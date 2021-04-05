@@ -13,8 +13,8 @@ General how to pages and articles not fiting rest of categories.
 Node-RED examples (working or semi-working flows) that can be used by new users to start a journey with nrchkb.
 
 ### Service and Characteristic
-HomeKit services and characteristics can be found here.
-If you believe that some page is missing then please open discussion since thoose pages are pregenerated with our [scripts](https://github.com/NRCHKB/NRCHKB.github.io/tree/master/utils).
+HomeKit's services and characteristics can be found here.
+If you believe that some page is missing then please open discussion since those pages are generated with our [scripts](https://github.com/NRCHKB/NRCHKB.github.io/tree/master/utils).
 
 ## Editing from website
-All wiki pages has `Edit this page on GitHub` button on the bottom of the page. You can use it to fast forward to specific file in our repository.
+All wiki pages has `Edit this page on GitHub` button on the bottom of the page. You can use it to fast-forward to specific file in our repository.
