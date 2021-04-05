@@ -11,7 +11,7 @@ At `content/wiki` you will find folders for our wiki sub categories.
 
 ### Prologue
 
-General how to pages and articles not fiting rest of categories.
+General how to pages and articles not fitting rest of categories.
 
 ### Examples
 

@@ -24,4 +24,4 @@ Once you have Node-RED running, head over to the Demo Setup page for the easiest
 
 ## Contribution
 
-If you wish to contribute to our wiki then head [here]({{< ref "/wiki/discover-more/contributing" >}} "Contribution") and read our guidelines.
+If you wish to contribute to our wiki then head [here]({{< ref "/wiki/discover-more/contribution" >}} "Contribution") and read our guidelines.

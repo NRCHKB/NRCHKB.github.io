@@ -1,9 +1,9 @@
 ---
-title : "Contributing"
-description: "Contributing"
+title: "Contribution"
+description: "Contribution"
 lead: ""
-date: 2021-05-04T15:25:00+00:00
-lastmod: 2021-05-04T15:25:00+00:00
+date: 2020-11-16T13:59:39+01:00
+lastmod: 2021-05-04T14:12:00+01:00
 draft: false
 images: []
 menu:
@@ -24,7 +24,7 @@ At `content/wiki` you will find folders for our wiki sub categories.
 
 ### Prologue
 
-General how to pages and articles not fiting rest of categories.
+General how to pages and articles not fitting rest of categories.
 
 ### Examples
 
