@@ -65,7 +65,7 @@ Source:
 (function(){
 
   var index = new FlexSearch({
-    preset: 'score',
+    preset: 'match',
     cache: true,
     doc: {
         id: 'id',
@@ -83,7 +83,7 @@ Source:
   });
 
   var docs = [
-    {{ range $index, $page := (where .Site.Pages "Section" "docs") -}}
+    {{ range $index, $page := (where .Site.Pages "Section" "wiki") -}}
       {
         id: {{ $index }},
         href: "{{ .Permalink | absURL }}",

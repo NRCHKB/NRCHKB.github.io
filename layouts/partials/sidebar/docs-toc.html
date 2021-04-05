@@ -1,6 +1,25 @@
 {{ if ne .Params.toc false -}}
+  {{ .Scratch.Set "additionalToc" "<ul>" }}
+
+  {{ $characteristic := (where .Site.Data.hap.characteristics "constructorName" .Params.characteristic.name) }}
+  {{ if $characteristic -}}
+    {{ $additionalToc := .Scratch.Get "additionalToc" }}
+    {{ .Scratch.Set "additionalToc" (print $additionalToc `<li><a href="#properties">Properties</a></li>`) }}
+  {{ end -}}
+
+  {{ $service := (where .Site.Data.hap.services "constructorName" .Params.service.name) }}
+  {{ if $service -}}
+    {{ $additionalToc := .Scratch.Get "additionalToc" }}
+    {{ .Scratch.Set "additionalToc" (print $additionalToc `<li><a href="#characteristics">Characteristics</a></li>`) }}
+  {{ end -}}
+
+  {{ $additionalToc := .Scratch.Get "additionalToc" }}
   <div class="page-links">
     <h3>On this page</h3>
-    {{ .TableOfContents }}
+    {{ if in .TableOfContents `<ul>` }}
+      {{ .TableOfContents | replaceRE `<ul>` $additionalToc | safeHTML }}
+    {{ else }}
+      {{ `<nav id="TableOfContents"><ul></ul></nav>` | replaceRE `<ul>` $additionalToc | safeHTML }}
+    {{ end -}}
   </div>
 {{ end -}}

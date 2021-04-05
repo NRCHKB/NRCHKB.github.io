@@ -1,9 +1,9 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "NRCHKB"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
+titleAddition = "HomeKit all the things!"
 description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
 
 ## Open Graph + Twitter Cards
@@ -36,15 +36,15 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+footer = "Powered by <a href=\"https://gohugo.io/\">Hugo</a> and <a href=\"https://getdoks.org/\">Doks</a>"
 
 # Alert
-alert = false
-alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alert = true
+alertText = "Like NRCHKB? <a class=\"alert-link\" href=\"https://github.com/NRCHKB/node-red-contrib-homekit-bridged\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/h-enk/doks"
-editPage = false
+docsRepo = "https://github.com/NRCHKB/nrchkb-wiki"
+editPage = true
 
 [options]
   lazySizes = true
@@ -53,6 +53,6 @@ editPage = false
   flexSearch = true
   darkMode = true
   bootStrapJs = false
-  breadCrumb = false
+  breadCrumb = true
   highLight = true
   kaTex = false

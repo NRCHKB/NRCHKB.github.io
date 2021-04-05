@@ -23,7 +23,7 @@
         {{ range .Site.Menus.main -}}
           {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
           {{- $active = or $active (eq .Name $current.Title) -}}
-          {{- $active = or $active (and (eq .Name "Docs") (eq $current.Section "docs")) -}}
+          {{- $active = or $active (and (eq .Name "Wiki") (eq $current.Section "wiki")) -}}
           {{- $active = or $active (and (eq .Name "Guides") (eq $current.Section "guides")) -}}
           {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
           <li class="nav-item{{ if $active }} active{{ end }}">
@@ -34,7 +34,7 @@
       <div class="break order-6 d-md-none"></div>
       {{ if .Site.Params.options.flexSearch -}}
       <form class="navbar-form flex-grow-1 order-7 order-md-3">
-        <input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">
+        <input id="userinput" class="form-control is-search" type="search" placeholder="Search wiki..." aria-label="Search wiki..." autocomplete="off">
         <div id="suggestions" class="shadow bg-white rounded"></div>
       </form>
       {{ end -}}

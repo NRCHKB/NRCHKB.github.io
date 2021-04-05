@@ -1,14 +1,14 @@
 {
-  "name": "@hyas/doks",
-  "description": "Doks theme",
-  "version": "0.2.2",
+  "name": "nrchkb-wiki",
+  "description": "NRCHKB Wiki",
+  "version": "1.2.0",
   "hugo-bin": {
     "buildTags": "extended"
   },
   "browserslist": [
     "defaults"
   ],
-  "repository": "https://github.com/h-enk/doks",
+  "repository": "https://github.com/NRCHKB/nrchkb-wiki",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
@@ -29,7 +29,7 @@
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "release": "standard-version",
     "release:dry-run": "standard-version --dry-run",
-    "server": "hugo server",
+    "server": "hugo server --disableFastRender --bind=192.168.1.80 --baseURL=http://192.168.1.80:1313",
     "test": "npm run -s lint",
     "env": "env",
     "precheck": "npm version",
