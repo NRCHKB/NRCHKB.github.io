@@ -22,6 +22,12 @@
   identifier = "characteristic"
   url = "/wiki/characteristic/"
 
+[[docs]]
+  name = "Discover More"
+  weight = 100
+  identifier = "discover-more"
+  url = "/wiki/discover-more/"
+
 [[main]]
   name = "Wiki"
   url = "/wiki/prologue/quick-start/"
