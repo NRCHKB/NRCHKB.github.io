@@ -10,6 +10,18 @@
   identifier = "examples"
   url = "/wiki/examples/"
 
+[[docs]]
+  name = "Service"
+  weight = 30
+  identifier = "service"
+  url = "/wiki/service/"
+
+[[docs]]
+  name = "Characteristic"
+  weight = 40
+  identifier = "characteristic"
+  url = "/wiki/characteristic/"
+
 [[main]]
   name = "Wiki"
   url = "/wiki/prologue/quick-start/"

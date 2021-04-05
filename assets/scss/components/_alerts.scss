@@ -53,6 +53,10 @@
   background-color: $primary;
 }
 
+.alert-primary a {
+  color: white;
+}
+
 .alert-primary .alert-link {
   color: $white;
 }
