@@ -43,7 +43,7 @@ alert = true
 alertText = "Like NRCHKB? <a class=\"alert-link\" href=\"https://github.com/NRCHKB/node-red-contrib-homekit-bridged\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/NRCHKB/nrchkb-wiki"
+docsRepo = "https://github.com/NRCHKB/NRCHKB.github.io"
 editPage = true
 
 [options]

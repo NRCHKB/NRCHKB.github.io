@@ -1,6 +1,6 @@
 {
-  "name": "nrchkb-wiki",
-  "description": "NRCHKB Wiki",
+  "name": "NRCHKB.github.io",
+  "description": "NRCHKB Website",
   "version": "1.2.0",
   "hugo-bin": {
     "buildTags": "extended"
@@ -8,7 +8,7 @@
   "browserslist": [
     "defaults"
   ],
-  "repository": "https://github.com/NRCHKB/nrchkb-wiki",
+  "repository": "https://github.com/NRCHKB/NRCHKB.github.io",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
