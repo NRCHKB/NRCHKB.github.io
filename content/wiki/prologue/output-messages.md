@@ -22,6 +22,7 @@ From version `1.3.0` on, the parts of the message will _always_ include `msg.hap
 Note, `msg.hap.context` is left for compatibility with previous versions of the plugin but is considered deprecated and will be removed in version `2.0.0`. Please transfer your flows to use `msg.hap.session` instead.
 
 The new message part `msg.hap.session` will exist only if the message is initiated from Home app. This object will include the following:
+
 * `msg.hap.session.sessionID` : UUID unique to each HAP connection
 * `msg.hap.session.username` : A unique identifier for each user, essentially a random string which will be different for each Apple ID your home is shared with
 * `msg.hap.session.remoteAddress` : the IP address where the message came from (iPhone, iPad, computer, Apple TV, HomePod, etc)
@@ -29,4 +30,4 @@ The new message part `msg.hap.session` will exist only if the message is initiat
 
 The `msg.hap.session` object can therefore be used to determine who or which device is initiating changes to your setup.
 
-Additionally it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home app or was a pass-through message from your HomeKit node. This is useful to prevent loops when "allow message pass through" is enabled on your bridge or accessory.
+Additionally, it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home app or was a pass-through message from your HomeKit node. This is useful to prevent loops when "allow message pass through" is enabled on your bridge or accessory.

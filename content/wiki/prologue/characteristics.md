@@ -26,16 +26,21 @@ The characteristic properties do not set any value in the item, instead they tel
 Here are some examples of how Characteristic Properties work. These will be moved to their respective example pages as more documentation is written ([help wanted](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/50)).
 
 ### On/off bulb (No optional characteristics: empty JSON object)
+
 ```json
 {}
 ```
+
 ### Dimmable bulb (Enable optional characteristic _Brightness_)
+
 ```json
 {
     "Brightness":true
 }
 ```
+
 ### Color changing bulb (Enable optional characteristics _Brightness, Hue, Saturation_)
+
 ```json
 {
     "Brightness":true,
@@ -43,9 +48,12 @@ Here are some examples of how Characteristic Properties work. These will be move
     "Saturation":true
 }
 ```
+
 ### Color Temperature bulb
+
 It is also possible to define the range of the lightbulb if it has a light which can change temperature.
 You should watch out, that this values are in `Reciprocal megakelvin` so you have to 'convert' to this if your lamp is using Kelvin values (1000000 / Kelvin).
+
 ```json
 {
     "ColorTemperature": {
@@ -56,6 +64,7 @@ You should watch out, that this values are in `Reciprocal megakelvin` so you hav
 ```
 
 ### Dimmable bulb with 5% increments
+
 ```json
 {
     "Brightness":{
@@ -63,7 +72,9 @@ You should watch out, that this values are in `Reciprocal megakelvin` so you hav
     }
 }
 ```
+
 ### Security system with no "night" mode
+
 ```json
 {
     "SecuritySystemCurrentState":
@@ -76,7 +87,9 @@ You should watch out, that this values are in `Reciprocal megakelvin` so you hav
         }
 }
 ```
+
 ### Valve with only "irrigation" valve type (will show in Home app as sprinkler)
+
 ```json
 {
     "ValveType":

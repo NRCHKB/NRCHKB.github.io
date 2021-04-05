@@ -24,7 +24,7 @@
 
 [[docs]]
   name = "Discover More"
-  weight = 100
+  weight = 50
   identifier = "discover-more"
   url = "/wiki/discover-more/"
 

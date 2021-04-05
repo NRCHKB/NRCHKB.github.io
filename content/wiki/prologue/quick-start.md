@@ -17,6 +17,11 @@ This wiki will be used to share examples so that users may see how this plugin f
 
 For new users, please start with the [official Node-RED docs](https://nodered.org/docs/) before continuing.
 
-## [Demo Setup]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup")
+## Demo Setup
 
 Once you have Node-RED running, head over to the Demo Setup page for the easiest demo setup we can provide. This is the setup we use for testing new releases - the demos can be copied directly into Node-RED and added to HomeKit.
+[Demo Setup page]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup")
+
+## Contribution
+
+If you wish to contribute to our wiki then head [here]({{< ref "/wiki/discover-more/contributing" >}} "Contribution") and read our guidelines.

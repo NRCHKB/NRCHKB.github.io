@@ -33,11 +33,11 @@ Once you have Node-RED and our plugin installed, you are ready to get started. T
 
 ### Deploy and add to Home app
 
-**Deploy**
+#### Deploy
 
 Once you have imported the demos you want to play with, you are ready to hit the "Deploy" button and start testing!
 
-**Add to HomeKit**
+#### Add to HomeKit
 
 Once deployed, you can add the bridge(s) to HomeKit using an iOS or iPad OS device.
 
@@ -49,7 +49,7 @@ The next screen will ask for an 8-digit code. This can be found below many of th
 
 <img width="262" alt="Screen Shot 2020-07-12 at 9 52 15 PM" src="https://user-images.githubusercontent.com/38265886/87266082-fa78b600-c489-11ea-8c5f-26456975d5f2.png">
 
-**5. Experiment!**
+#### 5. Experiment!
 
 Congratulations! If you have made it this far, you should have some demo services added to the Home app!
 
