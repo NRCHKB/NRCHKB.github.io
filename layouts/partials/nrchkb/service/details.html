@@ -13,7 +13,7 @@
       </tr>
       {{ range $characteristics }}
         <tr>
-          <td><a href="{{ .constructorName | replaceRE `([a-z])([A-Z])` `$1-$2` | lower | replaceRE `(.*)` `wiki/characteristic/$1/` | absURL }}">{{ .displayName }}</a></td>
+          <td><a href="{{ .displayName | replaceRE ` ` `-` | lower | replaceRE `(.*)` `wiki/characteristic/$1/` | absURL }}">{{ .displayName }}</a></td>
           <td>{{ if .required -}}✔{{ else }}❌{{ end -}}</td>
         </tr>
       {{ end }}
