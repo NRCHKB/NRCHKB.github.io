@@ -54,8 +54,8 @@ rel  = "sitemap"
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    codeFences = false
-    guessSyntax = false
+    codeFences = true
+    guessSyntax = true
     hl_Lines = ""
     lineNoStart = 1
     lineNos = false
@@ -82,9 +82,3 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "static"
     target = "static"
-  [[module.mounts]]
-    source = "node_modules/flexsearch"
-    target = "assets/js/vendor/flexsearch"
-  [[module.mounts]]
-    source = "node_modules/katex"
-    target = "assets/js/vendor/katex"
