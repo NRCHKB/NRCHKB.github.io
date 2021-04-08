@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.3.0...v1.3.1) (2021-04-08)
+
+
+### Bug Fixes
+
+* search input focus on / was not working ([6162ca9](https://github.com/NRCHKB/NRCHKB.github.io/commit/6162ca9eb629b13bfb14aab7c90773300933ff98))
+
 ## [1.3.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.2.1...v1.3.0) (2021-04-08)
 
 
