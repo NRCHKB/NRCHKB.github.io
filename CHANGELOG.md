@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.2.1...v1.4.0) (2021-04-08)
+
+
+### Features
+
+* Clean up yarn.lock ([22c688c](https://github.com/NRCHKB/NRCHKB.github.io/commit/22c688cdcfb408e57debc23a6b3ab5305b6b11dd))
+* Removed katex and replaced flexsearch with algolia ([3615303](https://github.com/NRCHKB/NRCHKB.github.io/commit/36153032c2fcf61ba14d194fc38d209e1aabbc9b))
+
+
+### Bug Fixes
+
+* make images from .md fit page (container) ([46fcb3a](https://github.com/NRCHKB/NRCHKB.github.io/commit/46fcb3ab759ae9b326ab6dd87f813f39913c2430))
+* search input focus on / was not working ([6162ca9](https://github.com/NRCHKB/NRCHKB.github.io/commit/6162ca9eb629b13bfb14aab7c90773300933ff98))
+
 ### [1.3.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.3.0...v1.3.1) (2021-04-08)
 
 
