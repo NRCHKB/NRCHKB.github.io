@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.4.0...v1.4.1) (2021-04-08)
+
+
+### Bug Fixes
+
+* demo-setup.md clean up image entries + grammar ([4b7644a](https://github.com/NRCHKB/NRCHKB.github.io/commit/4b7644a13bef8e0ce4dbbe7df2bae360e8835ddb))
+
 ## [1.4.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.2.1...v1.4.0) (2021-04-08)
 
 
