@@ -58,5 +58,10 @@
     "standard-version": "^9.2",
     "stylelint": "^13.12",
     "stylelint-config-standard": "^21.0"
+  },
+  "author": {
+    "name": "Tadeusz Wyrzykowski",
+    "email": "tadeusz@hey.com",
+    "url": "https://github.com/Shaquu"
   }
 }
