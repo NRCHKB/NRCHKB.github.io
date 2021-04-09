@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.5.0...v1.5.1) (2021-04-09)
+
+
+### Bug Fixes
+
+* add alt to discord shield ([b58afaf](https://github.com/NRCHKB/NRCHKB.github.io/commit/b58afaf09a87f806a56f0a8f62b1267923507bf1))
+
 ## [1.5.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.4.1...v1.5.0) (2021-04-09)
 
 
