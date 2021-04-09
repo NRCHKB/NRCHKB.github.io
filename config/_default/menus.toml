@@ -53,6 +53,11 @@
   weight = 30
 
 [[footer]]
+  name = "Privacy"
+  url = "/privacy-policy/"
+  weight = 10
+
+[[footer]]
   pre = "<img src=\"https://img.shields.io/discord/586065987267330068?color=%238f0000&label=Discord&logo=discord\"/>"
   url = "https://discord.gg/uvYac5u"
-  weight = 10
+  weight = 20
