@@ -8,8 +8,8 @@ $border-dark: darken($body-bg-dark, 2.5%);
 $body-color-dark: $gray-300;
 $dots-dark: darken($body-color-dark, 50%);
 
-$link-color-dark: $nrchkb;
-$button-color-dark: $link-color-dark;
+$link-color-dark: $nrchkb-soft;
+$button-color-dark: $nrchkb;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
 
 $navbar-dark-color:                 $body-color-dark;
@@ -301,7 +301,7 @@ body.dark .text-muted {
 }
 
 body.dark .alert-primary {
-  background: $link-color-dark;
+  background: $button-color-dark;
   color: white;
 }
 
