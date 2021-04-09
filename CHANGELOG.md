@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.4.1...v1.5.0) (2021-04-09)
+
+
+### Features
+
+* add author to package.json ([71d54b3](https://github.com/NRCHKB/NRCHKB.github.io/commit/71d54b3ba103ddb0c13a5b2e1cbb1029bde93c97))
+* added privacy policy and contact pages ([b0a6fd4](https://github.com/NRCHKB/NRCHKB.github.io/commit/b0a6fd4c6c64679c8ed03c1d0d64dc00cc7fdc60))
+* change check and x mark to white color ([89036b8](https://github.com/NRCHKB/NRCHKB.github.io/commit/89036b88f36ceb8c689942c23465c63b328581ab))
+* changed discord shield ([bfa7bb1](https://github.com/NRCHKB/NRCHKB.github.io/commit/bfa7bb1b3612c5c0854ea4317413be63a36318a1))
+* make links color for dark more better contrast with background ([2166145](https://github.com/NRCHKB/NRCHKB.github.io/commit/21661457dde25725fd97f00166a49a31f1527ceb))
+
 ### [1.4.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.4.0...v1.4.1) (2021-04-08)
 
 
