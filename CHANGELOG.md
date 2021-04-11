@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.6.0...v1.6.1) (2021-04-11)
+
+
+### Bug Fixes
+
+* replaced old dates in pages ([88d133f](https://github.com/NRCHKB/NRCHKB.github.io/commit/88d133fabdd2b14cbd3224798bcdd9a202e3c2a8))
+
 ## [1.6.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.5.1...v1.6.0) (2021-04-11)
 
 
