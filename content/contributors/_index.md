@@ -1,8 +1,8 @@
 ---
 title: "Contributors"
 description: "The NRCHKB Wiki contributors."
-date: 2020-10-06T08:50:29+00:00
-lastmod: 2020-10-06T08:50:29+00:00
+date: 2021-04-01T00:00:00+02:00
+lastmod: 2021-04-01T00:00:00+02:00
 draft: false
 images: []
 ---

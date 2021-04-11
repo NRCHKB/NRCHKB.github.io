@@ -2,7 +2,7 @@
 title: "Characteristics"
 description: "Characteristics"
 lead: ""
-date: 2020-11-16T13:59:39+01:00
+date: 2021-04-01T00:00:00+02:00
 lastmod: 2021-04-04T14:12:00+01:00
 draft: false
 images: []
