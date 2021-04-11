@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.5.1...v1.6.0) (2021-04-11)
+
+
+### Features
+
+* clean up contributors ([30f155a](https://github.com/NRCHKB/NRCHKB.github.io/commit/30f155a5cb377119e05371dda62fe9b48d9bb741))
+* show last updated date and contributors on wiki pages ([d08a71e](https://github.com/NRCHKB/NRCHKB.github.io/commit/d08a71ede8f98f3d003e292bddd6285c1386f35e))
+* yarn upgrade ([a00e0df](https://github.com/NRCHKB/NRCHKB.github.io/commit/a00e0df6205fcab08e879c134f5c4dd7a1c016a5))
+
+
+### Bug Fixes
+
+* incorrect lastmod date ([e3ef4a1](https://github.com/NRCHKB/NRCHKB.github.io/commit/e3ef4a15205001e089e4f3adfcaac68d20f30614))
+
 ### [1.5.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.5.0...v1.5.1) (2021-04-09)
 
 
