@@ -25,6 +25,7 @@
 				</nav>
 			{{ end }}
 			<h1>{{ .Title }}</h1>
+      {{ partial "main/wiki-meta.html" . }}
 			<p class="lead">{{ .Params.lead | safeHTML }}</p>
       {{ partial "nrchkb/characteristic/details.html" . }}
       {{ partial "nrchkb/service/details.html" . }}
