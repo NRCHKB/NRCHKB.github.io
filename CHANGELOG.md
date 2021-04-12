@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.6.1...v1.7.0) (2021-04-12)
+
+
+### Features
+
+* add wiki sections to main menu ([c914829](https://github.com/NRCHKB/NRCHKB.github.io/commit/c914829e03d53f96166bd6f11ea615917dc04ba1))
+* make sections in wiki collapsible ([a96050a](https://github.com/NRCHKB/NRCHKB.github.io/commit/a96050ae093ecc263908151ac592e779535e9957))
+
+
+### Dependencies
+
+* yarn upgrade ([1c91e9a](https://github.com/NRCHKB/NRCHKB.github.io/commit/1c91e9a642dd007827f46fb37cd80b1d89d39d2a))
+
 ### [1.6.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.6.0...v1.6.1) (2021-04-11)
 
 
