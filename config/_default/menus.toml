@@ -2,31 +2,31 @@
   name = "Prologue"
   weight = 10
   identifier = "prologue"
-  url = "/wiki/prologue/"
+  url = "/wiki/prologue/quick-start/"
 
 [[docs]]
   name = "Examples"
   weight = 20
   identifier = "examples"
-  url = "/wiki/examples/"
+  url = "/wiki/examples/demo-setup/"
 
 [[docs]]
   name = "Service"
   weight = 30
   identifier = "service"
-  url = "/wiki/service/"
+  url = "/wiki/service/access-control/"
 
 [[docs]]
   name = "Characteristic"
   weight = 40
   identifier = "characteristic"
-  url = "/wiki/characteristic/"
+  url = "/wiki/characteristic/access-control-level/"
 
 [[docs]]
   name = "Discover More"
   weight = 50
   identifier = "discover-more"
-  url = "/wiki/discover-more/"
+  url = "/wiki/discover-more/contribution/"
 
 [[main]]
   name = "Wiki"

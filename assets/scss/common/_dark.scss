@@ -331,3 +331,14 @@ body.dark .copy-status:active::after {
   display: block;
   color: $link-color-dark;
 }
+
+body.dark .dropdown-menu {
+  color: #dee2e6;
+  background-color: #343a40;
+  border-color: rgba(29, 45, 53, 0.15);
+}
+
+body.dark button.menu-wiki {
+  color: #fff;
+}
+

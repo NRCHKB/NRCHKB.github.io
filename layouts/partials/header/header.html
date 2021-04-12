@@ -24,11 +24,24 @@
           {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
           {{- $active = or $active (eq .Name $current.Title) -}}
           {{- $active = or $active (and (eq .Name "Wiki") (eq $current.Section "wiki")) -}}
-          {{- $active = or $active (and (eq .Name "Guides") (eq $current.Section "guides")) -}}
           {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
-          <li class="nav-item{{ if $active }} active{{ end }}">
-            <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
-          </li>
+          {{ if eq .Name "Wiki" -}}
+            <li class="nav-item{{ if $active }} active{{ end }}">
+              <div class="btn-group">
+                <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+                <button class="btn menu-wiki dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"><span class="visually-hidden">Toggle Dropdown</span></button>
+                <ul class="dropdown-menu">
+                  {{ range $.Site.Menus.docs -}}
+                    <li><a class="dropdown-item" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+                  {{ end -}}
+                </ul>
+              </div>
+            </li>
+          {{ else -}}
+            <li class="nav-item{{ if $active }} active{{ end }}">
+              <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            </li>
+          {{ end -}}
         {{ end -}}
       </ul>
       <div class="break order-6 d-md-none"></div>

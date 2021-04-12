@@ -227,3 +227,7 @@ body {
 .docs-content img {
   max-width: 100%;
 }
+
+button.menu-wiki:focus {
+  box-shadow: none;
+}
