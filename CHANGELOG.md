@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.2](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.7.1...v1.7.2) (2021-04-12)
+
+
+### Bug Fixes
+
+* reuse internal ga template ([35568f4](https://github.com/NRCHKB/NRCHKB.github.io/commit/35568f47877c1ea43e6c80e482893516baba873a))
+
 ### [1.7.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.7.0...v1.7.1) (2021-04-12)
 
 
