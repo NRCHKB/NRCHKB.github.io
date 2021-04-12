@@ -231,3 +231,18 @@ body {
 button.menu-wiki:focus {
   box-shadow: none;
 }
+
+.unstyled {
+  text-decoration: none;
+  color: $black;
+}
+
+.unstyled:hover,
+.unstyled:focus {
+  text-decoration: underline;
+  color: $black;
+}
+
+.caret {
+  @include caret();
+}

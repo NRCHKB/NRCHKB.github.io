@@ -342,3 +342,11 @@ body.dark button.menu-wiki {
   color: #fff;
 }
 
+body.dark .unstyled {
+  color: $body-color-dark;
+}
+
+body.dark .unstyled:hover,
+body.dark .unstyled:focus {
+  color: $body-color-dark;
+}
