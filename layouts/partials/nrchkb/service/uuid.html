@@ -1,0 +1,6 @@
+{{ $service := (where .Site.Data.hap.services "constructorName" .Params.service.name) }}
+{{ if $service -}}
+  {{ range $service}}
+<p><small>UUID: {{ .UUID }}</small></p>
+  {{ end -}}
+{{ end -}}

@@ -1,0 +1,6 @@
+{{ $characteristic := (where .Site.Data.hap.characteristics "constructorName" .Params.characteristic.name) }}
+{{ if $characteristic -}}
+  {{ range $characteristic }}
+<p><small>UUID: {{ .UUID }}</small></p>
+  {{ end }}
+{{ end -}}

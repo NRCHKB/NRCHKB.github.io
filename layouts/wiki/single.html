@@ -27,8 +27,13 @@
 			<h1>{{ .Title }}</h1>
       {{ partial "main/wiki-meta.html" . }}
 			<p class="lead">{{ .Params.lead | safeHTML }}</p>
-      {{ partial "nrchkb/characteristic/details.html" . }}
-      {{ partial "nrchkb/service/details.html" . }}
+
+      {{ partial "nrchkb/service/uuid.html" . }}
+      {{ partial "nrchkb/service/list.html" . }}
+
+      {{ partial "nrchkb/characteristic/uuid.html" . }}
+      {{ partial "nrchkb/characteristic/list.html" . }}
+
 			{{ partial "main/headline-hash.html" .Content }}
 			{{ if .Site.Params.editPage -}}
 				{{ partial "main/edit-page.html" . }}
