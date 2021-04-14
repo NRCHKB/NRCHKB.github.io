@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.7.2...v1.8.0) (2021-04-14)
+
+
+### Features
+
+* Display UUID on service and characteristic pages ([59517a2](https://github.com/NRCHKB/NRCHKB.github.io/commit/59517a2568acd7b07669007ac2e2ede5e60390da))
+* make "Updated" text to blend more ([30c5292](https://github.com/NRCHKB/NRCHKB.github.io/commit/30c529287354598acc9338da7c93f178d4b024db))
+
+
+### Bug Fixes
+
+* Change page title for Lightbulb Service to "Light Bulb" (just like in hap docs) ([78017ce](https://github.com/NRCHKB/NRCHKB.github.io/commit/78017cef8a519ca8a2502ab0f8fc08d88f578bc5))
+
+
+### Dependencies
+
+* yarn upgrade ([3e5b7f0](https://github.com/NRCHKB/NRCHKB.github.io/commit/3e5b7f0fb42d766a999ea05bdac31fd42472335a))
+
 ### [1.7.2](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.7.1...v1.7.2) (2021-04-12)
 
 
