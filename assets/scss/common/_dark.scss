@@ -350,3 +350,7 @@ body.dark .unstyled:hover,
 body.dark .unstyled:focus {
   color: $body-color-dark;
 }
+
+body.dark .updated {
+  color: $gray-600;
+}

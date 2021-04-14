@@ -246,3 +246,7 @@ button.menu-wiki:focus {
 .caret {
   @include caret();
 }
+
+.updated {
+  color: $gray-600;
+}
