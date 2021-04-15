@@ -1,0 +1,9 @@
+{{ $service := (where .Site.Data.hap.services "constructorName" .Params.service.name) }}
+{{ if $service -}}
+  {{ range $service}}
+  {{ if (fileExists (`.mp4` | printf "%s%s" .constructorName | printf "%s%s" `static/video/service/`)) -}}
+    <video autoplay="true" loop="true" src="{{`.mp4` | printf `%s%s` .constructorName | printf `%s%s` `video/service/` | absURL }}"></video>
+  {{- end }}
+  {{ end -}}
+{{ end -}}
+
