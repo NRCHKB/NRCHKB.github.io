@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.10.1...v1.11.0) (2021-04-15)
+
+
+### Features
+
+* make the discord invite a link in faq.md ([b5f7995](https://github.com/NRCHKB/NRCHKB.github.io/commit/b5f7995810ebb6802d61e86b140c9899bd2054ce))
+
 ### [1.10.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.10.0...v1.10.1) (2021-04-15)
 
 
