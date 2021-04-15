@@ -9,7 +9,7 @@ If you want to contribute consider opening discussion first before creating PR.
 At `content/wiki` you will find folders for our wiki sub categories.
 ![image](https://user-images.githubusercontent.com/2881159/113577526-afa75b80-9621-11eb-890f-174dabcd2957.png)
 
-### Prologue
+### Introduction
 
 General how to pages and articles not fitting rest of categories.
 

@@ -1,8 +1,8 @@
 [[docs]]
-  name = "Prologue"
+  name = "Introduction"
   weight = 10
-  identifier = "prologue"
-  url = "/wiki/prologue/quick-start/"
+  identifier = "introduction"
+  url = "/wiki/introduction/quick-start/"
 
 [[docs]]
   name = "Examples"
@@ -30,7 +30,7 @@
 
 [[main]]
   name = "Wiki"
-  url = "/wiki/prologue/quick-start/"
+  url = "/wiki/introduction/quick-start/"
   weight = 5
 
 [[main]]

@@ -1,6 +1,6 @@
 ---
-title: "Prologue"
-description: "Prologue Doks."
+title: "Introduction"
+description: "NRCHKB Wiki Introduction"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
 lastmod: 2021-04-01T00:00:00+02:00
