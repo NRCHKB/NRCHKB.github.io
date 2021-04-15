@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.8.0...v1.9.0) (2021-04-15)
+
+
+### Features
+
+* rename prologue to introduction ([8d9e61b](https://github.com/NRCHKB/NRCHKB.github.io/commit/8d9e61b5060e94775bca532187d7f5f63591f7bb))
+
 ## [1.8.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.7.2...v1.8.0) (2021-04-14)
 
 
