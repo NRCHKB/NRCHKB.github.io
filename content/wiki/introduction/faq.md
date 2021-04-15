@@ -18,4 +18,4 @@ toc: true
 You managed to pair with Accessory or Bridge but after a while it has disappeared?
 
 1. Make sure that device you are using to view Home status is connected to the same network that node-red (with nrchkb) is running on
-2. If you are using VLAN or special firewall rules, join us on discord to discuss what settings should be for things to work
+2. If you are using VLAN or special firewall rules, [join us on Discord](https://discord.gg/uvYac5u) to discuss what settings should be for things to work
