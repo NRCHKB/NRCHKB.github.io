@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.11.0...v1.12.0) (2021-04-15)
+
+
+### Features
+
+* Home.app demonstration video for Lightbulb ([d3f6490](https://github.com/NRCHKB/NRCHKB.github.io/commit/d3f649018e09a3201ab4993e04423849d9b8bd78))
+* Home.app demonstration video on service page ([1d5f265](https://github.com/NRCHKB/NRCHKB.github.io/commit/1d5f2656a5195d1ff020cb33640f7f39e8970e99))
+
 ## [1.11.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.10.1...v1.11.0) (2021-04-15)
 
 
