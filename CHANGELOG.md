@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.16.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.15.0...v1.16.0) (2021-04-17)
+
+
+### Features
+
+* update themeColor ([5e5a866](https://github.com/NRCHKB/NRCHKB.github.io/commit/5e5a86625618e61618a284310f762aed5f4ded09))
+
 ## [1.15.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.14.0...v1.15.0) (2021-04-17)
 
 
