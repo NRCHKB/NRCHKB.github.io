@@ -12,7 +12,7 @@ images = ["images/social-preview.png"]
 #twitterCreator = ""
 #facebookAuthor = ""
 #facebookPublisher = ""
-#ogLocale = "en_US"
+ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
