@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.14.0...v1.15.0) (2021-04-17)
+
+
+### Features
+
+* update lightbulb preview image ([3de2709](https://github.com/NRCHKB/NRCHKB.github.io/commit/3de270927fa0cddcd6bb5115657d8c935f534d12))
+
 ## [1.14.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.13.1...v1.14.0) (2021-04-17)
 
 
