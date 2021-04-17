@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.13.0...v1.13.1) (2021-04-17)
+
+
+### Bug Fixes
+
+* video not autoplaying on iOS ([b0ec307](https://github.com/NRCHKB/NRCHKB.github.io/commit/b0ec307cae00bd06248e668df7dbdbefff005609))
+
 ## [1.13.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.12.1...v1.13.0) (2021-04-17)
 
 
