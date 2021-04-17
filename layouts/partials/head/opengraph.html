@@ -74,10 +74,14 @@
 {{ if .IsPage -}}
   {{ range .Site.Authors -}}
     {{ with .Social.facebook -}}
+      {{ if gt (len .) 0 -}}
       <meta property="article:author" content="https://www.facebook.com/{{ . }}">
+      {{ end -}}
     {{ end -}}
     {{ with .Site.Social.facebook -}}
+      {{ if gt (len .) 0 -}}
       <meta property="article:publisher" content="https://www.facebook.com/{{ . }}">
+      {{ end -}}
     {{ end -}}
     <meta property="article:section" content="{{ .Section }}">
     {{ with .Params.tags -}}

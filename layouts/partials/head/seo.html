@@ -35,13 +35,34 @@
 {{ end -}}
 
 {{ partial "head/twitter_cards.html" . }}
-<meta name="twitter:site" content="@{{ .Site.Params.twitterSite }}">
-<meta name="twitter:creator" content="@{{ .Site.Params.twitterCreator }}">
+{{ with .Site.Params.twitterSite -}}
+  {{ if gt (len .) 0 -}}
+    <meta name="twitter:site" content="@{{ . }}">
+  {{ end -}}
+{{ end -}}
+{{ with .Site.Params.twitterCreator -}}
+  {{ if gt (len .) 0 -}}
+    <meta name="twitter:creator" content="@{{ . }}">
+  {{ end -}}
+{{ end -}}
 
 {{ partial "head/opengraph.html" . }}
-<meta property="article:publisher" content="https://www.facebook.com/{{ .Site.Params.facebookPublisher }}">
-<meta property="article:author" content="https://www.facebook.com/{{ .Site.Params.facebookAuthor }}">
-<meta property="og:locale" content="{{ .Site.Params.ogLocale }}">
+{{ with .Site.Params.facebookPublisher -}}
+  {{ if gt (len .) 0 -}}
+    <meta property="article:publisher" content="https://www.facebook.com/{{ . }}">
+  {{ end -}}
+{{ end -}}
+{{ with .Site.Params.facebookAuthor -}}
+  {{ if gt (len .) 0 -}}
+    <meta property="article:author" content="https://www.facebook.com/{{ . }}">
+  {{ end -}}
+{{ end -}}
+
+{{ with .Site.Params.ogLocale -}}
+  {{ if gt (len .) 0 -}}
+    <meta property="og:locale" content="{{ . }}">
+  {{ end -}}
+{{ end -}}
 
 {{ range .AlternativeOutputFormats -}}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
