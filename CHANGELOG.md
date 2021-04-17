@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.14.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.13.1...v1.14.0) (2021-04-17)
+
+
+### Features
+
+* added ogLocale ([36ee88b](https://github.com/NRCHKB/NRCHKB.github.io/commit/36ee88b54275b7da4ebcd6ef467c5bce76548bae))
+* lightbulb social preview image ([501519f](https://github.com/NRCHKB/NRCHKB.github.io/commit/501519f8eebbc76fabb1e640a96421094140a892))
+* regenerate pages as {name}/index.md ([0fda929](https://github.com/NRCHKB/NRCHKB.github.io/commit/0fda929898bf2a038606aab1cc74f07b1b614e20))
+* video path changed ([da86763](https://github.com/NRCHKB/NRCHKB.github.io/commit/da86763df6b93d31d7f06b6b58b5c5f06b49f85b))
+* wiki generator paths changed ([e3bf9ca](https://github.com/NRCHKB/NRCHKB.github.io/commit/e3bf9ca26b0b1d9aba80e356bb27c650f07af431))
+
+
+### Bug Fixes
+
+* do not show meta for empty params ([d1b1925](https://github.com/NRCHKB/NRCHKB.github.io/commit/d1b1925648614acb8602e5ca90f1b5ab5eb3e08a))
+
 ### [1.13.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.13.0...v1.13.1) (2021-04-17)
 
 
