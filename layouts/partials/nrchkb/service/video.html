@@ -1,9 +1,20 @@
 {{ $service := (where .Site.Data.hap.services "constructorName" .Params.service.name) }}
 {{ if $service -}}
   {{ range $service}}
-  {{ if (fileExists (`.mp4` | printf "%s%s" .constructorName | printf "%s%s" `static/video/service/`)) -}}
-    <video autoplay="true" loop="true" src="{{`.mp4` | printf `%s%s` .constructorName | printf `%s%s` `video/service/` | absURL }}"></video>
+  {{ $mp4Path := `.mp4` | printf "%s%s" .constructorName | printf "%s%s" `video/service/` }}
+  {{ $webmPath := `.webm` | printf "%s%s" .constructorName | printf "%s%s" `video/service/` }}
+  {{ $mp4Exists := fileExists ($mp4Path | printf "%s%s" `static/`) }}
+  {{ $webmExists := fileExists ($webmPath | printf "%s%s" `static/`) }}
+  {{ if or $mp4Exists $webmExists -}}
+    <video autoplay loop muted>
+      {{ if $webmExists -}}
+      <source src="{{$webmPath | absURL }}" type="video/webm">
+      {{- end }}
+      {{ if $mp4Exists -}}
+      <source src="{{$mp4Path | absURL }}" type="video/mp4">
+      {{- end }}
+      This browser does not support the HTML5 video element.
+    </video>
   {{- end }}
   {{ end -}}
 {{ end -}}
-
