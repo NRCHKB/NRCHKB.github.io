@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.12.1...v1.13.0) (2021-04-17)
+
+
+### Features
+
+* improved service video to support webm ([8894f3f](https://github.com/NRCHKB/NRCHKB.github.io/commit/8894f3fc5fc44716015e67ed56ec91a7d4394107))
+* new mp4 for Lightbulb and added webm ([6d35541](https://github.com/NRCHKB/NRCHKB.github.io/commit/6d35541e333f35df7d3639821b12dcc91d742d2f))
+
+
+### Dependencies
+
+* yarn upgrade ([f85be27](https://github.com/NRCHKB/NRCHKB.github.io/commit/f85be279b8c0ad1f4453be0ddf66e4a8d98309db))
+
 ### [1.12.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.12.0...v1.12.1) (2021-04-15)
 
 ## [1.12.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.11.0...v1.12.0) (2021-04-15)
