@@ -6,7 +6,7 @@
   {{ $mp4Exists := fileExists ($mp4Path | printf "%s%s" `static/`) }}
   {{ $webmExists := fileExists ($webmPath | printf "%s%s" `static/`) }}
   {{ if or $mp4Exists $webmExists -}}
-    <video autoplay loop muted>
+    <video autoplay loop muted playsinline>
       {{ if $webmExists -}}
       <source src="{{$webmPath | absURL }}" type="video/webm">
       {{- end }}
