@@ -48,7 +48,11 @@ var fs = require("fs");
 var generateInFolderForKeyset = function (setName, folder, set, template) {
     console.log(setName + " Page set generate STARTED");
     set().forEach(function (element) {
-        var filePath = path_1["default"].join(folder, element.key.toLowerCase().replace(/ /g, "-") + ".md");
+        var dirPath = path_1["default"].join(folder, element.key.toLowerCase().replace(/ /g, "-"));
+        var filePath = path_1["default"].join(dirPath, "index.md");
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath);
+        }
         fs.writeFile(filePath, template(element), { flag: "w" + (removeOld ? '' : 'x') }, function (err) {
             if (err) {
                 if (err.code == "EEXIST") {

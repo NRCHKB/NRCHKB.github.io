@@ -80,7 +80,12 @@ const generateInFolderForKeyset = (
   console.log(setName + " Page set generate STARTED")
 
   set().forEach((element) => {
-    const filePath = path.join(folder, element.key.toLowerCase().replace(/ /g, "-") + ".md")
+    const dirPath = path.join(folder, element.key.toLowerCase().replace(/ /g, "-"))
+    const filePath = path.join(dirPath, "index.md")
+
+    if (!fs.existsSync(dirPath)){
+      fs.mkdirSync(dirPath);
+    }
 
     fs.writeFile(filePath, template(element), { flag: "w" + (removeOld ? '' : 'x') }, (err: any) => {
       if (err) {
