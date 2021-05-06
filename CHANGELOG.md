@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.19.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.18.1...v1.19.0) (2021-05-06)
+
+
+### Features
+
+* service-node/properties/accessory description update ([ebb5f4f](https://github.com/NRCHKB/NRCHKB.github.io/commit/ebb5f4f488cbeb9748f0c251bac7865893a8957a))
+
 ### [1.18.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.18.0...v1.18.1) (2021-05-06)
 
 
