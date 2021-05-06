@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.17.0...v1.18.0) (2021-05-06)
+
+
+### Features
+
+* dedicated pages for our nodes ([eb4e3fc](https://github.com/NRCHKB/NRCHKB.github.io/commit/eb4e3fc95bd28b3f123767a4de27d97f855715fa))
+
+
+### Dependencies
+
+* yarn upgrade ([c4a74aa](https://github.com/NRCHKB/NRCHKB.github.io/commit/c4a74aa71c347016ef2cea81b19ff834e0e75450))
+
 ## [1.17.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.16.0...v1.17.0) (2021-04-17)
 
 
