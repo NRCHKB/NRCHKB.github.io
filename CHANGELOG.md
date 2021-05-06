@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.18.0...v1.18.1) (2021-05-06)
+
+
+### Bug Fixes
+
+* update lastmod for quick-start.md ([1ae8a0a](https://github.com/NRCHKB/NRCHKB.github.io/commit/1ae8a0a3859de5d587c301c115e2130a7475b270))
+
 ## [1.18.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.17.0...v1.18.0) (2021-05-06)
 
 
