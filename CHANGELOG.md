@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.19.0...v1.20.0) (2021-05-06)
+
+
+### Features
+
+* added yandex verification meta ([927e8e4](https://github.com/NRCHKB/NRCHKB.github.io/commit/927e8e44a3c9620eb1bba683909cd59f17b96e0c))
+
 ## [1.19.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.18.1...v1.19.0) (2021-05-06)
 
 
