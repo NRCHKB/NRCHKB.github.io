@@ -21,6 +21,14 @@ $navbar-dark-active-color:          $link-color-dark;
 body.dark {
   background: $body-bg-dark;
   color: $body-color-dark;
+
+  thead,
+  tbody,
+  tr,
+  td,
+  th {
+    border-color: inherit;
+  }
 }
 
 body.dark a {
