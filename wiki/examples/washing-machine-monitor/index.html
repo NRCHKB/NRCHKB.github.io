@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.cf685f959ed3472112c829180dc526abe9b0177fc1fe7b43541f542631ead237b8078731c491b1612e4f2d98a6d5c03db68c00202cde1e277eec692c2e7400da.css integrity="sha512-z2hflZ7TRyESyCkYDcUmq+mwF3/B/ntDVB9UJjHq0je4B4cxxJGxYS5PLZim1cA9towAICzeHid+7GksLnQA2g==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.88023cf0ab28d429d08fe2c72f24468e534a0cec48e66424e1ef38cdb5879183913107fe2e7fe30a2a1c76709335e6c4d1b5b1b513e50241314d1a5358bf498d.css integrity="sha512-iAI88Kso1CnQj+LHLyRGjlNKDOxI5mQk4e84zbWHkYORMQf+Ln/jCiocdnCTNebE0bWxtRPlAkExTRpTWL9JjQ==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 <meta name=robots content="index, follow">
@@ -460,9 +460,9 @@
 </ol>
 </nav>
 <h1>Washing Machine Monitor</h1>
-<small class=updated>Updated August 3, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/northern-man/>Northern Man</a></small>
+<small class=updated>Updated August 3, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/northernman54/>NorthernMan54</a></small>
 <p class=lead></p>
-<p>This is a Washing Machine in use flow I created to monitor the usage of our washing machine, and provide notification to the Home app of the wash status. To create this I leveraged an ESP8266 based current sensor <a href=https://github.com/alcar21/WemosEM>WemosEM</a> to monitor usage of the Washing Machine. And used the flow to determine if the Washing machine was in use, then trigger a Contact sensor.</p>
+<p>This is a Washing Machine in use flow I created to monitor the usage of our washing machine, and provide notification to the Home.app of the wash status. To create this I leveraged an ESP8266 based current sensor <a href=https://github.com/alcar21/WemosEM>WemosEM</a> to monitor usage of the Washing Machine. And used the flow to determine if the Washing machine was in use, then trigger a Contact sensor.</p>
 <p><img src=https://user-images.githubusercontent.com/19808920/73419506-5d67fd80-42ed-11ea-8a54-3114ff23692c.png alt></p>
 <p>The flow watches the watts used, averaging the previous 24 readings, and if they cross 30 watts, trigger the On state, and if the average drops below 15 watts trigger the off state. I found this worked well with my washer. YMMV</p>
 <p>This flow will also set accessory to be &lsquo;Not Responding&rsquo; if the sensor stops sending MQTT updates for more than 10 minutes.</p>
@@ -470,17 +470,17 @@
 </code></pre></div>
 <p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/examples/washing-machine-monitor.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
-<a href=https://nrchkb.github.io/wiki/introduction/faq/>
+<a href=https://nrchkb.github.io/wiki/introduction/host-node/>
 <div class="card my-1">
 <div class="card-body py-2">
-&larr; FAQ
+&larr; Host Node
 </div>
 </div>
 </a>
-<a class=ms-auto href=https://nrchkb.github.io/wiki/examples/demo-setup/>
+<a class=ms-auto href=https://nrchkb.github.io/wiki/introduction/output-messages/>
 <div class="card my-1">
 <div class="card-body py-2">
-Demo Setup &rarr;
+Output Messages &rarr;
 </div>
 </div>
 </a>

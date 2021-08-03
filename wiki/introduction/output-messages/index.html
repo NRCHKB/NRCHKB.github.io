@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.cf685f959ed3472112c829180dc526abe9b0177fc1fe7b43541f542631ead237b8078731c491b1612e4f2d98a6d5c03db68c00202cde1e277eec692c2e7400da.css integrity="sha512-z2hflZ7TRyESyCkYDcUmq+mwF3/B/ntDVB9UJjHq0je4B4cxxJGxYS5PLZim1cA9towAICzeHid+7GksLnQA2g==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.88023cf0ab28d429d08fe2c72f24468e534a0cec48e66424e1ef38cdb5879183913107fe2e7fe30a2a1c76709335e6c4d1b5b1b513e50241314d1a5358bf498d.css integrity="sha512-iAI88Kso1CnQj+LHLyRGjlNKDOxI5mQk4e84zbWHkYORMQf+Ln/jCiocdnCTNebE0bWxtRPlAkExTRpTWL9JjQ==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 <meta name=robots content="index, follow">
@@ -463,10 +463,10 @@
 <small class=updated>Updated April 4, 2021 </small>
 <p class=lead></p>
 <p>Starting with version <code>1.3.0</code>, there are some changes in the <code>hap</code> part of the messages coming from this node.</p>
-<p>Previous versions would have <code>msg.hap.newValue</code> and <code>msg.hap.oldValue</code> <em>only if the message originated from the Home App</em>. Additionally there was a message part <code>msg.hap.context</code> with some information that nobody really knows what it means, but it was there.</p>
-<p>From version <code>1.3.0</code> on, the parts of the message will <em>always</em> include <code>msg.hap.newValue</code> and <code>msg.hap.oldValue</code>. If the message originated from the Home App (iPhone, iPad, Mac, or Home Hub automation) then the message will contain <code>msg.hap.context</code> (deprecated, will be empty object <code>{}</code>), and the new part <code>msg.hap.session</code>.</p>
+<p>Previous versions would have <code>msg.hap.newValue</code> and <code>msg.hap.oldValue</code> <em>only if the message originated from the Home.app</em>. Additionally there was a message part <code>msg.hap.context</code> with some information that nobody really knows what it means, but it was there.</p>
+<p>From version <code>1.3.0</code> on, the parts of the message will <em>always</em> include <code>msg.hap.newValue</code> and <code>msg.hap.oldValue</code>. If the message originated from the Home.app (iPhone, iPad, Mac, or Home Hub automation) then the message will contain <code>msg.hap.context</code> (deprecated, will be empty object <code>{}</code>), and the new part <code>msg.hap.session</code>.</p>
 <p>Note, <code>msg.hap.context</code> is left for compatibility with previous versions of the plugin but is considered deprecated and will be removed in version <code>2.0.0</code>. Please transfer your flows to use <code>msg.hap.session</code> instead.</p>
-<p>The new message part <code>msg.hap.session</code> will exist only if the message is initiated from Home app. This object will include the following:</p>
+<p>The new message part <code>msg.hap.session</code> will exist only if the message is initiated from Home.app. This object will include the following:</p>
 <ul>
 <li><code>msg.hap.session.sessionID</code> : UUID unique to each HAP connection</li>
 <li><code>msg.hap.session.username</code> : A unique identifier for each user, essentially a random string which will be different for each Apple ID your home is shared with</li>
@@ -474,13 +474,13 @@
 <li>&lsquo;msg.hap.session.localAddress` : the IP where your HomeKit bridge lives, will match wherever you host NodeRED</li>
 </ul>
 <p>The <code>msg.hap.session</code> object can therefore be used to determine who or which device is initiating changes to your setup.</p>
-<p>Additionally, it is recommended to use a rule checking whether <code>msg.hap.session</code> exists to determine whether a message originated in Home app or was a pass-through message from your HomeKit node. This is useful to prevent loops when &ldquo;allow message pass through&rdquo; is enabled on your bridge or accessory.</p>
+<p>Additionally, it is recommended to use a rule checking whether <code>msg.hap.session</code> exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when &ldquo;allow message pass through&rdquo; is enabled on your bridge or accessory.</p>
 <p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/introduction/output-messages.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
-<a href=https://nrchkb.github.io/wiki/introduction/host-node/>
+<a href=https://nrchkb.github.io/wiki/examples/washing-machine-monitor/>
 <div class="card my-1">
 <div class="card-body py-2">
-&larr; Host Node
+&larr; Washing Machine Monitor
 </div>
 </div>
 </a>
