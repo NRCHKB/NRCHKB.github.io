@@ -88,6 +88,26 @@ generateInFolderForKeyset("Characteristic", characteristicFolder, function () {
         })
             .map(function (service) { return service.displayName; })
             .reduce(function (unique, item) { return (unique.includes(item) ? unique : __spreadArray(__spreadArray([], unique), [item])); }, []);
+        if (serialized.constructorName) {
+            // @ts-ignore
+            var knownValues = Object.entries(hap_nodejs_1.Characteristic[serialized.constructorName])
+                .filter(function (_a) {
+                var key = _a[0];
+                return key !== 'UUID';
+            })
+                .map(function (_a) {
+                var key = _a[0], value = _a[1];
+                return ({
+                    key: key.split('_')
+                        .map(function (word) { return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase(); })
+                        .join(' '),
+                    value: value
+                });
+            });
+            if (knownValues && knownValues.length > 0) {
+                serialized.knownValues = knownValues;
+            }
+        }
         pageData.push({
             key: serialized.displayName,
             name: serialized.constructorName

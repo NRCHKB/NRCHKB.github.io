@@ -102,7 +102,7 @@ const generateInFolderForKeyset = (
   console.log(setName + " Page set generate FINISHED")
 }
 
-type ExtraSerializedCharacteristic = SerializedCharacteristic & {usedBy?: string[]}
+type ExtraSerializedCharacteristic = SerializedCharacteristic & {usedBy?: string[], knownValues?: {key:string, value:unknown}[]}
 
 generateInFolderForKeyset(
   "Characteristic",
@@ -134,6 +134,22 @@ generateInFolderForKeyset(
             (unique, item) => (unique.includes(item) ? unique : [...unique, item]),
             [],
           );
+
+        if (serialized.constructorName) {
+          // @ts-ignore
+          const knownValues = Object.entries(Characteristic[serialized.constructorName])
+            .filter(([key]) => key !== 'UUID')
+            .map(([key, value]) => ({
+              key: key.split('_')
+                      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                      .join(' '),
+              value
+            }))
+
+          if (knownValues && knownValues.length > 0) {
+            serialized.knownValues = knownValues
+          }
+        }
 
         pageData.push({
           key: serialized.displayName,
