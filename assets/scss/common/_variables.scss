@@ -26,6 +26,10 @@ $nrchkb:    #8f0000 !default;
 $nrchkb-soft:    #ff9090;
 $primary: $nrchkb;
 
+$color-btn-bg: $nrchkb;
+$color-btn-border: darken($nrchkb, 5%);
+$color-btn-text: $white;
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
