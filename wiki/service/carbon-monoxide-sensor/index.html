@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.df570c1403db897ecde904b18511387879982a60725acdcd9847300e994229652c18db8476ce4746b7965e32134ecabe495f96ebf1172a87aa87fc1f3e193007.css integrity="sha512-31cMFAPbiX7N6QSxhRE4eHmYKmByWs3NmEcwDplCKWUsGNuEds5HRreWXjITTsq+SV+W6/EXKoeqh/wfPhkwBw==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.009bbbc07e57c13b9a54cfdc1c71505b33584d655515c41961695b62d70515e66d3ae4c75800dcda26869aeda267a4e466c09ff961fc4f008a165a87fab934d5.css integrity="sha512-AJu7wH5XwTuaVM/cHHFQWzNYTWVVFcQZYWlbYtcFFeZtOuTHWADc2iaGmu2iZ6TkZsCf+WH8TwCKFlqH+rk01Q==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 <meta name=robots content="index, follow">
@@ -97,6 +97,7 @@
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/host-node/>Host Node</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/output-messages/>Output Messages</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/characteristics/>Characteristics</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/wait-for-setup/>Wait For Setup</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/faq/>FAQ</a></li>
 </ul>
 </div>
@@ -108,6 +109,7 @@
 <div class=collapse id=collapse-examples>
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/examples/demo-setup/>Demo Setup</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/examples/washing-machine-monitor/>Washing Machine Monitor</a></li>
 </ul>
 </div>
 </div>
@@ -436,6 +438,7 @@
 <div class=collapse id=collapse-discover-more>
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/discover-more/contribution/>Contribution</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/discover-more/credits/>Credits</a></li>
 </ul>
 </div>
 </div>
@@ -497,7 +500,7 @@
 </tr>
 <tr>
 <td><a href=https://nrchkb.github.io/wiki/characteristic/carbon-monoxide-detected/>Carbon Monoxide Detected</a></td>
-<td>✓</td>
+<td><b>✓</b></td>
 </tr>
 </tbody>
 </table>
@@ -541,7 +544,7 @@ Cloud Relay &rarr;
 </footer>
 <script src=https://nrchkb.github.io/js/bootstrap.min.d67050adf5d370668aede4201f82af781b16970934804995a1ca37c1ee9222c2fc530972aa6d5d2b6124caf1fe318f139aac99df2c1e89af65504fc1185c7972.js integrity="sha512-1nBQrfXTcGaK7eQgH4KveBsWlwk0gEmVoco3we6SIsL8Uwlyqm1dK2EkyvH+MY8TmqyZ3yweia9lUE/BGFx5cg==" crossorigin=anonymous defer></script>
 <script src=https://nrchkb.github.io/js/highlight.min.b7973ffef359a1b055ecdd39cb2ff9a0d72d4128580c500b1baf63e6ed291900f9100e1ad9bba6b0ebc958b68ef4add867bb881656f30cde57a2a62ff043e0db.js integrity="sha512-t5c//vNZobBV7N05yy/5oNctQShYDFALG69j5u0pGQD5EA4a2bumsOvJWLaO9K3YZ7uIFlbzDN5XoqYv8EPg2w==" crossorigin=anonymous defer></script>
-<script src=https://nrchkb.github.io/main.min.505537b7832094f26c2d992c19e4be58edeff89a06181f4d11014a70272248d7cf88207c6280fac6fe716222c87fac808facea1864f858fce580ac640684b4b6.js integrity="sha512-UFU3t4MglPJsLZksGeS+WO3v+JoGGB9NEQFKcCciSNfPiCB8YoD6xv5xYiLIf6yAj6zqGGT4WPzlgKxkBoS0tg==" crossorigin=anonymous defer></script>
+<script src=https://nrchkb.github.io/main.min.afa95ced5821ad4bc06dae3e5f0a20fe6675326e5c7f5a0444a8dd9186718161f21573b997b30f49b3048cdb164d6c7bc2a69913149ddfb86801bd3730f8ae1e.js integrity="sha512-r6lc7VghrUvAba4+Xwog/mZ1Mm5cf1oERKjdkYZxgWHyFXO5l7MPSbMEjNsWTWx7wqaZExSd37hoAb03MPiuHg==" crossorigin=anonymous defer></script>
 <script type=text/javascript src=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js></script>
 <script type=text/javascript>docsearch({apiKey:'c0d6b8c0b6482607e905f4b1ba9397b4',indexName:'nrchkb',inputSelector:'#userinput',debug:!1})</script>
 <script src=https://nrchkb.github.io/index.js defer></script>
