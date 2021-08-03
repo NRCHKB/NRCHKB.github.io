@@ -11,6 +11,7 @@ menu:
     parent: "examples"
 weight: 1
 toc: true
+contributors: ["crxporter"]
 ---
 
 ## Explanation
@@ -68,5 +69,3 @@ These examples are not meant to replace the excellent examples already on the wi
 This is a work in progress. I've tried to make things as simple as possible, but I may have been around Node-RED longer than you. Please don't be afraid to ask questions! We are a growing community on [Discord](https://discord.gg/amwV5tq) please come visit us anytime.
 
 For discussion about how we can make these demos better, please see [issue #301](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/301). More demos will be added in the coming weeks, hopefully including most or all of the available services!
-
-Updated 4 November 2020. @CRXPorter.

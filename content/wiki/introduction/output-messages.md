@@ -11,6 +11,7 @@ menu:
     parent: "introduction"
 weight: 50
 toc: true
+contributors: ["crxporter"]
 ---
 
 Starting with version `1.3.0`, there are some changes in the `hap` part of the messages coming from this node.
