@@ -1,0 +1,18 @@
+{{ $characteristic := (where .Site.Data.hap.characteristics "constructorName" .Params.characteristic.name) }}
+{{ if $characteristic -}}
+  {{ range $characteristic }}
+    {{ if .knownValues -}}
+      <h2 id="known-values">Known Values<a href="#known-values" class="anchor" aria-hidden="true">#</a></h2>
+      <table>
+        <tbody>
+        {{ range .knownValues }}
+        <tr>
+          <th scope="row">{{ .key }}</th>
+          <td>{{ .value }}</td>
+        </tr>
+        {{ end -}}
+        </tbody>
+      </table>
+    {{ end -}}
+{{ end }}
+{{ end -}}

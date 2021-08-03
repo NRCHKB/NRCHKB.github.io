@@ -33,9 +33,13 @@
       {{ partial "nrchkb/service/list.html" . }}
 
       {{ partial "nrchkb/characteristic/uuid.html" . }}
-      {{ partial "nrchkb/characteristic/list.html" . }}
+      {{ partial "nrchkb/characteristic/details.html" . }}
+      {{ partial "nrchkb/characteristic/known-values.html" . }}
 
 			{{ partial "main/headline-hash.html" .Content }}
+
+      {{ partial "nrchkb/characteristic/used-by.html" . }}
+
 			{{ if .Site.Params.editPage -}}
 				{{ partial "main/edit-page.html" . }}
 			{{ end -}}
