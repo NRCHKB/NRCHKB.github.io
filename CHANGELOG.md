@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.22.0...v1.23.0) (2021-08-03)
+
+
+### Features
+
+* make table rows more visible ([b583f96](https://github.com/NRCHKB/NRCHKB.github.io/commit/b583f96ed56af33b4e980c75dc5c0c199fcb6ae1))
+
 ## [1.22.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.21.0...v1.22.0) (2021-08-03)
 
 
