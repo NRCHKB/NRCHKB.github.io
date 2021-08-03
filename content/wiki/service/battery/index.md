@@ -13,3 +13,5 @@ toc: true
 service:
   name: "Battery"
 ---
+
+**Note:** This service is to be used as a Linked Service as status of the parent's battery level.
