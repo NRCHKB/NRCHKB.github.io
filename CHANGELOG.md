@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.22.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.21.0...v1.22.0) (2021-08-03)
+
+
+### Features
+
+* add copy button for <code/> ([bb2ac4b](https://github.com/NRCHKB/NRCHKB.github.io/commit/bb2ac4b941f7ba79bd09261035fc123284b086a1))
+* generate known values for characteristics ([4fde95c](https://github.com/NRCHKB/NRCHKB.github.io/commit/4fde95c87054d9c5a22b5bec0a5a1e33f5700361))
+* make required tick more visible ([19e7790](https://github.com/NRCHKB/NRCHKB.github.io/commit/19e779067834b69ca8aad1ce2c8a49b7fc1be6f5))
+* migrated Battery page ([c71f9ca](https://github.com/NRCHKB/NRCHKB.github.io/commit/c71f9cabc618c5cb36bdedfeefd0de940295d52f))
+* migrated credits page ([4f05dfc](https://github.com/NRCHKB/NRCHKB.github.io/commit/4f05dfc821f6ed811985f50c12d41fce7804ab4c))
+* migrated Valve page ([14e3e25](https://github.com/NRCHKB/NRCHKB.github.io/commit/14e3e25476f6bb02c0fa1f4f133c3e0661786691))
+* migrated Wait for Setup page ([ff5da47](https://github.com/NRCHKB/NRCHKB.github.io/commit/ff5da47aab067baccd3113ea2432943c2b9c18ec))
+* migrated Washing Machine Monitor page ([373572c](https://github.com/NRCHKB/NRCHKB.github.io/commit/373572c2127062ba43952634511fd35bda5d042e))
+* show known values on characteristics page ([61c2622](https://github.com/NRCHKB/NRCHKB.github.io/commit/61c26223dd23684b75083499382f04bc51ab0c54))
+
+
+### Bug Fixes
+
+* remove duplicated entries from docs-toc ([ae9d4ca](https://github.com/NRCHKB/NRCHKB.github.io/commit/ae9d4ca1b05190ee633c068806eacfd2f930aabe))
+
 ## [1.21.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.20.0...v1.21.0) (2021-08-02)
 
 
