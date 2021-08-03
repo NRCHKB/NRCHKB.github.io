@@ -28,7 +28,7 @@ Currently, we have two nodes:
 
 ### Service Node
 
-Service Node mostly represents Service which will appear in Apple Home App.
+Service Node mostly represents Service which will appear in Apple Home.app.
 It is our main building block for creating interaction between house, application and our other systems.
 
 Find more about this node [here]({{< ref "/wiki/introduction/service-node" >}} "Service Node").
@@ -36,7 +36,7 @@ Find more about this node [here]({{< ref "/wiki/introduction/service-node" >}} "
 ### Host Node
 
 Host Node is our configuration node. It is either Bridge or Standalone Accessory.
-It will be used to pair (connect) our virtual device in Apple Home App.
+It will be used to pair (connect) our virtual device in Apple Home.app.
 
 Find more about this node [here]({{< ref "/wiki/introduction/host-node" >}} "Host Node").
 

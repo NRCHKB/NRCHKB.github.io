@@ -12,4 +12,7 @@ menu:
 toc: true
 service:
   name: "IrrigationSystem"
+contributors: ["caitken-com"]
 ---
+
+Used as an Irrigation accessory with program scheduling and manual mode.

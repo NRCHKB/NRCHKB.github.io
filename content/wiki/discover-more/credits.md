@@ -28,7 +28,7 @@ Many others have come and gone adding to the work. Thanks to each of you!
 
 > As Marius Schmeding seems to have abandoned his great [work](https://github.com/mschm/node-red-contrib-homekit), I decided to fork his repo and to introduce some major rework.
 >
->The biggest change is the use of HAP-NodeJS in **bridged mode**: only add one bridge in the iOS home app to access all your devices!
+>The biggest change is the use of HAP-NodeJS in **bridged mode**: only add one bridge in the iOS Home.app to access all your devices!
 Also, I (believe I) fixed some issues:
 >
 > - devices don't show as unreachable after redeploying

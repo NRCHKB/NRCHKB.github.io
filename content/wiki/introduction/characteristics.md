@@ -88,7 +88,7 @@ You should watch out, that this values are in `Reciprocal megakelvin` so you hav
 }
 ```
 
-### Valve with only "irrigation" valve type (will show in Home app as sprinkler)
+### Valve with only "irrigation" valve type (will show in Home.app as sprinkler)
 
 ```json
 {
@@ -102,7 +102,7 @@ You should watch out, that this values are in `Reciprocal megakelvin` so you hav
 
 ## General Characteristics
 
-Some characteristics are available to almost all services but do not do much to change the use of the item in the Home app. For example Active, Tampered, or Fault. These characteristics are optional and are used to show extra status information in the Home app.
+Some characteristics are available to almost all services but do not do much to change the use of the item in the Home.app. For example Active, Tampered, or Fault. These characteristics are optional and are used to show extra status information in the Home.app.
 
 This list is not meant to be a comprehensive or exhaustive list of general characteristics.
 

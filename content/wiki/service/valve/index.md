@@ -82,7 +82,7 @@ In this sample only one relay module is used. You should paste flow for each rel
 
 ### Sprinkler using a simple outlet (e.g. Philips Hue)
 
-- Duration is configurable and remaining duration time will be displayed in the Home App.
+- Duration is configurable and remaining duration time will be displayed in the Home.app.
 - Implementation in a simple loop
 - My Osram Smart Plug attached to Philips Hue Bridge can be controlled by boolean characteristic "On", for other characteristics change function nodes as required
 - Configure default duration (used each time after relaunching Node-red) in "Init" node
