@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.24.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.23.0...v1.24.0) (2021-08-03)
+
+
+### Features
+
+* GitHub wiki migration batch (part 1) ([8d010e5](https://github.com/NRCHKB/NRCHKB.github.io/commit/8d010e51def651840528cafe0bd82f759cb55f81))
+* GitHub wiki migration batch (part 2) ([cb4f099](https://github.com/NRCHKB/NRCHKB.github.io/commit/cb4f099a4cc37db07d2ed2f976e433ae25feb4a3))
+
 ## [1.23.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.22.0...v1.23.0) (2021-08-03)
 
 
