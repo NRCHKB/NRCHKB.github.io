@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.26.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.25.0...v1.26.0) (2021-08-09)
+
+
+### Features
+
+* characteristic page title without whitespace ([f0bbd1f](https://github.com/NRCHKB/NRCHKB.github.io/commit/f0bbd1fbea860b90ec64dddbcc4b6b85e360430c))
+
 ## [1.25.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.24.0...v1.25.0) (2021-08-03)
 
 
