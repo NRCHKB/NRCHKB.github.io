@@ -31,10 +31,11 @@ switch (myArgs[0]) {
 var characteristicDataFile = "../data/hap/characteristics.json";
 var characteristicFolder = "../content/wiki/characteristic/";
 var characteristicTemplate = function (element) {
-    var title = element.key;
+    var title = element.name;
+    var description = element.key;
     var name = element.name;
     var date = new Date().toISOString();
-    return "---\ntitle: \"" + title + "\"\ndescription: \"" + title + "\"\nlead: \"\"\ndate: " + date + "\nlastmod: " + date + "\ndraft: false\nimages: []\nmenu:\n  docs:\n    parent: \"characteristic\"\ntoc: true\ncharacteristic:\n  name: \"" + name + "\"\n---\n";
+    return "---\ntitle: \"" + title + "\"\ndescription: \"" + description + "\"\nlead: \"\"\ndate: " + date + "\nlastmod: " + date + "\ndraft: false\nimages: []\nmenu:\n  docs:\n    parent: \"characteristic\"\ntoc: true\ncharacteristic:\n  name: \"" + name + "\"\n---\n";
 };
 var serviceDataFile = "../data/hap/services.json";
 var serviceFolder = "../content/wiki/service/";

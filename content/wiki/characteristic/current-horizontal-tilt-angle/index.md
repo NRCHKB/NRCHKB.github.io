@@ -1,9 +1,9 @@
 ---
-title: "Current Horizontal Tilt Angle"
+title: "CurrentHorizontalTiltAngle"
 description: "Current Horizontal Tilt Angle"
 lead: ""
-date: 2021-04-17T18:50:11.975Z
-lastmod: 2021-04-17T18:50:11.975Z
+date: 2021-08-09T18:32:49.964Z
+lastmod: 2021-08-09T18:32:49.964Z
 draft: false
 images: []
 menu:

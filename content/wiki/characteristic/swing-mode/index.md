@@ -1,9 +1,9 @@
 ---
-title: "Swing Mode"
+title: "SwingMode"
 description: "Swing Mode"
 lead: ""
-date: 2021-04-17T18:50:12.009Z
-lastmod: 2021-04-17T18:50:12.009Z
+date: 2021-08-09T18:32:49.979Z
+lastmod: 2021-08-09T18:32:49.979Z
 draft: false
 images: []
 menu:

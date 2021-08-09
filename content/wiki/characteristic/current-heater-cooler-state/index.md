@@ -1,9 +1,9 @@
 ---
-title: "Current Heater-Cooler State"
+title: "CurrentHeaterCoolerState"
 description: "Current Heater-Cooler State"
 lead: ""
-date: 2021-04-17T18:50:11.975Z
-lastmod: 2021-04-17T18:50:11.975Z
+date: 2021-08-09T18:32:49.964Z
+lastmod: 2021-08-09T18:32:49.964Z
 draft: false
 images: []
 menu:

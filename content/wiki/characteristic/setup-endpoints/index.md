@@ -1,9 +1,9 @@
 ---
-title: "Setup Endpoints"
+title: "SetupEndpoints"
 description: "Setup Endpoints"
 lead: ""
-date: 2021-04-17T18:50:12.002Z
-lastmod: 2021-04-17T18:50:12.002Z
+date: 2021-08-09T18:32:49.976Z
+lastmod: 2021-08-09T18:32:49.976Z
 draft: false
 images: []
 menu:

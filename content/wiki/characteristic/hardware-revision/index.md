@@ -1,9 +1,9 @@
 ---
-title: "Hardware Revision"
+title: "HardwareRevision"
 description: "Hardware Revision"
 lead: ""
-date: 2021-04-17T18:50:11.982Z
-lastmod: 2021-04-17T18:50:11.982Z
+date: 2021-08-09T18:32:49.968Z
+lastmod: 2021-08-09T18:32:49.968Z
 draft: false
 images: []
 menu:

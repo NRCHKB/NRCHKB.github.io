@@ -1,9 +1,9 @@
 ---
-title: "Valve Type"
+title: "ValveType"
 description: "Valve Type"
 lead: ""
-date: 2021-04-17T18:50:12.016Z
-lastmod: 2021-04-17T18:50:12.016Z
+date: 2021-08-09T18:32:49.982Z
+lastmod: 2021-08-09T18:32:49.982Z
 draft: false
 images: []
 menu:

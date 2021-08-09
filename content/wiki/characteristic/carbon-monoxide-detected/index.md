@@ -1,9 +1,9 @@
 ---
-title: "Carbon Monoxide Detected"
+title: "CarbonMonoxideDetected"
 description: "Carbon Monoxide Detected"
 lead: ""
-date: 2021-04-17T18:50:11.970Z
-lastmod: 2021-04-17T18:50:11.970Z
+date: 2021-08-09T18:32:49.962Z
+lastmod: 2021-08-09T18:32:49.962Z
 draft: false
 images: []
 menu:

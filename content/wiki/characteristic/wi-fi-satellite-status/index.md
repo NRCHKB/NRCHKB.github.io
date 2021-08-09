@@ -1,9 +1,9 @@
 ---
-title: "Wi-Fi Satellite Status"
+title: "WiFiSatelliteStatus"
 description: "Wi-Fi Satellite Status"
 lead: ""
-date: 2021-04-17T18:50:12.019Z
-lastmod: 2021-04-17T18:50:12.019Z
+date: 2021-08-09T18:32:49.983Z
+lastmod: 2021-08-09T18:32:49.983Z
 draft: false
 images: []
 menu:

@@ -1,9 +1,9 @@
 ---
-title: "Maximum Transmit Power"
+title: "MaximumTransmitPower"
 description: "Maximum Transmit Power"
 lead: ""
-date: 2021-04-17T18:50:11.989Z
-lastmod: 2021-04-17T18:50:11.989Z
+date: 2021-08-09T18:32:49.971Z
+lastmod: 2021-08-09T18:32:49.971Z
 draft: false
 images: []
 menu:

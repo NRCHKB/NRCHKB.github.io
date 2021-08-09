@@ -1,9 +1,9 @@
 ---
-title: "Security System Alarm Type"
+title: "SecuritySystemAlarmType"
 description: "Security System Alarm Type"
 lead: ""
-date: 2021-04-17T18:50:12.000Z
-lastmod: 2021-04-17T18:50:12.000Z
+date: 2021-08-09T18:32:49.975Z
+lastmod: 2021-08-09T18:32:49.975Z
 draft: false
 images: []
 menu:

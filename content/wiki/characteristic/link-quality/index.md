@@ -1,9 +1,9 @@
 ---
-title: "Link Quality"
+title: "LinkQuality"
 description: "Link Quality"
 lead: ""
-date: 2021-04-17T18:50:11.986Z
-lastmod: 2021-04-17T18:50:11.986Z
+date: 2021-08-09T18:32:49.969Z
+lastmod: 2021-08-09T18:32:49.969Z
 draft: false
 images: []
 menu:

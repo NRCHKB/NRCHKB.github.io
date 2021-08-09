@@ -1,9 +1,9 @@
 ---
-title: "Target Temperature"
+title: "TargetTemperature"
 description: "Target Temperature"
 lead: ""
-date: 2021-04-17T18:50:12.012Z
-lastmod: 2021-04-17T18:50:12.012Z
+date: 2021-08-09T18:32:49.981Z
+lastmod: 2021-08-09T18:32:49.981Z
 draft: false
 images: []
 menu:

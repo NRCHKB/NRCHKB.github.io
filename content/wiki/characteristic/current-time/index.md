@@ -1,9 +1,9 @@
 ---
-title: "Current Time"
+title: "CurrentTime"
 description: "Current Time"
 lead: ""
-date: 2021-04-17T18:50:11.977Z
-lastmod: 2021-04-17T18:50:11.977Z
+date: 2021-08-09T18:32:49.965Z
+lastmod: 2021-08-09T18:32:49.965Z
 draft: false
 images: []
 menu:

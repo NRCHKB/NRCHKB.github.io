@@ -1,9 +1,9 @@
 ---
-title: "Thread OpenThread Version"
+title: "ThreadOpenThreadVersion"
 description: "Thread OpenThread Version"
 lead: ""
-date: 2021-04-17T18:50:12.014Z
-lastmod: 2021-04-17T18:50:12.014Z
+date: 2021-08-09T18:32:49.981Z
+lastmod: 2021-08-09T18:32:49.981Z
 draft: false
 images: []
 menu:

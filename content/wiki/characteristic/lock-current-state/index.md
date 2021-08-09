@@ -1,9 +1,9 @@
 ---
-title: "Lock Current State"
+title: "LockCurrentState"
 description: "Lock Current State"
 lead: ""
-date: 2021-04-17T18:50:11.987Z
-lastmod: 2021-04-17T18:50:11.987Z
+date: 2021-08-09T18:32:49.970Z
+lastmod: 2021-08-09T18:32:49.970Z
 draft: false
 images: []
 menu:

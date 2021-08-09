@@ -15,13 +15,14 @@ const characteristicFolder = "../content/wiki/characteristic/"
 
 const characteristicTemplate = (element: PageData) => {
 
-  const title = element.key
+  const title = element.name
+  const description = element.key
   const name = element.name
   const date = new Date().toISOString()
 
   return `---
 title: "${title}"
-description: "${title}"
+description: "${description}"
 lead: ""
 date: ${date}
 lastmod: ${date}
