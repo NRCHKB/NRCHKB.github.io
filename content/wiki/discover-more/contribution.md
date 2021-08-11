@@ -1,9 +1,9 @@
 ---
 title: "Contribution"
-description: "Contribution"
+description: "Few hints how to contribute to our wiki!"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-08-11T22:39:08.118Z
 draft: false
 images: []
 menu:
