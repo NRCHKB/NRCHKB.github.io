@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.29.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.26.0...v1.29.0) (2021-08-11)
+
+
+### Features
+
+* Generate changelog wiki page based on NRCHKB repo ([7760e11](https://github.com/NRCHKB/NRCHKB.github.io/commit/7760e11bb30abf91fa2a4771df56f67891935e32))
+* Update GH Action to use Node 16 and remove dependabot ([858cfa3](https://github.com/NRCHKB/NRCHKB.github.io/commit/858cfa39dd4d1c137a3e6e820421bc735ac59a70))
+* Update readme ([45b12cd](https://github.com/NRCHKB/NRCHKB.github.io/commit/45b12cd2a1ba769d293b8c705a0417d03b836478))
+* Updated contribution page ([295fa4b](https://github.com/NRCHKB/NRCHKB.github.io/commit/295fa4b056376fad11b9cd551497ab6542aec6bb))
+
 ## [1.28.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.27.0...v1.28.0) (2021-08-11)
 
 
