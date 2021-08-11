@@ -1,15 +1,16 @@
 {
-  "name": "utils",
-  "version": "1.1.0",
-  "dependencies": {},
+  "name": "nrchkb-github-io-utils",
+  "version": "1.2.0",
   "devDependencies": {
-    "@types/node": "^14.17.9",
+    "@types/node": "^16.4.14",
     "hap-nodejs": "^0.9.4",
+    "node-red-contrib-homekit-bridged": "^1.3.6",
     "rimraf": "^3.0.2",
     "ts-node": "^10.2.0",
     "typescript": "^4.3.5"
   },
   "scripts": {
-    "wiki": "tsc --esModuleInterop generateWikiPages.ts && node generateWikiPages.js"
+    "wiki": "ts-node generateWikiPages.ts",
+    "changelog": "ts-node generateChangelog.ts"
   }
 }
