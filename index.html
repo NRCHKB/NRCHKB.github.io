@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.14bd6fa33c3500afcf1c67141ab905d4a6ee38fa0247e95dd03681b4ee6a93a36416ba676ccd07e631171183396abcfd504e4d9dd040e8b735f5cf01a74a41a3.css integrity="sha512-FL1vozw1AK/PHGcUGrkF1KbuOPoCR+ld0DaBtO5qk6NkFrpnbM0H5jEXEYM5arz9UE5NndBA6Lc19c8Bp0pBow==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.14042fc5f89264d807fb7e40a22d5ca1291128174c98eb6799a1b1257efbacb0e7ad9560bf16f103d2604b3094c1b665425b4b2b6c54e3d934d77a1ba81f22f9.css integrity="sha512-FAQvxfiSZNgH+35Aoi1coSkRKBdMmOtnmaGxJX77rLDnrZVgvxbxA9JgSzCUwbZlQltLK2xU49k013obqB8i+Q==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 <meta name=robots content="index, follow">
@@ -23,7 +23,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nrchkb.github.io/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
-<meta property="og:updated_time" content="2021-04-01T00:00:00+02:00">
+<meta property="og:updated_time" content="2021-08-11T19:51:27+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <link rel=alternate type=application/rss+xml href=https://nrchkb.github.io/index.xml>
@@ -103,7 +103,23 @@
 </div>
 <section class="section section-sm container-fluid">
 <div class="row justify-content-center text-center">
-<div class=col-lg-9></div>
+<div class=col-lg-9><h3 id=about-this-contrib>About this Contrib</h3>
+<div class=clearfix>
+<img src=/images/presentation/demonstration.gif class="col-md-6 float-md-end mb-3 ms-md-3" style=max-width:100% alt="NRCHKB Demonstration">
+<p>
+This is a collection of nodes which can be used to imitate HomeKit devices inside of Node-RED. Messages coming into these nodes are able to set device states and status in Apple's iOS and MacOS Home apps. Commands from Home apps (or Siri) will be passed from these nodes into your Node-RED flows.
+</p>
+</div>
+<h3 id=easy-install>Easy Install</h3>
+<p>If you have Node-RED already installed, the recommended install method is to use the editor. To do this, select <code>Manage palette</code> from the Node-RED menu (top right).
+Then select <code>Install</code> tab in the palette. Search for and install this node (<code>node-red-contrib-homekit-bridged</code>).</p>
+<h3 id=docker-install>Docker Install</h3>
+<p>You can also pull a <a href=https://github.com/NRCHKB/node-red-contrib-homekit-docker>docker image</a> containing everything needed to get started.</p>
+<h3 id=getting-started>Getting Started</h3>
+<p><a href=/wiki/examples/><strong>Example flows</strong></a> For a quick start, we recommend checking out the flows which are included with the plugin, they can be imported using the Node-RED hamburger menu after install.</p>
+<p><a href=/wiki/introduction/quick-start/><strong>Documentation home page</strong></a> For more instructions, information about how things work, and detailed examples (including various real life examples from the community).</p>
+<p><a href=https://discord.gg/uvYac5u><strong>Discord</strong></a> Again, one of us is on Discord every day, always ready to help!</p>
+</div>
 </div>
 </section>
 <footer class="footer text-muted">
