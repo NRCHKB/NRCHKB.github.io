@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.30.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.29.1...v1.30.0) (2021-08-11)
+
+
+### Features
+
+* index layout improvements ([30b6584](https://github.com/NRCHKB/NRCHKB.github.io/commit/30b65847f19148741b96edf5ccabd7c81b01414d))
+
 ### [1.29.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.29.0...v1.29.1) (2021-08-11)
 
 
