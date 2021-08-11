@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.14042fc5f89264d807fb7e40a22d5ca1291128174c98eb6799a1b1257efbacb0e7ad9560bf16f103d2604b3094c1b665425b4b2b6c54e3d934d77a1ba81f22f9.css integrity="sha512-FAQvxfiSZNgH+35Aoi1coSkRKBdMmOtnmaGxJX77rLDnrZVgvxbxA9JgSzCUwbZlQltLK2xU49k013obqB8i+Q==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.5d0871f2a941862d4934ea733fd5895a5b630cf240bc21493411d5d622552a162a829454420c13209f216a95c8b86e8d52a2d4c1b331440f0b96c6de8c0e91a2.css integrity="sha512-XQhx8qlBhi1JNOpzP9WJWltjDPJAvCFJNBHV1iJVKhYqgpRUQgwTIJ8hapXIuG6NUqLUwbMxRA8LlsbejA6Rog==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 <meta name=robots content="index, follow">
@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/discover-more/contribution/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-04-01T00:00:00+02:00">
-<meta property="article:modified_time" content="2021-04-04T14:12:00+01:00">
+<meta property="article:modified_time" content="2021-08-11T21:57:06+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -452,14 +452,10 @@
 <h3>On this page</h3>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#structure>Structure</a>
-<ul>
-<li><a href=#introduction>Introduction</a></li>
-<li><a href=#examples>Examples</a></li>
-<li><a href=#service-and-characteristic>Service and Characteristic</a></li>
-</ul>
-</li>
-<li><a href=#editing-from-website>Editing from website</a></li>
+<li><a href=#editing>Editing</a></li>
+<li><a href=#page-parameters>Page parameters</a></li>
+<li><a href=#repository-directory-structure>Repository directory structure</a></li>
+<li><a href=#adding-contributor>Adding contributor</a></li>
 </ul>
 </nav>
 </div>
@@ -474,22 +470,83 @@
 </ol>
 </nav>
 <h1>Contribution</h1>
-<small class=updated>Updated April 4, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<small class=updated>Updated August 11, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead></p>
-<p>We are open for all contributions regarding our wiki page at https://nrchkb.github.io/</p>
-<p>If you want to contribute consider opening discussion first before creating PR.</p>
-<h2 id=structure>Structure<a href=#structure class=anchor aria-hidden=true>#</a> </h2>
-<p>At <code>content/wiki</code> you will find folders for our wiki sub categories.
-<img src=https://user-images.githubusercontent.com/2881159/113577526-afa75b80-9621-11eb-890f-174dabcd2957.png alt=image></p>
-<h3 id=introduction>Introduction<a href=#introduction class=anchor aria-hidden=true>#</a> </h3>
-<p>General how to pages and articles not fitting rest of categories.</p>
-<h3 id=examples>Examples<a href=#examples class=anchor aria-hidden=true>#</a> </h3>
-<p>Node-RED examples (working or semi-working flows) that can be used by new users to start a journey with nrchkb.</p>
-<h3 id=service-and-characteristic>Service and Characteristic<a href=#service-and-characteristic class=anchor aria-hidden=true>#</a> </h3>
-<p>HomeKit&rsquo;s services and characteristics can be found here.
-If you believe that some page is missing then please open discussion since those pages are generated with our <a href=https://github.com/NRCHKB/NRCHKB.github.io/tree/master/utils>scripts</a>.</p>
-<h2 id=editing-from-website>Editing from website<a href=#editing-from-website class=anchor aria-hidden=true>#</a> </h2>
-<p>All wiki pages has <code>Edit this page on GitHub</code> button on the bottom of the page. You can use it to fast-forward to specific file in our repository.</p>
+<h2 id=editing>Editing<a href=#editing class=anchor aria-hidden=true>#</a> </h2>
+<ol>
+<li>Open desired page
+<ol>
+<li>For example <a href=https://nrchkb.github.io/wiki/service/lock-mechanism/><code>https://nrchkb.github.io/wiki/service/lock-mechanism/</code></a></li>
+</ol>
+</li>
+<li>Click <a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/service/lock-mechanism/index.md><code>✏️Edit this page on GitHub</code></a> on the bottom of the page
+<ol>
+<li>It will redirect you to raw page file in our GitHub repository</li>
+</ol>
+</li>
+<li>In GitHub editor add or edit content after last <code>---</code>
+<ol>
+<li>For content, you can use markdown (preferred) or html</li>
+</ol>
+</li>
+<li>Create new branch for commit and create Pull Request
+<ol>
+<li>Our Moderators will respond shortly!</li>
+</ol>
+</li>
+</ol>
+<h2 id=page-parameters>Page parameters<a href=#page-parameters class=anchor aria-hidden=true>#</a> </h2>
+<p>On our every page between <code>---</code> you can find page specific parameters.</p>
+<table>
+<thead>
+<tr>
+<th>parameter</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>Page title, used in browser tab and also displayed at the top of the page</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Page description, displayed when you share page link</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Page creation date (ISO 8601)</td>
+</tr>
+<tr>
+<td>lastmod</td>
+<td>Page last modification date (ISO 8601), to be edited after every change. You can use <a href=https://www.timestamp-converter.com/>that</a> page to generate one.</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>Page order in menu</td>
+</tr>
+<tr>
+<td>toc</td>
+<td>If page table of content should be displayed</td>
+</tr>
+<tr>
+<td>contributors</td>
+<td>List of contributors</td>
+</tr>
+</tbody>
+</table>
+<h2 id=repository-directory-structure>Repository directory structure<a href=#repository-directory-structure class=anchor aria-hidden=true>#</a> </h2>
+<p>All our wiki pages are located in <code>content/wiki</code> folder <a href=https://github.com/NRCHKB/NRCHKB.github.io/tree/master/content/wiki>in our repository</a>.</p>
+<h2 id=adding-contributor>Adding contributor<a href=#adding-contributor class=anchor aria-hidden=true>#</a> </h2>
+<p>Once you edit or add any content feel free to add yourself to contributors.</p>
+<ol>
+<li>In specific page add your name to the end of array <code>contributors: ["Shaquu"]</code></li>
+<li>If you want you can create your profile page in <code>content/contributors</code>
+<ol>
+<li>Use <a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/contributors/shaquu/_index.md>this</a> as an example.</li>
+</ol>
+</li>
+</ol>
 <p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/discover-more/contribution.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
 <a href=https://nrchkb.github.io/wiki/examples/demo-setup/>
