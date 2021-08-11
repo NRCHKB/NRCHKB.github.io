@@ -3,7 +3,7 @@ title: "Outlet"
 description: "Outlet"
 lead: ""
 date: 2021-04-17T18:50:12.033Z
-lastmod: 2021-04-17T18:50:12.033Z
+lastmod: 2021-08-11T22:15:36.344Z
 draft: false
 images: []
 menu:
@@ -21,7 +21,7 @@ For this use case, I have an outlet module ( in my case a WION Outlet ) that has
 
 In TASMOTA I have this config
 
-```
+```yaml
 PowerOnState 1
 SetOption55 1
 WifiConfig 4

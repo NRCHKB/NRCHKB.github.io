@@ -3,7 +3,7 @@ title: "Switch"
 description: "Switch"
 lead: ""
 date: 2021-04-17T18:50:12.036Z
-lastmod: 2021-08-03T23:21:00.000Z
+lastmod: 2021-08-11T22:15:36.344Z
 draft: false
 images: []
 menu:
@@ -30,6 +30,7 @@ Home.app            |  node-red | YouTube
 <img src="https://user-images.githubusercontent.com/2881159/73109648-07b5de80-3f04-11ea-9a74-5ec4af995b66.png" width="300" alt="Example Switch in Home.app"/>  |  ![Example Switch in node-red](https://user-images.githubusercontent.com/2881159/73109622-f240b480-3f03-11ea-94bc-066bf9715074.png) | [![Example Switch on YouTube](https://img.youtube.com/vi/kPuFKZWweCk/0.jpg)](https://www.youtube.com/watch?v=kPuFKZWweCk)
 
 #### Copyable Node-RED flow:
+
 <details>
 <summary>Click to expand!</summary>
 <p>

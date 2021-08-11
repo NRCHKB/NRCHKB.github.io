@@ -3,7 +3,7 @@ title: "Contribution"
 description: "Contribution"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-08-11T21:57:06.617Z
+lastmod: 2021-08-11T22:15:36.344Z
 draft: false
 images: []
 menu:
@@ -44,6 +44,7 @@ On our every page between `---` you can find page specific parameters.
 All our wiki pages are located in `content/wiki` folder [in our repository](https://github.com/NRCHKB/NRCHKB.github.io/tree/master/content/wiki).
 
 ## Adding contributor
+
 Once you edit or add any content feel free to add yourself to contributors.
 
 1. In specific page add your name to the end of array `contributors: ["Shaquu"]`

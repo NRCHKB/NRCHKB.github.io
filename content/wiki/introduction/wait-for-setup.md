@@ -3,7 +3,7 @@ title: "Wait For Setup"
 description: "Wait For Setup"
 lead: ""
 date: 2021-08-03T00:00:00+02:00
-lastmod: 2021-08-03T00:00:00+02:00
+lastmod: 2021-08-11T22:15:36.344Z
 draft: false
 images: []
 menu:
@@ -34,8 +34,7 @@ To configure accessory characteristics `setup` should contain `characteristicPro
 
 All properties passed in `setup` part of Setup Message will be merged with properties explicitly set in node properties page, so you may specify only properties to override those in properties page.
 
-Also, feature allows to configure homekit node based on some external variables.
-
+Also, feature allows configuring homekit node based on some external variables.
 
 Here is an example how to configure homekit node to set accessory name based on `ACCESSORY_NAME` variable and `ColorTemperature` feature will be enambel in case `FEATURE_COLOR_TEMPERATURE` variable is `true`:
 

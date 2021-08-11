@@ -3,7 +3,7 @@ title: "Garage Door Opener"
 description: "Garage Door Opener"
 lead: ""
 date: 2021-04-17T18:50:12.030Z
-lastmod: 2021-08-03T21:21:00+01:00
+lastmod: 2021-08-11T22:15:36.344Z
 draft: false
 images: []
 menu:
@@ -16,8 +16,10 @@ contributors: ["caitken-com", "ptath"]
 ---
 
 ## Synopsis
+
 Garage door is dangerous because it can lock you inside or damage your car.
 That's why it is a good idea to have at least 3 sensors:
+
 * Door fully opened
 * Door fully closed
 * Obstruction sensor
@@ -25,6 +27,7 @@ That's why it is a good idea to have at least 3 sensors:
 Motion sensor or button inside to open it manually also is optional.
 
 ## Examples
+
 ### Garage door with initial state and simple open/close logics.
 
 ```json
@@ -32,6 +35,7 @@ Motion sensor or button inside to open it manually also is optional.
 ```
 
 ### Advanced Garage door setup
+
 Based on [#33](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/33). Using [Sonoff-Tasmota](https://github.com/arendst/Sonoff-Tasmota) and mqtt in real case: NodeMCU with two magnetic sensors (to check open/close position) and one relay (to control Garage door). In this case relay should blink (`Power 3` in sonoff-tasmota) once to send signal to the door, please check this before running IRL!
 
 ![Flow](https://user-images.githubusercontent.com/38265886/56858896-bca47600-6947-11e9-80d1-7640fcf4da53.png)

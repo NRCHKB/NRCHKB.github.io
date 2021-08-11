@@ -3,7 +3,7 @@ title: "Camera RTPStream Management"
 description: "Camera RTPStream Management"
 lead: ""
 date: 2021-04-17T18:50:12.027Z
-lastmod: 2021-08-03T21:10:00.000Z
+lastmod: 2021-08-11T22:15:36.344Z
 draft: false
 images: []
 menu:
@@ -46,9 +46,11 @@ Step **three**: install and start Node-RED with the script [found here](https://
 Step **four**: install node-red-contrib-homekit-bridged from palette manager
 
 Step **five**: import this flow. It should be a single homekit node
+
 ```json
 [{"id":"36df1f80.39e34","type":"homekit-service","z":"c9e35eda.bb75f8","isParent":true,"bridge":"f18ad79f.5081e8","parentService":"","name":"Pi zero camera","serviceName":"CameraControl","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Default Serial Number","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"-re -r 6 -s 1280x720 -f video4linux2 -i /dev/video0","cameraConfigStillImageSource":"-s 1280x720 -f video4linux2 -i /dev/video0","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":"1280","cameraConfigMaxHeight":"720","cameraConfigMaxFPS":"6","cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"h264_omx","cameraConfigAudioCodec":"h264_omx","cameraConfigAudio":false,"cameraConfigPacketSize":"564","cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":3,"x":430,"y":260,"wires":[[],[],[]]},{"id":"f18ad79f.5081e8","type":"homekit-bridge","bridgeName":"Camera","pinCode":"111-11-111","port":"","allowInsecureRequest":false,"manufacturer":"Raspberry Pi","model":"Pi zero w","serialNo":"00001","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
 ```
+
 (Note to self: need to add this to the examples for next release)
 
 Step **six**: add it to your Home.app and enjoy!
@@ -60,7 +62,7 @@ Additional tuning could be done to optimize resolution and speed. The new Raspbe
 
 This setup adds motion detection to the Pi Zero W camera. Note that the pi zero does not appear to have enough power to run MotionEye alongside nodered so it is recommended to run MotionEyeOS alone on a pi with nodered on another server (bigger pi, nas, etc).
 
-1. Head over to (MotionEyeOS)[https://github.com/ccrisan/motioneyeos] releases and download the one for "raspberrypi", flash it to your SD card as you normally would
+1. Head over to [MotionEyeOS](https://github.com/ccrisan/motioneyeos) releases and download the one for "raspberrypi", flash it to your SD card as you normally would
 2. Boot and set up MotionEyeOS as you like it (motion detector settings, stream quality, etc) using their instructions. The one important part is to send your motion alerts to a webhook, the address used in the code below is `http://<node-red-pi-address>:1880/MotionEye`
 3. Import the flow below into your nodered machine, you will need to change the IP addresses in the camera node so they point to your pi zero.
 
@@ -72,6 +74,7 @@ This setup adds motion detection to the Pi Zero W camera. Note that the pi zero 
 
 Example written by CRXPorter.\
 Cameras tested:
+
 - Unifi G3 Flex
 - Unifi G3 Bullet
 - Unifi G4 Doorbell
@@ -80,19 +83,22 @@ Motion detection and doorbell presses are available for advanced users, ask @crx
 
 FFMPEG was installed on a pi 4. Nodered was installed with the official nodered on pi install script.
 
-**FFMPEG Install**
+#### FFMPEG Install
 
 Install build tools
+
 ```bash
 sudo apt install git pkg-config autoconf automake libtool libx264-dev
 ```
 
 ALSA runtime library
+
 ```bash
 sudo apt install libasound2-dev
 ```
 
 Download and build fdk-aac
+
 ```bash
 cd ~
 git clone https://github.com/mstorsjo/fdk-aac.git
@@ -105,6 +111,7 @@ sudo ldconfig
 ```
 
 Download and build ffmpeg
+
 ```bash
 cd ~
 git clone https://github.com/FFmpeg/FFmpeg.git
@@ -115,16 +122,18 @@ sudo make install
 ```
 
 Clean up
+
 ```bash
 cd ~
 rm -rf FFmpeg
 rm -rf fdk-aac
 ```
 
-**Cameras Setup**
+#### Cameras Setup
 
 The camera node setup is quite simple for Unifi. Be sure to enable unauthenticated still images on your cameras. My fields are filled out as shown:
-```
+
+```yaml
 Video Processor: ffmpeg
 Source: -re -rtsp_transport tcp -i rtsp://10.0.0.1:7447/randomstring
 Still image source: -i http://10.0.1.4/snap.jpeg
@@ -152,7 +161,8 @@ This is a work in progress. Written October 9, 2020. Please find me (crxporter) 
 Replace XXX with your camera's password.
 Do not use Video Filter with copy codec.
 There may be more ideal settings but these should get you up and running.
-```
+
+```yaml
 Video Processor: ffmpeg
 Source: -re -rtsp_transport tcp -i rtsp://admin:XXX@10.0.1.125:544//h264Preview_01_sub
 Still image source: -i http://10.0.1.125/cgi-bin/api.cgi?cmd=Snap&amp;channel=0&amp;rs=wuuPhkmUCeI9WG7C&amp;user=admin&amp;password=XXX

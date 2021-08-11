@@ -3,7 +3,7 @@ title: "Stateless Programmable Switch"
 description: "Stateless Programmable Switch"
 lead: ""
 date: 2021-04-17T18:50:12.036Z
-lastmod: 2021-08-03T21:52:00.000Z
+lastmod: 2021-08-11T22:15:36.344Z
 draft: false
 images: []
 menu:
@@ -32,6 +32,7 @@ In Node-RED it will look like:
 <img width="436" alt="Screen Shot 2019-06-29 at 10 42 19 AM" src="https://user-images.githubusercontent.com/38265886/60386459-95a71500-9a5a-11e9-931b-ef8a835fcc18.png">
 
 Copyable Node-RED Flow:
+
 ```json
 [{"id":"7d1c7028.435a78","type":"homekit-service","z":"821a2c87.afa08","isParent":true,"bridge":"fc1c5b0d.cd50f8","parentService":"","name":"State Less","serviceName":"StatelessProgrammableSwitch","topic":"","filter":false,"manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number","characteristicProperties":"{}","x":490,"y":480,"wires":[[]]},{"id":"f24f73b8.99fcd8","type":"inject","z":"821a2c87.afa08","name":"0","topic":"","payload":"{\"ProgrammableSwitchEvent\":0}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":250,"y":460,"wires":[["7d1c7028.435a78"]]},{"id":"f120536.bb629b","type":"inject","z":"821a2c87.afa08","name":"1","topic":"","payload":"{\"ProgrammableSwitchEvent\":1}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":250,"y":500,"wires":[["7d1c7028.435a78"]]},{"id":"cc75a2e8.032db","type":"inject","z":"821a2c87.afa08","name":"2","topic":"","payload":"{\"ProgrammableSwitchEvent\":2}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":250,"y":540,"wires":[["7d1c7028.435a78"]]},{"id":"fc1c5b0d.cd50f8","type":"homekit-bridge","z":"","bridgeName":"Irrigation","pinCode":"123-45-321","port":"","allowInsecureRequest":false,"manufacturer":"Garage","model":"Pi HAT","serialNo":"3Aplus","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true}]
 ```
@@ -41,6 +42,7 @@ Copyable Node-RED Flow:
 The following example is using a `Stateless Programme Switch` to control a light bulb. Even it is connected to a [Philips Hue node](https://flows.nodered.org/node/node-red-contrib-huemagic) to control the particular light bulb, it can be used also for sending payload for brightness also to a [NRCHKB Light Bulb](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/wiki/Example-Bulb-Dimmer) generated accessory.
 
 The following flow was designed to have the following features available by pressing the button:
+
 * Single press - Toggle light switching _on_ with recent brightness and _off_
 * Double press - Switch Light _on with full brightness_, but with _different color temperature_ depending on evening time
 * Long press - dim light bulb _stepwise up to 100% brightness_ and _down to 0%_ as long as the button remains pressed
@@ -56,6 +58,7 @@ There are some specials in this flow. First prerequisite is to persist the recen
 flow.set('BedroomLightBulbLeftsideBed', msg.payload)
 `
 which persists the following values:
+
 ```json
 {
    "on":false,
@@ -66,13 +69,14 @@ which persists the following values:
    "updated":"2020-11-04T14:08:59+01:00"
 }
 ```
+
 The Author of this example leave it to your own choice, whether to persist this value in Node-red globally or locally within the flow.
 For the dimming feature there is also a need persist a factor whether the bulb shall dim brighter or darker, which is represented by a `stepValue`. The function node for A `btnLongPress` event controls the brightness. Here is an excerpt of the code to illustrate the coding concept for dimming:
 
 ```javascript
 var stepValue  = flow.get('BedroomLightBulbLeftsideBedStepValue') || 10;
 var bulbStatus = flow.get('BedroomLightBulbLeftsideBed')
-...
+//...
 if (stepValue > 0) {
     // raise brightness of the bulb
 
@@ -93,8 +97,9 @@ if (stepValue > 0) {
     }
 
 }
-...
+//...
 ```
+
 Some more tricky is the required generation of messages needed for increment/decrement the brightness based on the state of a long pressed button. In this application it is required because the deCONZ connected AQARA button doesn't provide a "pulsed" `BTN_LONG_PRESS`-event. The following diagram gives an overview what's happens in the related part of the flow:
 
 <img width="2087" alt="image" src="https://user-images.githubusercontent.com/37173958/98128082-be91b280-1eb7-11eb-8528-79995e7d5107.png">
@@ -116,6 +121,7 @@ The required configurations will go in `Characteristic Properties` inside of the
 For the `ServiceLabel` node, the `ServiceLabelIndex` must be defined. `0` is "dot numbers" so the buttons will be called "one dot", "two dots", "three dots", etc. `1` is normal numbers, so they will be called "Button 1", "Button 2", "Button 3", etc. This example will explain using numbered buttons.
 
 Characteristic properties for `ServiceLabel` service:
+
 ```json
 {
     "ServiceLabelNamespace":
@@ -127,6 +133,7 @@ Characteristic properties for `ServiceLabel` service:
 ```
 
 The buttons are configured the same as the previous example with some added information in the Characteristic Properties (example for button 2):
+
 ```json
 {
     "ServiceLabelIndex":
@@ -148,6 +155,7 @@ Node-RED flow looks like:
 <img width="506" alt="Screen Shot 2019-06-29 at 11 21 55 AM" src="https://user-images.githubusercontent.com/38265886/60386832-1d435280-9a60-11e9-8e29-643c655b7e5f.png">
 
 Copyable Node-RED flow:
+
 ```json
 [{"id":"cb200db5.a6b7d","type":"homekit-service","z":"821a2c87.afa08","isParent":true,"bridge":"fc1c5b0d.cd50f8","parentService":"","name":"Multi Button","serviceName":"ServiceLabel","topic":"","filter":false,"manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number","characteristicProperties":"{\n    \"ServiceLabelNamespace\":\n    {\n        \"minValue\":1,\n        \"maxValue\":1\n    }\n}","x":490,"y":660,"wires":[[]]},{"id":"7613def3.7d80d","type":"homekit-service","z":"821a2c87.afa08","isParent":false,"bridge":"","parentService":"cb200db5.a6b7d","name":"Button 1","serviceName":"StatelessProgrammableSwitch","topic":"","filter":false,"manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number","characteristicProperties":"{\n    \"ServiceLabelIndex\":\n    {\n        \"minValue\":1,\n        \"maxValue\":1\n    }\n}","x":480,"y":800,"wires":[[]]},{"id":"2b9112bc.f268ae","type":"homekit-service","z":"821a2c87.afa08","isParent":false,"bridge":"","parentService":"cb200db5.a6b7d","name":"Button 2","serviceName":"StatelessProgrammableSwitch","topic":"","filter":false,"manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number","characteristicProperties":"{\n    \"ServiceLabelIndex\":\n    {\n        \"minValue\":2,\n        \"maxValue\":2\n    }\n}","x":480,"y":860,"wires":[[]]},{"id":"e471bc3c.1151e","type":"homekit-service","z":"821a2c87.afa08","isParent":false,"bridge":"","parentService":"cb200db5.a6b7d","name":"Button 3","serviceName":"StatelessProgrammableSwitch","topic":"","filter":false,"manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number","characteristicProperties":"{\n    \"ServiceLabelIndex\":\n    {\n        \"minValue\":3,\n        \"maxValue\":3\n    }\n}","x":480,"y":920,"wires":[[]]},{"id":"64408457.fc1604","type":"inject","z":"821a2c87.afa08","name":"0","topic":"","payload":"{\"ProgrammableSwitchEvent\":0}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":700,"wires":[["7613def3.7d80d"]]},{"id":"2eee0f62.a2f88","type":"inject","z":"821a2c87.afa08","name":"1","topic":"","payload":"{\"ProgrammableSwitchEvent\":1}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":740,"wires":[["7613def3.7d80d"]]},{"id":"22d5965.1f5156a","type":"inject","z":"821a2c87.afa08","name":"2","topic":"","payload":"{\"ProgrammableSwitchEvent\":2}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":780,"wires":[["7613def3.7d80d"]]},{"id":"2348cbc0.32e3c4","type":"inject","z":"821a2c87.afa08","name":"0","topic":"","payload":"{\"ProgrammableSwitchEvent\":0}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":820,"wires":[["2b9112bc.f268ae"]]},{"id":"adde99d3.2a0838","type":"inject","z":"821a2c87.afa08","name":"1","topic":"","payload":"{\"ProgrammableSwitchEvent\":1}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":860,"wires":[["2b9112bc.f268ae"]]},{"id":"ea7db176.764068","type":"inject","z":"821a2c87.afa08","name":"2","topic":"","payload":"{\"ProgrammableSwitchEvent\":2}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":900,"wires":[["2b9112bc.f268ae"]]},{"id":"2cc3fa36.2adf8e","type":"inject","z":"821a2c87.afa08","name":"0","topic":"","payload":"{\"ProgrammableSwitchEvent\":0}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":940,"wires":[["e471bc3c.1151e"]]},{"id":"feb803d2.f1e728","type":"inject","z":"821a2c87.afa08","name":"1","topic":"","payload":"{\"ProgrammableSwitchEvent\":1}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":980,"wires":[["e471bc3c.1151e"]]},{"id":"ecad23a6.12434","type":"inject","z":"821a2c87.afa08","name":"2","topic":"","payload":"{\"ProgrammableSwitchEvent\":2}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":190,"y":1020,"wires":[["e471bc3c.1151e"]]},{"id":"fc1c5b0d.cd50f8","type":"homekit-bridge","z":"","bridgeName":"Irrigation","pinCode":"123-45-321","port":"","allowInsecureRequest":false,"manufacturer":"Garage","model":"Pi HAT","serialNo":"3Aplus","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true}]
 ```
@@ -155,6 +163,7 @@ Copyable Node-RED flow:
 **Note**: The number of press actions for each button can be limited by adding to the Characteristic Properties for `"ProgrammableSwitchEvent": {"validValues": [0,1,2]}}` - taking away 0, 1, or 2 to disable single, double, or long press respectively.
 
 This example would only have double press and long press actions:
+
 ```json
 "ProgrammableSwitchEvent":
 {
