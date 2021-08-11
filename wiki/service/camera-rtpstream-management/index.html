@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/service/camera-rtpstream-management/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-04-17T18:50:12+00:00">
-<meta property="article:modified_time" content="2021-08-03T21:10:00+00:00">
+<meta property="article:modified_time" content="2021-08-11T22:15:36+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -475,7 +475,7 @@
 </ol>
 </nav>
 <h1>Camera RTPStream Management</h1>
-<small class=updated>Updated August 3, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/caitken-com/>caitken-com</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/itsj4y/>itsj4y</a></small>
+<small class=updated>Updated August 11, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/caitken-com/>caitken-com</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/itsj4y/>itsj4y</a></small>
 <p class=lead></p>
 <p><small>UUID: 00000110-0000-1000-8000-0026BB765291</small></p>
 <h2 id=characteristics>Characteristics<a href=#characteristics class=anchor aria-hidden=true>#</a></h2>
@@ -540,7 +540,7 @@ Additional tuning could be done to optimize resolution and speed. The new Raspbe
 <h3 id=-raspberry-pi-zero-w-running-motioneyeos>* Raspberry Pi Zero W running MotionEyeOS<a href=#-raspberry-pi-zero-w-running-motioneyeos class=anchor aria-hidden=true>#</a> </h3>
 <p>This setup adds motion detection to the Pi Zero W camera. Note that the pi zero does not appear to have enough power to run MotionEye alongside nodered so it is recommended to run MotionEyeOS alone on a pi with nodered on another server (bigger pi, nas, etc).</p>
 <ol>
-<li>Head over to (MotionEyeOS)[https://github.com/ccrisan/motioneyeos] releases and download the one for &ldquo;raspberrypi&rdquo;, flash it to your SD card as you normally would</li>
+<li>Head over to <a href=https://github.com/ccrisan/motioneyeos>MotionEyeOS</a> releases and download the one for &ldquo;raspberrypi&rdquo;, flash it to your SD card as you normally would</li>
 <li>Boot and set up MotionEyeOS as you like it (motion detector settings, stream quality, etc) using their instructions. The one important part is to send your motion alerts to a webhook, the address used in the code below is <code>http://&lt;node-red-pi-address>:1880/MotionEye</code></li>
 <li>Import the flow below into your nodered machine, you will need to change the IP addresses in the camera node so they point to your pi zero.</li>
 </ol>
@@ -555,7 +555,7 @@ Cameras tested:</p>
 </ul>
 <p>Motion detection and doorbell presses are available for advanced users, ask @crxporter on discord. A new Unifi node is pending from CRXPorter - hopefully coming late 2020.</p>
 <p>FFMPEG was installed on a pi 4. Nodered was installed with the official nodered on pi install script.</p>
-<p><strong>FFMPEG Install</strong></p>
+<h4 id=ffmpeg-install>FFMPEG Install<a href=#ffmpeg-install class=anchor aria-hidden=true>#</a> </h4>
 <p>Install build tools</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo apt install git pkg-config autoconf automake libtool libx264-dev
 </code></pre></div><p>ALSA runtime library</p>
@@ -580,46 +580,46 @@ sudo make install
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=nb>cd</span> ~
 rm -rf FFmpeg
 rm -rf fdk-aac
-</code></pre></div><p><strong>Cameras Setup</strong></p>
+</code></pre></div><h4 id=cameras-setup>Cameras Setup<a href=#cameras-setup class=anchor aria-hidden=true>#</a> </h4>
 <p>The camera node setup is quite simple for Unifi. Be sure to enable unauthenticated still images on your cameras. My fields are filled out as shown:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Video Processor: ffmpeg
-Source: -re -rtsp_transport tcp -i rtsp://10.0.0.1:7447/randomstring
-Still image source: -i http://10.0.1.4/snap.jpeg
-Max Streams: 3
-Max Width: 960
-Max Height: 720
-Max FPS: 10
-Max Bitrate: 3072
-Video Codec: h264_omx
-Audio Codec: libfdk_aac
-Audio: yes
-Packet Sixe: 564
-Map Video: 0:1
-Map Audio: 0:0
-Video Filter: scale=960:720
-Additional Command Line: -preset slow -profile:v high -level 4.2 -x264-params intra-refresh=1:bframes=0
-</code></pre></div><p>This is a work in progress. Written October 9, 2020. Please find me (crxporter) on <a href=https://discord.gg/uvYac5u>our discord server</a> if you&rsquo;re having problems or would like more information.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>Video Processor</span><span class=p>:</span><span class=w> </span><span class=l>ffmpeg</span><span class=w>
+</span><span class=w></span><span class=nt>Source</span><span class=p>:</span><span class=w> </span>-<span class=l>re -rtsp_transport tcp -i rtsp://10.0.0.1:7447/randomstring</span><span class=w>
+</span><span class=w></span><span class=nt>Still image source</span><span class=p>:</span><span class=w> </span>-<span class=l>i http://10.0.1.4/snap.jpeg</span><span class=w>
+</span><span class=w></span><span class=nt>Max Streams</span><span class=p>:</span><span class=w> </span><span class=m>3</span><span class=w>
+</span><span class=w></span><span class=nt>Max Width</span><span class=p>:</span><span class=w> </span><span class=m>960</span><span class=w>
+</span><span class=w></span><span class=nt>Max Height</span><span class=p>:</span><span class=w> </span><span class=m>720</span><span class=w>
+</span><span class=w></span><span class=nt>Max FPS</span><span class=p>:</span><span class=w> </span><span class=m>10</span><span class=w>
+</span><span class=w></span><span class=nt>Max Bitrate</span><span class=p>:</span><span class=w> </span><span class=m>3072</span><span class=w>
+</span><span class=w></span><span class=nt>Video Codec</span><span class=p>:</span><span class=w> </span><span class=l>h264_omx</span><span class=w>
+</span><span class=w></span><span class=nt>Audio Codec</span><span class=p>:</span><span class=w> </span><span class=l>libfdk_aac</span><span class=w>
+</span><span class=w></span><span class=nt>Audio</span><span class=p>:</span><span class=w> </span><span class=kc>yes</span><span class=w>
+</span><span class=w></span><span class=nt>Packet Sixe</span><span class=p>:</span><span class=w> </span><span class=m>564</span><span class=w>
+</span><span class=w></span><span class=nt>Map Video</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=p>:</span><span class=m>1</span><span class=w>
+</span><span class=w></span><span class=nt>Map Audio</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=p>:</span><span class=m>0</span><span class=w>
+</span><span class=w></span><span class=nt>Video Filter</span><span class=p>:</span><span class=w> </span><span class=l>scale=960:720</span><span class=w>
+</span><span class=w></span><span class=nt>Additional Command Line</span><span class=p>:</span><span class=w> </span>-<span class=l>preset slow -profile:v high -level 4.2 -x264-params intra-refresh=1:bframes=0</span><span class=w>
+</span></code></pre></div><p>This is a work in progress. Written October 9, 2020. Please find me (crxporter) on <a href=https://discord.gg/uvYac5u>our discord server</a> if you&rsquo;re having problems or would like more information.</p>
 <h3 id=-reolink>* Reolink<a href=#-reolink class=anchor aria-hidden=true>#</a> </h3>
 <p>(reolink here by @itsj4y)</p>
 <p>Replace XXX with your camera&rsquo;s password.
 Do not use Video Filter with copy codec.
 There may be more ideal settings but these should get you up and running.</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Video Processor: ffmpeg
-Source: -re -rtsp_transport tcp -i rtsp://admin:XXX@10.0.1.125:544//h264Preview_01_sub
-Still image source: -i http://10.0.1.125/cgi-bin/api.cgi?cmd=Snap&amp;amp;channel=0&amp;amp;rs=wuuPhkmUCeI9WG7C&amp;amp;user=admin&amp;amp;password=XXX
-Max Streams: 2
-Max Width: 1280
-Max Height: 720
-Max FPS: 10
-Max Bitrate: 3000
-Video Codec: copy
-Audio Codec: libfdk_aac
-Audio: no
-Packet Size: 1316
-Map Video: 0:0
-Map Audio: 0:1
-Additional Command Line: -tune zerolatency
-</code></pre></div>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>Video Processor</span><span class=p>:</span><span class=w> </span><span class=l>ffmpeg</span><span class=w>
+</span><span class=w></span><span class=nt>Source</span><span class=p>:</span><span class=w> </span>-<span class=l>re -rtsp_transport tcp -i rtsp://admin:XXX@10.0.1.125:544//h264Preview_01_sub</span><span class=w>
+</span><span class=w></span><span class=nt>Still image source</span><span class=p>:</span><span class=w> </span>-<span class=l>i http://10.0.1.125/cgi-bin/api.cgi?cmd=Snap&amp;amp;channel=0&amp;amp;rs=wuuPhkmUCeI9WG7C&amp;amp;user=admin&amp;amp;password=XXX</span><span class=w>
+</span><span class=w></span><span class=nt>Max Streams</span><span class=p>:</span><span class=w> </span><span class=m>2</span><span class=w>
+</span><span class=w></span><span class=nt>Max Width</span><span class=p>:</span><span class=w> </span><span class=m>1280</span><span class=w>
+</span><span class=w></span><span class=nt>Max Height</span><span class=p>:</span><span class=w> </span><span class=m>720</span><span class=w>
+</span><span class=w></span><span class=nt>Max FPS</span><span class=p>:</span><span class=w> </span><span class=m>10</span><span class=w>
+</span><span class=w></span><span class=nt>Max Bitrate</span><span class=p>:</span><span class=w> </span><span class=m>3000</span><span class=w>
+</span><span class=w></span><span class=nt>Video Codec</span><span class=p>:</span><span class=w> </span><span class=l>copy</span><span class=w>
+</span><span class=w></span><span class=nt>Audio Codec</span><span class=p>:</span><span class=w> </span><span class=l>libfdk_aac</span><span class=w>
+</span><span class=w></span><span class=nt>Audio</span><span class=p>:</span><span class=w> </span><span class=kc>no</span><span class=w>
+</span><span class=w></span><span class=nt>Packet Size</span><span class=p>:</span><span class=w> </span><span class=m>1316</span><span class=w>
+</span><span class=w></span><span class=nt>Map Video</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=p>:</span><span class=m>0</span><span class=w>
+</span><span class=w></span><span class=nt>Map Audio</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=p>:</span><span class=m>1</span><span class=w>
+</span><span class=w></span><span class=nt>Additional Command Line</span><span class=p>:</span><span class=w> </span>-<span class=l>tune zerolatency</span><span class=w>
+</span></code></pre></div>
 <p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/service/camera-rtpstream-management/index.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
 <a href=https://nrchkb.github.io/wiki/service/camera-recording-management/>

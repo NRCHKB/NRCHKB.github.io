@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/service/outlet/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-04-17T18:50:12+00:00">
-<meta property="article:modified_time" content="2021-04-17T18:50:12+00:00">
+<meta property="article:modified_time" content="2021-08-11T22:15:36+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -467,7 +467,7 @@
 </ol>
 </nav>
 <h1>Outlet</h1>
-<small class=updated>Updated April 17, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/caitken-com/>caitken-com</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/northernman54/>NorthernMan54</a></small>
+<small class=updated>Updated August 11, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/caitken-com/>caitken-com</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/northernman54/>NorthernMan54</a></small>
 <p class=lead></p>
 <p><small>UUID: 00000047-0000-1000-8000-0026BB765291</small></p>
 <h2 id=characteristics>Characteristics<a href=#characteristics class=anchor aria-hidden=true>#</a></h2>
@@ -494,16 +494,16 @@
 <h2 id=using-an-outlet-as-an-internet-down-detector-and-reset-your-modem-automatically-when-internet-access-is-lost>Using an outlet as an Internet Down detector and reset your modem automatically when internet access is lost.<a href=#using-an-outlet-as-an-internet-down-detector-and-reset-your-modem-automatically-when-internet-access-is-lost class=anchor aria-hidden=true>#</a> </h2>
 <p>For this use case, I have an outlet module ( in my case a WION Outlet ) that has my router plugged in to it and flashed with TASMOTA.</p>
 <p>In TASMOTA I have this config</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>PowerOnState 1
-SetOption55 1
-WifiConfig 4
-rule1 on wifi#disconnected do backlog power 0;delay 150;power 1; delay 1800 endon
-rule2 on system#boot do ruletimer1 600 endon on Rules#Timer=1 do backlog power 1; ruletimer1 600 endon
-rule3 on Mqtt#Disconnected do MqttHost 0 endon
-rule1 1
-rule2 1
-rule3 1
-</code></pre></div><p>rule1 : upon disconnect, switch router off, wait 15 seconds (think it&rsquo;s enough for &lsquo;cold boot&rsquo;), power router on, and wait 180 seconds for router to boot (if no waiting - sonoff will reboot router in loop, because router cannot start WIFI immediately upon powering on).</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=l>PowerOnState 1</span><span class=w>
+</span><span class=w></span><span class=l>SetOption55 1</span><span class=w>
+</span><span class=w></span><span class=l>WifiConfig 4</span><span class=w>
+</span><span class=w></span><span class=l>rule1 on wifi#disconnected do backlog power 0;delay 150;power 1; delay 1800 endon</span><span class=w>
+</span><span class=w></span><span class=l>rule2 on system#boot do ruletimer1 600 endon on Rules#Timer=1 do backlog power 1; ruletimer1 600 endon</span><span class=w>
+</span><span class=w></span><span class=l>rule3 on Mqtt#Disconnected do MqttHost 0 endon</span><span class=w>
+</span><span class=w></span><span class=l>rule1 1</span><span class=w>
+</span><span class=w></span><span class=l>rule2 1</span><span class=w>
+</span><span class=w></span><span class=l>rule3 1</span><span class=w>
+</span></code></pre></div><p>rule1 : upon disconnect, switch router off, wait 15 seconds (think it&rsquo;s enough for &lsquo;cold boot&rsquo;), power router on, and wait 180 seconds for router to boot (if no waiting - sonoff will reboot router in loop, because router cannot start WIFI immediately upon powering on).</p>
 <p>rule 2: just power router ON every 10 minutes. That&rsquo;s in case someone (or you) incidentally switch off router remotely - you cannot issue the command for powering it on back. So even if you powered off your router, it will be back ON for less than 10 minutes.. YOU CAN OBEY THIS RULE - router will be powered ON back due to rule1 in case you power it off.</p>
 <p>rule 3: If Mqtt is disconnected, reset and use mDNS to discover MQTT host again.</p>
 <p>SetOption55 1 - Enable mDNS</p>
