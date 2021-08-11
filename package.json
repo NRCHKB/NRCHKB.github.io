@@ -1,7 +1,7 @@
 {
   "name": "nrchkb-website",
   "description": "NRCHKB Website",
-  "version": "1.29.0",
+  "version": "1.29.1",
   "hugo-bin": {
     "buildTags": "extended"
   },

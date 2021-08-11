@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.29.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.29.0...v1.29.1) (2021-08-11)
+
+
+### Bug Fixes
+
+* resolved lint issues ([8274b79](https://github.com/NRCHKB/NRCHKB.github.io/commit/8274b793f6cac38746cd494db4c0e162d3a656d4))
+
 ## [1.29.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.26.0...v1.29.0) (2021-08-11)
 
 
