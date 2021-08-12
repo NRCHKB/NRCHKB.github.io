@@ -1,6 +1,6 @@
 import path from 'path'
 
-const changelogFile = "../content/wiki/discover-more/changelog.md"
+const changelogFile = path.join(__dirname, "../content/wiki/discover-more/changelog.md")
 const changelogTemplate = (changelog: string, lastmod: string) => {
   return `---
 title: "Changelog"
@@ -24,23 +24,23 @@ ${changelog}
 
 const fs = require("fs")
 
-let changelog = fs.readFileSync(path.join(__dirname, "node_modules/node-red-contrib-homekit-bridged/CHANGELOG.md")).toString()
+let changelog = fs.readFileSync(path.join(__dirname, "../node_modules/node-red-contrib-homekit-bridged/CHANGELOG.md")).toString()
 changelog = changelog.replace('# Changelog', '')
-changelog = changelog.replace(/[^[]#(\d+)/g, (_: any, ticketID: string) =>  ` [#${ticketID}](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/${ticketID})`)
+changelog = changelog.replace(/[^[]#(\d+)/g, (_: any, ticketID: string) => ` [#${ticketID}](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/${ticketID})`)
 changelog = changelog.replace(/@(\w*)/g, (_: any, nickname: string) => `[@${nickname}](https://github.com/${nickname})`)
 
 fs.writeFile(changelogFile,
   changelogTemplate(changelog, new Date().toISOString()),
-  { flag: "w" },
+  {flag: "w"},
   (err: any) => {
-  if (err) {
-    if (err.code == "EEXIST") {
+    if (err) {
+      if (err.code == "EEXIST") {
+      } else {
+        throw err
+      }
     } else {
-      throw err
+      console.log("Changelog generated")
     }
-  } else {
-    console.log("Changelog generated")
-  }
-})
+  })
 
 export {}

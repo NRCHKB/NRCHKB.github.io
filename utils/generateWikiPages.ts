@@ -10,8 +10,8 @@ switch (myArgs[0]) {
     break;
 }
 
-const characteristicDataFile = "../data/hap/characteristics.json"
-const characteristicFolder = "../content/wiki/characteristic/"
+const characteristicDataFile = path.join(__dirname, "../data/hap/characteristics.json")
+const characteristicFolder = path.join(__dirname, "../content/wiki/characteristic/")
 
 const characteristicTemplate = (element: PageData) => {
 
@@ -38,8 +38,8 @@ characteristic:
 `
 }
 
-const serviceDataFile = "../data/hap/services.json"
-const serviceFolder = "../content/wiki/service/"
+const serviceDataFile = path.join(__dirname, "../data/hap/services.json")
+const serviceFolder = path.join(__dirname, "../content/wiki/service/")
 
 const serviceTemplate = (element: PageData) => {
 
@@ -84,11 +84,11 @@ const generateInFolderForKeyset = (
     const dirPath = path.join(folder, element.key.toLowerCase().replace(/ /g, "-"))
     const filePath = path.join(dirPath, "index.md")
 
-    if (!fs.existsSync(dirPath)){
+    if (!fs.existsSync(dirPath)) {
       fs.mkdirSync(dirPath);
     }
 
-    fs.writeFile(filePath, template(element), { flag: "w" + (removeOld ? '' : 'x') }, (err: any) => {
+    fs.writeFile(filePath, template(element), {flag: "w" + (removeOld ? '' : 'x')}, (err: any) => {
       if (err) {
         if (err.code == "EEXIST") {
         } else {
@@ -103,7 +103,9 @@ const generateInFolderForKeyset = (
   console.log(setName + " Page set generate FINISHED")
 }
 
-type ExtraSerializedCharacteristic = SerializedCharacteristic & {usedBy?: string[], knownValues?: {key:string, value:unknown}[]}
+type ExtraSerializedCharacteristic =
+  SerializedCharacteristic
+  & { usedBy?: string[], knownValues?: { key: string, value: unknown }[] }
 
 generateInFolderForKeyset(
   "Characteristic",
@@ -142,8 +144,8 @@ generateInFolderForKeyset(
             .filter(([key]) => key !== 'UUID')
             .map(([key, value]) => ({
               key: key.split('_')
-                      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-                      .join(' '),
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                .join(' '),
               value
             }))
 
@@ -162,7 +164,7 @@ generateInFolderForKeyset(
         }
       })
 
-    fs.writeFile(characteristicDataFile, JSON.stringify(data), { flag: "w" }, (err: any) => {
+    fs.writeFile(characteristicDataFile, JSON.stringify(data), {flag: "w"}, (err: any) => {
       if (err) {
         if (err.code == "EEXIST") {
         } else {
@@ -195,8 +197,8 @@ generateInFolderForKeyset(
         })
 
         pageData.push({
-            key: serialized.displayName,
-            name: serialized.constructorName
+          key: serialized.displayName,
+          name: serialized.constructorName
         })
 
         if (!data.find(s => s.displayName === serialized.displayName)) {
@@ -205,7 +207,7 @@ generateInFolderForKeyset(
       })
 
 
-    fs.writeFile(serviceDataFile, JSON.stringify(data), { flag: "w" }, (err: any) => {
+    fs.writeFile(serviceDataFile, JSON.stringify(data), {flag: "w"}, (err: any) => {
       if (err) {
         if (err.code == "EEXIST") {
         } else {
