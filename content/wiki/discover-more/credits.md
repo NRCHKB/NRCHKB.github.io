@@ -3,7 +3,7 @@ title: "Credits"
 description: "Credits"
 lead: ""
 date: 2021-08-03T00:00:00+02:00
-lastmod: 2021-08-03T00:00:00+02:00
+lastmod: 2021-08-12T21:53:37.352Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     parent: "discover-more"
 weight: 100
 toc: true
-contributors: ["crxporter"]
+contributors: ["crxporter", "Shaquu"]
 ---
 
 This is a place where would like to thank those who have come before to build the work that we have added to.
@@ -33,3 +33,9 @@ Also, I (believe I) fixed some issues:
 >
 > - devices don't show as unreachable after redeploying
 > - having more than one device per accessory (in the "old" world) or bridge doesn't lead to iOS losing the parameters for this device anymore
+
+### Contributors
+
+Thanks to all of our contributors for their work and effort!
+
+{{< contributors >}}

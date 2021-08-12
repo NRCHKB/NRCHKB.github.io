@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row row-cols-md-auto row-cols-1 g-2">
+    {{ range .Site.Data.nrchkb.contributors }}
+    <div class="col">
+      <a class="btn btn-primary" href="{{ .html_url }}" role="button" target="_blank"><img src="{{ .avatar_url }}" width="20" alt="{{.login }} avatar"/> {{ .login }}</a>
+    </div>
+    {{ end }}
+  </div>
+</div>
+
+
