@@ -362,3 +362,11 @@ body.dark .unstyled:focus {
 body.dark .updated {
   color: $gray-600;
 }
+
+body.dark .card-header {
+  border-bottom-color: #1b1f22;
+}
+
+body.dark .card-footer {
+  border-top-color: #1b1f22;
+}

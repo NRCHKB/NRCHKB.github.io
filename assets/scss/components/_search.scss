@@ -22,7 +22,7 @@
 }
 
 #suggestions div:not(:first-child) {
-  border-top: 1px dashed $gray-200;
+  border-top: 1px dashed $gray-300;
 }
 
 #suggestions div:first-child {
@@ -63,7 +63,7 @@
   #suggestions span:first-child {
     width: 9rem;
     padding-right: 1rem;
-    border-right: 1px solid $gray-200;
+    border-right: 1px solid $gray-300;
     display: inline-block;
     text-align: right;
   }

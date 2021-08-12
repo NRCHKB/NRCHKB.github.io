@@ -96,7 +96,7 @@ body {
 @include media-breakpoint-up(lg) {
   .docs-sidebar {
     order: 0;
-    border-right: 1px solid $gray-200;
+    border-right: 1px solid $gray-300;
   }
 
   @supports ((position:-webkit-sticky) or (position:sticky)) {
@@ -158,7 +158,7 @@ body {
 }
 
 .docs-navigation {
-  border-top: 1px solid $gray-200;
+  border-top: 1px solid $gray-300;
   margin-top: 2rem;
   margin-bottom: 0;
   padding-top: 2rem;
