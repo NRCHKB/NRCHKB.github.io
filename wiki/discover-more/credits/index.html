@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.5536aa9dda63593c22bda28d1e3ebddb75c87dad8a83092633a78efc25778025d5bd143f347d32c607ae79d81eecaa53080f7bfcaf10023f7400c31433615f2e.css integrity="sha512-VTaqndpjWTwivaKNHj6923XIfa2KgwkmM6eO/CV3gCXVvRQ/NH0yxgeuedge7KpTCA97/K8QAj90AMMUM2FfLg==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.90bd2509c9cf4b80631de3f037e91be949f6b0ca22718674eb204a910c6a765bc2049796d39387b7c0faf47a169186090efdd6abe4236673365ca235a444d7b1.css integrity="sha512-kL0lCcnPS4BjHePwN+kb6Un2sMoicYZ06yBKkQxqdlvCBJeW05OHt8D69HoWkYYJDv3Wq+QjZnM2XKI1pETXsQ==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 <meta name=robots content="index, follow">
@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/discover-more/credits/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-08-03T00:00:00+02:00">
-<meta property="article:modified_time" content="2021-08-03T00:00:00+02:00">
+<meta property="article:modified_time" content="2021-08-12T23:19:05+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -452,12 +452,14 @@
 <h3>On this page</h3>
 <nav id=TableOfContents>
 <ul>
-<li>
+<li><a href=#history>History</a>
 <ul>
-<li><a href=#where-the-project-came-from>Where the Project came from</a></li>
-<li><a href=#oliver-rahner-explains-his-work>Oliver Rahner explains his work</a></li>
+<li><a href=#7-november-2016>7 November 2016</a></li>
+<li><a href=#13-april-2018>13 April 2018</a></li>
+<li><a href=#21-february-2019---present>21 February 2019 - present</a></li>
 </ul>
 </li>
+<li><a href=#contributors>Contributors</a></li>
 </ul>
 </nav>
 </div>
@@ -472,23 +474,93 @@
 </ol>
 </nav>
 <h1>Credits</h1>
-<small class=updated>Updated August 3, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a></small>
+<small class=updated>Updated August 12, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead></p>
-<p>This is a place where would like to thank those who have come before to build the work that we have added to.</p>
-<h3 id=where-the-project-came-from>Where the Project came from<a href=#where-the-project-came-from class=anchor aria-hidden=true>#</a> </h3>
-<p>The API work to interact between HomeKit and NodeJS is from <a href=https://github.com/KhaosT/HAP-NodeJS>HAP-NodeJS</a>.</p>
-<p><a href=https://github.com/mschm/node-red-contrib-homekit>Marius Schmeding</a> made the first version of the Node-RED plugin to use HAP-NodeJS. His work was later forked by <a href=https://github.com/oliverrahner>Oliver Rahner</a> who put in a good effort to move over to bridged connections to HomeKit.</p>
-<p>Many others have come and gone adding to the work. Thanks to each of you!</p>
-<h3 id=oliver-rahner-explains-his-work>Oliver Rahner explains his work<a href=#oliver-rahner-explains-his-work class=anchor aria-hidden=true>#</a> </h3>
-<blockquote>
-<p>As Marius Schmeding seems to have abandoned his great <a href=https://github.com/mschm/node-red-contrib-homekit>work</a>, I decided to fork his repo and to introduce some major rework.</p>
-<p>The biggest change is the use of HAP-NodeJS in <strong>bridged mode</strong>: only add one bridge in the iOS Home.app to access all your devices!
-Also, I (believe I) fixed some issues:</p>
-<ul>
-<li>devices don&rsquo;t show as unreachable after redeploying</li>
-<li>having more than one device per accessory (in the &ldquo;old&rdquo; world) or bridge doesn&rsquo;t lead to iOS losing the parameters for this device anymore</li>
-</ul>
+<p>This is a place where we would like to thank those who have come before to build the work that we have added to.</p>
+<h2 id=history>History<a href=#history class=anchor aria-hidden=true>#</a> </h2>
+<h3 id=7-november-2016>7 November 2016<a href=#7-november-2016 class=anchor aria-hidden=true>#</a> </h3>
+<p><a href=https://github.com/mschm>Marius Schmeding (@mschm)</a> made the first version of the Node-RED plugin using <a href=https://github.com/homebridge/HAP-NodeJS>HAP-NodeJS</a> called <a href=https://www.npmjs.com/package/node-red-contrib-homekit>node-red-contrib-homekit</a></p>
+<h3 id=13-april-2018>13 April 2018<a href=#13-april-2018 class=anchor aria-hidden=true>#</a> </h3>
+<p><a href=https://github.com/oliverrahner>Oliver Rahner (@oliverrahner)</a> steps in and makes a fork called <a href=https://www.npmjs.com/package/node-red-contrib-homekit-bridged>node-red-contrib-homekit-bridged</a></p>
+<figure>
+<blockquote class=blockquote>
+<p>As Marius Schmeding seems to have abandoned his great work, I decided to fork his repo and to introduce some major rework.</p>
+<p>The biggest change is the use of HAP-NodeJS in bridged mode: only add one bridge in the iOS Home.app to access all your devices!</p>
+Also, I (believe I) fixed some issues:
+- devices don't show as unreachable after redeploying
+- having more than one device per accessory (in the "old" world) or bridge doesn't lead to iOS losing the parameters for this device anymore
 </blockquote>
+<figcaption class=blockquote-footer>
+<cite title="Oliver Rahner">@oliverrahner</cite>
+</figcaption>
+</figure>
+<h3 id=21-february-2019---present>21 February 2019 - present<a href=#21-february-2019---present class=anchor aria-hidden=true>#</a> </h3>
+<p><a href=https://github.com/Shaquu>Tadeusz Wyrzykowski (@Shaquu)</a> joins the effort.</p>
+<figure>
+<blockquote class=blockquote>
+<p>In the beginning I knew nothing about the HomeKit.</p>
+<p>Few days later I decided to fork the repository.</p>
+<p>Shortly after I got full control over original one and started major refactoring.</p>
+<p>That time with a help of random user <a href=https://github.com/crxporter>@crxporter</a> (who is my good friend today!) we started adding more and more features and improvements, and story continues!</p>
+</blockquote>
+<figcaption class=blockquote-footer>
+<cite title="Tadeusz Wyrzykowski">@Shaquu</cite>
+</figcaption>
+</figure>
+<h2 id=contributors>Contributors<a href=#contributors class=anchor aria-hidden=true>#</a> </h2>
+<p>Thanks to all of our contributors for their work and effort!</p>
+<div class=container>
+<div class="row row-cols-md-auto row-cols-1 g-2">
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/Shaquu role=button target=_blank><img src="https://avatars.githubusercontent.com/u/2881159?v=4" width=20 alt="Shaquu avatar"> Shaquu</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/crxporter role=button target=_blank><img src="https://avatars.githubusercontent.com/u/38265886?v=4" width=20 alt="crxporter avatar"> crxporter</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/oliverrahner role=button target=_blank><img src="https://avatars.githubusercontent.com/u/2277681?v=4" width=20 alt="oliverrahner avatar"> oliverrahner</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/mschm role=button target=_blank><img src="https://avatars.githubusercontent.com/u/2902690?v=4" width=20 alt="mschm avatar"> mschm</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/radionoise role=button target=_blank><img src="https://avatars.githubusercontent.com/u/1556082?v=4" width=20 alt="radionoise avatar"> radionoise</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/flic role=button target=_blank><img src="https://avatars.githubusercontent.com/u/400673?v=4" width=20 alt="flic avatar"> flic</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/NorthernMan54 role=button target=_blank><img src="https://avatars.githubusercontent.com/u/19808920?v=4" width=20 alt="NorthernMan54 avatar"> NorthernMan54</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/gotofoo role=button target=_blank><img src="https://avatars.githubusercontent.com/u/10225351?v=4" width=20 alt="gotofoo avatar"> gotofoo</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/radokristof role=button target=_blank><img src="https://avatars.githubusercontent.com/u/36210568?v=4" width=20 alt="radokristof avatar"> radokristof</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/sonntam role=button target=_blank><img src="https://avatars.githubusercontent.com/u/6692408?v=4" width=20 alt="sonntam avatar"> sonntam</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/AlexOwl role=button target=_blank><img src="https://avatars.githubusercontent.com/u/47189254?v=4" width=20 alt="AlexOwl avatar"> AlexOwl</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/emilingerslev role=button target=_blank><img src="https://avatars.githubusercontent.com/u/10768?v=4" width=20 alt="emilingerslev avatar"> emilingerslev</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/jasoncodes role=button target=_blank><img src="https://avatars.githubusercontent.com/u/83466?v=4" width=20 alt="jasoncodes avatar"> jasoncodes</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/PeteLawrence role=button target=_blank><img src="https://avatars.githubusercontent.com/u/1871471?v=4" width=20 alt="PeteLawrence avatar"> PeteLawrence</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/TheNON75 role=button target=_blank><img src="https://avatars.githubusercontent.com/u/60628305?v=4" width=20 alt="TheNON75 avatar"> TheNON75</a>
+</div>
+<div class=col>
+<a class="btn btn-primary" href=https://github.com/jonathanschneider role=button target=_blank><img src="https://avatars.githubusercontent.com/u/4623773?v=4" width=20 alt="jonathanschneider avatar"> jonathanschneider</a>
+</div>
+</div>
+</div>
 <p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/discover-more/credits.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
 <a href=https://nrchkb.github.io/wiki/discover-more/changelog/>
@@ -527,9 +599,9 @@ FAQ &rarr;
 </div>
 </div>
 </footer>
-<script src=https://nrchkb.github.io/js/bootstrap.min.d67050adf5d370668aede4201f82af781b16970934804995a1ca37c1ee9222c2fc530972aa6d5d2b6124caf1fe318f139aac99df2c1e89af65504fc1185c7972.js integrity="sha512-1nBQrfXTcGaK7eQgH4KveBsWlwk0gEmVoco3we6SIsL8Uwlyqm1dK2EkyvH+MY8TmqyZ3yweia9lUE/BGFx5cg==" crossorigin=anonymous defer></script>
-<script src=https://nrchkb.github.io/js/highlight.min.b7973ffef359a1b055ecdd39cb2ff9a0d72d4128580c500b1baf63e6ed291900f9100e1ad9bba6b0ebc958b68ef4add867bb881656f30cde57a2a62ff043e0db.js integrity="sha512-t5c//vNZobBV7N05yy/5oNctQShYDFALG69j5u0pGQD5EA4a2bumsOvJWLaO9K3YZ7uIFlbzDN5XoqYv8EPg2w==" crossorigin=anonymous defer></script>
-<script src=https://nrchkb.github.io/main.min.afa95ced5821ad4bc06dae3e5f0a20fe6675326e5c7f5a0444a8dd9186718161f21573b997b30f49b3048cdb164d6c7bc2a69913149ddfb86801bd3730f8ae1e.js integrity="sha512-r6lc7VghrUvAba4+Xwog/mZ1Mm5cf1oERKjdkYZxgWHyFXO5l7MPSbMEjNsWTWx7wqaZExSd37hoAb03MPiuHg==" crossorigin=anonymous defer></script>
+<script src=https://nrchkb.github.io/js/bootstrap.min.586171fec3966d1a44fa8aa2edb24b861dc3a72be8cc24aa4e0dabe4c312a0dae5fe1eaa7c93180a6211fa4d7c5461b0d228fdf741be2eae279a376dfa1e7d81.js integrity="sha512-WGFx/sOWbRpE+oqi7bJLhh3DpyvozCSqTg2r5MMSoNrl/h6qfJMYCmIR+k18VGGw0ij990G+Lq4nmjdt+h59gQ==" crossorigin=anonymous defer></script>
+<script src=https://nrchkb.github.io/js/highlight.min.127e3376bea3dd645cb978cf339ee2013a36b6e61ae547587bbe8ba16ad2669094399a73fcaae15fdd5b3835e1229ad05c9ec51f3ee46273044ef7632617c2a8.js integrity="sha512-En4zdr6j3WRcuXjPM57iATo2tuYa5UdYe76LoWrSZpCUOZpz/KrhX91bODXhIprQXJ7FHz7kYnMETvdjJhfCqA==" crossorigin=anonymous defer></script>
+<script src=https://nrchkb.github.io/main.min.4fe79bac09880084cfc759fdec42196d6f36bb680f53c6034d8272b44cf4d0484732c0fc3805ef5aae053a75d8ed8a8f17bcc64a138c82a3d7b1014f26793ca1.js integrity="sha512-T+ebrAmIAITPx1n97EIZbW82u2gPU8YDTYJytEz00EhHMsD8OAXvWq4FOnXY7YqPF7zGShOMgqPXsQFPJnk8oQ==" crossorigin=anonymous defer></script>
 <script type=text/javascript src=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js></script>
 <script type=text/javascript>docsearch({apiKey:'c0d6b8c0b6482607e905f4b1ba9397b4',indexName:'nrchkb',inputSelector:'#userinput',debug:!1})</script>
 <script src=https://nrchkb.github.io/index.js defer></script>
