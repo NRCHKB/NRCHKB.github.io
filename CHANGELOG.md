@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.32.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.31.0...v1.32.0) (2021-08-12)
+
+
+### Features
+
+* add contributor list to credits ([601a964](https://github.com/NRCHKB/NRCHKB.github.io/commit/601a96497b9a0cc90b3865aa466e6e044640e6a5))
+* merged main project files with utils ([ed4c360](https://github.com/NRCHKB/NRCHKB.github.io/commit/ed4c360f42c7a75ba8dad61dee15ea7a4c19638d))
+* new history section in credits ([8794eb4](https://github.com/NRCHKB/NRCHKB.github.io/commit/8794eb4b54e16dba52df96096f8020f5c004b00d))
+
+
+### Bug Fixes
+
+* some border colors having bad contrast ([eafb1a3](https://github.com/NRCHKB/NRCHKB.github.io/commit/eafb1a3549e9bee01a8e0d3ae950c90e88832858))
+
 ## [1.31.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.30.0...v1.31.0) (2021-08-11)
 
 
