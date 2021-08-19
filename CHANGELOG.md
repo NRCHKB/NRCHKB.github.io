@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.33.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.32.0...v1.33.0) (2021-08-19)
+
+
+### Features
+
+* Changes in Service Node page ([e5566f3](https://github.com/NRCHKB/NRCHKB.github.io/commit/e5566f391df6bfa58053214a63a9d6e85cb2bd40))
+
 ## [1.32.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.31.0...v1.32.0) (2021-08-12)
 
 
