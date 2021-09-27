@@ -39,17 +39,17 @@
     "gen:contributors": "ts-node utils/generateContributors.ts"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14",
+    "@babel/cli": "^7.15",
     "@babel/core": "^7.15",
     "@babel/preset-env": "^7.15",
     "@fullhuman/postcss-purgecss": "^4.0",
-    "@types/node": "^16.6.2",
+    "@types/node": "^16.10.1",
     "autoprefixer": "^10.3",
-    "axios": "^0.21.1",
-    "bootstrap": "^5.1.0",
+    "axios": "^0.21.4",
+    "bootstrap": "^5.1.1",
     "clipboard": "^2.0",
     "eslint": "^7.32",
-    "hap-nodejs": "^0.9.4",
+    "hap-nodejs": "^0.9.5",
     "highlight.js": "^10.7.3",
     "hugo-bin": "^0.75",
     "instant.page": "^5.1",
@@ -65,7 +65,7 @@
     "stylelint": "^13.13",
     "stylelint-config-standard": "^22.0",
     "ts-node": "^10.2.1",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.3"
   },
   "author": {
     "name": "Tadeusz Wyrzykowski",
