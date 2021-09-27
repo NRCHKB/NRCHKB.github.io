@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.34.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.34.0...v1.34.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* Resolved content wider then screen ([a05de3e](https://github.com/NRCHKB/NRCHKB.github.io/commit/a05de3e4cd2a6095a0e45591992cff5c6a8c4f2e))
+* Resolved linting issues ([878f7ff](https://github.com/NRCHKB/NRCHKB.github.io/commit/878f7ffdd88f298c4b63ee2b28ee48e3a16527d6))
+
 ## [1.34.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.33.2...v1.34.0) (2021-09-27)
 
 
