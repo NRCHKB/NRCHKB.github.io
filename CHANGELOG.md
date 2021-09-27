@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.34.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.33.2...v1.34.0) (2021-09-27)
+
+
+### Features
+
+* iOS 15 Services and Characteristics ([c9ab22b](https://github.com/NRCHKB/NRCHKB.github.io/commit/c9ab22b55ddc42939a9d77fe1e43cf26e3eb2361))
+
 ### [1.33.2](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.33.1...v1.33.2) (2021-08-19)
 
 ### [1.33.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.33.0...v1.33.1) (2021-08-19)
