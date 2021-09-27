@@ -10,16 +10,16 @@ images: []
 
 
 <div class="clearfix">
-  <img src="/images/presentation/demonstration.gif" class="col-md-9 float-md-end mb-3 ms-md-3" style="max-width: 100%;" alt="NRCHKB Demonstration"/>
+<img src="/images/presentation/demonstration.gif" class="col-md-9 float-md-end mb-3 ms-md-3" style="max-width: 100%;" alt="NRCHKB Demonstration"/>
 
-  ### About this Contrib
+### About this Contrib
 
-  This is a collection of nodes which can be used to imitate HomeKit devices inside of Node-RED. Messages coming into these nodes are able to set device states and status in Apple's iOS and MacOS Home apps. Commands from Home apps (or Siri) will be passed from these nodes into your Node-RED flows.
+This is a collection of nodes which can be used to imitate HomeKit devices inside of Node-RED. Messages coming into these nodes are able to set device states and status in Apple's iOS and MacOS Home apps. Commands from Home apps (or Siri) will be passed from these nodes into your Node-RED flows.
 
-  ### Easy Install
+### Easy Install
 
-  If you have Node-RED already installed, the recommended install method is to use the editor. To do this, select `Manage palette` from the Node-RED menu (top right).
-  Then select `Install` tab in the palette. Search for and install this node (`node-red-contrib-homekit-bridged`).
+If you have Node-RED already installed, the recommended install method is to use the editor. To do this, select `Manage palette` from the Node-RED menu (top right).
+Then select `Install` tab in the palette. Search for and install this node (`node-red-contrib-homekit-bridged`).
 </div>
 
 ### Docker Install

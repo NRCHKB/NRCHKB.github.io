@@ -3,7 +3,7 @@ title: "Credits"
 description: "Credits"
 lead: ""
 date: 2021-08-03T00:00:00+02:00
-lastmod: 2021-08-12T23:19:05.910Z
+lastmod: 2021-09-27T19:27:55.942Z
 draft: false
 images: []
 menu:
@@ -19,6 +19,7 @@ This is a place where we would like to thank those who have come before to build
 ## History
 
 ### 7 November 2016
+
 [Marius Schmeding (@mschm)](https://github.com/mschm) made the first version of the Node-RED plugin using [HAP-NodeJS](https://github.com/homebridge/HAP-NodeJS) called [node-red-contrib-homekit](https://www.npmjs.com/package/node-red-contrib-homekit)
 
 ### 13 April 2018
