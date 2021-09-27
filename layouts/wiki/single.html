@@ -24,7 +24,7 @@
 					</ol>
 				</nav>
 			{{ end }}
-			<h1>{{ .Title }}</h1>
+			<h1 id="title">{{ .Title }}</h1>
       {{ partial "main/wiki-meta.html" . }}
 			<p class="lead">{{ .Params.lead | safeHTML }}</p>
 
