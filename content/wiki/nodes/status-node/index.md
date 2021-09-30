@@ -3,7 +3,7 @@ title: "Status Node"
 description: "This node outputs status of the HomeKit Service"
 lead: ""
 date: 2021-09-30T18:51:41.675Z
-lastmod: 2021-09-30T18:51:41.675Z
+lastmod: 2021-09-30T18:57:39.032Z
 draft: false
 images: []
 menu:
@@ -17,6 +17,8 @@ contributors: ["Shaquu"]
 This node outputs status of the HomeKit Service.
 
 ## Configuration
+
+![Edit view](edit-view.png)
 
 Below you can find the list of configurable parameters for Service Node (this Node can also be found as a homekit node or homekit-service).
 
