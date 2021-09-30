@@ -3,7 +3,7 @@ title: "Quick Start"
 description: "Welcome to the NRCHKB wiki!"
 lead: "Welcome to the NRCHKB wiki!"
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-05-06T23:20:00+02:00
+lastmod: 2021-09-30T18:52:26.967Z
 draft: false
 images: []
 menu:
@@ -32,14 +32,14 @@ Currently, we have two nodes:
 Service Node mostly represents Service which will appear in Apple Home.app.
 It is our main building block for creating interaction between house, application and our other systems.
 
-Find more about this node [here]({{< ref "/wiki/introduction/service-node" >}} "Service Node").
+Find more about this node [here]({{< ref "/wiki/nodes/service-node" >}} "Service Node").
 
 ### Host Node
 
 Host Node is our configuration node. It is either Bridge or Standalone Accessory.
 It will be used to pair (connect) our virtual device in Apple Home.app.
 
-Find more about this node [here]({{< ref "/wiki/introduction/host-node" >}} "Host Node").
+Find more about this node [here]({{< ref "/wiki/nodes/host-node" >}} "Host Node").
 
 ## Demo Setup
 
