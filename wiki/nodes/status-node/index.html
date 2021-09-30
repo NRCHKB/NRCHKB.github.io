@@ -11,24 +11,24 @@
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>Host Node - NRCHKB</title>
-<meta name=description content="Host Node">
-<link rel=canonical href=https://nrchkb.github.io/wiki/introduction/host-node/>
+<title>Status Node - NRCHKB</title>
+<meta name=description content="This node outputs status of the HomeKit Service">
+<link rel=canonical href=https://nrchkb.github.io/wiki/nodes/status-node/>
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://nrchkb.github.io/images/social-preview.png">
-<meta name=twitter:title content="Host Node">
-<meta name=twitter:description content="Host Node">
-<meta property="og:title" content="Host Node">
-<meta property="og:description" content="Host Node">
+<meta name=twitter:title content="Status Node">
+<meta name=twitter:description content="This node outputs status of the HomeKit Service">
+<meta property="og:title" content="Status Node">
+<meta property="og:description" content="This node outputs status of the HomeKit Service">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://nrchkb.github.io/wiki/introduction/host-node/">
+<meta property="og:url" content="https://nrchkb.github.io/wiki/nodes/status-node/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
-<meta property="article:published_time" content="2021-05-06T00:00:00+02:00">
-<meta property="article:modified_time" content="2021-05-06T00:00:00+02:00">
+<meta property="article:published_time" content="2021-09-30T18:51:41+00:00">
+<meta property="article:modified_time" content="2021-09-30T18:51:41+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/nrchkb.github.io\/"},{"@type":"ListItem","position":2,"name":"Wiki","item":"https:\/\/nrchkb.github.io\/wiki\/"},{"@type":"ListItem","position":3,"name":"Introduction","item":"https:\/\/nrchkb.github.io\/wiki\/introduction\/"},{"@type":"ListItem","position":4,"name":"Host Node","item":"https:\/\/nrchkb.github.io\/wiki\/introduction\/host-node\/"}]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/nrchkb.github.io\/"},{"@type":"ListItem","position":2,"name":"Wiki","item":"https:\/\/nrchkb.github.io\/wiki\/"},{"@type":"ListItem","position":3,"name":"Nodes","item":"https:\/\/nrchkb.github.io\/wiki\/nodes\/"},{"@type":"ListItem","position":4,"name":"Status Node","item":"https:\/\/nrchkb.github.io\/wiki\/nodes\/status-node\/"}]}</script>
 <meta name=theme-color content="#8f0000">
 <link rel=apple-touch-icon sizes=180x180 href=https://nrchkb.github.io/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://nrchkb.github.io/favicon-32x32.png>
@@ -63,6 +63,7 @@
 <button class="btn menu-wiki dropdown-toggle dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false><span class=visually-hidden>Toggle Dropdown</span></button>
 <ul class=dropdown-menu>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/introduction/quick-start/>Introduction</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/nodes/service-node/>Nodes</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/examples/demo-setup/>Examples</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/service/access-control/>Service</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/characteristic/access-control-level/>Characteristic</a></li>
@@ -90,15 +91,25 @@
 <a class=unstyled data-bs-toggle=collapse href=#collapse-introduction role=button aria-expanded=false aria-controls=collapse-introduction>
 <h3 class=caret>Introduction</h3>
 </a>
-<div class="collapse show" id=collapse-introduction>
+<div class=collapse id=collapse-introduction>
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/quick-start/>Quick Start</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/service-node/>Service Node</a></li>
-<li><a class="docs-link active" href=https://nrchkb.github.io/wiki/introduction/host-node/>Host Node</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/output-messages/>Output Messages</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/characteristics/>Characteristics</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/wait-for-setup/>Wait For Setup</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/faq/>FAQ</a></li>
+</ul>
+</div>
+</div>
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-nodes role=button aria-expanded=false aria-controls=collapse-nodes>
+<h3 class=caret>Nodes</h3>
+</a>
+<div class="collapse show" id=collapse-nodes>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/service-node/>Service Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/host-node/>Host Node</a></li>
+<li><a class="docs-link active" href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
 </ul>
 </div>
 </div>
@@ -474,7 +485,21 @@
 <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 <div class=page-links>
 <h3>On this page</h3>
-<nav id=TableOfContents><ul></ul></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#configuration>Configuration</a>
+<ul>
+<li><a href=#service-node>Service Node</a></li>
+</ul>
+</li>
+<li><a href=#input>Input</a></li>
+<li><a href=#output>Output</a>
+<ul>
+<li><a href=#example-output>Example output</a></li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
 </nav>
 <main class="docs-content col-lg-11 col-xl-9">
@@ -482,20 +507,133 @@
 <ol class=breadcrumb>
 <li class=breadcrumb-item><a href=https://nrchkb.github.io/>Home</a></li>
 <li class=breadcrumb-item><a href=https://nrchkb.github.io/wiki/>Wiki</a></li>
-<li class=breadcrumb-item><a href=https://nrchkb.github.io/wiki/introduction/>Introduction</a></li>
-<li class="breadcrumb-item active" aria-current=page>Host Node</li>
+<li class=breadcrumb-item><a href=https://nrchkb.github.io/wiki/nodes/>Nodes</a></li>
+<li class="breadcrumb-item active" aria-current=page>Status Node</li>
 </ol>
 </nav>
-<h1 id=title>Host Node</h1>
-<small class=updated>Updated May 6, 2021 </small>
+<h1 id=title>Status Node</h1>
+<small class=updated>Updated September 30, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead></p>
-<p>Host Node is either Bridge or Standalone Accessory</p>
-<p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/introduction/host-node.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
+<p>This node outputs status of the HomeKit Service.</p>
+<h2 id=configuration>Configuration<a href=#configuration class=anchor aria-hidden=true>#</a> </h2>
+<p>Below you can find the list of configurable parameters for Service Node (this Node can also be found as a homekit node or homekit-service).</p>
+<h3 id=service-node>Service Node<a href=#service-node class=anchor aria-hidden=true>#</a> </h3>
+<p>Select Service node from the list of already configured nodes which will be used in this node to return status.</p>
+<h2 id=input>Input<a href=#input class=anchor aria-hidden=true>#</a> </h2>
+<p>There is no input payload required.
+Input port is just used to trigger status output.
+You can either connect inject node or make some login in your flow to trigger it.
+<img src=input-inject-node.png alt="Inject node trigger"></p>
+<h2 id=output>Output<a href=#output class=anchor aria-hidden=true>#</a> </h2>
+<p>Once triggered, Status node will output payload containing:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>displayName</td>
+<td>Service display name.</td>
+</tr>
+<tr>
+<td>UUID</td>
+<td>Service UUID according to HAP specification.</td>
+</tr>
+<tr>
+<td>subtype</td>
+<td>Value generated for nrchkb internal use.</td>
+</tr>
+<tr>
+<td>constructorName</td>
+<td>Service name according to HAP specification.</td>
+</tr>
+<tr>
+<td>hiddenService</td>
+<td>If the Service is hidden service.</td>
+</tr>
+<tr>
+<td>primaryService</td>
+<td>If the Service is primary service.</td>
+</tr>
+<tr>
+<td>characteristics</td>
+<td>Characteristics that Service is currently using.</td>
+</tr>
+<tr>
+<td>optionalCharacteristics</td>
+<td>All optional Characteristics that Service could use. For currently used please refer to <code>characteristics</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=example-output>Example output<a href=#example-output class=anchor aria-hidden=true>#</a> </h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+  <span class=nt>&#34;payload&#34;</span><span class=p>:{</span>
+    <span class=nt>&#34;displayName&#34;</span><span class=p>:</span><span class=s2>&#34;My Fav Switch&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;00000049-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;subtype&#34;</span><span class=p>:</span><span class=s2>&#34;01b45824-9beb-4b19-bb0c-3b4c9e3fe2ba&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span><span class=s2>&#34;Switch&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;hiddenService&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
+    <span class=nt>&#34;primaryService&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
+    <span class=nt>&#34;characteristics&#34;</span><span class=p>:[</span>
+      <span class=p>{</span>
+        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span><span class=s2>&#34;Name&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;00000023-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span><span class=s2>&#34;Name&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;value&#34;</span><span class=p>:</span><span class=s2>&#34;My Fav Switch&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;props&#34;</span><span class=p>:{</span>
+          <span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;string&#34;</span><span class=p>,</span>
+          <span class=nt>&#34;perms&#34;</span><span class=p>:[</span>
+            <span class=s2>&#34;pr&#34;</span>
+          <span class=p>],</span>
+          <span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=mi>64</span>
+        <span class=p>}</span>
+      <span class=p>},</span>
+      <span class=p>{</span>
+        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span><span class=s2>&#34;On&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;00000025-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span><span class=s2>&#34;On&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;value&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;props&#34;</span><span class=p>:{</span>
+          <span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;bool&#34;</span><span class=p>,</span>
+          <span class=nt>&#34;perms&#34;</span><span class=p>:[</span>
+            <span class=s2>&#34;ev&#34;</span><span class=p>,</span>
+            <span class=s2>&#34;pr&#34;</span><span class=p>,</span>
+            <span class=s2>&#34;pw&#34;</span>
+          <span class=p>]</span>
+        <span class=p>}</span>
+      <span class=p>}</span>
+    <span class=p>],</span>
+    <span class=nt>&#34;optionalCharacteristics&#34;</span><span class=p>:[</span>
+      <span class=p>{</span>
+        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span><span class=s2>&#34;Name&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;00000023-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span><span class=s2>&#34;Name&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;value&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;props&#34;</span><span class=p>:{</span>
+          <span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;string&#34;</span><span class=p>,</span>
+          <span class=nt>&#34;perms&#34;</span><span class=p>:[</span>
+            <span class=s2>&#34;pr&#34;</span>
+          <span class=p>],</span>
+          <span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=mi>64</span>
+        <span class=p>}</span>
+      <span class=p>}</span>
+    <span class=p>]</span>
+  <span class=p>},</span>
+  <span class=nt>&#34;_msgid&#34;</span><span class=p>:</span><span class=s2>&#34;12353123.f7ba2f&#34;</span>
+<span class=p>}</span>
+</code></pre></div>
+<p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/nodes/status-node/index.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
-<a href=https://nrchkb.github.io/wiki/introduction/service-node/>
+<a href=https://nrchkb.github.io/wiki/nodes/host-node/>
 <div class="card my-1">
 <div class="card-body py-2">
-&larr; Service Node
+&larr; Host Node
 </div>
 </div>
 </a>

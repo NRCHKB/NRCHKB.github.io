@@ -11,24 +11,24 @@
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>Service Node - NRCHKB</title>
-<meta name=description content="This node represents Service in HomeKit">
-<link rel=canonical href=https://nrchkb.github.io/wiki/introduction/service-node/>
+<title>Host Node - NRCHKB</title>
+<meta name=description content="Host Node">
+<link rel=canonical href=https://nrchkb.github.io/wiki/nodes/host-node/>
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://nrchkb.github.io/images/social-preview.png">
-<meta name=twitter:title content="Service Node">
-<meta name=twitter:description content="This node represents Service in HomeKit">
-<meta property="og:title" content="Service Node">
-<meta property="og:description" content="This node represents Service in HomeKit">
+<meta name=twitter:title content="Host Node">
+<meta name=twitter:description content="Host Node">
+<meta property="og:title" content="Host Node">
+<meta property="og:description" content="Host Node">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://nrchkb.github.io/wiki/introduction/service-node/">
+<meta property="og:url" content="https://nrchkb.github.io/wiki/nodes/host-node/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-05-06T00:00:00+02:00">
-<meta property="article:modified_time" content="2021-08-19T18:26:22+00:00">
+<meta property="article:modified_time" content="2021-09-30T18:52:26+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/nrchkb.github.io\/"},{"@type":"ListItem","position":2,"name":"Wiki","item":"https:\/\/nrchkb.github.io\/wiki\/"},{"@type":"ListItem","position":3,"name":"Introduction","item":"https:\/\/nrchkb.github.io\/wiki\/introduction\/"},{"@type":"ListItem","position":4,"name":"Service Node","item":"https:\/\/nrchkb.github.io\/wiki\/introduction\/service-node\/"}]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/nrchkb.github.io\/"},{"@type":"ListItem","position":2,"name":"Wiki","item":"https:\/\/nrchkb.github.io\/wiki\/"},{"@type":"ListItem","position":3,"name":"Nodes","item":"https:\/\/nrchkb.github.io\/wiki\/nodes\/"},{"@type":"ListItem","position":4,"name":"Host Node","item":"https:\/\/nrchkb.github.io\/wiki\/nodes\/host-node\/"}]}</script>
 <meta name=theme-color content="#8f0000">
 <link rel=apple-touch-icon sizes=180x180 href=https://nrchkb.github.io/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://nrchkb.github.io/favicon-32x32.png>
@@ -63,6 +63,7 @@
 <button class="btn menu-wiki dropdown-toggle dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false><span class=visually-hidden>Toggle Dropdown</span></button>
 <ul class=dropdown-menu>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/introduction/quick-start/>Introduction</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/nodes/service-node/>Nodes</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/examples/demo-setup/>Examples</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/service/access-control/>Service</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/characteristic/access-control-level/>Characteristic</a></li>
@@ -90,15 +91,25 @@
 <a class=unstyled data-bs-toggle=collapse href=#collapse-introduction role=button aria-expanded=false aria-controls=collapse-introduction>
 <h3 class=caret>Introduction</h3>
 </a>
-<div class="collapse show" id=collapse-introduction>
+<div class=collapse id=collapse-introduction>
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/quick-start/>Quick Start</a></li>
-<li><a class="docs-link active" href=https://nrchkb.github.io/wiki/introduction/service-node/>Service Node</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/host-node/>Host Node</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/output-messages/>Output Messages</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/characteristics/>Characteristics</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/wait-for-setup/>Wait For Setup</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/faq/>FAQ</a></li>
+</ul>
+</div>
+</div>
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-nodes role=button aria-expanded=false aria-controls=collapse-nodes>
+<h3 class=caret>Nodes</h3>
+</a>
+<div class="collapse show" id=collapse-nodes>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/service-node/>Service Node</a></li>
+<li><a class="docs-link active" href=https://nrchkb.github.io/wiki/nodes/host-node/>Host Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
 </ul>
 </div>
 </div>
@@ -474,31 +485,7 @@
 <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 <div class=page-links>
 <h3>On this page</h3>
-<nav id=TableOfContents>
-<ul>
-<li><a href=#service-hierarchy>Service Hierarchy</a>
-<ul>
-<li><a href=#example>Example</a></li>
-</ul>
-</li>
-<li><a href=#service>Service</a></li>
-<li><a href=#parent-service>Parent Service</a></li>
-<li><a href=#host-type>Host Type</a></li>
-<li><a href=#accessory>Accessory</a></li>
-<li><a href=#bridge>Bridge</a></li>
-<li><a href=#manufacturer>Manufacturer</a></li>
-<li><a href=#serial-number>Serial Number</a></li>
-<li><a href=#model>Model</a></li>
-<li><a href=#firmware-revision>Firmware Revision</a></li>
-<li><a href=#hardware-revision>Hardware Revision</a></li>
-<li><a href=#software-revision>Software Revision</a></li>
-<li><a href=#topic>Topic</a></li>
-<li><a href=#filter-on-topic>Filter on Topic</a></li>
-<li><a href=#name>Name</a></li>
-<li><a href=#characteristic-properties>Characteristic Properties</a></li>
-<li><a href=#wait-for-setup-message>Wait for Setup message</a></li>
-</ul>
-</nav>
+<nav id=TableOfContents><ul></ul></nav>
 </div>
 </nav>
 <main class="docs-content col-lg-11 col-xl-9">
@@ -506,117 +493,27 @@
 <ol class=breadcrumb>
 <li class=breadcrumb-item><a href=https://nrchkb.github.io/>Home</a></li>
 <li class=breadcrumb-item><a href=https://nrchkb.github.io/wiki/>Wiki</a></li>
-<li class=breadcrumb-item><a href=https://nrchkb.github.io/wiki/introduction/>Introduction</a></li>
-<li class="breadcrumb-item active" aria-current=page>Service Node</li>
+<li class=breadcrumb-item><a href=https://nrchkb.github.io/wiki/nodes/>Nodes</a></li>
+<li class="breadcrumb-item active" aria-current=page>Host Node</li>
 </ol>
 </nav>
-<h1 id=title>Service Node</h1>
-<small class=updated>Updated August 19, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<h1 id=title>Host Node</h1>
+<small class=updated>Updated September 30, 2021 </small>
 <p class=lead></p>
-<p>This node represents Service in HomeKit.
-When hosted behind the <a href=https://nrchkb.github.io/wiki/introduction/host-node/ title="Host Node">Bridge</a> it will also represent Accessory.</p>
-<p>Below you can find the list of configurable parameters for Service Node (this Node can also be found as a homekit node or homekit-service).</p>
-<h2 id=service-hierarchy>Service Hierarchy<a href=#service-hierarchy class=anchor aria-hidden=true>#</a> </h2>
-<p>Choose if this node will represent Parent (or Primary) Service or Linked one.</p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Parent</td>
-<td>Node will be used as Primary Service. The Primary Service must match the primary function of the accessory and must also match with the accessory category. An accessory must expose only one primary service from its list of available services.</td>
-</tr>
-<tr>
-<td>Linked</td>
-<td>Node will be used as a Linked Service. Linked Services allows accessories to specify logical relationship between services. A service can link to one or more services. A service must not link to itself. Service links have context and meaning only to the first level of services that it links to.</td>
-</tr>
-</tbody>
-</table>
-<h3 id=example>Example<a href=#example class=anchor aria-hidden=true>#</a> </h3>
-<p>We want to configure Air Quality Sensor which is battery powered.
-We need to define Air Quality Sensor (Parent) and Battery (Linked).</p>
-<p><img src=service-hierarchy-node-red.png alt="Service Hierarchy Node-Red"></p>
-<p>In Home.app room view it will be displayed as one accessory.</p>
-<p><img src=service-hierarchy-home.app-overview.png alt="Service Hierarchy Home.app Overview"></p>
-<p>In Home.app in accessory detail view you will also notice battery percentage.</p>
-<p><img src=service-hierarchy-home.app-details.png alt="Service Hierarchy Home.app Details"></p>
-<h2 id=service>Service<a href=#service class=anchor aria-hidden=true>#</a> </h2>
-<p>Select Service from the <a href=https://nrchkb.github.io/wiki/service/ title=Services>list</a> which will be used to represent this node.</p>
-<h2 id=parent-service>Parent Service<a href=#parent-service class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Linked</em></strong></p>
-<p>Select Parent Service from the list to which this node&rsquo;s Linked Service will be attached to.</p>
-<h2 id=host-type>Host Type<a href=#host-type class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em></strong></p>
-<table>
-<thead>
-<tr>
-<th>Option</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bridge</td>
-<td>Service will be hosted behind Bridge.</td>
-</tr>
-<tr>
-<td>Accessory</td>
-<td>Service will be hosted as Standalone Accessory.</td>
-</tr>
-</tbody>
-</table>
-<h2 id=accessory>Accessory<a href=#accessory class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em> and <em><a href=#host-type title="Host Type">Host Type</a></em> is set to <em>Accessory</em></strong></p>
-<p>You can select already created <a href=https://nrchkb.github.io/wiki/introduction/host-node/ title="Host Node">Standalone Accessory Node</a> or create a new one.</p>
-<ul>
-<li>By clicking button with a pencil icon next to it, you can edit currently selected Accessory</li>
-<li>You can also create a new one by clicking the same button when <em>Add new homekit-standalone&mldr;</em> is selected. <img src=add-new-homekit-standalone-accessory.png alt="Adding new HomeKit Standalone Accessory"></li>
-</ul>
-<h2 id=bridge>Bridge<a href=#bridge class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em> and <em><a href=#host-type title="Host Type">Host Type</a></em> is set to <em>Bridge</em></strong></p>
-<p>You can select already created <a href=https://nrchkb.github.io/wiki/introduction/host-node/ title="Host Node">Bridge Node</a> or create a new one.</p>
-<ul>
-<li>By clicking button with a pencil icon next to it, you can edit currently selected Bridge</li>
-<li>You can also create a new one by clicking the same button when <em>Add new homekit-bridge&mldr;</em> is selected. <img src=add-new-homekit-bridge.png alt="Adding new HomeKit Bridge"></li>
-</ul>
-<blockquote>
-<p><strong>Important Notice,</strong> when you create a new Bridge for Service Node that is in a subflow, once deployed new Bridge will be created for each Subflow instance in a flow.
-If you create a Bridge outside a Subflow then it will be created only once (reused).</p>
-</blockquote>
-<h2 id=manufacturer>Manufacturer<a href=#manufacturer class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em> and <em><a href=#host-type title="Host Type">Host Type</a></em> is set to <em>Bridge</em></strong></p>
-<h2 id=serial-number>Serial Number<a href=#serial-number class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em> and <em><a href=#host-type title="Host Type">Host Type</a></em> is set to <em>Bridge</em></strong></p>
-<h2 id=model>Model<a href=#model class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em> and <em><a href=#host-type title="Host Type">Host Type</a></em> is set to <em>Bridge</em></strong></p>
-<h2 id=firmware-revision>Firmware Revision<a href=#firmware-revision class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em> and <em><a href=#host-type title="Host Type">Host Type</a></em> is set to <em>Bridge</em></strong></p>
-<h2 id=hardware-revision>Hardware Revision<a href=#hardware-revision class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em> and <em><a href=#host-type title="Host Type">Host Type</a></em> is set to <em>Bridge</em></strong></p>
-<h2 id=software-revision>Software Revision<a href=#software-revision class=anchor aria-hidden=true>#</a> </h2>
-<p><strong>This field is only available when <em><a href=#service-hierarchy title="Service Hierarchy">Service Hierarchy</a></em> is set to <em>Parent</em> and <em><a href=#host-type title="Host Type">Host Type</a></em> is set to <em>Bridge</em></strong></p>
-<h2 id=topic>Topic<a href=#topic class=anchor aria-hidden=true>#</a> </h2>
-<h2 id=filter-on-topic>Filter on Topic<a href=#filter-on-topic class=anchor aria-hidden=true>#</a> </h2>
-<h2 id=name>Name<a href=#name class=anchor aria-hidden=true>#</a> </h2>
-<h2 id=characteristic-properties>Characteristic Properties<a href=#characteristic-properties class=anchor aria-hidden=true>#</a> </h2>
-<h2 id=wait-for-setup-message>Wait for Setup message<a href=#wait-for-setup-message class=anchor aria-hidden=true>#</a> </h2>
-<p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/introduction/service-node/index.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
+<p>Host Node is either Bridge or Standalone Accessory</p>
+<p class=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/nodes/host-node.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
-<a href=https://nrchkb.github.io/wiki/introduction/quick-start/>
+<a href=https://nrchkb.github.io/wiki/nodes/service-node/>
 <div class="card my-1">
 <div class="card-body py-2">
-&larr; Quick Start
+&larr; Service Node
 </div>
 </div>
 </a>
-<a class=ms-auto href=https://nrchkb.github.io/wiki/introduction/host-node/>
+<a class=ms-auto href=https://nrchkb.github.io/wiki/nodes/status-node/>
 <div class="card my-1">
 <div class="card-body py-2">
-Host Node &rarr;
+Status Node &rarr;
 </div>
 </div>
 </a>

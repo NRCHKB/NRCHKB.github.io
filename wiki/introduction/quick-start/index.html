@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/introduction/quick-start/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-04-01T00:00:00+02:00">
-<meta property="article:modified_time" content="2021-05-06T23:20:00+02:00">
+<meta property="article:modified_time" content="2021-09-30T18:52:26+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -63,6 +63,7 @@
 <button class="btn menu-wiki dropdown-toggle dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false><span class=visually-hidden>Toggle Dropdown</span></button>
 <ul class=dropdown-menu>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/introduction/quick-start/>Introduction</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/nodes/service-node/>Nodes</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/examples/demo-setup/>Examples</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/service/access-control/>Service</a></li>
 <li><a class=dropdown-item href=https://nrchkb.github.io/wiki/characteristic/access-control-level/>Characteristic</a></li>
@@ -93,12 +94,22 @@
 <div class="collapse show" id=collapse-introduction>
 <ul class=list-unstyled>
 <li><a class="docs-link active" href=https://nrchkb.github.io/wiki/introduction/quick-start/>Quick Start</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/service-node/>Service Node</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/host-node/>Host Node</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/output-messages/>Output Messages</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/characteristics/>Characteristics</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/wait-for-setup/>Wait For Setup</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/faq/>FAQ</a></li>
+</ul>
+</div>
+</div>
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-nodes role=button aria-expanded=false aria-controls=collapse-nodes>
+<h3 class=caret>Nodes</h3>
+</a>
+<div class=collapse id=collapse-nodes>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/service-node/>Service Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/host-node/>Host Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
 </ul>
 </div>
 </div>
@@ -498,7 +509,7 @@
 </ol>
 </nav>
 <h1 id=title>Quick Start</h1>
-<small class=updated>Updated May 6, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/radokristof/>radokristof</a></small>
+<small class=updated>Updated September 30, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/radokristof/>radokristof</a></small>
 <p class=lead>Welcome to the NRCHKB wiki!</p>
 <p>This wiki will be used to share examples so that users may see how this plugin functions and get started more easily with copyable flows for each HomeKit service. This page will assume you are familiar with Node-RED basics.</p>
 <p>For new users, please start with the <a href=https://nodered.org/docs/>official Node-RED docs</a> before continuing.</p>
@@ -510,11 +521,11 @@ Nodes are triggered by either receiving a message from the previous node in a fl
 <h3 id=service-node>Service Node<a href=#service-node class=anchor aria-hidden=true>#</a> </h3>
 <p>Service Node mostly represents Service which will appear in Apple Home.app.
 It is our main building block for creating interaction between house, application and our other systems.</p>
-<p>Find more about this node <a href=https://nrchkb.github.io/wiki/introduction/service-node/ title="Service Node">here</a>.</p>
+<p>Find more about this node <a href=https://nrchkb.github.io/wiki/nodes/service-node/ title="Service Node">here</a>.</p>
 <h3 id=host-node>Host Node<a href=#host-node class=anchor aria-hidden=true>#</a> </h3>
 <p>Host Node is our configuration node. It is either Bridge or Standalone Accessory.
 It will be used to pair (connect) our virtual device in Apple Home.app.</p>
-<p>Find more about this node <a href=https://nrchkb.github.io/wiki/introduction/host-node/ title="Host Node">here</a>.</p>
+<p>Find more about this node <a href=https://nrchkb.github.io/wiki/nodes/host-node/ title="Host Node">here</a>.</p>
 <h2 id=demo-setup>Demo Setup<a href=#demo-setup class=anchor aria-hidden=true>#</a> </h2>
 <p>Once you have Node-RED running, head over to the Demo Setup page for the easiest demo setup we can provide. This is the setup we use for testing new releases - the demos can be copied directly into Node-RED and added to HomeKit.
 <a href=https://nrchkb.github.io/wiki/examples/demo-setup/ title="Demo Setup">Demo Setup page</a></p>
@@ -529,7 +540,7 @@ It will be used to pair (connect) our virtual device in Apple Home.app.</p>
 </div>
 </div>
 </a>
-<a class=ms-auto href=https://nrchkb.github.io/wiki/introduction/service-node/>
+<a class=ms-auto href=https://nrchkb.github.io/wiki/nodes/service-node/>
 <div class="card my-1">
 <div class="card-body py-2">
 Service Node &rarr;
