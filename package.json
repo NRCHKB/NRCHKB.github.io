@@ -43,7 +43,7 @@
     "@babel/core": "^7.15",
     "@babel/preset-env": "^7.15",
     "@fullhuman/postcss-purgecss": "^4.0",
-    "@types/node": "^16.10.1",
+    "@types/node": "^16.10.2",
     "autoprefixer": "^10.3",
     "axios": "^0.21.4",
     "bootstrap": "^5.1.1",
