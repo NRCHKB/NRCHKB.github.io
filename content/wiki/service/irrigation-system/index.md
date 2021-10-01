@@ -3,7 +3,7 @@ title: "Irrigation System"
 description: "Irrigation System"
 lead: ""
 date: 2021-04-17T18:50:12.031Z
-lastmod: 2021-04-17T18:50:12.031Z
+lastmod: 2021-10-01T11:28:10.528Z
 draft: false
 images: []
 menu:
@@ -15,7 +15,7 @@ service:
 contributors: ["caitken-com", "crxporter"]
 ---
 
-Used as an Irrigation accessory with program scheduling and manual mode. This service is meant to be used with a full external irrigation controller which could be some piece of hardware (rachio, skydrop, orbit, etc), it could be an open source setup (OpenSprinkler is good), or it could be simply a set of flows which is controlling your irrigation system. Note that from the Home app it is *not* possible to make a schedule, it is *not* possible to enable/disable a schedule, and it is *not* possible to start a manual schedule. From the Home app this service simply will display your system, state if it is on "manual" or "scheduled" mode, and allow you to control each valve individually.
+Used as an Irrigation accessory with program scheduling and manual mode. This service is meant to be used with a full external irrigation controller which could be some piece of hardware (rachio, skydrop, orbit, etc), it could be an open source setup (OpenSprinkler is good), or it could be simply a set of flows which is controlling your irrigation system. Note that from Home.app it is *not* possible to make a schedule, it is *not* possible to enable/disable a schedule, and it is *not* possible to start a manual schedule. From Home.app this service simply will display your system, state if it is on "manual" or "scheduled" mode, and allow you to control each valve individually.
 
 ## Examples
 
@@ -25,12 +25,12 @@ These examples are meant to be copied into your Node-RED system and adapted to y
 
 Updated 30 September 2021, [@crxporter](https://github.com/crxporter)
 
-This is a variation of [this setup](https://nrchkb.github.io/wiki/service/valve/#4-zone-sprinkler-connected-to-opensprinkler) but is using the `IrrigationSystem` service. It ends up being quite similar but with some key differences to combine it into an "Irrigation System" instead of 4 individual valves.
+This is a variation of [this example]({{< ref "/wiki/service/valve#4-zone-sprinkler-connected-to-opensprinkler" >}} "Multi valves example") but is using the `IrrigationSystem` service. It ends up being quite similar but with some key differences to combine it into an "Irrigation System" instead of 4 individual valves.
 
 **Prerequisites**
 
 If you want to simply copy-paste this into your nodered setup, you will need to do these things first:
-1. Install OpenSprinkler on the same machine as your Node-RED instance. Ideally this would be a raspberry pi. This is important because this setup is polling OpenSprinkler every one second at `localhost:8080`
+1. Install [OpenSprinkler](https://opensprinkler.com) on the same machine as your Node-RED instance. Ideally this would be a `Raspberry Pi`. This is important because this setup is polling OpenSprinkler every one second at `localhost:8080`
 2. Remove the password from your OpenSprinkler setup
 3. Create at least one program in OpenSprinkler. It does not have to be enabled but it should exist.
 
@@ -44,7 +44,7 @@ Some key things to note if you are adding more than 4 zones:
 
 Quick walk through of the services we are using...
 
-**IrrigationSystem:** this is *not* a bridged but a standalone accessory. `IrrigationSystem` will be the parent service to each of your valves. The `RemainingDuration` doesn't actually have any effect on Apple's Home app but it might show in the Eve or another HomeKit app.
+**IrrigationSystem:** this is *not* a bridged but a standalone accessory. `IrrigationSystem` will be the parent service to each of your valves. The `RemainingDuration` doesn't actually have any effect on Apple's Home.app but it might show in the Eve or another HomeKit app.
 
 **Valve:** these are linked services with your `IrrigationSystem` as the parent. The Characteristic Properties here are very important. An example set is shown below.
 
