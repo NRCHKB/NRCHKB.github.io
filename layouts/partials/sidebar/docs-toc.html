@@ -4,7 +4,7 @@
   {{ $characteristic := (where .Site.Data.hap.characteristics "constructorName" .Params.characteristic.name) }}
   {{ if $characteristic -}}
     {{ $additionalToc := .Scratch.Get "additionalToc" }}
-    {{ .Scratch.Set "additionalToc" (print $additionalToc `<li><a href="#properties">Properties</a></li>`) }}
+    {{ .Scratch.Set "additionalToc" (print $additionalToc `<li><a href="#properties">Properties</a></li><li><a href="#known-values">Known Values</a></li><li><a href="#services">Services</a></li>`) }}
   {{ end -}}
 
   {{ $service := (where .Site.Data.hap.services "constructorName" .Params.service.name) }}
@@ -17,7 +17,7 @@
   <div class="page-links">
     <h3>On this page</h3>
     {{ if in .TableOfContents `<ul>` }}
-      {{ .TableOfContents | replaceRE `<ul>` $additionalToc | safeHTML }}
+      {{ replaceRE `<ul>` $additionalToc .TableOfContents 1| safeHTML }}
     {{ else }}
       {{ `<nav id="TableOfContents"><ul></ul></nav>` | replaceRE `<ul>` $additionalToc | safeHTML }}
     {{ end -}}

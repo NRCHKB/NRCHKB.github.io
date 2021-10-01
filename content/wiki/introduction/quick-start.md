@@ -3,7 +3,7 @@ title: "Quick Start"
 description: "Welcome to the NRCHKB wiki!"
 lead: "Welcome to the NRCHKB wiki!"
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-04-04T14:12:00+01:00
+lastmod: 2021-09-30T18:52:26.967Z
 draft: false
 images: []
 menu:
@@ -11,11 +11,35 @@ menu:
     parent: "introduction"
 weight: 10
 toc: true
+contributors: ["crxporter", "radokristof"]
 ---
 
 This wiki will be used to share examples so that users may see how this plugin functions and get started more easily with copyable flows for each HomeKit service. This page will assume you are familiar with Node-RED basics.
 
 For new users, please start with the [official Node-RED docs](https://nodered.org/docs/) before continuing.
+
+## Nodes
+
+A Node is the basic building block of a flow.
+Nodes are triggered by either receiving a message from the previous node in a flow, or by waiting for some external event, such as change state of the light or some automated logic. They process that message, or event, and then may send a message to the next nodes in the flow.
+
+A node can have at most one input port and as many output ports as it requires.
+
+Currently, we have two nodes:
+
+### Service Node
+
+Service Node mostly represents Service which will appear in Apple Home.app.
+It is our main building block for creating interaction between house, application and our other systems.
+
+Find more about this node [here]({{< ref "/wiki/nodes/service-node" >}} "Service Node").
+
+### Host Node
+
+Host Node is our configuration node. It is either Bridge or Standalone Accessory.
+It will be used to pair (connect) our virtual device in Apple Home.app.
+
+Find more about this node [here]({{< ref "/wiki/nodes/host-node" >}} "Host Node").
 
 ## Demo Setup
 

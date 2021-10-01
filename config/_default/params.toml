@@ -12,7 +12,7 @@ images = ["images/social-preview.png"]
 #twitterCreator = ""
 #facebookAuthor = ""
 #facebookPublisher = ""
-#ogLocale = "en_US"
+ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
@@ -26,11 +26,11 @@ schemaSection = "blog"
 siteLinksSearchBox = true
 
 ## Chrome Browser
-themeColor = "#fff"
+themeColor = "#8f0000"
 
 # Images
 quality = 100
-bgColor = "#fff"
+bgColor = "#8f0000"
 landscapePhotoWidths = [900, 800, 700, 600, 500]
 portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"

@@ -9,8 +9,9 @@ images: []
 menu:
   docs:
     parent: "introduction"
-weight: 100
+weight: 80
 toc: true
+contributors: ["crxporter", "djiwondee", "radokristof", "caitken-com"]
 ---
 
 Characteristics are the values sent to the service item. They are generally true/false or number values. All services have at least one required characteristic. For example the switch has only the required characteristic of `On`.
@@ -52,7 +53,7 @@ Here are some examples of how Characteristic Properties work. These will be move
 ### Color Temperature bulb
 
 It is also possible to define the range of the lightbulb if it has a light which can change temperature.
-You should watch out, that this values are in `Reciprocal megakelvin` so you have to 'convert' to this if your lamp is using Kelvin values (1000000 / Kelvin).
+You should watch out, that these values are in `Reciprocal megakelvin` so you have to 'convert' to this if your lamp is using Kelvin values (1000000 / Kelvin).
 
 ```json
 {
@@ -88,7 +89,7 @@ You should watch out, that this values are in `Reciprocal megakelvin` so you hav
 }
 ```
 
-### Valve with only "irrigation" valve type (will show in Home app as sprinkler)
+### Valve with only "irrigation" valve type (will show in Home.app as sprinkler)
 
 ```json
 {
@@ -102,7 +103,7 @@ You should watch out, that this values are in `Reciprocal megakelvin` so you hav
 
 ## General Characteristics
 
-Some characteristics are available to almost all services but do not do much to change the use of the item in the Home app. For example Active, Tampered, or Fault. These characteristics are optional and are used to show extra status information in the Home app.
+Some characteristics are available to almost all services but do not do much to change the use of the item in the Home.app. For example Active, Tampered, or Fault. These characteristics are optional and are used to show extra status information in the Home.app.
 
 This list is not meant to be a comprehensive or exhaustive list of general characteristics.
 

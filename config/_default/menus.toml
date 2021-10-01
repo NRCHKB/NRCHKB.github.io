@@ -5,6 +5,12 @@
   url = "/wiki/introduction/quick-start/"
 
 [[docs]]
+  name = "Nodes"
+  weight = 15
+  identifier = "nodes"
+  url = "/wiki/nodes/service-node/"
+
+[[docs]]
   name = "Examples"
   weight = 20
   identifier = "examples"

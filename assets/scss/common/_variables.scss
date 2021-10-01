@@ -26,6 +26,10 @@ $nrchkb:    #8f0000 !default;
 $nrchkb-soft:    #ff9090;
 $primary: $nrchkb;
 
+$color-btn-bg: $nrchkb;
+$color-btn-border: darken($nrchkb, 5%);
+$color-btn-text: $white;
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -95,7 +99,7 @@ $grid-row-columns:            6;
 //
 // Define common padding and border radius sizes and more.
 
-$border-color:                $gray-200;
+$border-color:                $gray-300;
 
 // Typography
 //
@@ -141,7 +145,7 @@ $navbar-light-active-color:         $primary;
 
 // Cards
 
-$card-border-color:                 $gray-200;
+$card-border-color:                 $gray-300;
 
 // Alerts
 //

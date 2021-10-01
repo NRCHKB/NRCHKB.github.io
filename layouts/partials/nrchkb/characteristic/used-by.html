@@ -1,0 +1,11 @@
+{{ $characteristic := (where .Site.Data.hap.characteristics "constructorName" .Params.characteristic.name) }}
+{{ if $characteristic -}}
+  {{ range $characteristic }}
+    <h2 id="services">Services<a href="#services" class="anchor" aria-hidden="true">#</a></h2>
+    <ul>
+      {{ range .usedBy }}
+      <li><a href="{{ . | replaceRE `([a-z])([A-Z])` `$1-$2` | lower | replaceRE `(.*)` `wiki/service/$1/` | absURL }}">{{ . | replaceRE `([a-z])([A-Z])` `$1 $2` }}</a></li>
+      {{ end }}
+    </ul>
+{{ end }}
+{{ end -}}

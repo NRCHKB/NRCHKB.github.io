@@ -96,7 +96,7 @@ body {
 @include media-breakpoint-up(lg) {
   .docs-sidebar {
     order: 0;
-    border-right: 1px solid $gray-200;
+    border-right: 1px solid $gray-300;
   }
 
   @supports ((position:-webkit-sticky) or (position:sticky)) {
@@ -158,7 +158,7 @@ body {
 }
 
 .docs-navigation {
-  border-top: 1px solid $gray-200;
+  border-top: 1px solid $gray-300;
   margin-top: 2rem;
   margin-bottom: 0;
   padding-top: 2rem;
@@ -193,11 +193,11 @@ body {
 }
 
 .bg-dots {
-  background-image: radial-gradient($gray-300 15%, transparent 15%);
+  background-image: radial-gradient($nrchkb 15%, transparent 15%);
   background-position: 0 0;
   background-size: 1rem 1rem;
-  -webkit-mask: linear-gradient(to top, #fff, transparent);
-  mask: linear-gradient(to top, #fff, transparent);
+  -webkit-mask: linear-gradient(to top, $nrchkb, transparent);
+  mask: linear-gradient(to top, $nrchkb, transparent);
   width: 100%;
   height: 9rem;
   margin-top: -10rem;
@@ -249,4 +249,9 @@ button.menu-wiki:focus {
 
 .updated {
   color: $gray-600;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
 }

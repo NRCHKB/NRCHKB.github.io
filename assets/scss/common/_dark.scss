@@ -21,6 +21,14 @@ $navbar-dark-active-color:          $link-color-dark;
 body.dark {
   background: $body-bg-dark;
   color: $body-color-dark;
+
+  thead,
+  tbody,
+  tr,
+  td,
+  th {
+    border-color: inherit;
+  }
 }
 
 body.dark a {
@@ -293,7 +301,7 @@ body.dark .bg-light {
 }
 
 body.dark .bg-dots {
-  background-image: radial-gradient($dots-dark 15%, transparent 15%);
+  background-image: radial-gradient($nrchkb 15%, transparent 15%);
 }
 
 body.dark .text-muted {
@@ -353,4 +361,12 @@ body.dark .unstyled:focus {
 
 body.dark .updated {
   color: $gray-600;
+}
+
+body.dark .card-header {
+  border-bottom-color: #1b1f22;
+}
+
+body.dark .card-footer {
+  border-top-color: #1b1f22;
 }
