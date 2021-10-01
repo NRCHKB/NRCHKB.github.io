@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.38.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.37.0...v1.38.0) (2021-10-01)
+
 ## [1.37.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.36.0...v1.37.0) (2021-09-30)
 
 ## [1.36.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.35.0...v1.36.0) (2021-09-30)
