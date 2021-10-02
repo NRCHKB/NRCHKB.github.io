@@ -3,7 +3,7 @@ title: "Contribution"
 description: "Few hints how to contribute to our wiki!"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-08-11T22:39:08.118Z
+lastmod: 2021-10-02T00:27:32.610Z
 draft: false
 images: []
 menu:
@@ -18,7 +18,7 @@ contributors: ["Shaquu"]
 
 1. Open desired page
    1. For example [`https://nrchkb.github.io/wiki/service/lock-mechanism/`](https://nrchkb.github.io/wiki/service/lock-mechanism/)
-2. Click [`✏️Edit this page on GitHub`](https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/service/lock-mechanism/index.md) on the bottom of the page
+2. Click <p class="edit-page" style="display: contents;"><a href="javascript: document.body.scrollIntoView(false);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>Edit this page on GitHub</a></p> on the bottom of the page
    1. It will redirect you to raw page file in our GitHub repository
 3. In GitHub editor add or edit content after last `---`
    1. For content, you can use markdown (preferred) or html
