@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.39.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.37.0...v1.39.0) (2021-10-02)
+
+
+### Features
+
+* contribution page improvements ([ad2c9da](https://github.com/NRCHKB/NRCHKB.github.io/commit/ad2c9da3fc1a217a2ce92b2b0c466dfeeecb3adf))
+
+
+### Bug Fixes
+
+* irrigation-system linting ([5ab9a41](https://github.com/NRCHKB/NRCHKB.github.io/commit/5ab9a419b109c94aeafcf620798a41f22c52a5a3))
+
 ## [1.38.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.37.0...v1.38.0) (2021-10-01)
 
 ## [1.37.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.36.0...v1.37.0) (2021-09-30)
