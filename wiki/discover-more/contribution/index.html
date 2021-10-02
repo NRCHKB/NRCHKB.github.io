@@ -490,6 +490,8 @@
 <li><a href=#editing>Editing</a></li>
 <li><a href=#page-parameters>Page parameters</a></li>
 <li><a href=#repository-directory-structure>Repository directory structure</a></li>
+<li><a href=#linking-to-other-pages-within-our-wiki>Linking to other pages within our wiki</a></li>
+<li><a href=#screenshots>Screenshots</a></li>
 <li><a href=#adding-contributor>Adding contributor</a></li>
 </ul>
 </nav>
@@ -505,33 +507,33 @@
 </ol>
 </nav>
 <h1 id=title>Contribution</h1>
-<small class=updated>Updated October 2, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<small class=updated>Updated October 2, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a></small>
 <p class=lead></p>
 <h2 id=editing>Editing<a href=#editing class=anchor aria-hidden=true>#</a> </h2>
 <ol>
 <li>Open desired page
-<ol>
+<ul>
 <li>For example <a href=https://nrchkb.github.io/wiki/service/lock-mechanism/><code>https://nrchkb.github.io/wiki/service/lock-mechanism/</code></a></li>
-</ol>
+</ul>
 </li>
 <li>Click <p class=edit-page style=display:contents><a href="javascript: document.body.scrollIntoView(false);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p> on the bottom of the page
-<ol>
-<li>It will redirect you to raw page file in our GitHub repository</li>
-</ol>
+<ul>
+<li>You will be directed to the raw page file in our GitHub repository</li>
+</ul>
 </li>
-<li>In GitHub editor add or edit content after last <code>---</code>
-<ol>
+<li>In GitHub editor, add or edit content after last <code>---</code>
+<ul>
 <li>For content, you can use markdown (preferred) or html</li>
-</ol>
+</ul>
 </li>
 <li>Create new branch for commit and create Pull Request
-<ol>
+<ul>
 <li>Our Moderators will respond shortly!</li>
-</ol>
+</ul>
 </li>
 </ol>
 <h2 id=page-parameters>Page parameters<a href=#page-parameters class=anchor aria-hidden=true>#</a> </h2>
-<p>On our every page between <code>---</code> you can find page specific parameters.</p>
+<p>On each raw page between <code>---</code> you can find page specific parameters.</p>
 <table>
 <thead>
 <tr>
@@ -554,7 +556,7 @@
 </tr>
 <tr>
 <td>lastmod</td>
-<td>Page last modification date (ISO 8601), to be edited after every change. You can use <a href=https://www.timestamp-converter.com/>that</a> page to generate one.</td>
+<td>Page last modification date (ISO 8601), to be edited after every change. You can use <a href=https://www.timestamp-converter.com/>this</a> page to generate one.</td>
 </tr>
 <tr>
 <td>weight</td>
@@ -572,14 +574,22 @@
 </table>
 <h2 id=repository-directory-structure>Repository directory structure<a href=#repository-directory-structure class=anchor aria-hidden=true>#</a> </h2>
 <p>All our wiki pages are located in <code>content/wiki</code> folder <a href=https://github.com/NRCHKB/NRCHKB.github.io/tree/master/content/wiki>in our repository</a>.</p>
+<h2 id=linking-to-other-pages-within-our-wiki>Linking to other pages within our wiki<a href=#linking-to-other-pages-within-our-wiki class=anchor aria-hidden=true>#</a> </h2>
+<p>When referencing other wiki pages, please use <a href=https://gohugo.io/content-management/cross-references/>Hugo mechanism</a>. This helps keep things organized and prevent broken links in the future.</p>
+<p>Example <code>[Bridge](https://nrchkb.github.io/wiki/nodes/host-node/ "Host Node")</code>
+Where you specify text, reference link, and text which is displayed on link hover.</p>
+<h2 id=screenshots>Screenshots<a href=#screenshots class=anchor aria-hidden=true>#</a> </h2>
+<p>When uploading screenshots, it is preferred to upload them to the GitHub repository in the same folder as the wiki page you are editing. The screenshot should be uploaded to the branch you are using for your pull request.</p>
+<p>An example can be found <a href=https://github.com/NRCHKB/NRCHKB.github.io/tree/master/content/wiki/nodes/status-node>here</a>. Markdown is then used to reference the uploaded image file:
+<code>![Edit view](edit-view.png)</code></p>
 <h2 id=adding-contributor>Adding contributor<a href=#adding-contributor class=anchor aria-hidden=true>#</a> </h2>
 <p>Once you edit or add any content feel free to add yourself to contributors.</p>
 <ol>
-<li>In specific page add your name to the end of array <code>contributors: ["Shaquu"]</code></li>
+<li>In specific page add your name (case sensitive) to the end of array <code>contributors: ["Shaquu", "crxporter"]</code></li>
 <li>If you want you can create your profile page in <code>content/contributors</code>
-<ol>
+<ul>
 <li>Use <a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/contributors/shaquu/_index.md>this</a> as an example.</li>
-</ol>
+</ul>
 </li>
 </ol>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/discover-more/contribution.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
