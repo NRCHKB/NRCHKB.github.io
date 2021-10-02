@@ -27,14 +27,15 @@ Updated 30 September 2021, [@crxporter](https://github.com/crxporter)
 
 This is a variation of [this example]({{< ref "/wiki/service/valve#4-zone-sprinkler-connected-to-opensprinkler" >}} "Multi valves example") but is using the `IrrigationSystem` service. It ends up being quite similar but with some key differences to combine it into an "Irrigation System" instead of 4 individual valves.
 
-**Prerequisites**
+#### Prerequisites
 
 If you want to simply copy-paste this into your nodered setup, you will need to do these things first:
+
 1. Install [OpenSprinkler](https://opensprinkler.com) on the same machine as your Node-RED instance. Ideally this would be a `Raspberry Pi`. This is important because this setup is polling OpenSprinkler every one second at `localhost:8080`
 2. Remove the password from your OpenSprinkler setup
 3. Create at least one program in OpenSprinkler. It does not have to be enabled but it should exist.
 
-**Setup**
+#### Setup
 
 Honestly I think this one can just be copied right into your nodered - be sure to rename the HomeKit nodes according to your yard.
 
