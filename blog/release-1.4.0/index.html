@@ -1,0 +1,159 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
+<link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
+<link rel=stylesheet href=https://nrchkb.github.io/main.04ed0a3d67fbd114a9ab90889840cbef428d4ab04af773be13f8844f2a1596244a4e5907f76fe7ba5f50f4b9beb34d8c7930306385597fa21b0e0f6035a2e8a9.css integrity="sha512-BO0KPWf70RSpq5CImEDL70KNSrBK93O+E/iETyoVliRKTlkH92/nul9Q9Lm+s02MeTAwY4VZf6IbDg9gNaLoqQ==" crossorigin=anonymous>
+<noscript><style>img.lazyload{display:none}</style></noscript>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>Release 1.4.0 🥳 - NRCHKB</title>
+<meta name=description content="NRCHKB/node-red-contrib-homekit-bridged Release 1.4.0">
+<link rel=canonical href=https://nrchkb.github.io/blog/release-1.4.0/>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://nrchkb.github.io/blog/release-1.4.0/title.png">
+<meta name=twitter:title content="Release 1.4.0 🥳">
+<meta name=twitter:description content="NRCHKB/node-red-contrib-homekit-bridged Release 1.4.0">
+<meta property="og:title" content="Release 1.4.0 🥳">
+<meta property="og:description" content="NRCHKB/node-red-contrib-homekit-bridged Release 1.4.0">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nrchkb.github.io/blog/release-1.4.0/">
+<meta property="og:image" content="https://nrchkb.github.io/blog/release-1.4.0/title.png">
+<meta property="article:published_time" content="2021-10-04T16:04:58+00:00">
+<meta property="article:modified_time" content="2021-10-04T16:04:58+00:00">
+<meta property="og:site_name" content="NRCHKB">
+<meta property="og:locale" content="en_US">
+<meta name=yandex-verification content="5f5fdb90049c85bb">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/nrchkb.github.io\/blog\/release-1.4.0\/"},"headline":"Release 1.4.0 🥳","image":["https://nrchkb.github.io/blog/release-1.4.0/title.png"],"datePublished":"2021-10-04T16:04:58CET","dateModified":"2021-10-04T16:04:58CET","author":{"@type":"Organization","name":"NRCHKB"},"publisher":{"@type":"Organization","name":"NRCHKB","logo":{"@type":"ImageObject","url":"https:\/\/nrchkb.github.io\/images\/logo.png"}},"description":"NRCHKB\/node-red-contrib-homekit-bridged Release 1.4.0"}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/nrchkb.github.io\/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https:\/\/nrchkb.github.io\/blog\/"},{"@type":"ListItem","position":3,"name":"Release 1.4.0","item":"https:\/\/nrchkb.github.io\/blog\/release-1.4.0\/"}]}</script>
+<meta name=theme-color content="#8f0000">
+<link rel=apple-touch-icon sizes=180x180 href=https://nrchkb.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://nrchkb.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://nrchkb.github.io/favicon-16x16.png>
+<link rel=manifest href=https://nrchkb.github.io/site.webmanifest>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYRM4ZVKJS"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-XYRM4ZVKJS',{anonymize_ip:!1})}</script>
+</head>
+<body class="blog single">
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+<div class=container>
+<input class="menu-btn order-0" type=checkbox id=menu-btn>
+<label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label>
+<a class="navbar-brand order-1 order-md-0 me-auto" href=https://nrchkb.github.io/>NRCHKB</a>
+<button id=mode class="btn btn-link order-2 order-md-4" type=button aria-label="Toggle mode">
+<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
+<span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+</button>
+<ul class="navbar-nav social-nav order-3 order-md-5">
+<li class=nav-item>
+<a class=nav-link href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://discord.gg/uvYac5u target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 245 240"><style>.st0{fill:#7289da}</style><path class="st0" d="M104.4 103.9c-5.7.0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7.0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5.0c-5.7.0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7.0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"/><path class="st0" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2.0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6.0.0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3.0.0-8.5 14.5-30.6 15.2z"/></svg><span class="ms-2 visually-hidden">Discord</span></a>
+</li>
+</ul>
+<div class="collapse navbar-collapse order-4 order-md-1">
+<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class=nav-item>
+<div class=btn-group>
+<a class=nav-link href=https://nrchkb.github.io/wiki/introduction/quick-start/>Wiki</a>
+<button class="btn menu-wiki dropdown-toggle dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false><span class=visually-hidden>Toggle Dropdown</span></button>
+<ul class=dropdown-menu>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/introduction/quick-start/>Introduction</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/nodes/service-node/>Nodes</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/examples/demo-setup/>Examples</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/service/access-control/>Service</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/characteristic/access-control-level/>Characteristic</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/discover-more/contribution/>Discover More</a></li>
+</ul>
+</div>
+</li>
+<li class="nav-item active">
+<a class=nav-link href=https://nrchkb.github.io/blog/>Blog</a>
+</li>
+</ul>
+<div class="break order-6 d-md-none"></div>
+<form class="navbar-form flex-grow-1 order-7 order-md-3">
+<input id=userinput class="form-control is-search" type=search placeholder="Search wiki..." aria-label="Search wiki..." autocomplete=off>
+</form>
+</div>
+</div>
+</header>
+<div class="wrap container" role=document>
+<div class=content>
+<div class="row justify-content-center">
+<div class="col-md-12 col-lg-10 col-xl-8">
+<article>
+<div class=blog-header>
+<h1>Release 1.4.0 🥳</h1>
+<p><small>Posted October 4, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a>&nbsp;&dash;&nbsp;<strong>2&nbsp;min read</strong></small><p>
+</div>
+<p class=lead>New version is now available to install!</p>
+<p>You can read <a href=https://nrchkb.github.io/wiki/introduction/faq/#how-to-update-nrchkb-node title="How to upgrade NRCHKB">here</a> to find out how to upgrade to the newest version.</p>
+<p>Huge thanks to all contributors and testers from our <a href=https://discord.gg/uvYac5u>NRCHKB community</a>!
+Specially to <a href=https://nrchkb.github.io/contributors/crxporter/ title=@crxporter>@crxporter</a> and <a href=https://nrchkb.github.io/contributors/kevinkub/ title=@kevinkub>@kevinkub</a>.</p>
+<h2 id=changelog>Changelog</h2>
+<h3 id=fixed>Fixed</h3>
+<ul>
+<li>Fixed customCharacteristics incorrect refresh in UI</li>
+<li>Implemented static accessoryUUIDs for subflows Enables the use of nrchkb nodes in subflows with backwards
+compatibility <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/393>#393</a> - thanks <a href=https://github.com/kevinkub>@kevinkub</a></li>
+<li>Fixed Custom MDNS Configuration not showing in UI for Standalone Accessory</li>
+<li>Stop components from clearing other component&rsquo;s node.status call</li>
+<li>Add missing advertiser selector in UI for Standalone Accessory</li>
+<li>Not naming the host node causes a crash <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/424>#424</a></li>
+<li>Do not output oldValue for onSet as it does not have access to old value</li>
+</ul>
+<h3 id=added>Added</h3>
+<ul>
+<li>Notice during app launch: Node.js 10 will be deprecated in Node-RED 2.0.0</li>
+<li>Event output in Service 2 which is available in NRCHKB_EXPERIMENTAL <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/392>#392</a> <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/437>#437</a></li>
+<li>Status node to fetch Serialized Service <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/210>#210</a></li>
+<li>Support for environment variables in characteristic properties <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/217>#217</a></li>
+</ul>
+<h3 id=changed>Changed</h3>
+<ul>
+<li>Updated hap-nodejs to 0.9.5 (added new iOS 15 Services and Characteristics)</li>
+<li>Updated dependencies to the latest versions</li>
+<li>Changed <code>BatteryService</code> to <code>Battery</code> in demo examples as <code>BatteryService</code> is deprecated <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/381>#381</a> - thanks <a href=https://github.com/crxporter>@crxporter</a></li>
+<li>Readme rework - thanks <a href=https://github.com/crxporter>@crxporter</a></li>
+<li>More descriptive error when incorrect Characteristic has been used in msg.payload</li>
+<li>Add msg.hap.allChars to service nodes <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/438>#438</a></li>
+</ul>
+<h2 id=whats-next>What&rsquo;s next</h2>
+<p>We are already preparing for the next phase which will be 1.5.0 release.
+You can find <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/projects/10>here</a> what is in the planned scope.</p>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer text-muted">
+<div class=container>
+<div class=row>
+<div class="col-lg-8 order-last order-lg-first">
+<ul class=list-inline>
+<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://getdoks.org/>Doks</a></li>
+</ul>
+</div>
+<div class="col-lg-8 order-first order-lg-last text-lg-end">
+<ul class=list-inline>
+<li class=list-inline-item><a href=https://nrchkb.github.io/privacy-policy/>Privacy</a></li>
+<li class=list-inline-item><a href=https://discord.gg/uvYac5u><img src="https://img.shields.io/discord/586065987267330068?color=%238f0000&label=Discord&logo=discord" alt="NRCHKB Discord"></a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src=https://nrchkb.github.io/js/bootstrap.min.73ca27033146a505b6a0f66b79d99f613a18e778bc9606fd223476d0ebf0fc10508b0d4f5c448b0a946fa1d71fbeffaae9732adc0c2890e61c449217fd6ee1c0.js integrity="sha512-c8onAzFGpQW2oPZredmfYToY53i8lgb9IjR20Ovw/BBQiw1PXESLCpRvodcfvv+q6XMq3AwokOYcRJIX/W7hwA==" crossorigin=anonymous defer></script>
+<script src=https://nrchkb.github.io/js/highlight.min.127e3376bea3dd645cb978cf339ee2013a36b6e61ae547587bbe8ba16ad2669094399a73fcaae15fdd5b3835e1229ad05c9ec51f3ee46273044ef7632617c2a8.js integrity="sha512-En4zdr6j3WRcuXjPM57iATo2tuYa5UdYe76LoWrSZpCUOZpz/KrhX91bODXhIprQXJ7FHz7kYnMETvdjJhfCqA==" crossorigin=anonymous defer></script>
+<script src=https://nrchkb.github.io/main.min.4fe79bac09880084cfc759fdec42196d6f36bb680f53c6034d8272b44cf4d0484732c0fc3805ef5aae053a75d8ed8a8f17bcc64a138c82a3d7b1014f26793ca1.js integrity="sha512-T+ebrAmIAITPx1n97EIZbW82u2gPU8YDTYJytEz00EhHMsD8OAXvWq4FOnXY7YqPF7zGShOMgqPXsQFPJnk8oQ==" crossorigin=anonymous defer></script>
+<script type=text/javascript src=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js></script>
+<script type=text/javascript>docsearch({apiKey:'c0d6b8c0b6482607e905f4b1ba9397b4',indexName:'nrchkb',inputSelector:'#userinput',debug:!1})</script>
+<script src=https://nrchkb.github.io/index.js defer></script>
+</body>
+</html>
