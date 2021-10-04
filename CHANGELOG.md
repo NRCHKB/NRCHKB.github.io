@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.40.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.39.0...v1.40.0) (2021-10-04)
+
+
+### Features
+
+* Contribution page improvements ([80466a5](https://github.com/NRCHKB/NRCHKB.github.io/commit/80466a547a1e8c63315ebfb2001e35a3908ffe5f))
+* NRCHKB 1.4.0 release ([75577e7](https://github.com/NRCHKB/NRCHKB.github.io/commit/75577e7a83f680febf43533ae78bdf6d4019908d))
+
 ## [1.39.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.37.0...v1.39.0) (2021-10-02)
 
 
