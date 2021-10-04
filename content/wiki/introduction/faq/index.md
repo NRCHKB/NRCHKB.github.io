@@ -3,7 +3,7 @@ title: "FAQ"
 description: "Frequently Asked Questions"
 lead: "Question you ask us and questions we ask you"
 date: 2021-04-15T20:00:00+02:00
-lastmod: 2021-09-30T18:16:24.348Z
+lastmod: 2021-10-04T16:10:51.017Z
 draft: false
 images: []
 menu:
@@ -13,6 +13,22 @@ weight: 100
 toc: true
 contributors: ["Shaquu"]
 ---
+
+## How to update NRCHKB node
+
+New version has been released, and you would like to upgrade? There are at least two ways to do that!
+
+### Using palette
+
+1. In `node-red` UI click Manage palette in Menu
+2. Locate `node-red-contrib-homekit-bridged` and click update to `1.4.0`
+
+### Manually
+
+1. Stop `node-red`
+2. `cd ~/.node-red`
+3. `npm i node-red-contrib-homekit-bridged@1.4.0`
+4. Start `node-red`
 
 ## Device paired but Service disappearing in Home.app from time to time
 

@@ -45,14 +45,14 @@ All our wiki pages are located in `content/wiki` folder [in our repository](http
 
 ## Linking to other pages within our wiki
 
-When referencing other wiki pages, please use [Hugo mechanism](https://gohugo.io/content-management/cross-references/). This helps keep things organized and prevent broken links in the future. 
+When referencing other wiki pages, please use [Hugo mechanism](https://gohugo.io/content-management/cross-references/). This helps keep things organized and prevent broken links in the future.
 
 Example `[Bridge]({{< ref "/wiki/nodes/host-node" >}} "Host Node")`
 Where you specify text, reference link, and text which is displayed on link hover.
 
 ## Screenshots
 
-When uploading screenshots, it is preferred to upload them to the GitHub repository in the same folder as the wiki page you are editing. The screenshot should be uploaded to the branch you are using for your pull request. 
+When uploading screenshots, it is preferred to upload them to the GitHub repository in the same folder as the wiki page you are editing. The screenshot should be uploaded to the branch you are using for your pull request.
 
 An example can be found [here](https://github.com/NRCHKB/NRCHKB.github.io/tree/master/content/wiki/nodes/status-node). Markdown is then used to reference the uploaded image file:
 `![Edit view](edit-view.png)`

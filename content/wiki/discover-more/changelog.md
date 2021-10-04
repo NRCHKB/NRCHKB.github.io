@@ -3,7 +3,7 @@ title: "Changelog"
 description: "All notable changes in NRCHKB project."
 lead: ""
 date: 2021-08-11T18:47:58.489Z
-lastmod: 2021-09-30T17:58:48.105Z
+lastmod: 2021-10-04T15:11:09.456Z
 draft: false
 images: []
 menu:
@@ -16,7 +16,7 @@ contributors: ["Shaquu"]
 
 #### ⚠️ CAUTION ⚠️
 
-##### Before upgrading make sure that you are using latest version of [Node-RED](https://nodered.org/docs/getting-started/local) and latest LTS version of [Node.js](https://nodejs.org/en/download/)
+##### Before upgrading make sure that you are using the latest version of [Node-RED](https://nodered.org/docs/getting-started/local) and latest LTS version of [Node.js](https://nodejs.org/en/download/)
 
 ###### Upgrading from versions 0.X to 1.X is a breaking change, all devices will be reset in the Home app. Please review the [release notes](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/releases/tag/v1.0.1) thoroughly before updating!
 
@@ -26,6 +26,35 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.4.0]
+
+### Fixed
+
+- Fixed customCharacteristics incorrect refresh in UI
+- Implemented static accessoryUUIDs for subflows Enables the use of nrchkb nodes in subflows with backwards
+  compatibility [#393](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/393) - thanks [@kevinkub](https://github.com/kevinkub)
+- Fixed Custom MDNS Configuration not showing in UI for Standalone Accessory
+- Stop components from clearing other component's node.status call
+- Add missing advertiser selector in UI for Standalone Accessory
+- Not naming the host node causes a crash [#424](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/424)
+- Do not output oldValue for onSet as it does not have access to old value
+
+### Added
+
+- Notice during app launch: Node.js 10 will be deprecated in Node-RED 2.0.0
+- Event output in Service 2 which is available in NRCHKB_EXPERIMENTAL [#392](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/392) [#437](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/437)
+- Status node to fetch Serialized Service [#210](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/210)
+- Support for environment variables in characteristic properties [#217](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/217)
+
+### Changed
+
+- Updated hap-nodejs to 0.9.5 (added new iOS 15 Services and Characteristics)
+- Updated dependencies to latest versions
+- Changed `BatteryService` to `Battery` in demo examples as `BatteryService` is deprecated [#381](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/381) - thanks [@crxporter](https://github.com/crxporter)
+- Readme rework - thanks [@crxporter](https://github.com/crxporter)
+- More descriptive error when incorrect Characteristic has been used in msg.payload
+- Add msg.hap.allChars to service nodes [#438](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/438)
 
 ## [1.3.6]
 
@@ -84,7 +113,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   Characteristics [#52](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/52)
 - Add client IP address to onSet/onChange output
   message (`msg.hap.session`) [#328](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/328)
-- As of new mdns advertiser available now there is a possibilty to choose which you want to use in Bridge Config: ciao (
+- As of new mdns advertiser available now there is a possibility to choose which you want to use in Bridge Config:
+  ciao (
   new, improved but not yet proved) or (good old) bonjour. Default bonjour
 
 ### Changed
@@ -178,7 +208,7 @@ this [notice](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/pull/16
 - Corrections regarding issue [#12](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/12) so that
   changes can be deployed without restarting node-red
 - Automatically creating a new service and replacing the old one if the service type changed
-- Automatically replacing an accessory with a new one if the accessory information changes (e.g. Name, Manufacturer,
+- Automatically replacing an accessory with a new one if the accessory information changes (e.g., Name, Manufacturer,
   ...)
 - Video Filter value in Camera Control is now
   optional [#194](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/194) (can be empty, before it was
@@ -199,7 +229,7 @@ this [notice](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/pull/16
 - Accessory Category in node configuration moved under Service selection
 - Clarify NO_RESPONSE in README
 - Update node-red version in dependencies
-- Camera Service source code to match newest improvements in homebridge-camera-ffmpeg
+- Camera Service source code to match the newest improvements in homebridge-camera-ffmpeg
 - Update to latest HAP-NodeJS
 - Removed unnecessary accessory category from service node
 - Removed fields Manufacturer, Serial Number and Model from linked service nodes
@@ -211,7 +241,7 @@ this [notice](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/pull/16
 ### Added
 
 - Added greenkeeper
-- Added setting to Bidge configuration called Allow Message Passthrough
+- Added setting to Bridge configuration called Allow Message Passthrough
 
 ### Changed
 
@@ -232,7 +262,6 @@ this [notice](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/pull/16
 ### Added
 
 - CHANGELOG page introduction
-- travis autodeploy to npm on pushed tags
 - Change from "characteristic-change" to "set" to listen to HAP-NodeJS events
 - Sorted Service Type list in UI
 - Camera support (RTSP, Video Doorbell and others)
@@ -240,7 +269,7 @@ this [notice](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/pull/16
 - HAP-NodeJS version changed to latest (0.5.0)
 - Added Accessory Category field for Parent Service
 - More code refactoring
-- Newest HomeKit Docs uploaded
+- The Newest HomeKit Docs uploaded
 - Security hints
 - And more...
 
@@ -248,9 +277,9 @@ this [notice](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/pull/16
 
 - MIT license
 - Better node-red tests
-- Pretiefied and linted code!
+- Prettified and linted code!
 - Support for node 8 and 10 only
-- Github Actions for automatic tests and publish
+- GitHub Actions for automatic tests and publish
 - And more...
 
 ### Fixed
