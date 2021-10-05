@@ -3,7 +3,7 @@ title: "Changelog"
 description: "All notable changes in NRCHKB project."
 lead: ""
 date: 2021-08-11T18:47:58.489Z
-lastmod: 2021-10-04T15:11:09.456Z
+lastmod: 2021-10-05T17:12:50.194Z
 draft: false
 images: []
 menu:
@@ -26,6 +26,19 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.4.2]
+
+### Fixed
+
+- Resolve issue with customCharacteristics not loading from file
+- Fixed publish process
+
+## [1.4.1]
+
+### Fixed
+
+- Fix readme appearance on `flows.nodered.org`
 
 ## [1.4.0]
 
