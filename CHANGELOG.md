@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.41.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.41.0...v1.41.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* Incorrect image paths in Service Node page ([66c1ad9](https://github.com/NRCHKB/NRCHKB.github.io/commit/66c1ad9c0ffed33e798bbe07f1b172d596be1bf2))
+
 ## [1.41.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.40.0...v1.41.0) (2021-10-05)
 
 
