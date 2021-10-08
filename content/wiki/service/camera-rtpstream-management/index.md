@@ -28,7 +28,7 @@ If you have problems with FFMPEG (if you think the camera is set up properly but
 - Configure camera controller in node-red
 - Run node-red with `DEBUG=NRCHKB*` and tick "debug mode" in Camera Control
 - It will error again but will print ffmpeg command in logs
-- Run that command in terminal separatly to get real problem
+- Run that command in terminal separately to get real problem
 
 ## Examples
 
