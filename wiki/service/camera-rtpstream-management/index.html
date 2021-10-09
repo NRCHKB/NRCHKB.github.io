@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/service/camera-rtpstream-management/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-04-17T18:50:12+00:00">
-<meta property="article:modified_time" content="2021-08-11T22:15:36+00:00">
+<meta property="article:modified_time" content="2021-10-08T23:03:11+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -510,7 +510,7 @@
 </ol>
 </nav>
 <h1 id=title>Camera RTPStream Management</h1>
-<small class=updated>Updated August 11, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/caitken-com/>caitken-com</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/itsj4y/>itsj4y</a></small>
+<small class=updated>Updated October 8, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/caitken-com/>caitken-com</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/itsj4y/>itsj4y</a></small>
 <p class=lead></p>
 <p><small>UUID: 00000110-0000-1000-8000-0026BB765291</small></p>
 <h2 id=characteristics>Characteristics<a href=#characteristics class=anchor aria-hidden=true>#</a></h2>
@@ -554,6 +554,13 @@
 <p>Cameras are a complicated situation. If you are running the <a href=https://github.com/NRCHKB/node-red-contrib-homekit-docker>Docker way</a> then FFMPEG will be preinstalled for you with several of the options preset (may not have all hardware accelerations built). Alternately you can download and compile your own version of FFMPEG with the build flags you need for your cameras.</p>
 <p>For those writing examples, please include how you have installed FFMPEG!</p>
 <p>It is recommended to add only one camera per bridge. The camera should be the &ldquo;parent&rdquo; service with &ldquo;motion&rdquo; and &ldquo;doorbell&rdquo; (if used) as linked services.</p>
+<p>If you have problems with FFMPEG (if you think the camera is set up properly but it &ldquo;does nothing&rdquo; then you might have FFMPEG problems) then please follow these steps to properly debug your FFMPEG setup.</p>
+<ul>
+<li>Configure camera controller in node-red</li>
+<li>Run node-red with <code>DEBUG=NRCHKB*</code> and tick &ldquo;debug mode&rdquo; in Camera Control</li>
+<li>It will error again but will print ffmpeg command in logs</li>
+<li>Run that command in terminal separately to get real problem</li>
+</ul>
 <h2 id=examples>Examples<a href=#examples class=anchor aria-hidden=true>#</a> </h2>
 <h3 id=-raspberry-pi-zero-w>* Raspberry Pi Zero W<a href=#-raspberry-pi-zero-w class=anchor aria-hidden=true>#</a> </h3>
 <p>Example written by CRXPorter. Date 21 November, 2020. Plugin version 1.2.0, Node-RED version 1.2.5.</p>
