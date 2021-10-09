@@ -3,7 +3,7 @@ title: "Camera RTPStream Management"
 description: "Camera RTPStream Management"
 lead: ""
 date: 2021-04-17T18:50:12.027Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-08T23:03:11.434Z
 draft: false
 images: []
 menu:
@@ -22,6 +22,13 @@ Cameras are a complicated situation. If you are running the [Docker way](https:/
 For those writing examples, please include how you have installed FFMPEG!
 
 It is recommended to add only one camera per bridge. The camera should be the "parent" service with "motion" and "doorbell" (if used) as linked services.
+
+If you have problems with FFMPEG (if you think the camera is set up properly but it "does nothing" then you might have FFMPEG problems) then please follow these steps to properly debug your FFMPEG setup.
+
+- Configure camera controller in node-red
+- Run node-red with `DEBUG=NRCHKB*` and tick "debug mode" in Camera Control
+- It will error again but will print ffmpeg command in logs
+- Run that command in terminal separately to get real problem
 
 ## Examples
 
