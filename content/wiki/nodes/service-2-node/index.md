@@ -2,8 +2,8 @@
 title: "Service 2 Node (Experimental)"
 description: "This node represents Service 2 in HomeKit"
 lead: ""
-date: 2021-10-11T22:56:23.730Z
-lastmod: 2021-10-11T22:56:23.730Z
+date: 2021-10-11T23:29:29.943Z
+lastmod: 2021-10-11T23:29:29.943Z
 draft: true
 images: []
 menu:
