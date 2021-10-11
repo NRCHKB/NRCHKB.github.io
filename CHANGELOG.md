@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.42.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.41.1...v1.42.0) (2021-10-11)
+
+
+### Features
+
+* Draft for Service 2 page ([7520c2a](https://github.com/NRCHKB/NRCHKB.github.io/commit/7520c2a1be6be20f317fa8c58781c4f54144bf4b))
+* Experimental features page ([b153b84](https://github.com/NRCHKB/NRCHKB.github.io/commit/b153b840b88d03e1894ce9948b3b508e249758d6))
+* Improved CameraControl debug tips ([c40936a](https://github.com/NRCHKB/NRCHKB.github.io/commit/c40936a01537d27cd5d76afcd19881bd0702ecd5))
+* Improved CameraControl debug tips ([891ea09](https://github.com/NRCHKB/NRCHKB.github.io/commit/891ea09c9c6eb217b0419c519031654e2551208b))
+* NRCHKB 1.4.3 release ([a6711a4](https://github.com/NRCHKB/NRCHKB.github.io/commit/a6711a49d28d6dbffc302465c7bd75793cbb4be4))
+
 ### [1.41.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.41.0...v1.41.1) (2021-10-07)
 
 
