@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.42.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.42.0...v1.42.1) (2021-10-11)
+
+
+### Bug Fixes
+
+* Fix code wrapping in Safari ([eae1815](https://github.com/NRCHKB/NRCHKB.github.io/commit/eae1815dbd0df882428cd9a46e2739a6f6243d98))
+
 ## [1.42.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.41.1...v1.42.0) (2021-10-11)
 
 
