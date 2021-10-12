@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/discover-more/experimental/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-10-11T23:29:29+00:00">
-<meta property="article:modified_time" content="2021-10-11T23:29:29+00:00">
+<meta property="article:modified_time" content="2021-10-12T21:47:04+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -508,7 +508,7 @@
 </ol>
 </nav>
 <h1 id=title>Experimental</h1>
-<small class=updated>Updated October 11, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<small class=updated>Updated October 12, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead></p>
 <p>During development, we add new features that are marked as <code>experimental</code>.</p>
 <p>They can be marked that way for few reasons:</p>
@@ -535,7 +535,71 @@
 To see them in action you have to use alternative app like Eve.app
 <img src=custom-characteristics-eve-app.jpeg alt="Custom Characteristics Eve.app"></p>
 </blockquote>
-<h3 id=service-2>Service 2<a href=#service-2 class=anchor aria-hidden=true>#</a> </h3>
+<h4 id=example-eve-characteristics>Example Eve Characteristics<a href=#example-eve-characteristics class=anchor aria-hidden=true>#</a> </h4>
+<h5 id=sumary>Sumary<a href=#sumary class=anchor aria-hidden=true>#</a> </h5>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>UUID</th>
+<th>format</th>
+<th>description</th>
+<th>minValue</th>
+<th>maxValue</th>
+<th>minStep</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volt</td>
+<td>E863F10A-079E-48FF-8F27-9C2605A29F52</td>
+<td>uint16</td>
+<td>Eve Volt</td>
+<td>0</td>
+<td>400</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Ampere</td>
+<td>E863F126-079E-48FF-8F27-9C2605A29F52</td>
+<td>float</td>
+<td>Eve Ampere</td>
+<td>0</td>
+<td>16</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Watt</td>
+<td>E863F10D-079E-48FF-8F27-9C2605A29F52</td>
+<td>uint16</td>
+<td>Eve Watt</td>
+<td>0</td>
+<td>3500</td>
+<td></td>
+</tr>
+<tr>
+<td>Kilowatt-Hour</td>
+<td>E863F10C-079E-48FF-8F27-9C2605A29F52</td>
+<td>float</td>
+<td>Eve Kilowatt-Hour</td>
+<td>0</td>
+<td>4294967295</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Volt-Ampere</td>
+<td>E863F110-079E-48FF-8F27-9C2605A29F52</td>
+<td>float</td>
+<td>Eve Volt-Ampere</td>
+<td>0</td>
+<td>4000</td>
+<td>0.01</td>
+</tr>
+</tbody>
+</table>
+<h5 id=node-rednrchkb35b973f1696b4cd60b78ca5f719b83ca><code>~/.node-red/nrchkb/35b973f1696b4cd60b78ca5f719b83ca</code><a href=#node-rednrchkb35b973f1696b4cd60b78ca5f719b83ca class=anchor aria-hidden=true>#</a> </h5>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span><span class=nt>&#34;key&#34;</span><span class=p>:</span><span class=s2>&#34;customCharacteristics&#34;</span><span class=p>,</span><span class=nt>&#34;value&#34;</span><span class=p>:[{</span><span class=nt>&#34;name&#34;</span><span class=p>:</span><span class=s2>&#34;Volt&#34;</span><span class=p>,</span><span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;E863F10A-079E-48FF-8F27-9C2605A29F52&#34;</span><span class=p>,</span><span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;uint16&#34;</span><span class=p>,</span><span class=nt>&#34;unit&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;perms&#34;</span><span class=p>:[</span><span class=s2>&#34;pr&#34;</span><span class=p>,</span><span class=s2>&#34;pw&#34;</span><span class=p>,</span><span class=s2>&#34;ev&#34;</span><span class=p>,</span><span class=s2>&#34;tw&#34;</span><span class=p>,</span><span class=s2>&#34;wr&#34;</span><span class=p>],</span><span class=nt>&#34;ev&#34;</span><span class=p>:</span><span class=s2>&#34;true&#34;</span><span class=p>,</span><span class=nt>&#34;description&#34;</span><span class=p>:</span><span class=s2>&#34;Eve Volt&#34;</span><span class=p>,</span><span class=nt>&#34;minValue&#34;</span><span class=p>:</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=nt>&#34;maxValue&#34;</span><span class=p>:</span><span class=s2>&#34;400&#34;</span><span class=p>,</span><span class=nt>&#34;minStep&#34;</span><span class=p>:</span><span class=s2>&#34;3&#34;</span><span class=p>,</span><span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;maxDataLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;validValues&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;adminOnlyAccess&#34;</span><span class=p>:[</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=s2>&#34;1&#34;</span><span class=p>,</span><span class=s2>&#34;2&#34;</span><span class=p>]},{</span><span class=nt>&#34;name&#34;</span><span class=p>:</span><span class=s2>&#34;Ampere&#34;</span><span class=p>,</span><span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;E863F126-079E-48FF-8F27-9C2605A29F52&#34;</span><span class=p>,</span><span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;float&#34;</span><span class=p>,</span><span class=nt>&#34;unit&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;perms&#34;</span><span class=p>:[</span><span class=s2>&#34;pr&#34;</span><span class=p>,</span><span class=s2>&#34;pw&#34;</span><span class=p>,</span><span class=s2>&#34;ev&#34;</span><span class=p>,</span><span class=s2>&#34;tw&#34;</span><span class=p>,</span><span class=s2>&#34;wr&#34;</span><span class=p>],</span><span class=nt>&#34;ev&#34;</span><span class=p>:</span><span class=s2>&#34;true&#34;</span><span class=p>,</span><span class=nt>&#34;description&#34;</span><span class=p>:</span><span class=s2>&#34;Eve Ampere&#34;</span><span class=p>,</span><span class=nt>&#34;minValue&#34;</span><span class=p>:</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=nt>&#34;maxValue&#34;</span><span class=p>:</span><span class=s2>&#34;16&#34;</span><span class=p>,</span><span class=nt>&#34;minStep&#34;</span><span class=p>:</span><span class=s2>&#34;0.01&#34;</span><span class=p>,</span><span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;maxDataLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;validValues&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;adminOnlyAccess&#34;</span><span class=p>:[</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=s2>&#34;1&#34;</span><span class=p>,</span><span class=s2>&#34;2&#34;</span><span class=p>]},{</span><span class=nt>&#34;name&#34;</span><span class=p>:</span><span class=s2>&#34;Watt&#34;</span><span class=p>,</span><span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;E863F10D-079E-48FF-8F27-9C2605A29F52&#34;</span><span class=p>,</span><span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;uint16&#34;</span><span class=p>,</span><span class=nt>&#34;unit&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;perms&#34;</span><span class=p>:[</span><span class=s2>&#34;pr&#34;</span><span class=p>,</span><span class=s2>&#34;pw&#34;</span><span class=p>,</span><span class=s2>&#34;ev&#34;</span><span class=p>,</span><span class=s2>&#34;tw&#34;</span><span class=p>,</span><span class=s2>&#34;wr&#34;</span><span class=p>],</span><span class=nt>&#34;ev&#34;</span><span class=p>:</span><span class=s2>&#34;true&#34;</span><span class=p>,</span><span class=nt>&#34;description&#34;</span><span class=p>:</span><span class=s2>&#34;Eve Watt&#34;</span><span class=p>,</span><span class=nt>&#34;minValue&#34;</span><span class=p>:</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=nt>&#34;maxValue&#34;</span><span class=p>:</span><span class=s2>&#34;3500&#34;</span><span class=p>,</span><span class=nt>&#34;minStep&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;maxDataLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;validValues&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;adminOnlyAccess&#34;</span><span class=p>:[</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=s2>&#34;1&#34;</span><span class=p>,</span><span class=s2>&#34;2&#34;</span><span class=p>]},{</span><span class=nt>&#34;name&#34;</span><span class=p>:</span><span class=s2>&#34;Kilowatt-Hour&#34;</span><span class=p>,</span><span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;E863F10C-079E-48FF-8F27-9C2605A29F52&#34;</span><span class=p>,</span><span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;float&#34;</span><span class=p>,</span><span class=nt>&#34;unit&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;perms&#34;</span><span class=p>:[</span><span class=s2>&#34;pr&#34;</span><span class=p>,</span><span class=s2>&#34;pw&#34;</span><span class=p>,</span><span class=s2>&#34;ev&#34;</span><span class=p>,</span><span class=s2>&#34;tw&#34;</span><span class=p>,</span><span class=s2>&#34;wr&#34;</span><span class=p>],</span><span class=nt>&#34;ev&#34;</span><span class=p>:</span><span class=s2>&#34;true&#34;</span><span class=p>,</span><span class=nt>&#34;description&#34;</span><span class=p>:</span><span class=s2>&#34;Eve Kilowatt-Hour&#34;</span><span class=p>,</span><span class=nt>&#34;minValue&#34;</span><span class=p>:</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=nt>&#34;maxValue&#34;</span><span class=p>:</span><span class=s2>&#34;4294967295&#34;</span><span class=p>,</span><span class=nt>&#34;minStep&#34;</span><span class=p>:</span><span class=s2>&#34;0.01&#34;</span><span class=p>,</span><span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;maxDataLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;validValues&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;adminOnlyAccess&#34;</span><span class=p>:[</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=s2>&#34;1&#34;</span><span class=p>,</span><span class=s2>&#34;2&#34;</span><span class=p>]},{</span><span class=nt>&#34;name&#34;</span><span class=p>:</span><span class=s2>&#34;Volt-Ampere&#34;</span><span class=p>,</span><span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;E863F110-079E-48FF-8F27-9C2605A29F52&#34;</span><span class=p>,</span><span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;float&#34;</span><span class=p>,</span><span class=nt>&#34;unit&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;perms&#34;</span><span class=p>:[</span><span class=s2>&#34;pr&#34;</span><span class=p>,</span><span class=s2>&#34;pw&#34;</span><span class=p>,</span><span class=s2>&#34;ev&#34;</span><span class=p>,</span><span class=s2>&#34;tw&#34;</span><span class=p>,</span><span class=s2>&#34;wr&#34;</span><span class=p>],</span><span class=nt>&#34;ev&#34;</span><span class=p>:</span><span class=s2>&#34;true&#34;</span><span class=p>,</span><span class=nt>&#34;description&#34;</span><span class=p>:</span><span class=s2>&#34;Eve Volt-Ampere&#34;</span><span class=p>,</span><span class=nt>&#34;minValue&#34;</span><span class=p>:</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=nt>&#34;maxValue&#34;</span><span class=p>:</span><span class=s2>&#34;4000&#34;</span><span class=p>,</span><span class=nt>&#34;minStep&#34;</span><span class=p>:</span><span class=s2>&#34;0.01&#34;</span><span class=p>,</span><span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;maxDataLen&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;validValues&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;adminOnlyAccess&#34;</span><span class=p>:[</span><span class=s2>&#34;0&#34;</span><span class=p>,</span><span class=s2>&#34;1&#34;</span><span class=p>,</span><span class=s2>&#34;2&#34;</span><span class=p>]}]}</span>
+</code></pre></div><h3 id=service-2>Service 2<a href=#service-2 class=anchor aria-hidden=true>#</a> </h3>
 <p><a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/392>NRCHKB/node-red-contrib-homekit-bridged#392</a></p>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/discover-more/experimental/index.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
