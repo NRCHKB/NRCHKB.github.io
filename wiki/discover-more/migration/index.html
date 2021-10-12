@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/discover-more/migration/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-08-03T23:21:00+00:00">
-<meta property="article:modified_time" content="2021-08-11T22:15:36+00:00">
+<meta property="article:modified_time" content="2021-10-12T22:15:26+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -492,6 +492,7 @@
 <li><a href=#how-to-do-it>How to do it!</a></li>
 </ul>
 </li>
+<li><a href=#migration-to-new-flow>Migration to new flow</a></li>
 </ul>
 </nav>
 </div>
@@ -506,7 +507,7 @@
 </ol>
 </nav>
 <h1 id=title>Migration</h1>
-<small class=updated>Updated August 11, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a></small>
+<small class=updated>Updated October 12, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead></p>
 <h2 id=migration-to-new-setup>Migration to new setup<a href=#migration-to-new-setup class=anchor aria-hidden=true>#</a> </h2>
 <p>There are some cases when you may want to move your HomeKit devices to a new Node-RED instance while not changing your Home App pairings.
@@ -523,6 +524,19 @@ While not guaranteed, this process should allow migration without needing to rem
 <li>Rename the <code>flows_&lt;old machine's hostname>.json</code> to <code>flows.json</code> on the new server.</li>
 <li>Edit the <code>settings.js</code> file on the new server, and uncomment the line `flowFile: &lsquo;flows.json&rsquo;</li>
 <li>(Re)Start Node-RED on your new server.</li>
+</ol>
+<h2 id=migration-to-new-flow>Migration to new flow<a href=#migration-to-new-flow class=anchor aria-hidden=true>#</a> </h2>
+<p>Sometimes you want to move Service node between flows. Unfortunately simple copy and paste will cause the node to have it&rsquo;s id regenerated.
+New id means that HomeKit will loose data about that Service which can cause some settings missing in Home.app (like room assignment etc. for that Service).</p>
+<ol>
+<li>Create new flow in Node-RED. If already created make sure that you have at least one (any) node in it.</li>
+<li>Note node.id of the Service node you want to move to new flow.</li>
+<li>Backup your files that are in <code>.node-red</code> directory</li>
+<li>Shut down Node-RED</li>
+<li>Locate flows file <code>flows_&lt;machine's hostname>.json</code> and open it</li>
+<li>Locate node in the flow file. Example <code>"id":"6bed989d.116308","type":"homekit-service","z":"6c3f03b4.f0351c"</code></li>
+<li><code>z</code> is flow id. Change it to new flow id.</li>
+<li>Save file and start Node-RED.</li>
 </ol>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/discover-more/migration.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
