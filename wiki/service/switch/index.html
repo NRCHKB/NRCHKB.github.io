@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.0a5f6f4079cf3f1c9f686e5cf216f96d42a65c5bcc7c95a1f3e4a574f01ab695f3fd5b08dc524bef06a034898d7c975569774effe6812f8c5bb45b8922ca89c1.css integrity="sha512-Cl9vQHnPPxyfaG5c8hb5bUKmXFvMfJWh8+SldPAatpXz/VsI3FJL7wagNImNfJdVaXdO/+aBL4xbtFuJIsqJwQ==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.772c1369f20310d4cc7aceb67f177d8286efe2c5e5e8c7f7933fd521cd4f56275c22e0706df14f8526d745dd8f3ea34cde21e65c5fed8ad15e7795434301859f.css integrity="sha512-dywTafIDENTMes62fxd9gobv4sXl6Mf3kz/VIc1PVidcIuBwbfFPhSbXRd2PPqNM3iHmXF/titFed5VDQwGFnw==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 <meta name=robots content="index, follow">
@@ -552,136 +552,135 @@
 <details>
 <summary>Click to expand!</summary>
 <p>
-<pre><code class=language-json>[
-    {
-        &quot;id&quot;: &quot;7509f965.646da8&quot;,
-        &quot;type&quot;: &quot;inject&quot;,
-        &quot;z&quot;: &quot;53127d0.a094d84&quot;,
-        &quot;name&quot;: &quot;On&quot;,
-        &quot;topic&quot;: &quot;&quot;,
-        &quot;payload&quot;: &quot;{\&quot;On\&quot;:true}&quot;,
-        &quot;payloadType&quot;: &quot;json&quot;,
-        &quot;repeat&quot;: &quot;&quot;,
-        &quot;crontab&quot;: &quot;&quot;,
-        &quot;once&quot;: false,
-        &quot;onceDelay&quot;: 0.1,
-        &quot;x&quot;: 230,
-        &quot;y&quot;: 320,
-        &quot;wires&quot;: [
-            [
-                &quot;84c5345e.cea678&quot;
-            ]
-        ]
-    },
-    {
-        &quot;id&quot;: &quot;83aa9e6a.6ac9e&quot;,
-        &quot;type&quot;: &quot;debug&quot;,
-        &quot;z&quot;: &quot;53127d0.a094d84&quot;,
-        &quot;name&quot;: &quot;HomeKit Out&quot;,
-        &quot;active&quot;: true,
-        &quot;tosidebar&quot;: true,
-        &quot;console&quot;: false,
-        &quot;tostatus&quot;: false,
-        &quot;complete&quot;: &quot;payload&quot;,
-        &quot;targetType&quot;: &quot;msg&quot;,
-        &quot;x&quot;: 650,
-        &quot;y&quot;: 340,
-        &quot;wires&quot;: []
-    },
-    {
-        &quot;id&quot;: &quot;6f909132.f78a&quot;,
-        &quot;type&quot;: &quot;inject&quot;,
-        &quot;z&quot;: &quot;53127d0.a094d84&quot;,
-        &quot;name&quot;: &quot;Off&quot;,
-        &quot;topic&quot;: &quot;&quot;,
-        &quot;payload&quot;: &quot;{\&quot;On\&quot;:false}&quot;,
-        &quot;payloadType&quot;: &quot;json&quot;,
-        &quot;repeat&quot;: &quot;&quot;,
-        &quot;crontab&quot;: &quot;&quot;,
-        &quot;once&quot;: false,
-        &quot;onceDelay&quot;: 0.1,
-        &quot;x&quot;: 230,
-        &quot;y&quot;: 360,
-        &quot;wires&quot;: [
-            [
-                &quot;84c5345e.cea678&quot;
-            ]
-        ]
-    },
-    {
-        &quot;id&quot;: &quot;84c5345e.cea678&quot;,
-        &quot;type&quot;: &quot;homekit-service&quot;,
-        &quot;z&quot;: &quot;53127d0.a094d84&quot;,
-        &quot;isParent&quot;: true,
-        &quot;bridge&quot;: &quot;51de116c.bb01&quot;,
-        &quot;parentService&quot;: &quot;&quot;,
-        &quot;name&quot;: &quot;Example Switch&quot;,
-        &quot;serviceName&quot;: &quot;Switch&quot;,
-        &quot;topic&quot;: &quot;&quot;,
-        &quot;filter&quot;: false,
-        &quot;manufacturer&quot;: &quot;NRCHKB&quot;,
-        &quot;model&quot;: &quot;Default Model&quot;,
-        &quot;serialNo&quot;: &quot;1.1.1&quot;,
-        &quot;firmwareRev&quot;: &quot;1.1.1&quot;,
-        &quot;hardwareRev&quot;: &quot;1.1.1&quot;,
-        &quot;softwareRev&quot;: &quot;1.0.0&quot;,
-        &quot;cameraConfigVideoProcessor&quot;: &quot;ffmpeg&quot;,
-        &quot;cameraConfigSource&quot;: &quot;&quot;,
-        &quot;cameraConfigStillImageSource&quot;: &quot;&quot;,
-        &quot;cameraConfigMaxStreams&quot;: 2,
-        &quot;cameraConfigMaxWidth&quot;: 1280,
-        &quot;cameraConfigMaxHeight&quot;: 720,
-        &quot;cameraConfigMaxFPS&quot;: 10,
-        &quot;cameraConfigMaxBitrate&quot;: 300,
-        &quot;cameraConfigVideoCodec&quot;: &quot;libx264&quot;,
-        &quot;cameraConfigAudioCodec&quot;: &quot;libfdk_aac&quot;,
-        &quot;cameraConfigAudio&quot;: false,
-        &quot;cameraConfigPacketSize&quot;: 1316,
-        &quot;cameraConfigVerticalFlip&quot;: false,
-        &quot;cameraConfigHorizontalFlip&quot;: false,
-        &quot;cameraConfigMapVideo&quot;: &quot;0:0&quot;,
-        &quot;cameraConfigMapAudio&quot;: &quot;0:1&quot;,
-        &quot;cameraConfigVideoFilter&quot;: &quot;scale=1280:720&quot;,
-        &quot;cameraConfigAdditionalCommandLine&quot;: &quot;-tune zerolatency&quot;,
-        &quot;cameraConfigDebug&quot;: false,
-        &quot;cameraConfigSnapshotOutput&quot;: &quot;disabled&quot;,
-        &quot;cameraConfigInterfaceName&quot;: &quot;&quot;,
-        &quot;characteristicProperties&quot;: &quot;{}&quot;,
-        &quot;x&quot;: 440,
-        &quot;y&quot;: 340,
-        &quot;wires&quot;: [
-            [
-                &quot;83aa9e6a.6ac9e&quot;
-            ],
-            [
-                &quot;83aa9e6a.6ac9e&quot;
-            ]
-        ]
-    },
-    {
-        &quot;id&quot;: &quot;51de116c.bb01&quot;,
-        &quot;type&quot;: &quot;homekit-bridge&quot;,
-        &quot;z&quot;: &quot;&quot;,
-        &quot;bridgeName&quot;: &quot;Example Bridge&quot;,
-        &quot;pinCode&quot;: &quot;111-11-111&quot;,
-        &quot;port&quot;: &quot;&quot;,
-        &quot;allowInsecureRequest&quot;: false,
-        &quot;manufacturer&quot;: &quot;Default Manufacturer&quot;,
-        &quot;model&quot;: &quot;Default Model&quot;,
-        &quot;serialNo&quot;: &quot;Default Serial Number&quot;,
-        &quot;customMdnsConfig&quot;: false,
-        &quot;mdnsMulticast&quot;: true,
-        &quot;mdnsInterface&quot;: &quot;&quot;,
-        &quot;mdnsPort&quot;: &quot;&quot;,
-        &quot;mdnsIp&quot;: &quot;&quot;,
-        &quot;mdnsTtl&quot;: &quot;&quot;,
-        &quot;mdnsLoopback&quot;: true,
-        &quot;mdnsReuseAddr&quot;: true,
-        &quot;allowMessagePassthrough&quot;: true
-    }
-]
-</code></pre>
-</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>[</span>
+    <span class=p>{</span>
+        <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;7509f965.646da8&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;inject&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;z&#34;</span><span class=p>:</span> <span class=s2>&#34;53127d0.a094d84&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;On&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;topic&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;payload&#34;</span><span class=p>:</span> <span class=s2>&#34;{\&#34;On\&#34;:true}&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;payloadType&#34;</span><span class=p>:</span> <span class=s2>&#34;json&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;repeat&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;crontab&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;once&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;onceDelay&#34;</span><span class=p>:</span> <span class=mf>0.1</span><span class=p>,</span>
+        <span class=nt>&#34;x&#34;</span><span class=p>:</span> <span class=mi>230</span><span class=p>,</span>
+        <span class=nt>&#34;y&#34;</span><span class=p>:</span> <span class=mi>320</span><span class=p>,</span>
+        <span class=nt>&#34;wires&#34;</span><span class=p>:</span> <span class=p>[</span>
+            <span class=p>[</span>
+                <span class=s2>&#34;84c5345e.cea678&#34;</span>
+            <span class=p>]</span>
+        <span class=p>]</span>
+    <span class=p>},</span>
+    <span class=p>{</span>
+        <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;83aa9e6a.6ac9e&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;debug&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;z&#34;</span><span class=p>:</span> <span class=s2>&#34;53127d0.a094d84&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;HomeKit Out&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;active&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+        <span class=nt>&#34;tosidebar&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+        <span class=nt>&#34;console&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;tostatus&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;complete&#34;</span><span class=p>:</span> <span class=s2>&#34;payload&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;targetType&#34;</span><span class=p>:</span> <span class=s2>&#34;msg&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;x&#34;</span><span class=p>:</span> <span class=mi>650</span><span class=p>,</span>
+        <span class=nt>&#34;y&#34;</span><span class=p>:</span> <span class=mi>340</span><span class=p>,</span>
+        <span class=nt>&#34;wires&#34;</span><span class=p>:</span> <span class=p>[]</span>
+    <span class=p>},</span>
+    <span class=p>{</span>
+        <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;6f909132.f78a&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;inject&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;z&#34;</span><span class=p>:</span> <span class=s2>&#34;53127d0.a094d84&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Off&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;topic&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;payload&#34;</span><span class=p>:</span> <span class=s2>&#34;{\&#34;On\&#34;:false}&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;payloadType&#34;</span><span class=p>:</span> <span class=s2>&#34;json&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;repeat&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;crontab&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;once&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;onceDelay&#34;</span><span class=p>:</span> <span class=mf>0.1</span><span class=p>,</span>
+        <span class=nt>&#34;x&#34;</span><span class=p>:</span> <span class=mi>230</span><span class=p>,</span>
+        <span class=nt>&#34;y&#34;</span><span class=p>:</span> <span class=mi>360</span><span class=p>,</span>
+        <span class=nt>&#34;wires&#34;</span><span class=p>:</span> <span class=p>[</span>
+            <span class=p>[</span>
+                <span class=s2>&#34;84c5345e.cea678&#34;</span>
+            <span class=p>]</span>
+        <span class=p>]</span>
+    <span class=p>},</span>
+    <span class=p>{</span>
+        <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;84c5345e.cea678&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;homekit-service&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;z&#34;</span><span class=p>:</span> <span class=s2>&#34;53127d0.a094d84&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;isParent&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+        <span class=nt>&#34;bridge&#34;</span><span class=p>:</span> <span class=s2>&#34;51de116c.bb01&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;parentService&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Example Switch&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;serviceName&#34;</span><span class=p>:</span> <span class=s2>&#34;Switch&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;topic&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;filter&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;manufacturer&#34;</span><span class=p>:</span> <span class=s2>&#34;NRCHKB&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;model&#34;</span><span class=p>:</span> <span class=s2>&#34;Default Model&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;serialNo&#34;</span><span class=p>:</span> <span class=s2>&#34;1.1.1&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;firmwareRev&#34;</span><span class=p>:</span> <span class=s2>&#34;1.1.1&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;hardwareRev&#34;</span><span class=p>:</span> <span class=s2>&#34;1.1.1&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;softwareRev&#34;</span><span class=p>:</span> <span class=s2>&#34;1.0.0&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigVideoProcessor&#34;</span><span class=p>:</span> <span class=s2>&#34;ffmpeg&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigSource&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigStillImageSource&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigMaxStreams&#34;</span><span class=p>:</span> <span class=mi>2</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigMaxWidth&#34;</span><span class=p>:</span> <span class=mi>1280</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigMaxHeight&#34;</span><span class=p>:</span> <span class=mi>720</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigMaxFPS&#34;</span><span class=p>:</span> <span class=mi>10</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigMaxBitrate&#34;</span><span class=p>:</span> <span class=mi>300</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigVideoCodec&#34;</span><span class=p>:</span> <span class=s2>&#34;libx264&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigAudioCodec&#34;</span><span class=p>:</span> <span class=s2>&#34;libfdk_aac&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigAudio&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigPacketSize&#34;</span><span class=p>:</span> <span class=mi>1316</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigVerticalFlip&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigHorizontalFlip&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigMapVideo&#34;</span><span class=p>:</span> <span class=s2>&#34;0:0&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigMapAudio&#34;</span><span class=p>:</span> <span class=s2>&#34;0:1&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigVideoFilter&#34;</span><span class=p>:</span> <span class=s2>&#34;scale=1280:720&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigAdditionalCommandLine&#34;</span><span class=p>:</span> <span class=s2>&#34;-tune zerolatency&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigDebug&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigSnapshotOutput&#34;</span><span class=p>:</span> <span class=s2>&#34;disabled&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;cameraConfigInterfaceName&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;characteristicProperties&#34;</span><span class=p>:</span> <span class=s2>&#34;{}&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;x&#34;</span><span class=p>:</span> <span class=mi>440</span><span class=p>,</span>
+        <span class=nt>&#34;y&#34;</span><span class=p>:</span> <span class=mi>340</span><span class=p>,</span>
+        <span class=nt>&#34;wires&#34;</span><span class=p>:</span> <span class=p>[</span>
+            <span class=p>[</span>
+                <span class=s2>&#34;83aa9e6a.6ac9e&#34;</span>
+            <span class=p>],</span>
+            <span class=p>[</span>
+                <span class=s2>&#34;83aa9e6a.6ac9e&#34;</span>
+            <span class=p>]</span>
+        <span class=p>]</span>
+    <span class=p>},</span>
+    <span class=p>{</span>
+        <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;51de116c.bb01&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;homekit-bridge&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;z&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;bridgeName&#34;</span><span class=p>:</span> <span class=s2>&#34;Example Bridge&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;pinCode&#34;</span><span class=p>:</span> <span class=s2>&#34;111-11-111&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;port&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;allowInsecureRequest&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;manufacturer&#34;</span><span class=p>:</span> <span class=s2>&#34;Default Manufacturer&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;model&#34;</span><span class=p>:</span> <span class=s2>&#34;Default Model&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;serialNo&#34;</span><span class=p>:</span> <span class=s2>&#34;Default Serial Number&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;customMdnsConfig&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;mdnsMulticast&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+        <span class=nt>&#34;mdnsInterface&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;mdnsPort&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;mdnsIp&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;mdnsTtl&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;mdnsLoopback&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+        <span class=nt>&#34;mdnsReuseAddr&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+        <span class=nt>&#34;allowMessagePassthrough&#34;</span><span class=p>:</span> <span class=kc>true</span>
+    <span class=p>}</span>
+<span class=p>]</span>
+</code></pre></div></p>
 </details>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/service/switch/index.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">

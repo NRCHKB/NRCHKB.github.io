@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.0a5f6f4079cf3f1c9f686e5cf216f96d42a65c5bcc7c95a1f3e4a574f01ab695f3fd5b08dc524bef06a034898d7c975569774effe6812f8c5bb45b8922ca89c1.css integrity="sha512-Cl9vQHnPPxyfaG5c8hb5bUKmXFvMfJWh8+SldPAatpXz/VsI3FJL7wagNImNfJdVaXdO/+aBL4xbtFuJIsqJwQ==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.772c1369f20310d4cc7aceb67f177d8286efe2c5e5e8c7f7933fd521cd4f56275c22e0706df14f8526d745dd8f3ea34cde21e65c5fed8ad15e7795434301859f.css integrity="sha512-dywTafIDENTMes62fxd9gobv4sXl6Mf3kz/VIc1PVidcIuBwbfFPhSbXRd2PPqNM3iHmXF/titFed5VDQwGFnw==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css>
 <meta name=robots content="index, follow">
@@ -503,21 +503,20 @@
 <p class=lead></p>
 <p>Wait For Setup feature allows to perform actual accessory configuration in bridge on incoming Setup Message.</p>
 <p>Setup Message structure is:</p>
-<pre><code class=language-json>{
-   &quot;nrchkb&quot;: {
-       &quot;setup&quot;: {
-           ... setup properties goes here
-       }
-    }
-}
-</code></pre>
-<p>In the <code>setup</code> part you may specify properties to configure accessory, such as <code>name</code>, <code>model</code>, <code>manufacturer</code> and other properties available on <code>homekit</code> node.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+   <span class=nt>&#34;nrchkb&#34;</span><span class=p>:</span> <span class=p>{</span>
+       <span class=nt>&#34;setup&#34;</span><span class=p>:</span> <span class=p>{</span>
+           <span class=err>...</span> <span class=err>setup</span> <span class=err>properties</span> <span class=err>goes</span> <span class=err>here</span>
+       <span class=p>}</span>
+    <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>In the <code>setup</code> part you may specify properties to configure accessory, such as <code>name</code>, <code>model</code>, <code>manufacturer</code> and other properties available on <code>homekit</code> node.</p>
 <p>To configure accessory characteristics <code>setup</code> should contain <code>characteristicProperties</code> <strong>string</strong> JSON representation for Characteristics Properties as seen in homekit node properties page.</p>
 <p>All properties passed in <code>setup</code> part of Setup Message will be merged with properties explicitly set in node properties page, so you may specify only properties to override those in properties page.</p>
 <p>Also, feature allows configuring homekit node based on some external variables.</p>
 <p>Here is an example how to configure homekit node to set accessory name based on <code>ACCESSORY_NAME</code> variable and <code>ColorTemperature</code> feature will be enambel in case <code>FEATURE_COLOR_TEMPERATURE</code> variable is <code>true</code>:</p>
-<pre><code class=language-json>[{&quot;id&quot;:&quot;3550fe6c.93d6a2&quot;,&quot;type&quot;:&quot;inject&quot;,&quot;z&quot;:&quot;93ad7680.969cb8&quot;,&quot;name&quot;:&quot;&quot;,&quot;props&quot;:[{&quot;p&quot;:&quot;payload&quot;},{&quot;p&quot;:&quot;payload.nrchkb.setup.characteristicProperties&quot;,&quot;v&quot;:&quot;'{\t   \&quot;On\&quot;: true,\t   \&quot;Brightness\&quot;: true\t   ' &amp; ($env('FEATURE_COLOR_TEMPERATURE') ? ',\&quot;ColorTemperature\&quot;: true' : '' ) &amp; '\t}'&quot;,&quot;vt&quot;:&quot;jsonata&quot;}],&quot;repeat&quot;:&quot;&quot;,&quot;crontab&quot;:&quot;&quot;,&quot;once&quot;:true,&quot;onceDelay&quot;:0.1,&quot;topic&quot;:&quot;&quot;,&quot;payload&quot;:&quot;{\t   \&quot;nrchkb\&quot;: {\t       \&quot;setup\&quot;: {\t           \&quot;name\&quot;: $env(\&quot;ACCESSORY_NAME\&quot;),\t           \&quot;characteristicProperties\&quot;: \&quot;{}\&quot;\t        }\t    }\t}&quot;,&quot;payloadType&quot;:&quot;jsonata&quot;,&quot;x&quot;:660,&quot;y&quot;:440,&quot;wires&quot;:[[&quot;d73d1565.8d9568&quot;,&quot;a954f617.e7b868&quot;]]}]
-</code></pre>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>[{</span><span class=nt>&#34;id&#34;</span><span class=p>:</span><span class=s2>&#34;3550fe6c.93d6a2&#34;</span><span class=p>,</span><span class=nt>&#34;type&#34;</span><span class=p>:</span><span class=s2>&#34;inject&#34;</span><span class=p>,</span><span class=nt>&#34;z&#34;</span><span class=p>:</span><span class=s2>&#34;93ad7680.969cb8&#34;</span><span class=p>,</span><span class=nt>&#34;name&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;props&#34;</span><span class=p>:[{</span><span class=nt>&#34;p&#34;</span><span class=p>:</span><span class=s2>&#34;payload&#34;</span><span class=p>},{</span><span class=nt>&#34;p&#34;</span><span class=p>:</span><span class=s2>&#34;payload.nrchkb.setup.characteristicProperties&#34;</span><span class=p>,</span><span class=nt>&#34;v&#34;</span><span class=p>:</span><span class=s2>&#34;&#39;{\t   \&#34;On\&#34;: true,\t   \&#34;Brightness\&#34;: true\t   &#39; &amp; ($env(&#39;FEATURE_COLOR_TEMPERATURE&#39;) ? &#39;,\&#34;ColorTemperature\&#34;: true&#39; : &#39;&#39; ) &amp; &#39;\t}&#39;&#34;</span><span class=p>,</span><span class=nt>&#34;vt&#34;</span><span class=p>:</span><span class=s2>&#34;jsonata&#34;</span><span class=p>}],</span><span class=nt>&#34;repeat&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;crontab&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;once&#34;</span><span class=p>:</span><span class=kc>true</span><span class=p>,</span><span class=nt>&#34;onceDelay&#34;</span><span class=p>:</span><span class=mf>0.1</span><span class=p>,</span><span class=nt>&#34;topic&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span><span class=nt>&#34;payload&#34;</span><span class=p>:</span><span class=s2>&#34;{\t   \&#34;nrchkb\&#34;: {\t       \&#34;setup\&#34;: {\t           \&#34;name\&#34;: $env(\&#34;ACCESSORY_NAME\&#34;),\t           \&#34;characteristicProperties\&#34;: \&#34;{}\&#34;\t        }\t    }\t}&#34;</span><span class=p>,</span><span class=nt>&#34;payloadType&#34;</span><span class=p>:</span><span class=s2>&#34;jsonata&#34;</span><span class=p>,</span><span class=nt>&#34;x&#34;</span><span class=p>:</span><span class=mi>660</span><span class=p>,</span><span class=nt>&#34;y&#34;</span><span class=p>:</span><span class=mi>440</span><span class=p>,</span><span class=nt>&#34;wires&#34;</span><span class=p>:[[</span><span class=s2>&#34;d73d1565.8d9568&#34;</span><span class=p>,</span><span class=s2>&#34;a954f617.e7b868&#34;</span><span class=p>]]}]</span>
+</code></pre></div>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/introduction/wait-for-setup.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
 <a href=https://nrchkb.github.io/wiki/discover-more/roadmap/>
