@@ -48,6 +48,24 @@ After you add them you need to also enable them on Service node.
 > To see them in action you have to use alternative app like Eve.app
 > ![Custom Characteristics Eve.app](custom-characteristics-eve-app.jpeg)
 
+#### Example Eve Characteristics
+
+##### Sumary
+
+| name          | UUID                                 | format | description       | minValue | maxValue   | minStep |
+| ------------- | ------------------------------------ | ------ | ----------------- | -------- | ---------- | ------- |
+| Volt          | E863F10A-079E-48FF-8F27-9C2605A29F52 | uint16 | Eve Volt          | 0        | 400        | 3       |
+| Ampere        | E863F126-079E-48FF-8F27-9C2605A29F52 | float  | Eve Ampere        | 0        | 16         | 0.01    |
+| Watt          | E863F10D-079E-48FF-8F27-9C2605A29F52 | uint16 | Eve Watt          | 0        | 3500       |         |
+| Kilowatt-Hour | E863F10C-079E-48FF-8F27-9C2605A29F52 | float  | Eve Kilowatt-Hour | 0        | 4294967295 | 0.01    |
+| Volt-Ampere   | E863F110-079E-48FF-8F27-9C2605A29F52 | float  | Eve Volt-Ampere   | 0        | 4000       | 0.01    |
+
+##### `~/.node-red/nrchkb/35b973f1696b4cd60b78ca5f719b83ca`
+
+```json
+{"key":"customCharacteristics","value":[{"name":"Volt","UUID":"E863F10A-079E-48FF-8F27-9C2605A29F52","format":"uint16","unit":"","perms":["pr","pw","ev","tw","wr"],"ev":"true","description":"Eve Volt","minValue":"0","maxValue":"400","minStep":"3","maxLen":"","maxDataLen":"","validValues":"","adminOnlyAccess":["0","1","2"]},{"name":"Ampere","UUID":"E863F126-079E-48FF-8F27-9C2605A29F52","format":"float","unit":"","perms":["pr","pw","ev","tw","wr"],"ev":"true","description":"Eve Ampere","minValue":"0","maxValue":"16","minStep":"0.01","maxLen":"","maxDataLen":"","validValues":"","adminOnlyAccess":["0","1","2"]},{"name":"Watt","UUID":"E863F10D-079E-48FF-8F27-9C2605A29F52","format":"uint16","unit":"","perms":["pr","pw","ev","tw","wr"],"ev":"true","description":"Eve Watt","minValue":"0","maxValue":"3500","minStep":"","maxLen":"","maxDataLen":"","validValues":"","adminOnlyAccess":["0","1","2"]},{"name":"Kilowatt-Hour","UUID":"E863F10C-079E-48FF-8F27-9C2605A29F52","format":"float","unit":"","perms":["pr","pw","ev","tw","wr"],"ev":"true","description":"Eve Kilowatt-Hour","minValue":"0","maxValue":"4294967295","minStep":"0.01","maxLen":"","maxDataLen":"","validValues":"","adminOnlyAccess":["0","1","2"]},{"name":"Volt-Ampere","UUID":"E863F110-079E-48FF-8F27-9C2605A29F52","format":"float","unit":"","perms":["pr","pw","ev","tw","wr"],"ev":"true","description":"Eve Volt-Ampere","minValue":"0","maxValue":"4000","minStep":"0.01","maxLen":"","maxDataLen":"","validValues":"","adminOnlyAccess":["0","1","2"]}]}
+```
+
 ### Service 2
 
 [NRCHKB/node-red-contrib-homekit-bridged#392](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/392)
