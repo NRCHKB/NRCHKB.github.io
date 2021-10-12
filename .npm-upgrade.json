@@ -1,9 +1,5 @@
 {
   "ignore": {
-    "highlight.js": {
-      "versions": "11.2.0",
-      "reason": ""
-    },
     "postcss-cli": {
       "versions": "9.0.1",
       "reason": ""
