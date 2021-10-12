@@ -35,7 +35,7 @@ rel  = "sitemap"
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    codeFences = false
+    codeFences = true
     guessSyntax = true
     hl_Lines = ""
     lineNoStart = 1
