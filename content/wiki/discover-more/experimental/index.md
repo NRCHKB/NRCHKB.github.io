@@ -30,11 +30,25 @@ In order to be able to use experimental features you have to start Node-RED with
 
 Examples
 
-### terminal
+### Terminal
 
 `NRCHKB_EXPERIMENTAL=true node-red` or with `DEBUG` you can use `NRCHKB_EXPERIMENTAL=true DEBUG=NRCHKB* node-red`
 
-### docker-compose
+### System Service (Raspberry Pi)
+
+If you run Node-RED using the provided system service after installing with their Raspberry Pi, then you will need to modify the system service file.
+
+The file should be located at `/lib/systemd/system/nodered.service`
+
+Find a line starting with `Environment` and add one (or both) of the following lines. 
+```
+Environment="NRCHKB_EXPERIMENTAL=true"
+Environment="DEBUG=NRCHKB*"
+```
+
+### Docker
+
+Edit your `docker-compose` file like this:
 
 ```yaml
 version: '3.8'
