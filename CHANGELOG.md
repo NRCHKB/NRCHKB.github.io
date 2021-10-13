@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.44.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.43.0...v1.44.0) (2021-10-13)
+
+
+### Features
+
+* add Chris to credits page ([fef2724](https://github.com/NRCHKB/NRCHKB.github.io/commit/fef27240e4fb187167735accc4a7c5c80e053e1e))
+* add Chris to credits page ([32784e7](https://github.com/NRCHKB/NRCHKB.github.io/commit/32784e70583ee9141de4405684c8093b6d91e56b))
+* hints for enabling experimental in docker ([2c318b8](https://github.com/NRCHKB/NRCHKB.github.io/commit/2c318b8ce4fa74cce6849e487b864e853672900e))
+* hints for enabling experimental in docker ([e38e235](https://github.com/NRCHKB/NRCHKB.github.io/commit/e38e23513909655f33c143d59bbaa4f277c46258))
+
+
+### Bug Fixes
+
+* Add word wrap to one line code ([f8d65b3](https://github.com/NRCHKB/NRCHKB.github.io/commit/f8d65b356705c31f09245ce0a96fb904d2602e6e))
+* Add word wrap to one line code ([d0a9be2](https://github.com/NRCHKB/NRCHKB.github.io/commit/d0a9be2e543acecd137707ec45ea632526e0e7c2))
+* Page linting ([f13f7b1](https://github.com/NRCHKB/NRCHKB.github.io/commit/f13f7b1d7449588b44b7a4dd8643850845d4dcfc))
+
 ## [1.43.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.42.1...v1.43.0) (2021-10-13)
 
 
