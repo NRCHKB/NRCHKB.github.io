@@ -36,7 +36,7 @@ Examples
 
 ### System Service (Raspberry Pi)
 
-If you run Node-RED using the provided system service after installing with their Raspberry Pi, then you will need to modify the system service file.
+If you run Node-RED using the provided system service after installing with their Raspberry Pi script, then you will need to modify the system service file.
 
 The file should be located at `/lib/systemd/system/nodered.service`
 
