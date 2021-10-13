@@ -56,13 +56,8 @@ body.dark .btn-outline-primary:hover {
 }
 
 body.dark .navbar {
-  background: $body-bg-dark;
-  opacity: 0.975;
+  background-color: rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid $border-dark;
-}
-
-body.dark.home .navbar {
-  border-bottom: 0;
 }
 
 body.dark .navbar-light .navbar-brand {
