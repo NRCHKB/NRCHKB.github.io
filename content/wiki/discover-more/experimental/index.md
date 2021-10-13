@@ -41,6 +41,7 @@ If you run Node-RED using the provided system service after installing with thei
 The file should be located at `/lib/systemd/system/nodered.service`
 
 Find a line starting with `Environment` and add one (or both) of the following lines. 
+
 ```
 Environment="NRCHKB_EXPERIMENTAL=true"
 Environment="DEBUG=NRCHKB*"
