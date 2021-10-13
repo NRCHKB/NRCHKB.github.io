@@ -36,7 +36,8 @@
     "gen:wiki": "ts-node utils/generateWikiPages.ts",
     "postinstall": "yarn gen:changelog && yarn gen:contributors",
     "gen:changelog": "ts-node utils/generateChangelog.ts",
-    "gen:contributors": "ts-node utils/generateContributors.ts"
+    "gen:contributors": "ts-node utils/generateContributors.ts",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/cli": "^7.15",
@@ -52,6 +53,7 @@
     "hap-nodejs": "^0.9.6",
     "highlight.js": "^11.2.0",
     "hugo-bin": "^0.76",
+    "husky": "^7.0.2",
     "instant.page": "^5.1",
     "lazysizes": "^5.3",
     "markdownlint-cli": "^0.29",
@@ -69,7 +71,7 @@
   },
   "author": {
     "name": "Tadeusz Wyrzykowski",
-    "email": "tadeusz@hey.com",
+    "email": "shaquu@icloud.com",
     "url": "https://github.com/Shaquu"
   }
 }
