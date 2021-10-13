@@ -3,7 +3,7 @@ title: "Light Bulb"
 description: "This service describes a light bulb."
 lead: ""
 date: 2021-04-17T18:50:12.031Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-13T17:10:40.104Z
 draft: false
 images: ["preview.png"]
 menu:
@@ -45,7 +45,7 @@ The `On` state and `Brightness` may be sent in the same payload for example:
 }
 ```
 
-If `{"On":true}` is sent without a brightness payload, HomeKit will return to the last set brightness on the device. In this example, there are 2 functions. The `Brightness to HomeKit` function translates an integer number range 1-100 into a proper payload for the HomeKit node. The `Brightness to Integer` function node translates the output of the HomeKit node back into an integer level 0-100 where 0 is "off". Additionally, the `Brightness to Integer` node saves the previously used brightness value (as a context variable) to pass on in the case that HomeKit sends `{"On":true}` without any `Brightness` value.
+If `{"On": true}` is sent without a brightness payload, HomeKit will return to the last set brightness on the device. In this example, there are 2 functions. The `Brightness to HomeKit` function translates an integer number range 1-100 into a proper payload for the HomeKit node. The `Brightness to Integer` function node translates the output of the HomeKit node back into an integer level 0-100 where 0 is "off". Additionally, the `Brightness to Integer` node saves the previously used brightness value (as a context variable) to pass on in the case that HomeKit sends `{"On": true}` without any `Brightness` value.
 
 ![screen shot 2019-03-05 at 11 48 05 am](https://user-images.githubusercontent.com/38265886/53825719-8b598c00-3f3c-11e9-815d-81d18e538493.png)
 
@@ -90,9 +90,9 @@ Use the following JSON in your characteristic properties for the bulb to show in
 
 ```json
 {
-    "Brightness":true,
-    "Hue":true,
-    "Saturation":true
+    "Brightness": true,
+    "Hue": true,
+    "Saturation": true
 }
 ```
 
