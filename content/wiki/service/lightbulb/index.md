@@ -39,7 +39,10 @@ This is an example of a dimmable light bulb item. The input nodes are "On" and "
 The `On` state and `Brightness` may be sent in the same payload for example:
 
 ```json
-{"On":true, "Brightness":75}
+{
+  "On": true,
+  "Brightness": 75
+}
 ```
 
 If `{"On":true}` is sent without a brightness payload, HomeKit will return to the last set brightness on the device. In this example, there are 2 functions. The `Brightness to HomeKit` function translates an integer number range 1-100 into a proper payload for the HomeKit node. The `Brightness to Integer` function node translates the output of the HomeKit node back into an integer level 0-100 where 0 is "off". Additionally, the `Brightness to Integer` node saves the previously used brightness value (as a context variable) to pass on in the case that HomeKit sends `{"On":true}` without any `Brightness` value.
@@ -51,7 +54,9 @@ If `{"On":true}` is sent without a brightness payload, HomeKit will return to th
 Use the following JSON in your characteristic properties so the Home app shows a dimmable bulb by default.
 
 ```json
-{"Brightness":true}
+{
+  "Brightness": true
+}
 ```
 
 #### Example
