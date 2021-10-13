@@ -3,7 +3,7 @@ title: "Experimental"
 description: "NRCHKB experimental features"
 lead: ""
 date: 2021-10-11T23:29:29.943Z
-lastmod: 2021-10-12T21:47:04.492Z
+lastmod: 2021-10-13T16:05:21.782Z
 draft: false
 images: []
 menu:
@@ -28,7 +28,27 @@ They can be marked that way for few reasons:
 
 In order to be able to use experimental features you have to start Node-RED with `NRCHKB_EXPERIMENTAL=true` environment variable.
 
-For example `NRCHKB_EXPERIMENTAL=true node-red` or with `DEBUG` you can use `NRCHKB_EXPERIMENTAL=true DEBUG=NRCHKB* node-red`
+Examples
+
+### terminal
+
+`NRCHKB_EXPERIMENTAL=true node-red` or with `DEBUG` you can use `NRCHKB_EXPERIMENTAL=true DEBUG=NRCHKB* node-red`
+
+### docker-compose
+
+```yaml
+version: '3.8'
+services:
+  node-red-homekit:
+    image: nrchkb/node-red-homekit:latest-12
+    environment:
+      NRCHKB_EXPERIMENTAL: 'true'
+    network_mode: host
+    volumes:
+      - './data/node-red-homekit:/data'
+    container_name: node-red-homekit
+    restart: always
+```
 
 ## Experimental features
 
