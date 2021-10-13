@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/discover-more/experimental/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-10-11T23:29:29+00:00">
-<meta property="article:modified_time" content="2021-10-12T21:47:04+00:00">
+<meta property="article:modified_time" content="2021-10-13T16:05:21+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -487,7 +487,13 @@
 <h3>On this page</h3>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#getting-started>Getting started</a></li>
+<li><a href=#getting-started>Getting started</a>
+<ul>
+<li><a href=#terminal>Terminal</a></li>
+<li><a href=#system-service-raspberry-pi>System Service (Raspberry Pi)</a></li>
+<li><a href=#docker>Docker</a></li>
+</ul>
+</li>
 <li><a href=#experimental-features>Experimental features</a>
 <ul>
 <li><a href=#custom-characteristics>Custom Characteristics</a></li>
@@ -508,7 +514,7 @@
 </ol>
 </nav>
 <h1 id=title>Experimental</h1>
-<small class=updated>Updated October 12, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<small class=updated>Updated October 13, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead></p>
 <p>During development, we add new features that are marked as <code>experimental</code>.</p>
 <p>They can be marked that way for few reasons:</p>
@@ -522,8 +528,29 @@
 </blockquote>
 <h2 id=getting-started>Getting started<a href=#getting-started class=anchor aria-hidden=true>#</a> </h2>
 <p>In order to be able to use experimental features you have to start Node-RED with <code>NRCHKB_EXPERIMENTAL=true</code> environment variable.</p>
-<p>For example <code>NRCHKB_EXPERIMENTAL=true node-red</code> or with <code>DEBUG</code> you can use <code>NRCHKB_EXPERIMENTAL=true DEBUG=NRCHKB* node-red</code></p>
-<h2 id=experimental-features>Experimental features<a href=#experimental-features class=anchor aria-hidden=true>#</a> </h2>
+<p>Examples</p>
+<h3 id=terminal>Terminal<a href=#terminal class=anchor aria-hidden=true>#</a> </h3>
+<p><code>NRCHKB_EXPERIMENTAL=true node-red</code> or with <code>DEBUG</code> you can use <code>NRCHKB_EXPERIMENTAL=true DEBUG=NRCHKB* node-red</code></p>
+<h3 id=system-service-raspberry-pi>System Service (Raspberry Pi)<a href=#system-service-raspberry-pi class=anchor aria-hidden=true>#</a> </h3>
+<p>If you run Node-RED using the provided system service after installing with their Raspberry Pi script, then you will need to modify the system service file.</p>
+<p>The file should be located at <code>/lib/systemd/system/nodered.service</code></p>
+<p>Find a line starting with <code>Environment</code> and add one (or both) of the following lines.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>Environment=&#34;NRCHKB_EXPERIMENTAL=true&#34;
+Environment=&#34;DEBUG=NRCHKB*&#34;
+</code></pre></div><h3 id=docker>Docker<a href=#docker class=anchor aria-hidden=true>#</a> </h3>
+<p>Edit your <code>docker-compose</code> file like this:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>version</span><span class=p>:</span><span class=w> </span><span class=s1>&#39;3.8&#39;</span><span class=w>
+</span><span class=w></span><span class=nt>services</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>node-red-homekit</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>image</span><span class=p>:</span><span class=w> </span><span class=l>nrchkb/node-red-homekit:latest-12</span><span class=w>
+</span><span class=w>    </span><span class=nt>environment</span><span class=p>:</span><span class=w>
+</span><span class=w>      </span><span class=nt>NRCHKB_EXPERIMENTAL</span><span class=p>:</span><span class=w> </span><span class=s1>&#39;true&#39;</span><span class=w>
+</span><span class=w>    </span><span class=nt>network_mode</span><span class=p>:</span><span class=w> </span><span class=l>host</span><span class=w>
+</span><span class=w>    </span><span class=nt>volumes</span><span class=p>:</span><span class=w>
+</span><span class=w>      </span>- <span class=s1>&#39;./data/node-red-homekit:/data&#39;</span><span class=w>
+</span><span class=w>    </span><span class=nt>container_name</span><span class=p>:</span><span class=w> </span><span class=l>node-red-homekit</span><span class=w>
+</span><span class=w>    </span><span class=nt>restart</span><span class=p>:</span><span class=w> </span><span class=l>always</span><span class=w>
+</span></code></pre></div><h2 id=experimental-features>Experimental features<a href=#experimental-features class=anchor aria-hidden=true>#</a> </h2>
 <h3 id=custom-characteristics>Custom Characteristics<a href=#custom-characteristics class=anchor aria-hidden=true>#</a> </h3>
 <p><a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/52>NRCHKB/node-red-contrib-homekit-bridged#52</a></p>
 <p>Using nrchkb node <img src=nrchkb-node.png alt="nrchkb node"> you can define new Characteristics.</p>
