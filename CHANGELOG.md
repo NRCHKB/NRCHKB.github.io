@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.43.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.42.1...v1.43.0) (2021-10-13)
+
+
+### Features
+
+* Add example Eve Characteristics ([618262d](https://github.com/NRCHKB/NRCHKB.github.io/commit/618262d67482c37f00ebbb2ed2374e4839e4582b))
+* Add example Eve Characteristics ([cc305f7](https://github.com/NRCHKB/NRCHKB.github.io/commit/cc305f73ac036ab88e670c6196919f933c2694d1))
+* Added migration between flows ([d6f1229](https://github.com/NRCHKB/NRCHKB.github.io/commit/d6f1229647056193eec779da7131d6e0d2dc2569))
+* Added migration between flows ([d48d6c7](https://github.com/NRCHKB/NRCHKB.github.io/commit/d48d6c72312147d1f8dbb42bbc57f4a98415eacd))
+* Update highlight.js and use github theme as default ([1fc02c7](https://github.com/NRCHKB/NRCHKB.github.io/commit/1fc02c72cae2c3297273f9b567e886420a0e6724))
+* Update highlight.js and use github theme as default ([6749a8d](https://github.com/NRCHKB/NRCHKB.github.io/commit/6749a8d7a492627a89733f2e88fe7ba79dba69da))
+
+
+### Bug Fixes
+
+* Fix code wrapping in all browsers ([1dc133f](https://github.com/NRCHKB/NRCHKB.github.io/commit/1dc133fc0500993bde0648052c1cac3aed99d3e1))
+* Fix code wrapping in all browsers (again) ([91ba827](https://github.com/NRCHKB/NRCHKB.github.io/commit/91ba8276a9d42f44b73f2d490e9c1105f1677702))
+
 ### [1.42.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.42.0...v1.42.1) (2021-10-11)
 
 
