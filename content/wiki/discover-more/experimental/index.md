@@ -3,7 +3,7 @@ title: "Experimental"
 description: "NRCHKB experimental features"
 lead: ""
 date: 2021-10-11T23:29:29.943Z
-lastmod: 2021-10-13T16:05:21.782Z
+lastmod: 2021-10-13T22:55:59+02:00
 draft: false
 images: []
 menu:
@@ -40,9 +40,9 @@ If you run Node-RED using the provided system service after installing with thei
 
 The file should be located at `/lib/systemd/system/nodered.service`
 
-Find a line starting with `Environment` and add one (or both) of the following lines. 
+Find a line starting with `Environment` and add one (or both) of the following lines.
 
-```
+```bash
 Environment="NRCHKB_EXPERIMENTAL=true"
 Environment="DEBUG=NRCHKB*"
 ```
