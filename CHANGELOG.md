@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.45.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.44.0...v1.45.0) (2021-10-15)
+
+
+### Features
+
+* Script for updating page contributors ([8820a74](https://github.com/NRCHKB/NRCHKB.github.io/commit/8820a74e2b1a91f4013427d96d29c0aac74e637a))
+
 ## [1.44.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.43.0...v1.44.0) (2021-10-13)
 
 
