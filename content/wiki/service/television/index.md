@@ -3,7 +3,7 @@ title: "Television"
 description: "Television"
 lead: ""
 date: 2021-04-17T18:50:12.037Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:23.483Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "Television"
-contributors: ["crxporter", "caitken-com", "S474N"]
+contributors: ["crxporter","caitken-com","S474N","Shaquu"]
 ---
 
 **Note:** It is recommended that beginners get comfortable with Node Red and more simple HomeKit configurations of this plugin before attempting to set up Television Service.

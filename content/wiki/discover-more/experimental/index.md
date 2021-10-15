@@ -3,7 +3,7 @@ title: "Experimental"
 description: "NRCHKB experimental features"
 lead: ""
 date: 2021-10-11T23:29:29.943Z
-lastmod: 2021-10-13T22:55:59+02:00
+lastmod: 2021-10-15T22:06:00.598Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     parent: "discover-more"
 weight: 100
 toc: true
-contributors: ["Shaquu"]
+contributors: ["Shaquu","crxporter"]
 ---
 
 During development, we add new features that are marked as `experimental`.

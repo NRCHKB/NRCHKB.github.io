@@ -3,7 +3,7 @@ title: "Irrigation System"
 description: "Irrigation System"
 lead: ""
 date: 2021-04-17T18:50:12.031Z
-lastmod: 2021-10-01T11:28:10.528Z
+lastmod: 2021-10-15T22:06:15.899Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "IrrigationSystem"
-contributors: ["caitken-com", "crxporter"]
+contributors: ["caitken-com","crxporter","Shaquu"]
 ---
 
 Used as an Irrigation accessory with program scheduling and manual mode. This service is meant to be used with a full external irrigation controller which could be some piece of hardware (rachio, skydrop, orbit, etc), it could be an open source setup (OpenSprinkler is good), or it could be simply a set of flows which is controlling your irrigation system. Note that from Home.app it is *not* possible to make a schedule, it is *not* possible to enable/disable a schedule, and it is *not* possible to start a manual schedule. From Home.app this service simply will display your system, state if it is on "manual" or "scheduled" mode, and allow you to control each valve individually.

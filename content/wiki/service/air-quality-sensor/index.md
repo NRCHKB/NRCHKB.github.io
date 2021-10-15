@@ -3,7 +3,7 @@ title: "Air Quality Sensor"
 description: "Air Quality Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.025Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:08.212Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "AirQualitySensor"
-contributors: ["djiwondee"]
+contributors: ["djiwondee","Shaquu"]
 ---
 
 To have a real _Air Quality Sensor_ appear in the Home.app showing a _Particulate Levels for 2.5 and 10 microns_ as well as an _Air Quality Index_ based on the [US EPA Scale](https://aqicn.org), you can setup a Node-red flow to provide air characteristics value in HomeKit.

@@ -3,7 +3,7 @@ title: "Thermostat"
 description: "Thermostat"
 lead: ""
 date: 2021-04-17T18:50:12.037Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:24.023Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "Thermostat"
-contributors: ["oliverrahner", "ptath", "crxporter"]
+contributors: ["oliverrahner","ptath","crxporter","Shaquu"]
 ---
 
 ## Examples

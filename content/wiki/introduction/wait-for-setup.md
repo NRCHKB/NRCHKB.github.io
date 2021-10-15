@@ -3,7 +3,7 @@ title: "Wait For Setup"
 description: "Wait For Setup"
 lead: ""
 date: 2021-08-03T00:00:00+02:00
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:03.701Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     parent: "introduction"
 weight: 90
 toc: true
-contributors: ["crxporter", "Toshik"]
+contributors: ["crxporter","Toshik","Shaquu"]
 ---
 
 Wait For Setup feature allows to perform actual accessory configuration in bridge on incoming Setup Message.

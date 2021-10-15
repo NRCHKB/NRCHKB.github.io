@@ -3,7 +3,7 @@ title: "Light Sensor"
 description: "Light Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.032Z
-lastmod: 2021-08-03T23:21:00.000Z
+lastmod: 2021-10-15T22:06:16.436Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "LightSensor"
-contributors: ["kilbamoo", "crxporter"]
+contributors: ["kilbamoo","crxporter","Shaquu"]
 ---
 
 ## Examples

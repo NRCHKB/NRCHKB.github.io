@@ -3,7 +3,7 @@ title: "Characteristics"
 description: "Characteristics"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-04-04T14:12:00+01:00
+lastmod: 2021-10-15T22:06:02.595Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     parent: "introduction"
 weight: 80
 toc: true
-contributors: ["crxporter", "djiwondee", "radokristof", "caitken-com"]
+contributors: ["crxporter","djiwondee","radokristof","caitken-com","Shaquu"]
 ---
 
 Characteristics are the values sent to the service item. They are generally true/false or number values. All services have at least one required characteristic. For example the switch has only the required characteristic of `On`.

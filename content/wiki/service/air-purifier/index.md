@@ -3,7 +3,7 @@ title: "Air Purifier"
 description: "Air Purifier"
 lead: ""
 date: 2021-04-17T18:50:12.025Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:07.935Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "AirPurifier"
-contributors: ["crxporter"]
+contributors: ["crxporter","Shaquu"]
 ---
 
 ## Possible combinations

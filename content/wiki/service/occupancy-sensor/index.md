@@ -3,7 +3,7 @@ title: "Occupancy Sensor"
 description: "Occupancy Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.033Z
-lastmod: 2021-08-03T21:52:00.000Z
+lastmod: 2021-10-15T22:06:18.282Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "OccupancySensor"
-contributors: ["djiwondee", "crxporter", "caitken-com"]
+contributors: ["djiwondee","crxporter","caitken-com","Shaquu"]
 ---
 
 ## Example

@@ -3,7 +3,7 @@ title: "Outlet"
 description: "Outlet"
 lead: ""
 date: 2021-04-17T18:50:12.033Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:18.533Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "Outlet"
-contributors: ["caitken-com", "NorthernMan54"]
+contributors: ["caitken-com","NorthernMan54","Shaquu"]
 ---
 
 ## Using an outlet as an Internet Down detector and reset your modem automatically when internet access is lost.

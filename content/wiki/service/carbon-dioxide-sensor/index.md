@@ -3,7 +3,7 @@ title: "Carbon Dioxide Sensor"
 description: "Carbon Dioxide Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.027Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:11.305Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "CarbonDioxideSensor"
-contributors: ["djiwondee", "crxporter", "caitken-com"]
+contributors: ["djiwondee","crxporter","caitken-com","Shaquu"]
 ---
 
 ## Example

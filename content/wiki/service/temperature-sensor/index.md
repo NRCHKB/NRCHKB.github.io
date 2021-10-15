@@ -3,7 +3,7 @@ title: "Temperature Sensor"
 description: "Temperature Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.037Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:23.762Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "TemperatureSensor"
-contributors: ["djiwondee", "crxporter", "caitken-com"]
+contributors: ["djiwondee","crxporter","caitken-com","Shaquu"]
 ---
 
 ## Example

@@ -3,7 +3,7 @@ title: "Security System"
 description: "Security System"
 lead: ""
 date: 2021-04-17T18:50:12.034Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:19.806Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "SecuritySystem"
-contributors: ["radokristof", "ptath", "crxporter"]
+contributors: ["radokristof","ptath","crxporter","Shaquu"]
 ---
 
 ## Example

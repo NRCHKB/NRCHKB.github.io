@@ -3,7 +3,7 @@ title: "Window"
 description: "Window"
 lead: ""
 date: 2021-04-17T18:50:12.039Z
-lastmod: 2021-08-11T22:15:36.344Z
+lastmod: 2021-10-15T22:06:26.781Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "Window"
-contributors: ["djiwondee"]
+contributors: ["djiwondee","Shaquu"]
 ---
 
 This service describes a motorized window to be appeared in the Home.app showing a status and whether the windows are moving its position based on an injected payload.
