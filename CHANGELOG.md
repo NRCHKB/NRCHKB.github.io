@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.46.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.45.0...v1.46.0) (2021-10-21)
+
+
+### Features
+
+* Added Example of implementation with an Omron PLC ([783613d](https://github.com/NRCHKB/NRCHKB.github.io/commit/783613de719f06fce9483ac9b1eebe2d675586aa))
+* migrated remote images to local repo ([e9d807b](https://github.com/NRCHKB/NRCHKB.github.io/commit/e9d807bd04437f6d650d06ae149af991cefef0c8))
+
+
+### Bug Fixes
+
+* lint issues ([b4666c0](https://github.com/NRCHKB/NRCHKB.github.io/commit/b4666c04bb1a22b694e5b22a364911a2f573e8bf))
+
 ## [1.45.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.44.0...v1.45.0) (2021-10-15)
 
 
