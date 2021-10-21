@@ -3,7 +3,7 @@ title: "Light Bulb"
 description: "This service describes a light bulb."
 lead: ""
 date: 2021-04-17T18:50:12.031Z
-lastmod: 2021-10-15T22:06:16.695Z
+lastmod: 2021-10-21T16:37:34.565Z
 draft: false
 images: ["preview.png"]
 menu:
