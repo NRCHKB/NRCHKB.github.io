@@ -3,7 +3,7 @@ title: "Light Bulb"
 description: "This service describes a light bulb."
 lead: ""
 date: 2021-04-17T18:50:12.031Z
-lastmod: 2021-10-21T23:23:43+02:00
+lastmod: 2021-10-21T23:33:51+02:00
 draft: false
 images: ["preview.png"]
 menu:
@@ -24,7 +24,7 @@ These examples are meant to be copied into your Node-RED system and adapted to y
 
 This is the simplest example of a light bulb item. The input nodes are "On" and "Off". The debug node will return values when the switch is turned on or off via the Home app on an Apple device.
 
-![screen shot 2019-03-05 at 11 33 52 am](https://user-images.githubusercontent.com/38265886/53824859-8eec1380-3f3a-11e9-99e0-d9094940024d.png)
+![On Off Light](lighbulb_on_off_example.png)
 
 Copyable Node-RED flow:
 
@@ -47,7 +47,7 @@ The `On` state and `Brightness` may be sent in the same payload for example:
 
 If `{"On": true}` is sent without a brightness payload, HomeKit will return to the last set brightness on the device. In this example, there are 2 functions. The `Brightness to HomeKit` function translates an integer number range 1-100 into a proper payload for the HomeKit node. The `Brightness to Integer` function node translates the output of the HomeKit node back into an integer level 0-100 where 0 is "off". Additionally, the `Brightness to Integer` node saves the previously used brightness value (as a context variable) to pass on in the case that HomeKit sends `{"On": true}` without any `Brightness` value.
 
-![screen shot 2019-03-05 at 11 48 05 am](https://user-images.githubusercontent.com/38265886/53825719-8b598c00-3f3c-11e9-815d-81d18e538493.png)
+![Dimmable Light](lighbulb_dimmable_example.png)
 
 #### Characteristic Properties
 
@@ -82,7 +82,7 @@ The use case of this example is an ESP8266 running a custom Arduino sketch (buil
 
 The function nodes simply change the inputs into JSON format readable by HomeKit then back from JSON to numbers or strings for MQTT.
 
-![Screen Shot 2019-03-21 at 9 35 16 AM](https://user-images.githubusercontent.com/38265886/54760505-3796a600-4bbe-11e9-8440-e6167d10d644.png)
+![HSV MQTT Light](lighbulb_hsv_mqtt_example.png)
 
 #### Characteristic Properties
 
@@ -112,7 +112,7 @@ Depending on your hardware, it is likely that you will be using HSV, RGB, or HSL
 
 Simply replace the correct `Input` node with your input and the correct `Output` debug node with your output. Note there is loop prevention built into the `Output` function so the outgoing messages are only sent when originating within the Home app on your device.
 
-<img width="1473" alt="Screen Shot 2019-03-20 at 8 31 45 PM" src="https://user-images.githubusercontent.com/38265886/54729050-3c704100-4b4f-11e9-994e-261bba93f7ab.png">
+![Color Spaces Light](lighbulb_color_spaces_example.png)
 
 Copyable node-red flow:
 
@@ -126,7 +126,7 @@ Please note that if these functions are used multiple times within the same flow
 
 This is a node-red flow to integrate a Sonoff-Tasmota flashed [WiFi Dimmers](https://github.com/arendst/Tasmota/issues/4003) with HomeKit. This flow creates a dimmable light in HomeKit, and also detects if the device is disconnected, and sets the device as 'not responding' after 15 minutes.  This node-red flow would also work with dimmable light bulb's as well, but not color or RGB lightbulbs.
 
-![example flow](https://user-images.githubusercontent.com/19808920/68632765-8da5ba00-04bd-11ea-8d52-f7e41d21d71d.png)
+![Tasmota Example](lighbulb_tasmota_example.png)
 
 To set this up for use in your environment you will need to change a couple of settings
 
@@ -146,7 +146,7 @@ Copyable Node-RED code:
 
 This flow makes it possible to react with a lightbulb controlled by PLC.
 
-![Several Light Bulb](https://user-images.githubusercontent.com/92022724/138313550-f0f0dddc-7739-437f-bb72-430ae012c4a4.PNG)
+![Omron PLC Light](ligbulb_omron_plc_example.png)
 
 To do this you must:
 
