@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.47.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.46.0...v1.47.0) (2021-10-22)
+
+
+### Features
+
+* Added Examples to Contact Sensor ([546a40c](https://github.com/NRCHKB/NRCHKB.github.io/commit/546a40c922066d5abdf166bf6b4e26a78cfdb275))
+* Added Examples to Smoke Sensor ([4796b35](https://github.com/NRCHKB/NRCHKB.github.io/commit/4796b35f5e8b45446bc71d8e7d651a92425a41bc))
+
+
+### Bug Fixes
+
+* linting issues ([c9795e1](https://github.com/NRCHKB/NRCHKB.github.io/commit/c9795e1f363bd4bb575226606d79afe60ea8944f))
+
 ## [1.46.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.45.0...v1.46.0) (2021-10-21)
 
 
