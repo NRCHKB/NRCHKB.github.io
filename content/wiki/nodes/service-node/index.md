@@ -121,4 +121,32 @@ If you create a Bridge outside a Subflow then it will be created only once (reus
 
 ## Input
 
+**How to Identify the service node**
+
+Sometime it's useful to obtain some infos about, for example, the service type, to dinamically adapt other node's in/out messages.</br>
+Pass ```msg.ident = true``` to the service node, to obtain a flow msg containing useful infos from the service node:
+
+```
+"identification":{
+      "name":"Luce Banana",
+      "serviceName":"Lightbulb",
+      "topic":"",
+      "id":"ce7a66f97370c33b",
+      "bridge":"415c386714f794ee",
+      "parentService":"",
+      "supported":[
+         "Name",
+         "On",
+         "Brightness",
+         "CharacteristicValueActiveTransitionCount",
+         "CharacteristicValueTransitionControl",
+         "ColorTemperature",
+         "Hue",
+         "Name",
+         "Saturation",
+         "SupportedCharacteristicValueTransitionConfiguration"
+      ]
+   }
+```
+
 ## Output
