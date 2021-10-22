@@ -19,7 +19,7 @@ contributors: ["GogoVega"]
 
 This is the simplest example of a Smoke sensor item. The input nodes are `Smoke`, `Not Smoke`, `Tampered` and `Not Tampered`.
 
-![Sample Smoke Sensor](https://user-images.githubusercontent.com/92022724/138468809-a13f597f-0df9-4073-a5ab-ab5f8fae90a2.PNG)
+![Smoke Sensor](smoke_sensor_example.png)
 
 Copyable Node-RED flow:
 
@@ -44,7 +44,7 @@ Use the following JSON in your characteristic properties so that the Home applic
 
 This is an example of a smoke sensor element wired in NC with a safety if the sensor is open.
 
-![Smoke Sensor](https://user-images.githubusercontent.com/92022724/138470319-47494613-5f9c-4f26-8a9a-5ef1968f8d11.PNG)
+![Smoke Sensor Omron PLC](smoke_sensor_omron_plc_example.png)
 
 To do this you must:
 
