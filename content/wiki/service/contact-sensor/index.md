@@ -20,7 +20,7 @@ contributors: ["GogoVega"]
 
 This is the simplest example of a contact sensor item. The input nodes are `Open`, `Close`, `Tampered` and `Not Tampered`.
 
-![Sample Contact Sensor](https://user-images.githubusercontent.com/92022724/138437822-c6e2042d-f853-4cd7-baa5-a927e13f76d5.PNG)
+![Contact Sensor](contact_sensor_example.png)
 
 Copyable Node-RED flow:
 
@@ -45,7 +45,7 @@ Use the following JSON in your characteristic properties so that the Home applic
 
 This is an example of a contact sensor element wired in NO with a safety if the cable is cut.
 
-![Contact Sensor](https://user-images.githubusercontent.com/92022724/138437909-ba946827-c288-4e51-96f6-6477abac92fe.PNG)
+![Contact Sensor Omron PLC](contact_sensor_omron_plc_example.png)
 
 To do this you must:
 
