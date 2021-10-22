@@ -47,7 +47,7 @@ All our wiki pages are located in `content/wiki` folder [in our repository](http
 
 When referencing other wiki pages, please use [Hugo mechanism](https://gohugo.io/content-management/cross-references/). This helps keep things organized and prevent broken links in the future.
 
-Example `[Bridge]({{< ref "/wiki/nodes/host-node" >}} "Host Node")`
+Example `[Bridge]({{</* ref "/wiki/nodes/host-node" */>}} "Host Node")`
 Where you specify text, reference link, and text which is displayed on link hover.
 
 ## Screenshots
