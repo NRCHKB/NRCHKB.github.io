@@ -3,7 +3,7 @@ title: "Contact Sensor"
 description: "Contact Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.028Z
-lastmod: 2021-10-22T10:26:16.828Z
+lastmod: 2021-10-22T17:53:40+02:00
 draft: false
 images: []
 menu:
@@ -34,8 +34,8 @@ Use the following JSON in your characteristic properties so that the Home applic
 
 ```json
 {
-	"ContactSensorState": 0,
-	"StatusTampered": false
+  "ContactSensorState": 0,
+  "StatusTampered": false
 }
 ```
 

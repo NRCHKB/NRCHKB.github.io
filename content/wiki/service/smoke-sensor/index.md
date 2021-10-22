@@ -3,7 +3,7 @@ title: "Smoke Sensor"
 description: "Smoke Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.035Z
-lastmod: 2021-10-22T14:26:06.067Z
+lastmod: 2021-10-22T17:53:52+02:00
 draft: false
 images: []
 menu:
@@ -33,8 +33,8 @@ Use the following JSON in your characteristic properties so that the Home applic
 
 ```json
 {
-	"SmokeDetected": 0,
-	"StatusTampered": false
+  "SmokeDetected": 0,
+  "StatusTampered": false
 }
 ```
 
