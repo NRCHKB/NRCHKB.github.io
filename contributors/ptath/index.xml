@@ -9,6 +9,5 @@ In Home.app, you will get this:
 Heating thermostat Icon view
 Set temperature
 Choose mode
-Detailed view
-Heating/cooling thermostat Icon view</description></item><item><title>Valve</title><link>https://nrchkb.github.io/wiki/service/valve/</link><pubDate>Sat, 17 Apr 2021 18:50:12 +0000</pubDate><guid>https://nrchkb.github.io/wiki/service/valve/</guid><description>Possible Combinations The combination of Active and InUse Characteristics will determine what the Home.app shows for the valve item. Here is a table showing all (known) combinations:
+Detailed view</description></item><item><title>Valve</title><link>https://nrchkb.github.io/wiki/service/valve/</link><pubDate>Sat, 17 Apr 2021 18:50:12 +0000</pubDate><guid>https://nrchkb.github.io/wiki/service/valve/</guid><description>Possible Combinations The combination of Active and InUse Characteristics will determine what the Home.app shows for the valve item. Here is a table showing all (known) combinations:
 Active InUse Home.app shows 0 0 Off 0 1 Stopping 1 0 Idle 1 1 Running Examples These examples are meant to be copied into your Node-RED system and adapted to your setup.</description></item></channel></rss>

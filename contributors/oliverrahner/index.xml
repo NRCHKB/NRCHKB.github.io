@@ -5,7 +5,6 @@ In Home.app, you will get this:
 Heating thermostat Icon view
 Set temperature
 Choose mode
-Detailed view
-Heating/cooling thermostat Icon view</description></item><item><title>Window Covering</title><link>https://nrchkb.github.io/wiki/service/window-covering/</link><pubDate>Sat, 17 Apr 2021 18:50:12 +0000</pubDate><guid>https://nrchkb.github.io/wiki/service/window-covering/</guid><description>A minimal Window Covering only has a Position. Additionally, Horizontal and Vertical tilt angles can be added, as well as information about Obstruction Detection.
+Detailed view</description></item><item><title>Window Covering</title><link>https://nrchkb.github.io/wiki/service/window-covering/</link><pubDate>Sat, 17 Apr 2021 18:50:12 +0000</pubDate><guid>https://nrchkb.github.io/wiki/service/window-covering/</guid><description>A minimal Window Covering only has a Position. Additionally, Horizontal and Vertical tilt angles can be added, as well as information about Obstruction Detection.
 Position State is an official characteristic, but does not have any effect! It is implicitly derived by comparing Current State to Target State (e.g. Current State &amp;gt; Target State = Decreasing).
 When Current State and Target State are not equal, you will get the spinning icon in Home.</description></item></channel></rss>
