@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.48.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.47.0...v1.48.0) (2021-10-23)
+
+
+### Features
+
+* now md img title will be rendered as caption ([ef836c5](https://github.com/NRCHKB/NRCHKB.github.io/commit/ef836c57b5f2c992844e88ef299a5f745c3d6943))
+* Showcase of Television icons ([01d20a9](https://github.com/NRCHKB/NRCHKB.github.io/commit/01d20a96e7a046ea3072b35b47ac33a9e996d3cc))
+* Showcase of Television icons ([348d55a](https://github.com/NRCHKB/NRCHKB.github.io/commit/348d55a6a4c7ddfb9fdcd5d80b94fcbe3d7683e4))
+
 ## [1.47.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.46.0...v1.47.0) (2021-10-22)
 
 
