@@ -3,7 +3,7 @@ title: "Contribution"
 description: "Few hints how to contribute to our wiki!"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-10-02T00:27:32.610Z
+lastmod: 2021-10-22T17:44:58+02:00
 draft: false
 images: []
 menu:
@@ -47,7 +47,7 @@ All our wiki pages are located in `content/wiki` folder [in our repository](http
 
 When referencing other wiki pages, please use [Hugo mechanism](https://gohugo.io/content-management/cross-references/). This helps keep things organized and prevent broken links in the future.
 
-Example `[Bridge]({{< ref "/wiki/nodes/host-node" >}} "Host Node")`
+Example `[Bridge]({{</* ref "/wiki/nodes/host-node" */>}} "Host Node")`
 Where you specify text, reference link, and text which is displayed on link hover.
 
 ## Screenshots
