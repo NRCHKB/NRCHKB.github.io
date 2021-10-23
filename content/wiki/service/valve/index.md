@@ -16,7 +16,7 @@ contributors: ["crxporter","ptath","Andi1968","Shaquu","GogoVega"]
 ---
 
 **Note :** `SetDuration` is a value ! **No action in Home app !**\
-**Note :** `RemainingDuration` is a **input variable** !
+**Note :** `RemainingDuration` is a **input variable** of Homekit node !
 
 
 ## Possible Valve Type
