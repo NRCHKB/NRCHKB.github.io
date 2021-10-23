@@ -115,3 +115,21 @@ Known remote codes include:
 {"Active":0} POWER_OFF
 {"Active":1} POWER_ON
 ```
+
+## Icons
+
+When Television Service is hosted as a Standalone Accessory it will use corresponding Accessory Category to visualise icon in Home.app
+These are the options:
+
+| Accessory Category | Icon |
+| ----------- | ----------- |
+| AIRPORT | ![Airport](tv_category_airport.png) |
+| APPLE_TV | ![Apple TV](tv_category_apple_tv.png) |
+| AUDIO_RECEIVED | ![Audio Receiver](tv_category_audio_receiver.png) |
+| HOMEPOD | ![HomePod](tv_category_homepod.png) |
+| ROUTER | ![Router](tv_category_router.png) |
+| SPEAKER | ![Speaker](tv_category_speaker.png) |
+| TARGET_CONTROLLER | ![Target Controller](tv_category_target_controller.png) |
+| TELEVISION | ![Television](tv_category_television.png) |
+| TV_SET_TOP_BOX | ![TV Set Top Box](tv_category_tv_set_top_box.png) |
+| TV_STREAMING_STICK | ![TV Streaming Stick](tv_category_tv_streaming_stick.png) |
