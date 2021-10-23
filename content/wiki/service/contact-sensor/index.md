@@ -3,7 +3,7 @@ title: "Contact Sensor"
 description: "Contact Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.028Z
-lastmod: 2021-10-22T17:53:40+02:00
+lastmod: 2021-10-23T03:54:33.325Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "ContactSensor"
-contributors: ["GogoVega"]
+contributors: ["GogoVega","Shaquu"]
 
 ---
 

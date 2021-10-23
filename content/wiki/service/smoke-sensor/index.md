@@ -3,7 +3,7 @@ title: "Smoke Sensor"
 description: "Smoke Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.035Z
-lastmod: 2021-10-22T17:53:52+02:00
+lastmod: 2021-10-23T03:54:48.654Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "SmokeSensor"
-contributors: ["GogoVega"]
+contributors: ["GogoVega","Shaquu"]
 ---
 
 ### Basic principle
