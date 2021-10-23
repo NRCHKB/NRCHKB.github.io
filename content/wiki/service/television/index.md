@@ -3,7 +3,7 @@ title: "Television"
 description: "Television"
 lead: ""
 date: 2021-04-17T18:50:12.037Z
-lastmod: 2021-10-15T22:06:23.483Z
+lastmod: 2021-10-23T05:48:09+02:00
 draft: false
 images: []
 menu:
@@ -121,15 +121,13 @@ Known remote codes include:
 When Television Service is hosted as a Standalone Accessory it will use corresponding Accessory Category to visualise icon in Home.app
 These are the options:
 
-| Accessory Category | Icon |
-| ----------- | ----------- |
-| AIRPORT | ![Airport](tv_category_airport.png) |
-| APPLE_TV | ![Apple TV](tv_category_apple_tv.png) |
-| AUDIO_RECEIVED | ![Audio Receiver](tv_category_audio_receiver.png) |
-| HOMEPOD | ![HomePod](tv_category_homepod.png) |
-| ROUTER | ![Router](tv_category_router.png) |
-| SPEAKER | ![Speaker](tv_category_speaker.png) |
-| TARGET_CONTROLLER | ![Target Controller](tv_category_target_controller.png) |
-| TELEVISION | ![Television](tv_category_television.png) |
-| TV_SET_TOP_BOX | ![TV Set Top Box](tv_category_tv_set_top_box.png) |
-| TV_STREAMING_STICK | ![TV Streaming Stick](tv_category_tv_streaming_stick.png) |
+![Airport](icons/small/tv_category_airport.png "AIRPORT")
+![Apple TV](icons/small/tv_category_apple_tv.png "APPLE_TV")
+![HomePod](icons/small/tv_category_homepod.png "HOMEPOD")
+![Router](icons/small/tv_category_router.png "ROUTER")
+![Speaker](icons/small/tv_category_speaker.png "SPEAKER")
+![Television](icons/small/tv_category_television.png "TELEVISION")
+![Audio Receiver](icons/small/tv_category_audio_receiver.png "AUDIO_RECEIVED")
+![TV Set Top Box](icons/small/tv_category_tv_set_top_box.png "TV_SET_TOP_BOX")
+![TV Streaming Stick](icons/small/tv_category_tv_streaming_stick.png "TV_STREAMING_STICK")
+![Target Controller](icons/small/tv_category_target_controller.png "TARGET_CONTROLLER")
