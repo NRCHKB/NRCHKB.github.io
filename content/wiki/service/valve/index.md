@@ -3,7 +3,7 @@ title: "Valve"
 description: "Valve"
 lead: ""
 date: 2021-04-17T18:50:12.039Z
-lastmod: 2021-10-15T22:06:25.355Z
+lastmod: 2021-10-23T10:41:01.466Z
 draft: false
 images: []
 menu:
@@ -12,10 +12,58 @@ menu:
 toc: true
 service:
   name: "Valve"
-contributors: ["crxporter","ptath","Andi1968","Shaquu"]
+contributors: ["crxporter","ptath","Andi1968","Shaquu","GogoVega"]
 ---
 
-## Possible Combinations
+## Possible Valve Type
+
+The `ValveType` Characteristics will determine what the Home.app shows for the valve item.\
+Here is a table showing all (known) Valve Type :
+
+| ValveType | Home.app shows |
+| --- | --- |
+| `0` | Generic Valve |
+| `1` | Irrigation |
+| `2` | Shower Head |
+| `3` | Water Faucet |
+
+## Basic Principle
+
+This is the simplest example of a Generic Valve item. The input nodes are `Close`, `Opening`, `Closing` and `Open`.
+
+![Basic Principle](valve_basic_principle_example.png)
+
+Copyable Node-RED flow:
+
+```json
+[{"id":"04c963093073daea","type":"inject","z":"96be518d.693a18","name":"Close","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"Active\":0,\"InUse\":0}","payloadType":"json","x":130,"y":80,"wires":[["2e5664d6894d86cd"]]},{"id":"a6cd9bf2c6c16195","type":"inject","z":"96be518d.693a18","name":"Opening","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"Active\":1,\"InUse\":0}","payloadType":"json","x":140,"y":120,"wires":[["2e5664d6894d86cd"]]},{"id":"2e5664d6894d86cd","type":"homekit-service","z":"96be518d.693a18","isParent":true,"hostType":"0","bridge":"4a2a4fc162440a41","accessoryId":"","parentService":"","name":"Valve","serviceName":"Valve","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.4.3","serialNo":"Default Serial Number","firmwareRev":"1.4.3","hardwareRev":"1.4.3","softwareRev":"1.4.3","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{\"ValveType\":{\"minValue\":0,\"maxValue\":0}}","waitForSetupMsg":false,"outputs":2,"x":310,"y":120,"wires":[[],[]]},{"id":"60403f5f0a717273","type":"inject","z":"96be518d.693a18","name":"Closing","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"Active\":0,\"InUse\":1}","payloadType":"json","x":130,"y":160,"wires":[["2e5664d6894d86cd"]]},{"id":"c6119ed30d0c44ae","type":"inject","z":"96be518d.693a18","name":"Open","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"Active\":1,\"InUse\":1}","payloadType":"json","x":130,"y":200,"wires":[["2e5664d6894d86cd"]]},{"id":"4a2a4fc162440a41","type":"homekit-bridge","bridgeName":"Bridge Node-RED","pinCode":"605-37-162","port":"","advertiser":"bonjour-hap","allowInsecureRequest":false,"manufacturer":"NRCHKB","model":"1.4.3","serialNo":"Default Serial Number","firmwareRev":"1.4.3","hardwareRev":"1.4.3","softwareRev":"1.4.3","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
+```
+
+### Characteristic Properties
+
+Use the following JSON in your characteristic properties so that the Home application displays a Generic Valve.
+
+```json
+{ 
+    "ValveType":{
+      "minValue":0
+      "maxValue":0
+      }
+}
+```
+
+You can also add `SetDuration` characteristic allowing to choose the duration operating time.
+
+```json
+{ 
+    "SetDuration":{
+      "minValue":30
+      "maxValue":1800
+      }
+}
+```
+
+### Possible Combinations of Valve Status
 
 The combination of `Active` and `InUse` Characteristics will determine what the Home.app shows for the valve item.
 Here is a table showing all (known) combinations:
@@ -24,7 +72,7 @@ Here is a table showing all (known) combinations:
 | --- | --- | --- |
 | `0` | `0` | Off |
 | `0` | `1` | Stopping |
-| `1` | `0` | Idle |
+| `1` | `0` | Start-Up |
 | `1` | `1` | Running |
 
 ## Examples
