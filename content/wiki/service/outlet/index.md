@@ -33,10 +33,7 @@ Use the following JSON in your characteristic properties so that the Home applic
 
 ```json
 {
-    "OutletInUse": {
-        "minValue": 0,
-        "maxValue": 1
-    }
+    "OutletInUse": 0
 }
 ```
 
