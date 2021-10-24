@@ -3,7 +3,7 @@ title: "Outlet"
 description: "Outlet"
 lead: ""
 date: 2021-04-17T18:50:12.033Z
-lastmod: 2021-10-15T22:06:18.533Z
+lastmod: 2021-10-24T09:20:37.212Z
 draft: false
 images: []
 menu:
@@ -12,10 +12,49 @@ menu:
 toc: true
 service:
   name: "Outlet"
-contributors: ["caitken-com","NorthernMan54","Shaquu"]
+contributors: ["caitken-com","NorthernMan54","Shaquu","GogoVega"]
 ---
 
-## Using an outlet as an Internet Down detector and reset your modem automatically when internet access is lost.
+## Basic Principle
+
+This is the simplest example of an outlet item. The input nodes are `On`, `Off`, `In Use` and `Not in Use`.
+
+![Basic Outlet](outlet_basic_principle_example.png)
+
+Copyable Node-RED flow:
+
+```json
+[{"id":"b2bc6d32725ce207","type":"inject","z":"79ab71a53e21e046","name":"On","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"On\":1}","payloadType":"json","x":130,"y":80,"wires":[["503a4c551f4e455b"]]},{"id":"dcf7dbd66ba3f303","type":"inject","z":"79ab71a53e21e046","name":"Off","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"On\":0}","payloadType":"json","x":130,"y":120,"wires":[["503a4c551f4e455b"]]},{"id":"6282f6b7760eb090","type":"inject","z":"79ab71a53e21e046","name":"Not In Use","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"OutletInUse\":0}","payloadType":"json","x":120,"y":180,"wires":[["503a4c551f4e455b"]]},{"id":"3c728bedb5474384","type":"inject","z":"79ab71a53e21e046","name":"In Use","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"OutletInUse\":1}","payloadType":"json","x":130,"y":220,"wires":[["503a4c551f4e455b"]]},{"id":"503a4c551f4e455b","type":"homekit-service","z":"79ab71a53e21e046","isParent":true,"hostType":"0","bridge":"4a2a4fc162440a41","accessoryId":"","parentService":"","name":"Outlet","serviceName":"Outlet","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.4.2","serialNo":"Default Serial Number","firmwareRev":"1.4.2","hardwareRev":"1.4.2","softwareRev":"1.4.2","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{\"OutletInUse\":{\"minValue\":0,\"maxValue\":1}}","waitForSetupMsg":false,"outputs":2,"x":310,"y":180,"wires":[["66261314408ffb64","b0e06e3f012f25b2"],[]]},{"id":"66261314408ffb64","type":"debug","z":"79ab71a53e21e046","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":510,"y":120,"wires":[]},{"id":"b0e06e3f012f25b2","type":"function","z":"79ab71a53e21e046","name":"State","func":"msg.payload = msg.payload.On;\n\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":450,"y":180,"wires":[["0ad3df8e40c50749"]]},{"id":"0ad3df8e40c50749","type":"debug","z":"79ab71a53e21e046","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","statusVal":"","statusType":"auto","x":610,"y":180,"wires":[]},{"id":"4a2a4fc162440a41","type":"homekit-bridge","bridgeName":"Bridge Node-RED","pinCode":"605-37-162","port":"","advertiser":"bonjour-hap","allowInsecureRequest":false,"manufacturer":"NRCHKB","model":"1.4.3","serialNo":"Default Serial Number","firmwareRev":"1.4.3","hardwareRev":"1.4.3","softwareRev":"1.4.3","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
+```
+
+### Characteristic Properties
+
+Use the following JSON in your characteristic properties so that the Home application displays an outlet with `OutletInUse`.
+
+```json
+{
+    "OutletInUse": {
+        "minValue": 0,
+        "maxValue": 1
+    }
+}
+```
+
+## Example
+
+### Implementation with a [Sonoff Module](https://sonoff.tech/product/diy-smart-switch/basicr2/) Flashed by [Tasmota](https://tasmota.github.io/docs/)
+
+This is a Node-RED flow to integrate a Sonoff-Tasmota flashed WiFi Outlet with HomeKit.
+
+![Outlet Sonoff](outlet_sonoff_tasmota_example.png)
+
+Copyable Node-RED flow:
+
+```json
+[{"id":"48261270e6d40148","type":"mqtt in","z":"79ab71a53e21e046","name":"","topic":"domoticz/in","qos":"2","datatype":"json","broker":"e17954568d0e969f","nl":false,"rap":true,"rh":0,"x":110,"y":300,"wires":[["42ae1f48153467da"]]},{"id":"730d23b913596ca2","type":"homekit-service","z":"79ab71a53e21e046","isParent":true,"hostType":"0","bridge":"4a2a4fc162440a41","accessoryId":"","parentService":"","name":"Outlet","serviceName":"Outlet","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Default Serial Number","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":2,"x":490,"y":300,"wires":[["829710a89f6e4b16"],[]]},{"id":"7efdbb603d6f8332","type":"mqtt out","z":"79ab71a53e21e046","name":"","topic":"domoticz/out","qos":"","retain":"","respTopic":"","contentType":"","userProps":"","correl":"","expiry":"","broker":"e17954568d0e969f","x":850,"y":300,"wires":[]},{"id":"42ae1f48153467da","type":"function","z":"79ab71a53e21e046","name":"State to Homekit","func":"if (msg.payload.idx == 1){  // Outlet as idx 1\n    msg.payload = {\"On\": (msg.payload.nvalue)? true:false};\n    return msg;\n} else {\n    return;\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":310,"y":300,"wires":[["730d23b913596ca2"]]},{"id":"829710a89f6e4b16","type":"function","z":"79ab71a53e21e046","name":"State to MQTT","func":"msg.payload = {\n    \n    \"idx\": 1,\n    \"nvalue\": (msg.payload.On) ? 1 : 0\n};\n\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":660,"y":300,"wires":[["7efdbb603d6f8332"]]},{"id":"e17954568d0e969f","type":"mqtt-broker","name":"Mosquitto","broker":"192.168.1.20","port":"1883","clientid":"","usetls":false,"protocolVersion":"4","keepalive":"60","cleansession":true,"birthTopic":"","birthQos":"0","birthRetain":"false","birthPayload":"","birthMsg":{},"closeTopic":"","closeQos":"0","closeRetain":"false","closePayload":"","closeMsg":{},"willTopic":"","willQos":"0","willRetain":"false","willPayload":"","willMsg":{},"sessionExpiry":""},{"id":"4a2a4fc162440a41","type":"homekit-bridge","bridgeName":"Bridge Node-RED","pinCode":"605-37-162","port":"","advertiser":"bonjour-hap","allowInsecureRequest":false,"manufacturer":"NRCHKB","model":"1.4.3","serialNo":"Default Serial Number","firmwareRev":"1.4.3","hardwareRev":"1.4.3","softwareRev":"1.4.3","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
+```
+
+### Using an outlet as an Internet Down detector and reset your modem automatically when internet access is lost.
 
 For this use case, I have an outlet module ( in my case a WION Outlet ) that has my router plugged in to it and flashed with TASMOTA.
 
