@@ -57,6 +57,8 @@ Copyable Node-RED flow:
 
 ## Incompatible Services
 
-It is tested that Battery Service cannot be used as Linked for given Services (it will simply not attach in Home.app):
+Incompatible means that Battery will not attach to Parent and will be displayed as separate Service in Home.app
+
+It is tested that Battery Service cannot be used as Linked for listed Services (in progress):
 
 - [Switch]({{< ref "/wiki/service/switch" >}} "Switch")
