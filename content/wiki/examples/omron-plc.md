@@ -3,7 +3,7 @@ title: "OMRON PLC"
 description: "HomeKit for OMRON PLCs"
 lead: ""
 date: 2021-10-23T18:26:33+02:00
-lastmod: 2021-10-25T19:11:14+02:00
+lastmod: 2021-10-25T17:19:59.227Z
 draft: false
 images: []
 menu:
