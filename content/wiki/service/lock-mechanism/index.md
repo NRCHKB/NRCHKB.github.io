@@ -3,7 +3,7 @@ title: "Lock Mechanism"
 description: "Lock Mechanism"
 lead: ""
 date: 2021-04-17T18:50:12.032Z
-lastmod: 2021-10-25T09:53:50.904Z
+lastmod: 2021-10-25T16:49:03.867Z
 draft: false
 images: []
 menu:
@@ -28,17 +28,8 @@ Copyable Node-RED flow:
 ```
 ### Possible Lock Current State
 
-The `LockCurrentState` Characteristics will determine what the Home.app shows for the Lock Mechanism.\
-Here is a table showing all Lock Mechanism :
-
-| LockCurrentState | Home.app shows |
-| --- | --- |
-| `0` | `Close` |
-| `1` | `Open` |
-| `2` | `Jammed` |
-| `3` | `Unknow` |
-
-Below is an example of a flow with `Jammed` and `Unknow` input nodes.
+The `LockCurrentState` characteristic will determine what the Home.app displays for the Lock Mechanism. 
+Below is an example of a flow with the addition of the input nodes `Jammed` and `Unknow`.
 
 ![Basic Lock Advanced Mechanism](lock_mechanism_basic_principle_advanced_example.png)
 
