@@ -15,21 +15,8 @@ service:
 contributors: ["crxporter","ptath","Andi1968","Shaquu","GogoVega"]
 ---
 
-**Note :** `SetDuration` is an input or an output, it is used to set the "Default Run Time" on each valve in the Home app.
-**Note :** `RemainingDuration` is an **input** to the Service node, used to display the remaining runtime on the current program. It cannot be sent as an output from Home app into Node-RED.
-
-
-## Possible Valve Type
-
-The `ValveType` Characteristics will determine what the Home.app shows for the valve item.\
-Here is a table showing all (known) Valve Type :
-
-| ValveType | Home.app shows |
-| --- | --- |
-| `0` | Generic Valve |
-| `1` | Irrigation |
-| `2` | Shower Head |
-| `3` | Water Faucet |
+**Note :** `SetDuration` is an input or an output, it is used to set the "Default Run Time" on each valve in the Home.app.
+**Note :** `RemainingDuration` is an **input** to the Service node, used to display the remaining runtime on the current program. It cannot be sent as an output from Home.app into Node-RED.
 
 ## Basic Principle
 
@@ -45,25 +32,25 @@ Copyable Node-RED flow:
 
 ### Characteristic Properties
 
-Use the following JSON in your characteristic properties so that the Home application displays a Generic Valve.
+Use the following JSON in your Characteristic Properties so that the Home.app displays a Generic Valve.
 
 ```json
-{ 
-    "ValveType":{
-      "minValue":0
+{
+   "ValveType":{
+      "minValue":0,
       "maxValue":0
-      }
+   }
 }
 ```
 
 You can also add `SetDuration` characteristic allowing to choose the duration operating time.
 
 ```json
-{ 
-    "SetDuration":{
-      "minValue":30
+{
+   "SetDuration":{
+      "minValue":30,
       "maxValue":1800
-      }
+   }
 }
 ```
 
@@ -102,16 +89,14 @@ These properties define the sprinkler to show as a "sprinkler" in HomeKit (rathe
 
 ```json
 {
-    "ValveType":
-    {
-        "minValue":1,
-        "maxValue":1
-    },
-    "SetDuration":
-    {
-        "minValue":300,
-        "maxValue":1800
-    }
+   "ValveType":{
+      "minValue":1,
+      "maxValue":1
+   },
+   "SetDuration":{
+      "minValue":300,
+      "maxValue":1800
+   }
 }
 ```
 
