@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/examples/omron-plc/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-10-23T18:26:33+02:00">
-<meta property="article:modified_time" content="2021-10-25T17:05:02+00:00">
+<meta property="article:modified_time" content="2021-10-25T19:11:14+02:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -541,19 +541,19 @@ Another advantage is that it is cheaper than the <a href=https://www.knx.org/knx
 <img src=omron_plc_buffer_parser_example.png alt="Buffer Parser Example">
 </p>
 <p>We can exploit the response of the node with:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>msg.payload = {
-    &#34;CIO100&#34;: msg.READ_PLC.CIO100[0].bits,
-    &#34;D100&#34;: msg.READ_PLC.D100
-};
-return msg;
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>msg</span><span class=p>.</span><span class=nx>payload</span> <span class=o>=</span> <span class=p>{</span>
+    <span class=s2>&#34;CIO100&#34;</span><span class=o>:</span> <span class=nx>msg</span><span class=p>.</span><span class=nx>READ_PLC</span><span class=p>.</span><span class=nx>CIO100</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=nx>bits</span><span class=p>,</span>
+    <span class=s2>&#34;D100&#34;</span><span class=o>:</span> <span class=nx>msg</span><span class=p>.</span><span class=nx>READ_PLC</span><span class=p>.</span><span class=nx>D100</span>
+<span class=p>};</span>
+<span class=k>return</span> <span class=nx>msg</span><span class=p>;</span>
 </code></pre></div><p>To convert <code>16bits</code> back to <code>Int16</code> use this in a <code>Function</code> node:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback>let READ = msg.READ_PLC.CIO10[0].bits;
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kd>let</span> <span class=nx>READ</span> <span class=o>=</span> <span class=nx>msg</span><span class=p>.</span><span class=nx>READ_PLC</span><span class=p>.</span><span class=nx>CIO10</span><span class=p>[</span><span class=mi>0</span><span class=p>].</span><span class=nx>bits</span><span class=p>;</span>
 
-READ = READ.reverse().toString().replace(/\,/g,&#39;&#39;);
+<span class=nx>READ</span> <span class=o>=</span> <span class=nx>READ</span><span class=p>.</span><span class=nx>reverse</span><span class=p>().</span><span class=nx>toString</span><span class=p>().</span><span class=nx>replace</span><span class=p>(</span><span class=sr>/\,/g</span><span class=p>,</span><span class=s1>&#39;&#39;</span><span class=p>);</span>
 
-msg.WRITE = parseInt(READ, 2).toString(10);
+<span class=nx>msg</span><span class=p>.</span><span class=nx>WRITE</span> <span class=o>=</span> <span class=nb>parseInt</span><span class=p>(</span><span class=nx>READ</span><span class=p>,</span> <span class=mi>2</span><span class=p>).</span><span class=nx>toString</span><span class=p>(</span><span class=mi>10</span><span class=p>);</span>
 
-return msg;
+<span class=k>return</span> <span class=nx>msg</span><span class=p>;</span>
 </code></pre></div><h2 id=example-flows>Example flows<a href=#example-flows class=anchor aria-hidden=true>#</a> </h2>
 <p>Here is a list of examples that you can go to visit:</p>
 <ul>
