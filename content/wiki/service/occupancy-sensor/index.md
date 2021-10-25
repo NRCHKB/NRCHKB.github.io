@@ -3,7 +3,7 @@ title: "Occupancy Sensor"
 description: "Occupancy Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.033Z
-lastmod: 2021-10-15T22:06:18.282Z
+lastmod: 2021-10-25T12:46:25.877Z
 draft: false
 images: []
 menu:
@@ -12,8 +12,33 @@ menu:
 toc: true
 service:
   name: "OccupancySensor"
-contributors: ["djiwondee","crxporter","caitken-com","Shaquu"]
+contributors: ["djiwondee","crxporter","caitken-com","Shaquu","GogoVega"]
 ---
+
+## Basic principle
+
+This is the simplest example of a Occupancy Sensor item. The input nodes are `Occupancy`, `Not Occupancy`, `Tampered` and `Not Tampered`.
+
+![Basic Principle](occupancy_sensor_basic_principle_example.png)
+
+Copyable Node-RED flow:
+
+```json
+[{"id":"037524dadae99821","type":"homekit-service","z":"ca8eb198a99ccdae","isParent":true,"hostType":"0","bridge":"4a2a4fc162440a41","accessoryId":"","parentService":"","name":"Occupancy Sensor","serviceName":"OccupancySensor","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Default Serial Number","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{\"OccupancyDetected\":0,\"StatusTampered\":false}","waitForSetupMsg":false,"outputs":2,"x":430,"y":400,"wires":[[],[]]},{"id":"5bf4958884e7fa45","type":"inject","z":"ca8eb198a99ccdae","name":"Not Occupancy","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":"0.5","topic":"","payload":"{\"OccupancyDetected\":0}","payloadType":"json","x":200,"y":300,"wires":[["037524dadae99821"]]},{"id":"2ae270f003dc341a","type":"inject","z":"ca8eb198a99ccdae","name":"Occupancy","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":"0.5","topic":"","payload":"{\"OccupancyDetected\":1}","payloadType":"json","x":180,"y":360,"wires":[["037524dadae99821"]]},{"id":"ed5cc3214d9160b1","type":"inject","z":"ca8eb198a99ccdae","name":"Tampered","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":"0.5","topic":"","payload":"{\"StatusTampered\":true}","payloadType":"json","x":180,"y":440,"wires":[["037524dadae99821"]]},{"id":"dfbe83296722b5df","type":"inject","z":"ca8eb198a99ccdae","name":"Not Tampered","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":"0.5","topic":"","payload":"{\"StatusTampered\":false}","payloadType":"json","x":190,"y":500,"wires":[["037524dadae99821"]]},{"id":"4a2a4fc162440a41","type":"homekit-bridge","bridgeName":"Bridge Node-RED","pinCode":"605-37-162","port":"","advertiser":"bonjour-hap","allowInsecureRequest":false,"manufacturer":"NRCHKB","model":"1.4.3","serialNo":"Default Serial Number","firmwareRev":"1.4.3","hardwareRev":"1.4.3","softwareRev":"1.4.3","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
+```
+
+### Characteristic Properties
+
+Use the following JSON in your characteristic properties so that the Home application displays a Occupancy Sensor with `StatusTampered`.
+
+```json
+{
+	"OccupancyDetected": 0,
+	"StatusTampered": 0
+}
+```
+
+**Note:** A Occupancy Sensor is a less energy-consuming and much more sensitive Motion Sensor.
 
 ## Example
 
