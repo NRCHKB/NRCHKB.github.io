@@ -33,9 +33,9 @@ Another advantage is that it is cheaper than the [KNX System](https://www.knx.or
 
 For that you must do the following points:
 
-#### 1. Install [`node-red-contrib-omron-fins`](https://github.com/Steve-Mcl/node-red-contrib-omron-fins) and [`node-red-contrib-buffer-parser`](https://github.com/Steve-Mcl/node-red-contrib-buffer-parser) using `Manage Palette`
+### 1. Install [`node-red-contrib-omron-fins`](https://github.com/Steve-Mcl/node-red-contrib-omron-fins) and [`node-red-contrib-buffer-parser`](https://github.com/Steve-Mcl/node-red-contrib-buffer-parser) using `Manage Palette`
 
-#### 2. Configure the `FINS Read` and `FINS Write` nodes
+### 2. Configure the `FINS Read` and `FINS Write` nodes
 
 To put the **Read Addresses** you have two nodes:
   1. `FINS Read` in which you put a starting address and the number of addresses you want to read after it.
@@ -47,7 +47,7 @@ For the bridge configuration, please visit [this instruction](https://github.com
 
 **Warning! We can only write to one address at a time!**
 
-#### 3. Configure the `Buffer-Parser` node
+### 3. Configure the `Buffer-Parser` node
 
 This node allows for our use to convert an `Int16` to `16bits`. Indeed the read nodes return an `Int16 list`.
 
