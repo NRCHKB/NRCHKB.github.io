@@ -3,7 +3,7 @@ title: "Battery"
 description: "Battery"
 lead: ""
 date: 2021-04-17T18:50:12.025Z
-lastmod: 2021-10-25T19:11:31+02:00
+lastmod: 2021-10-25T17:14:21.615Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "Battery"
-contributors: ["GogoVega"]
+contributors: ["GogoVega","Shaquu"]
 ---
 
 **Note:** This service is to be used as a Linked Service as status of the parent's battery level.

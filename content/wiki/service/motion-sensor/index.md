@@ -3,7 +3,7 @@ title: "Motion Sensor"
 description: "Motion Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.032Z
-lastmod: 2021-10-25T19:11:46+02:00
+lastmod: 2021-10-25T17:14:31.056Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "MotionSensor"
-contributors: ["GogoVega"]
+contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic principle
