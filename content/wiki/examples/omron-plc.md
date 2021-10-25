@@ -3,7 +3,7 @@ title: "OMRON PLC"
 description: "HomeKit for OMRON PLCs"
 lead: ""
 date: 2021-10-23T18:26:33+02:00
-lastmod: 2021-10-25T17:05:02.299Z
+lastmod: 2021-10-25T19:11:14+02:00
 draft: false
 images: []
 menu:
@@ -38,8 +38,9 @@ For that you must do the following points:
 ### 2. Configure the `FINS Read` and `FINS Write` nodes
 
 To put the **Read Addresses** you have two nodes:
-  1. `FINS Read` in which you put a starting address and the number of addresses you want to read after it.
-  2. `FINS Read Multiple` in which you put addresses you want.
+
+1. `FINS Read` in which you put a starting address and the number of addresses you want to read after it.
+2. `FINS Read Multiple` in which you put addresses you want.
 
 And to put the **Write Address** you have `FINS Write` node.
 
@@ -55,7 +56,7 @@ This node allows for our use to convert an `Int16` to `16bits`. Indeed the read 
 
 We can exploit the response of the node with:
 
-```
+```js
 msg.payload = {
     "CIO100": msg.READ_PLC.CIO100[0].bits,
     "D100": msg.READ_PLC.D100
@@ -65,7 +66,7 @@ return msg;
 
 To convert `16bits` back to `Int16` use this in a `Function` node:
 
-```
+```js
 let READ = msg.READ_PLC.CIO10[0].bits;
 
 READ = READ.reverse().toString().replace(/\,/g,'');

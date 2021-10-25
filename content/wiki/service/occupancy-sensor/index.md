@@ -3,7 +3,7 @@ title: "Occupancy Sensor"
 description: "Occupancy Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.033Z
-lastmod: 2021-10-25T12:46:25.877Z
+lastmod: 2021-10-25T19:11:42+02:00
 draft: false
 images: []
 menu:
@@ -33,8 +33,8 @@ Use the following JSON in your characteristic properties so that the Home applic
 
 ```json
 {
-	"OccupancyDetected": 0,
-	"StatusTampered": 0
+  "OccupancyDetected": 0,
+  "StatusTampered": 0
 }
 ```
 

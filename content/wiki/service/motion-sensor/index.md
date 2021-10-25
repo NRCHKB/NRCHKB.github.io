@@ -3,7 +3,7 @@ title: "Motion Sensor"
 description: "Motion Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.032Z
-lastmod: 2021-10-23T17:11:45.940Z
+lastmod: 2021-10-25T19:11:46+02:00
 draft: false
 images: []
 menu:
@@ -33,8 +33,8 @@ Use the following JSON in your characteristic properties so that the Home applic
 
 ```json
 {
-	"MotionDetected": 0,
-	"StatusTampered": false
+  "MotionDetected": 0,
+  "StatusTampered": false
 }
 ```
 
