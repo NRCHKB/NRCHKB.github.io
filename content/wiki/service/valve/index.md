@@ -15,8 +15,8 @@ service:
 contributors: ["crxporter","ptath","Andi1968","Shaquu","GogoVega"]
 ---
 
-**Note :** `SetDuration` is a value ! **No action in Home app !**\
-**Note :** `RemainingDuration` is a **input variable** of Homekit node !
+**Note :** `SetDuration` is an input or an output, it is used to set the "Default Run Time" on each valve in the Home app.
+**Note :** `RemainingDuration` is an **input** to the Service node, used to display the remaining runtime on the current program. It cannot be sent as an output from Home app into Node-RED.
 
 
 ## Possible Valve Type
