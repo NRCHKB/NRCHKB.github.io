@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.49.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.48.0...v1.49.0) (2021-10-25)
+
+
+### Features
+
+* Added Basic Principle  to Occupancy Sensor ([a474d9c](https://github.com/NRCHKB/NRCHKB.github.io/commit/a474d9c1539984273066a49aa61771da266f3cee))
+* Added Basic Principle and Example to Outlet ([9066826](https://github.com/NRCHKB/NRCHKB.github.io/commit/9066826424add683e6f7bd1f2a2e9349c7d087ed))
+* Added Basic Principle and Sonoff Example to Outlet ([476b5fc](https://github.com/NRCHKB/NRCHKB.github.io/commit/476b5fcedc5875dfc6a825d1296af97076997a00))
+* Added Basic Principle to Lock Mechanism ([2f8305d](https://github.com/NRCHKB/NRCHKB.github.io/commit/2f8305d37b90c6a18962257a4a3cd8ae4c50beef))
+* Added Basic Principle to Lock Mechanism ([d583d80](https://github.com/NRCHKB/NRCHKB.github.io/commit/d583d80cfa4f6850b0b82e483b923d615c67472c))
+* Added Example to Doorbell ([facda36](https://github.com/NRCHKB/NRCHKB.github.io/commit/facda364c04604336284b019dde36f0e93e4c288))
+* Added Example to Fan ([8a4d74e](https://github.com/NRCHKB/NRCHKB.github.io/commit/8a4d74e9de0a6f9b927a03e18b598d25a4b2aa96))
+* Added Example to Faucet ([aa0093e](https://github.com/NRCHKB/NRCHKB.github.io/commit/aa0093e9c49b078b4e70a264efe303973dcd1084))
+* Added Instruction to Battery Service ([1634ce5](https://github.com/NRCHKB/NRCHKB.github.io/commit/1634ce5c6575cdb4c43da0848bb539c3d9da3299))
+* OMRON PLC page ([ef0c28d](https://github.com/NRCHKB/NRCHKB.github.io/commit/ef0c28d465e5d118bf410f515edaccacb27fcd7d))
+* Update Valve ([98ef4c4](https://github.com/NRCHKB/NRCHKB.github.io/commit/98ef4c4dad3a914e04cf8f6307dc541fa4ddfa5e))
+
+
+### Bug Fixes
+
+* Disable parse for example linking code ([e813aab](https://github.com/NRCHKB/NRCHKB.github.io/commit/e813aab99477120116d74abe9443279519763ec7))
+* Disable parse for example linking code ([7d64c1e](https://github.com/NRCHKB/NRCHKB.github.io/commit/7d64c1e5605fbad01b1758b2a179786c4f281d09))
+* linting ([5d497ee](https://github.com/NRCHKB/NRCHKB.github.io/commit/5d497eeceddeb6c2e6985e1a44dc0e3b7a8679de))
+
 ## [1.48.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.47.0...v1.48.0) (2021-10-23)
 
 
