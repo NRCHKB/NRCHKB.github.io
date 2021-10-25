@@ -31,7 +31,7 @@ Copyable Node-RED flow:
 The `LockCurrentState` Characteristics will determine what the Home.app shows for the Lock Mechanism.\
 Here is a table showing all Lock Mechanism :
 
-| ValveType | Home.app shows |
+| LockCurrentState | Home.app shows |
 | --- | --- |
 | `0` | `Close` |
 | `1` | `Open` |
