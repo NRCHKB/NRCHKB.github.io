@@ -3,7 +3,7 @@ title: "Valve"
 description: "Valve"
 lead: ""
 date: 2021-04-17T18:50:12.039Z
-lastmod: 22021-10-23T17:09:21.335Z
+lastmod: 2021-10-26T18:34:55.330Z
 draft: false
 images: []
 menu:
@@ -15,7 +15,7 @@ service:
 contributors: ["crxporter","ptath","Andi1968","Shaquu","GogoVega"]
 ---
 
-**Note :** `SetDuration` is an input or an output, it is used to set the "Default Run Time" on each valve in the Home.app.
+**Note :** `SetDuration` is an input or an output, it is used to set the "Default Run Time" on each valve in the Home.app.\
 **Note :** `RemainingDuration` is an **input** to the Service node, used to display the remaining runtime on the current program. It cannot be sent as an output from Home.app into Node-RED.
 
 ## Basic Principle
@@ -136,7 +136,7 @@ In this sample only one relay module is used. You should paste flow for each rel
 
 ### Implementation with an Omron PLC (with Set and Remaining Duration)
 
-This is an example of a sprinkler element controlled by PLC and interfaced by Home app.
+This is an example of a sprinkler item controlled by PLC and interfaced by Home app.
 
 ![Omron PLC Example](valve_omron_plc_example.png)
 
