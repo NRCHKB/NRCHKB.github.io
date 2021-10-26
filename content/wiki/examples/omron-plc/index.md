@@ -3,7 +3,7 @@ title: "OMRON PLC"
 description: "HomeKit for OMRON PLCs"
 lead: ""
 date: 2021-10-23T18:26:33+02:00
-lastmod: 2021-10-25T17:19:59.227Z
+lastmod: 2021-10-26T21:05:47+02:00
 draft: false
 images: []
 menu:
@@ -33,11 +33,15 @@ Another advantage is that it is cheaper than the [KNX System](https://www.knx.or
 
 For that you must do the following points:
 
-1. Install [`node-red-contrib-omron-fins`](https://github.com/Steve-Mcl/node-red-contrib-omron-fins) and [`node-red-contrib-buffer-parser`](https://github.com/Steve-Mcl/node-red-contrib-buffer-parser) using `Manage Palette`
+### Install
 
-2. Configure the `FINS Read` and `FINS Write` nodes
+Install [`node-red-contrib-omron-fins`](https://github.com/Steve-Mcl/node-red-contrib-omron-fins) and [`node-red-contrib-buffer-parser`](https://github.com/Steve-Mcl/node-red-contrib-buffer-parser) using `Manage Palette`
 
-  To put the **Read Addresses** you have two nodes:
+### Configure
+
+#### FINS Read and FINS Write nodes
+
+To put the **Read Addresses** you have two nodes:
 
 - `FINS Read` in which you put a starting address and the number of addresses you want to read after it.
 - `FINS Read Multiple` in which you put addresses you want.
@@ -48,7 +52,7 @@ For the bridge configuration, please visit [this instruction](https://github.com
 
 **Warning! We can only write to one address at a time!**
 
-3. Configure the `Buffer-Parser` node
+#### Buffer-Parser node
 
 This node allows for our use to convert an `Int16` to `16bits`. Indeed the read nodes return an `Int16 list`.
 
