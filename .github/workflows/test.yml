@@ -23,6 +23,7 @@ jobs:
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v1.2.2
         with:
+          publish_dir: ./public
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_NRCHKB_WIKI }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_NRCHKB_WIKI }}
-          publish_dir: ./public
