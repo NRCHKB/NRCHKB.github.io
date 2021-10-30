@@ -3,7 +3,7 @@ title: "Faucet"
 description: "This service describes accessories like faucets or shower heads."
 lead: ""
 date: 2021-04-17T18:50:12.030Z
-lastmod: 2021-10-31T01:27:37+02:00
+lastmod: 2021-10-31T01:34:37+02:00
 draft: false
 images: []
 menu:
@@ -32,7 +32,21 @@ Depending on the cirumstances Faucet will present different status in Home.app:
 
 This is example of a faucet item with heater and multiple valves.
 
-![Basic Principle](faucet_basic_principle_example.png)
+![Basic Principle](faucet_single_valve_example.png)
+
+Copyable Node-RED flow:
+
+```json
+[{"id":"3288f6947422b693","type":"homekit-service","z":"677ab7b023898f3c","isParent":true,"hostType":"0","bridge":"4a2a4fc162440a41","accessoryId":"","parentService":"","name":"Single Valve Faucet","serviceName":"Faucet","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.4.3","serialNo":"Default Serial Number","firmwareRev":"1.4.3","hardwareRev":"1.4.3","softwareRev":"1.4.3","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":2,"x":1030,"y":780,"wires":[[],[]]},{"id":"0e1576b865e502fb","type":"inject","z":"677ab7b023898f3c","name":"InActive","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"Active\":0}","payloadType":"json","x":810,"y":800,"wires":[["3288f6947422b693"]]},{"id":"f7d602ae4a658eb4","type":"inject","z":"677ab7b023898f3c","name":"Active","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"Active\":1}","payloadType":"json","x":810,"y":760,"wires":[["3288f6947422b693"]]},{"id":"1bdfd569e98740bf","type":"homekit-service","z":"677ab7b023898f3c","isParent":false,"hostType":"0","bridge":"","accessoryId":"","parentService":"3288f6947422b693","name":"Single Valve","serviceName":"Valve","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.4.3","serialNo":"Default Serial Number","firmwareRev":"1.4.3","hardwareRev":"1.4.3","softwareRev":"1.4.3","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{\"Name\":true}","waitForSetupMsg":false,"outputs":2,"x":1010,"y":840,"wires":[[],[]]},{"id":"1c10364eef5d7105","type":"inject","z":"677ab7b023898f3c","name":"InActive","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"Active\":0}","payloadType":"json","x":530,"y":840,"wires":[["1bdfd569e98740bf"]]},{"id":"5d56c765b35261db","type":"inject","z":"677ab7b023898f3c","name":"Active","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"Active\":1}","payloadType":"json","x":390,"y":840,"wires":[["1bdfd569e98740bf"]]},{"id":"6c0e2edd43ae6b31","type":"inject","z":"677ab7b023898f3c","name":"InUse 1","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"InUse\":1}","payloadType":"json","x":670,"y":840,"wires":[["1bdfd569e98740bf"]]},{"id":"56d5bfda010b1362","type":"inject","z":"677ab7b023898f3c","name":"InUse 0","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"InUse\":0}","payloadType":"json","x":810,"y":840,"wires":[["1bdfd569e98740bf"]]},{"id":"4a2a4fc162440a41","type":"homekit-bridge","bridgeName":"Bridge Node-RED","pinCode":"605-37-162","port":"","advertiser":"ciao","allowInsecureRequest":false,"manufacturer":"NRCHKB","model":"1.4.3","serialNo":"Default Serial Number","firmwareRev":"1.4.3","hardwareRev":"1.4.3","softwareRev":"1.4.3","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
+```
+
+## Examples
+
+### Faucet with Heater and multiple Valves
+
+This is example of a faucet item with heater and multiple valves.
+
+![Faucet with Heater and multiple Valves](faucet_with_heater_multi_valve_example.png)
 
 Copyable Node-RED flow:
 
