@@ -1,9 +1,9 @@
 ---
 title: "Faucet"
-description: "Faucet"
+description: "This service describes accessories like faucets or shower heads."
 lead: ""
 date: 2021-04-17T18:50:12.030Z
-lastmod: 2021-10-25T17:14:26.814Z
+lastmod: 2021-10-30T22:12:31.383Z
 draft: false
 images: []
 menu:
@@ -14,6 +14,8 @@ service:
   name: "Faucet"
 contributors: ["GogoVega","Shaquu"]
 ---
+
+This service must only be included when an accessory has either a linked [Heater Cooler]({{< ref "/wiki/service/heater-cooler" >}} "Heater Cooler") with single linked [Valve]({{< ref "/wiki/service/valve" >}} "Valve") service or multiple linked Valve services (with/without Heater Cooler service) to describe water outlets. This service serves as a top level service for such accessories
 
 ## Basic principle
 
