@@ -3,7 +3,7 @@ title: "Faucet"
 description: "This service describes accessories like faucets or shower heads."
 lead: ""
 date: 2021-04-17T18:50:12.030Z
-lastmod: 2021-10-30T22:12:31.383Z
+lastmod: 2021-10-31T00:40:17+02:00
 draft: false
 images: []
 menu:
@@ -19,7 +19,7 @@ This service must only be included when an accessory has either a linked [Heater
 
 ## Basic principle
 
-This is example of a faucet item. The input nodes are `Open` and `Close`.
+This is example of a faucet item with heater and multiple valves.
 
 ![Basic Principle](faucet_basic_principle_example.png)
 
