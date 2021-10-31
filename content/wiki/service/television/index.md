@@ -30,6 +30,8 @@ Currently, the example below has:
 * **Input 2** as child service of _Television Service_
 * **Input 3** as child service of _Television Service_
 
+**Note:** Such complex linked services only work properly if they are standalone accessories. Otherwise the linked services are not shown correctly in the home app.
+
 ## Example With Speaker and 4 inputs
 
 This example will show a television service with 4 inputs and a speaker (volume control). There are two functions that should be used to name your specific devices. These functions are `Setup TV` and `Setup Inputs`.
