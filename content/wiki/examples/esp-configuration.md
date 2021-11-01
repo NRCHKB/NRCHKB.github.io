@@ -37,7 +37,7 @@ There are many firmware options, including simply writing your own using the Ard
 
 ## Using in Node-RED
 
-The use in Node-RED is done using the nodes `MQTT in` and` MQTT out`. If you don't have an MQTT Server, you can install [Aedes](https://flows.nodered.org/node/node-red-contrib-aedes), which runs great inside of Node-RED. You must then configure the address of the server (if using Aedes this will be `localhost` or the IP of your Node-RED instance) and the identifiers in the `MQTT` node as well as the `Topic`. The `Topic` is very important, it must match the topics your devices are using. We will discuss using Domoticz topics and the default Tasmota topics below.
+The use in Node-RED is done using the nodes `MQTT in` and `MQTT out`. If you don't have an MQTT Server, you can install [Aedes](https://flows.nodered.org/node/node-red-contrib-aedes), which runs great inside of Node-RED. You must then configure the address of the server (if using Aedes this will be `localhost` or the IP of your Node-RED instance) and the identifiers in the `MQTT` node as well as the `Topic`. The `Topic` is very important, it must match the topics your devices are using. We will discuss using Domoticz topics and the default Tasmota topics below.
 
 ### Domoticz Topic
 
@@ -73,6 +73,93 @@ Tasmota uses 3 prefixes for forming a `FullTopic`:
 
 <!-- section here to explain adding MQTT nodes to NR -->
 
+Before starting, add an `MQTT in` node, then let's go to the configuration :
+
++ MQTT Server
+
+Put the `IP address` and `port` of your server.
+User advance, you can choose the desired `mqtt protocol`.
+
+![MQTT Server](esp_mqtt_server_configuration_example.png)
+
+And put, if you have, the logins of your server.
+
+![MQTT Server Login](esp_mqtt_server_login_configuration_example.png)
+
++ MQTT Properties
+
+Put the `Topic` as described above and select "A parsed JSON object" in `Output`.
+
+![MQTT Properties](esp_mqtt_properties_example.png)
+
 ### Adding to NRCHKB
 
 <!-- if we don't bring it back to NRCHKB it's just another "look it's mqtt" post like all the rest -->
+
+To connect the `MQTT` nodes to `Homekit`, I offer you some examples for a Topic configuration with domoticz and manual.
+
+Here is a screenshot of the general structure of your flow :
+
+![Basic Principle](esp_basic_principle_example.png)
+
+#### Domoticz Topic
+
++ LightBulb/Outlet/Fan
+
+`State to HK` node :
+```
+if (msg.payload.idx == 1){
+    msg = {"payload": {
+        "On": (msg.payload.nvalue)? true: false
+    }}
+    return msg;
+} else {
+    return;
+}
+```
+`State to MQTT` node :
+```
+msg = {"payload": {
+    "idx": 1,
+    "nvalue": (msg.payload.On)? 1: 0
+}};
+return msg;
+```
+
++ Temperature Sensor
+
+`State to HK` node :
+```
+if (msg.payload.idx == 1){
+    msg = {"payload": {
+        "CurrentTemperature": parseInt(msg.payload.svalue)
+    }}
+    return msg;
+} else {
+    return;
+}
+```
+
++ Temperature + Humidity Sensor
+
+`State to HK` node :
+```
+let Read = msg.payload.svalue.split(/\;/g);
+
+msg1 = {"payload": {
+    "CurrentTemperature": Read[0]
+}};
+msg2 = {"payload": {
+    "CurrentRelativeHumidity": Read[1]
+}};
+
+if (msg.payload.idx == 1){
+    return [msg1,msg2];
+} else {
+    return;
+}
+```
+
+#### Manual Topic
+
+<!-- will have to help me here -->
