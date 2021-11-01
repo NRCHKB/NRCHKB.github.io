@@ -1,9 +1,9 @@
 ---
-title: "ESP Configuration"
+title: "ESP"
 description: "ESP Configuration"
 lead: ""
 date: 2021-10-28T15:03:28.815Z
-lastmod: 2021-10-28T15:03:28.815Z
+lastmod: 2021-11-01T11:22:27.065Z
 draft: false
 images: []
 menu:
@@ -57,7 +57,9 @@ Example message at the output of the `MQTT in` node :
 msg.payload = {
     "idx": 1,
     "nvalue": 0,
-    "svalue":''
+    "svalue":'',
+    "RSSI": 10,
+    "Battery": 100
 }
 ```
 
@@ -65,9 +67,18 @@ msg.payload = {
 
 ### Manual Topic
 
-The identifier of your ESP will be the name of your Topic.
+`Topic` or `%topic%` is the identifier (name) of your ESP.
 
-%topic%/%prefix%/
+> Example "Light"
 
-cmnd/
-state/
+`Full Topic` is the MQTT topic used to communicate with Tasmota over MQTT.
+
+> Example "%topic%/%prefix%/" or "bedroom/tasmota/%topic%/%prefix%/" ...
+
+`%prefix%` in Node-RED :
+
+Tasmota uses 3 prefixes for forming a `FullTopic`:
+
+`cmnd` - prefix to issue commands; ask for status\
+`stat` - reports back status or configuration message\
+`tele` - reports telemetry info at specified intervals\
