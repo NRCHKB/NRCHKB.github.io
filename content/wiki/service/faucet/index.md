@@ -30,7 +30,7 @@ Depending on the cirumstances Faucet will present different status in Home.app:
 
 ## Basic principle
 
-This is example of a faucet item with heater and multiple valves.
+This is example of a faucet item with single valve.
 
 ![Basic Principle](faucet_single_valve_example.png)
 
