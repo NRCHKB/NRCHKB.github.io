@@ -69,9 +69,9 @@ Tasmota uses 3 prefixes for forming a `FullTopic`:
 `stat` - reports back status or configuration message\
 `tele` - reports telemetry info at specified intervals
 
-### MQTT Nodes in Node-RED
+[Read more about MQTT](https://tasmota.github.io/docs/MQTT/)
 
-<!-- section here to explain adding MQTT nodes to NR -->
+### MQTT Nodes in Node-RED
 
 Before starting, add an `MQTT in` node, then let's go to the configuration :
 
@@ -94,13 +94,13 @@ Put the `Topic` as described above and select "A parsed JSON object" in `Output`
 
 ### Adding to NRCHKB
 
-<!-- if we don't bring it back to NRCHKB it's just another "look it's mqtt" post like all the rest -->
-
 To connect the `MQTT` nodes to `Homekit`, I offer you some examples for a Topic configuration with domoticz and manual.
 
 Here is a screenshot of the general structure of your flow :
 
 ![Basic Principle](esp_basic_principle_example.png)
+
+[Read more about Supported Peripherals by Tasmota](https://tasmota.github.io/docs/Supported-Peripherals/)
 
 #### Domoticz Topic
 
@@ -204,9 +204,9 @@ if (msg.payload.idx == 1){
 
 <!-- will have to help me here -->
 
-+ LightBulb
++ Fan/LightBulb/Outlet
 
-`Topic in` = stat/Light1/POWER
+`Topic in` = **stat/Light1/POWER**
 
 `State to HK` node :
 ```
@@ -223,7 +223,7 @@ msg = {"payload": {
 return msg;
 
 ```
-`Topic out` = cmnd/Light1/POWER
+`Topic out` = **cmnd/Light1/POWER**
 
 `State to MQTT` node :
 ```
@@ -236,5 +236,41 @@ if (msg.payload.On){
 }
 msg = {"payload": State
 };
+return msg;
+```
+
++ Humidity Sensor
+
+`Topic in` = **tele/Humidity/SENSOR**
+
+`State to HK` node :
+```
+msg = {"payload": {
+    "CurrentRelativeHumidity": msg.payload.Humidity
+}};
+return msg;
+```
+
++ Temperature Sensor
+
+`Topic in` = **tele/Temp/SENSOR**
+
+`State to HK` node :
+```
+msg = {"payload": {
+    "CurrentTemperature": msg.payload.Temperature
+}};
+return msg;
+```
+
++ Light Sensor
+
+`Topic in` = **tele/Light_Sensor/SENSOR**
+
+`State to HK` node :
+```
+msg = {"payload": {
+    "CurrentAmbientLightLevel": msg.payload.Illuminance
+}};
 return msg;
 ```
