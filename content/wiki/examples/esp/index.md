@@ -2,8 +2,8 @@
 title: "ESP"
 description: "Description and example of ESP configuration"
 lead: ""
-date: 2021-10-28T15:03:28.815Z
-lastmod: ***pending***
+date: 2021-11-02T18:43:58.123Z
+lastmod: 2021-11-02T18:43:58.123Z
 draft: false
 images: []
 menu:
@@ -16,13 +16,13 @@ contributors: ["GogoVega"]
 
 ## What is an ESP ?
 
-ESP is a microcontroller integrated circuit with Wi-Fi connection and very inexpensive. There are several versions of ESP, including ESP32 which is the latest version. ESP32 is more powerful and integrates Bluetooth connection. A popular option is Itead Sonoff modules which integrate an ESP, but the original firmware is not fully "open" so it cannot be easily added to systems like Node-RED. To solve this problem, [ESP Easy](https://www.letscontrolit.com/wiki/index.php?title=ESPEasy) or [Tasmota](https://tasmota.github.io/docs/About/) firmware can be used to transform the ESP module into a simple multi-function sensor device for home automation solutions.
+ESP is a microcontroller integrated circuit with Wi-Fi connection and very inexpensive. There are several versions of ESP, including ESP32, which is the latest version. ESP32 is more powerful and integrates Bluetooth connection. A popular option is Itead Sonoff modules which integrate an ESP, but the original firmware is not fully "open" so it cannot be easily added to systems like Node-RED. To solve this problem, [ESP Easy](https://www.letscontrolit.com/wiki/index.php?title=ESPEasy) or [Tasmota](https://tasmota.github.io/docs/About/) firmware can be used to transform the ESP module into a simple multi-function sensor device for home automation solutions.
 
 ## Why use an ESP with Node-RED ?
 
-Tasmota and ESP Easy integrate easily with many home automation solutions, usually over MQTT protocol. Node-RED has a full set of MQTT nodes so using this hardware (or anything with MQTT) is simple and robust. There are various "MQTT standards" which may be compatible with Tasmota and ESP Easy including Domoticz, Homie, and HomeAssistant; these "standards" are MQTT topic and payload structures which are generally used to make discovery of devices easier.
+Tasmota and ESP Easy integrate easily with many home automation solutions, usually over MQTT protocol. Node-RED has a full set of MQTT nodes, so using this hardware (or anything with MQTT) is simple and robust. There are various "MQTT standards" which may be compatible with Tasmota and ESP Easy including Domoticz, Homie, and HomeAssistant; these "standards" are MQTT topic and payload structures which are generally used to make discovery of devices easier.
 
-## Wich ESP to choose ?
+## Which ESP to choose ?
 
 Buy the one which does what you want! There are various choices:
 - Plug-and-play modules (Itead Sonoff, Magic Home LED controllers, Shelly, [and more](https://templates.blakadder.com))
@@ -30,18 +30,18 @@ Buy the one which does what you want! There are various choices:
 
 ## Which firmware to choose for Flashing ?
 
-There are many firmware options, including simply writing your own using the Arduino IDE. We will focus on the two which seem most popular; they are similar in their operation. If you want to use a simple sensor then Tasmota could be an easier starting point. If you want to create rules on-device (advanced use) then ESP Easy may be more robust.
+There are many firmware options, including simply writing your own using the Arduino IDE. We will focus on the two which seem most popular; they are similar in their operation. If you want to use a simple sensor, then Tasmota could be an easier starting point. If you want to create rules on-device (advanced use) then ESP Easy may be more robust.
 
 - [Tasmota](https://tasmota.github.io/docs/Getting-Started/)
 - [ESPEasy](https://www.letscontrolit.com/wiki/index.php/ESPEasy#Get_started)
 
 ## Using in Node-RED
 
-The use in Node-RED is done using the nodes `MQTT in` and `MQTT out`. If you don't have an MQTT Server, you can install [Aedes](https://flows.nodered.org/node/node-red-contrib-aedes), which runs great inside of Node-RED. You must then configure the address of the server (if using Aedes this will be `localhost` or the IP of your Node-RED instance) and the identifiers in the `MQTT` node as well as the `Topic`. The `Topic` is very important, it must match the topics your devices are using. We will discuss using Domoticz topics and the default Tasmota topics below.
+The use in Node-RED is done using the nodes `MQTT in` and `MQTT out`. If you don't have an MQTT Server, you can install [Aedes](https://flows.nodered.org/node/node-red-contrib-aedes), which runs great inside Node-RED. You must then configure the address of the server (if using Aedes this will be `localhost` or the IP of your Node-RED instance) and the identifiers in the `MQTT` node as well as the `Topic`. The `Topic` is very important, it must match the topics your devices are using. We will discuss using Domoticz topics and the default Tasmota topics below.
 
 ### Domoticz Topic
 
-If your ESP device has Domoticz topics enabled then the messagew will follow this format. The advantage of using Domoticz topics is having the standard format message and is useful for those who are comfortable with the Domoticz topic structure. The identifier of your ESP will be `idx` in the message.
+If your ESP device has Domoticz topics enabled, then the message will follow this format. The advantage of using Domoticz topics is having the standard format message, and is useful for those who are comfortable with the Domoticz topic structure. The identifier of your ESP will be `idx` in the message.
 
 Topic : **domoticz/in** for `MQTT in` and **domoticz/out** for ` MQTT out` node.
 
@@ -61,7 +61,7 @@ msg.payload = {
 
 ### Manual Topic
 
-`Topic` or `%topic%` is the identifier (name) of your ESP, such as `Light1`, `DeskLamp`, `GarageSensor`, etc. depending how you have named your devices. Messages using this topic structure will have a topic of `%prefix%/%topic%/%event%` where `%prefix%` is one of the 3 described below, `%topic%` is the identifier, and `%event%` is the event happening (could be `POWER`, `SENSOR`, `TELE`, or more depending on your device).
+`Topic` or `%topic%` is the identifier (name) of your ESP, such as `Light1`, `DeskLamp`, `GarageSensor`, etc. depending on how you have named your devices. Messages using this topic structure will have a topic of `%prefix%/%topic%/%event%` where `%prefix%` is one of the 3 described below, `%topic%` is the identifier, and `%event%` is the event happening (could be `POWER`, `SENSOR`, `TELE`, or more depending on your device).
 
 Tasmota uses 3 prefixes for forming a `FullTopic`:
 
