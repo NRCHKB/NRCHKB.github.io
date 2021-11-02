@@ -51,7 +51,7 @@ Example message at the output of the `MQTT in` node :
 msg.payload = {
     "idx": 1,
     "nvalue": 0,
-    "svalue":'',
+    "svalue": '',
     "RSSI": 10,
     "Battery": 100
 }
@@ -109,10 +109,12 @@ Here is a screenshot of the general structure of your flow:
 `State to HK` node:
 
 ```js
-if (msg.payload.idx == 1 && msg.payload.nvalue == 1){
-    msg = {"payload": {
-        "ProgrammableSwitchEvent": 0
-    }}
+if (msg.payload.idx == 1 && msg.payload.nvalue == 1) {
+    msg = {
+        "payload": {
+            "ProgrammableSwitchEvent": 0
+        }
+    }
     return msg;
 } else {
     return;
@@ -124,10 +126,12 @@ if (msg.payload.idx == 1 && msg.payload.nvalue == 1){
 `State to HK` node:
 
 ```js
-if (msg.payload.idx == 1){
-    msg = {"payload": {
-        "On": (msg.payload.nvalue)? true: false
-    }}
+if (msg.payload.idx == 1) {
+    msg = {
+        "payload": {
+            "On": (msg.payload.nvalue) ? true : false
+        }
+    }
     return msg;
 } else {
     return;
@@ -137,10 +141,12 @@ if (msg.payload.idx == 1){
 `State to MQTT` node:
 
 ```js
-msg = {"payload": {
-    "idx": 1,
-    "nvalue": (msg.payload.On)? 1: 0
-}};
+msg = {
+    "payload": {
+        "idx": 1,
+        "nvalue": (msg.payload.On) ? 1 : 0
+    }
+};
 return msg;
 ```
 
@@ -149,10 +155,12 @@ return msg;
 `State to HK` node:
 
 ```js
-if (msg.payload.idx == 1){
-    msg = {"payload": {
-        "CurrentRelativeHumidity": msg.payload.nvalue
-    }}
+if (msg.payload.idx == 1) {
+    msg = {
+        "payload": {
+            "CurrentRelativeHumidity": msg.payload.nvalue
+        }
+    }
     return msg;
 } else {
     return;
@@ -162,10 +170,12 @@ if (msg.payload.idx == 1){
 + Light Sensor
 
 ```js
-if (msg.payload.idx == 1){
-    msg = {"payload": {
-        "CurrentAmbientLightLevel": parseInt(msg.payload.svalue)
-    }}
+if (msg.payload.idx == 1) {
+    msg = {
+        "payload": {
+            "CurrentAmbientLightLevel": parseInt(msg.payload.svalue)
+        }
+    }
     return msg;
 } else {
     return;
@@ -177,10 +187,12 @@ if (msg.payload.idx == 1){
 `State to HK` node:
 
 ```js
-if (msg.payload.idx == 1){
-    msg = {"payload": {
-        "CurrentTemperature": parseInt(msg.payload.svalue)
-    }}
+if (msg.payload.idx == 1) {
+    msg = {
+        "payload": {
+            "CurrentTemperature": parseInt(msg.payload.svalue)
+        }
+    }
     return msg;
 } else {
     return;
@@ -194,15 +206,19 @@ if (msg.payload.idx == 1){
 ```js
 let Read = msg.payload.svalue.split(/\;/g);
 
-msg1 = {"payload": {
-    "CurrentTemperature": Read[0]
-}};
-msg2 = {"payload": {
-    "CurrentRelativeHumidity": Read[1]
-}};
+msg1 = {
+    "payload": {
+        "CurrentTemperature": Read[0]
+    }
+};
+msg2 = {
+    "payload": {
+        "CurrentRelativeHumidity": Read[1]
+    }
+};
 
-if (msg.payload.idx == 1){
-    return [msg1,msg2];
+if (msg.payload.idx == 1) {
+    return [msg1, msg2];
 } else {
     return;
 }
@@ -221,14 +237,16 @@ if (msg.payload.idx == 1){
 ```js
 let State;
 
-if (msg.payload == "ON"){
+if (msg.payload == "ON") {
     State = true
-} else if (msg.payload == "OFF"){
+} else if (msg.payload == "OFF") {
     State = false
 }
-msg = {"payload": {
-    "On": State
-}};
+msg = {
+    "payload": {
+        "On": State
+    }
+};
 return msg;
 ```
 
@@ -239,12 +257,13 @@ return msg;
 ```js
 let State;
 
-if (msg.payload.On){
+if (msg.payload.On) {
     State = "ON"
 } else {
     State = "OFF"
 }
-msg = {"payload": State
+msg = {
+    "payload": State
 };
 return msg;
 ```
@@ -256,9 +275,11 @@ return msg;
 `State to HK` node:
 
 ```js
-msg = {"payload": {
-    "CurrentRelativeHumidity": msg.payload.Humidity
-}};
+msg = {
+    "payload": {
+        "CurrentRelativeHumidity": msg.payload.Humidity
+    }
+};
 return msg;
 ```
 
@@ -269,9 +290,11 @@ return msg;
 `State to HK` node:
 
 ```js
-msg = {"payload": {
-    "CurrentTemperature": msg.payload.Temperature
-}};
+msg = {
+    "payload": {
+        "CurrentTemperature": msg.payload.Temperature
+    }
+};
 return msg;
 ```
 
@@ -282,8 +305,10 @@ return msg;
 `State to HK` node:
 
 ```js
-msg = {"payload": {
-    "CurrentAmbientLightLevel": msg.payload.Illuminance
-}};
+msg = {
+    "payload": {
+        "CurrentAmbientLightLevel": msg.payload.Illuminance
+    }
+};
 return msg;
 ```
