@@ -18,17 +18,17 @@ contributors: ["GogoVega"]
 
 ESP is a microcontroller integrated circuit with Wi-Fi connection and very inexpensive. There are several versions of ESP, including ESP32, which is the latest version. ESP32 is more powerful and integrates Bluetooth connection. A popular option is Itead Sonoff modules which integrate an ESP, but the original firmware is not fully "open" so it cannot be easily added to systems like Node-RED. To solve this problem, [ESP Easy](https://www.letscontrolit.com/wiki/index.php?title=ESPEasy) or [Tasmota](https://tasmota.github.io/docs/About/) firmware can be used to transform the ESP module into a simple multi-function sensor device for home automation solutions.
 
-## Why use an ESP with Node-RED ?
+## Why use an ESP with Node-RED?
 
 Tasmota and ESP Easy integrate easily with many home automation solutions, usually over MQTT protocol. Node-RED has a full set of MQTT nodes, so using this hardware (or anything with MQTT) is simple and robust. There are various "MQTT standards" which may be compatible with Tasmota and ESP Easy including Domoticz, Homie, and HomeAssistant; these "standards" are MQTT topic and payload structures which are generally used to make discovery of devices easier.
 
-## Which ESP to choose ?
+## Which ESP to choose?
 
 Buy the one which does what you want! There are various choices:
 - Plug-and-play modules (Itead Sonoff, Magic Home LED controllers, Shelly, [and more](https://templates.blakadder.com))
-- DIY hardware like ESP8285, ESP8266, ESP 32, or similar with your own set of devices attached to the GPIO
+- DIY hardware like ESP8285, ESP8266, ESP32, or similar with your own set of devices attached to the GPIO
 
-## Which firmware to choose for Flashing ?
+## Which firmware to choose for Flashing?
 
 There are many firmware options, including simply writing your own using the Arduino IDE. We will focus on the two which seem most popular; they are similar in their operation. If you want to use a simple sensor, then Tasmota could be an easier starting point. If you want to create rules on-device (advanced use) then ESP Easy may be more robust.
 
@@ -47,7 +47,7 @@ Topic : **domoticz/in** for `MQTT in` and **domoticz/out** for ` MQTT out` node.
 
 Example message at the output of the `MQTT in` node :
 
-```
+```js
 msg.payload = {
     "idx": 1,
     "nvalue": 0,
@@ -94,9 +94,9 @@ Put the `Topic` as described above and select "A parsed JSON object" in `Output`
 
 ### Adding to NRCHKB
 
-To connect the `MQTT` nodes to `Homekit`, I offer you some examples for a Topic configuration with domoticz and manual.
+To connect the `MQTT` nodes to `HomeKit`, I offer you some examples for a Topic configuration with Domoticz and manual.
 
-Here is a screenshot of the general structure of your flow :
+Here is a screenshot of the general structure of your flow:
 
 ![Basic Principle](esp_basic_principle_example.png)
 
@@ -106,8 +106,9 @@ Here is a screenshot of the general structure of your flow :
 
 + Doorbell
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 if (msg.payload.idx == 1 && msg.payload.nvalue == 1){
     msg = {"payload": {
         "ProgrammableSwitchEvent": 0
@@ -120,8 +121,9 @@ if (msg.payload.idx == 1 && msg.payload.nvalue == 1){
 
 + Fan/LightBulb/Outlet/Switch
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 if (msg.payload.idx == 1){
     msg = {"payload": {
         "On": (msg.payload.nvalue)? true: false
@@ -131,8 +133,10 @@ if (msg.payload.idx == 1){
     return;
 }
 ```
-`State to MQTT` node :
-```
+
+`State to MQTT` node:
+
+```js
 msg = {"payload": {
     "idx": 1,
     "nvalue": (msg.payload.On)? 1: 0
@@ -142,8 +146,9 @@ return msg;
 
 + Humidity Sensor
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 if (msg.payload.idx == 1){
     msg = {"payload": {
         "CurrentRelativeHumidity": msg.payload.nvalue
@@ -153,9 +158,10 @@ if (msg.payload.idx == 1){
     return;
 }
 ```
+
 + Light Sensor
 
-```
+```js
 if (msg.payload.idx == 1){
     msg = {"payload": {
         "CurrentAmbientLightLevel": parseInt(msg.payload.svalue)
@@ -168,8 +174,9 @@ if (msg.payload.idx == 1){
 
 + Temperature Sensor
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 if (msg.payload.idx == 1){
     msg = {"payload": {
         "CurrentTemperature": parseInt(msg.payload.svalue)
@@ -182,8 +189,9 @@ if (msg.payload.idx == 1){
 
 + Temperature + Humidity Sensor
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 let Read = msg.payload.svalue.split(/\;/g);
 
 msg1 = {"payload": {
@@ -208,8 +216,9 @@ if (msg.payload.idx == 1){
 
 `Topic in` = **stat/Light1/POWER**
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 let State;
 
 if (msg.payload == "ON"){
@@ -221,12 +230,13 @@ msg = {"payload": {
     "On": State
 }};
 return msg;
-
 ```
+
 `Topic out` = **cmnd/Light1/POWER**
 
-`State to MQTT` node :
-```
+`State to MQTT` node:
+
+```js
 let State;
 
 if (msg.payload.On){
@@ -243,8 +253,9 @@ return msg;
 
 `Topic in` = **tele/Humidity/SENSOR**
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 msg = {"payload": {
     "CurrentRelativeHumidity": msg.payload.Humidity
 }};
@@ -255,8 +266,9 @@ return msg;
 
 `Topic in` = **tele/Temp/SENSOR**
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 msg = {"payload": {
     "CurrentTemperature": msg.payload.Temperature
 }};
@@ -267,8 +279,9 @@ return msg;
 
 `Topic in` = **tele/Light_Sensor/SENSOR**
 
-`State to HK` node :
-```
+`State to HK` node:
+
+```js
 msg = {"payload": {
     "CurrentAmbientLightLevel": msg.payload.Illuminance
 }};
