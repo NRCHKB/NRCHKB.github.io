@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
 
 jobs:
   deploy:
@@ -22,8 +21,23 @@ jobs:
       - name: Check for linting errors
         run: yarn test
 
+      - name: Update metadata
+        shell: 'script --return --quiet --command "bash {0}"' # used to run with TTY
+        run: yarn update:metadata
+
+      - name: Push updated metadata
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          disable_globbing: true
+          commit_message: 'updated metadata'
+          commit_user_name: GitHub Actions
+          commit_user_email: actions@github.com
+          commit_author: GitHub Actions <actions@github.com>
+          file_pattern: |
+            content/*.md
+            data/nrchkb/contributors.json
+
       - name: Build production website
-        shell: 'script --return --quiet --command "bash {0}"'
         run: yarn build
 
       - name: Deploy to GitHub Pages
