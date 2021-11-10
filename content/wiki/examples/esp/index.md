@@ -2,8 +2,8 @@
 title: "ESP"
 description: "Description and example of ESP configuration"
 lead: ""
-date: 2021-11-02T18:43:58.123Z
-lastmod: 2021-11-02T18:43:58.123Z
+date: 2021-11-10T18:28:20.895Z
+lastmod: 2021-11-10T18:28:20.895Z
 draft: false
 images: []
 menu:
@@ -14,7 +14,7 @@ toc: true
 contributors: ["GogoVega"]
 ---
 
-## What is an ESP ?
+## What is an ESP?
 
 ESP is a microcontroller integrated circuit with Wi-Fi connection and very inexpensive. There are several versions of ESP, including ESP32, which is the latest version. ESP32 is more powerful and integrates Bluetooth connection. A popular option is Itead Sonoff modules which integrate an ESP, but the original firmware is not fully "open" so it cannot be easily added to systems like Node-RED. To solve this problem, [ESP Easy](https://www.letscontrolit.com/wiki/index.php?title=ESPEasy) or [Tasmota](https://tasmota.github.io/docs/About/) firmware can be used to transform the ESP module into a simple multi-function sensor device for home automation solutions.
 
@@ -45,7 +45,7 @@ If your ESP device has Domoticz topics enabled, then the message will follow thi
 
 Topic : **domoticz/in** for `MQTT in` and **domoticz/out** for ` MQTT out` node.
 
-Example message at the output of the `MQTT in` node :
+Example message at the output of the `MQTT in` node:
 
 ```js
 msg.payload = {
@@ -73,7 +73,7 @@ Tasmota uses 3 prefixes for forming a `FullTopic`:
 
 ### MQTT Nodes in Node-RED
 
-Before starting, add an `MQTT in` node, then let's go to the configuration :
+Before starting, add an `MQTT in` node, then let's go to the configuration:
 
 + MQTT Server
 
@@ -225,8 +225,6 @@ if (msg.payload.idx == 1) {
 ```
 
 #### Manual Topic
-
-<!-- will have to help me here -->
 
 + Fan/LightBulb/Outlet
 
