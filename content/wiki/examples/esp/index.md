@@ -20,7 +20,7 @@ ESP is a microcontroller integrated circuit with Wi-Fi connection and very inexp
 
 ## Why use an ESP with Node-RED?
 
-Tasmota and ESP Easy integrate easily with many home automation solutions, usually over MQTT protocol. Node-RED has a full set of MQTT nodes, so using this hardware (or anything with MQTT) is simple and robust. There are various "MQTT standards" which may be compatible with Tasmota and ESP Easy including Domoticz, Homie, and HomeAssistant; these "standards" are MQTT topic and payload structures which are generally used to make discovery of devices easier.
+Tasmota and ESP Easy integrate easily with many home automation solutions, usually over MQTT protocol. Node-RED has a full set of MQTT nodes, so using this hardware (or anything with MQTT) is simple and robust. There are various "MQTT standards" which may be compatible with Tasmota and ESP Easy including Domoticz, Homey, and HomeAssistant; these "standards" are MQTT topic and payload structures which are generally used to make discovery of devices easier.
 
 ## Which ESP to choose?
 
