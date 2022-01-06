@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.72d68e608569bf6160b7dcc0f5fb11096b80fa60de400718b853422917deea2fa6944a2bb752150f84b3c0df78b1bf89d88828961d63f11c9cd920d91ae639f1.css integrity="sha512-ctaOYIVpv2Fgt9zA9fsRCWuA+mDeQAcYuFNCKRfe6i+mlEort1IVD4SzwN94sb+J2Igolh1j8Ryc2SDZGuY58Q==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.61daa5812bd42d78b9cdb8f39315235f20bb18918e28f5363f2c854731f69116aad3a461e461ef60884cda09dca430084fc5d5ef2b26daeb6d9fe3bde11931d7.css integrity="sha512-YdqlgSvULXi5zbjzkxUjXyC7GJGOKPU2PyyFRzH2kRaq06Rh5GHvYIhM2gncpDAIT8XV7ysm2uttn+O94Rkx1w==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@docsearch/css@alpha>
 <meta name=robots content="index, follow">
@@ -44,11 +44,12 @@
 <input class="menu-btn order-0" type=checkbox id=menu-btn>
 <label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label>
 <a class="navbar-brand order-1 order-md-0 me-auto" href=https://nrchkb.github.io/>NRCHKB</a>
-<button id=mode class="btn btn-link order-2 order-md-4" type=button aria-label="Toggle mode">
+<div id=docsearch class="order-2 order-md-4"></div>
+<button id=mode class="btn btn-link order-3 order-md-4" type=button aria-label="Toggle mode">
 <span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
 <span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
 </button>
-<ul class="navbar-nav social-nav order-3 order-md-5">
+<ul class="navbar-nav social-nav order-4 order-md-5">
 <li class=nav-item>
 <a class=nav-link href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg><span class="ms-2 visually-hidden">GitHub</span></a>
 </li>
@@ -56,8 +57,8 @@
 <a class=nav-link href=https://discord.gg/uvYac5u target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 245 240"><style>.st0{fill:#7289da}</style><path class="st0" d="M104.4 103.9c-5.7.0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7.0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5.0c-5.7.0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7.0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"/><path class="st0" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2.0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6.0.0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3.0.0-8.5 14.5-30.6 15.2z"/></svg><span class="ms-2 visually-hidden">Discord</span></a>
 </li>
 </ul>
-<div class="collapse navbar-collapse order-4 order-md-1">
-<ul class="navbar-nav main-nav me-auto order-5 order-md-2"><li class=nav-item>
+<div class="collapse navbar-collapse order-5 order-md-1">
+<ul class="navbar-nav main-nav me-auto order-6 order-md-2"><li class=nav-item>
 <div class=btn-group>
 <a class=nav-link href=https://nrchkb.github.io/wiki/introduction/quick-start/>Wiki</a>
 <button class="btn menu-wiki dropdown-toggle dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false><span class=visually-hidden>Toggle Dropdown</span></button>
@@ -75,10 +76,6 @@
 <a class=nav-link href=https://nrchkb.github.io/blog/>Blog</a>
 </li>
 </ul>
-<div class="break order-6 d-md-none"></div>
-<form class="navbar-form flex-grow-1 order-7 order-md-3">
-<input id=userinput class="form-control is-search" type=search placeholder="Search wiki..." aria-label="Search wiki..." autocomplete=off>
-</form>
 </div>
 </div>
 </header>
@@ -124,7 +121,8 @@
 <script src=https://nrchkb.github.io/js/highlight.min.533e1de8c53e115db8b89c51da51ec35dd647651070cba69056f64cfe8801f920028db81aeed3391346f17b90cf80e7c20c9ef80cac058de437fd57af2f097df.js integrity="sha512-Uz4d6MU+EV24uJxR2lHsNd1kdlEHDLppBW9kz+iAH5IAKNuBru0zkTRvF7kM+A58IMnvgMrAWN5Df9V68vCX3w==" crossorigin=anonymous defer></script>
 <script src=https://nrchkb.github.io/main.min.4fe79bac09880084cfc759fdec42196d6f36bb680f53c6034d8272b44cf4d0484732c0fc3805ef5aae053a75d8ed8a8f17bcc64a138c82a3d7b1014f26793ca1.js integrity="sha512-T+ebrAmIAITPx1n97EIZbW82u2gPU8YDTYJytEz00EhHMsD8OAXvWq4FOnXY7YqPF7zGShOMgqPXsQFPJnk8oQ==" crossorigin=anonymous defer></script>
 <script src=https://cdn.jsdelivr.net/npm/@docsearch/js@alpha></script>
-<script type=text/javascript>docsearch({container:'#userinput',appId:'J8509KWQO1',indexName:'nrchkb',apiKey:'3b8902adb61265110336eccda34c4199'})</script>
+<script type=text/javascript>docsearch({container:'#docsearch',appId:'J8509KWQO1',indexName:'nrchkb',apiKey:'3b8902adb61265110336eccda34c4199'})</script>
+<link rel=preconnect href=https://J8509KWQO1-dsn.algolia.net crossorigin>
 <script src=https://nrchkb.github.io/index.js defer></script>
 </body>
 </html>
