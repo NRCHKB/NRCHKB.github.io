@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.50.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.50.0...v1.50.1) (2022-01-06)
+
+
+### Bug Fixes
+
+* docsearch not working after upgrade ([b143f5b](https://github.com/NRCHKB/NRCHKB.github.io/commit/b143f5bef513487f98e49e33f621d0406b3b110c))
+
 ## [1.50.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.49.0...v1.50.0) (2022-01-06)
 
 
