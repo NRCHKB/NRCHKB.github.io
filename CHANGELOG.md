@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.50.3](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.50.2...v1.50.3) (2022-01-06)
+
+
+### Bug Fixes
+
+* docsearch form position (with css whitelist) ([1c741f3](https://github.com/NRCHKB/NRCHKB.github.io/commit/1c741f3502febc0a5f8d99019d6515c6f8b628c5))
+
 ### [1.50.2](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.50.1...v1.50.2) (2022-01-06)
 
 
