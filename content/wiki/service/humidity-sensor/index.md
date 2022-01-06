@@ -3,7 +3,7 @@ title: "Humidity Sensor"
 description: "Humidity Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.031Z
-lastmod: 2021-10-27T20:36:54.686Z
+lastmod: 2022-01-06T22:41:09.837Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "HumiditySensor"
-contributors: ["GogoVega"]
+contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic principle
