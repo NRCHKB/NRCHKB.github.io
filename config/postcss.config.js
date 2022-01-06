@@ -22,6 +22,7 @@ module.exports = {
           './assets/scss/components/_buttons.scss',
           './assets/scss/components/_doks.scss',
           './assets/scss/components/_code.scss',
+          './assets/scss/components/_search.scss',
           './assets/scss/common/_dark.scss',
         ]),
       ],

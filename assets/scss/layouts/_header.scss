@@ -79,14 +79,6 @@
   border-image-slice: 1;
 }
 
-.DocSearch .DocSearch-Container {
-  top: 56px !important;
-}
-
-#docsearch {
-  margin-right: 12px;
-}
-
 @include media-breakpoint-up(md) {
   .navbar-brand {
     margin-right: 1rem !important;
