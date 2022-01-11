@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/examples/esp/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-11-10T18:28:20+00:00">
-<meta property="article:modified_time" content="2022-01-06T22:40:55+00:00">
+<meta property="article:modified_time" content="2022-01-11T16:34:08+01:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -512,7 +512,7 @@
 </ol>
 </nav>
 <h1 id=title>ESP</h1>
-<small class=updated>Updated January 6, 2022 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/gogovega/>GogoVega</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<small class=updated>Updated January 11, 2022 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/gogovega/>GogoVega</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead></p>
 <h2 id=what-is-an-esp>What is an ESP?<a href=#what-is-an-esp class=anchor aria-hidden=true>#</a> </h2>
 <p>ESP is a microcontroller integrated circuit with Wi-Fi connection and very inexpensive. There are several versions of ESP, including ESP32, which is the latest version. ESP32 is more powerful and integrates Bluetooth connection. A popular option is Itead Sonoff modules which integrate an ESP, but the original firmware is not fully &ldquo;open&rdquo; so it cannot be easily added to systems like Node-RED. To solve this problem, <a href="https://www.letscontrolit.com/wiki/index.php?title=ESPEasy">ESP Easy</a> or <a href=https://tasmota.github.io/docs/About/>Tasmota</a> firmware can be used to transform the ESP module into a simple multi-function sensor device for home automation solutions.</p>
@@ -534,7 +534,7 @@
 <p>The use in Node-RED is done using the nodes <code>MQTT in</code> and <code>MQTT out</code>. If you don&rsquo;t have an MQTT Server, you can install <a href=https://flows.nodered.org/node/node-red-contrib-aedes>Aedes</a>, which runs great inside Node-RED. You must then configure the address of the server (if using Aedes this will be <code>localhost</code> or the IP of your Node-RED instance) and the identifiers in the <code>MQTT</code> node as well as the <code>Topic</code>. The <code>Topic</code> is very important, it must match the topics your devices are using. We will discuss using Domoticz topics and the default Tasmota topics below.</p>
 <h3 id=domoticz-topic>Domoticz Topic<a href=#domoticz-topic class=anchor aria-hidden=true>#</a> </h3>
 <p>If your ESP device has Domoticz topics enabled, then the message will follow this format. The advantage of using Domoticz topics is having the standard format message, and is useful for those who are comfortable with the Domoticz topic structure. The identifier of your ESP will be <code>idx</code> in the message.</p>
-<p>Topic : <strong>domoticz/in</strong> for <code>MQTT in</code> and <strong>domoticz/out</strong> for <code> MQTT out</code> node.</p>
+<p>Topic : <strong>domoticz/in</strong> for <code>MQTT in</code> and <strong>domoticz/out</strong> for <code>MQTT out</code> node.</p>
 <p>Example message at the output of the <code>MQTT in</code> node:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=nx>msg</span><span class=p>.</span><span class=nx>payload</span> <span class=o>=</span> <span class=p>{</span>
     <span class=s2>&#34;idx&#34;</span><span class=o>:</span> <span class=mi>1</span><span class=p>,</span>
