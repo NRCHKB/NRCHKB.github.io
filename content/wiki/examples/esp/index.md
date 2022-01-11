@@ -3,7 +3,7 @@ title: "ESP"
 description: "Description and example of ESP configuration"
 lead: ""
 date: 2021-11-10T18:28:20.895Z
-lastmod: 2022-01-06T22:40:55.950Z
+lastmod: 2022-01-11T16:34:08+01:00
 draft: false
 images: []
 menu:
@@ -25,6 +25,7 @@ Tasmota and ESP Easy integrate easily with many home automation solutions, usual
 ## Which ESP to choose?
 
 Buy the one which does what you want! There are various choices:
+
 - Plug-and-play modules (Itead Sonoff, Magic Home LED controllers, Shelly, [and more](https://templates.blakadder.com))
 - DIY hardware like ESP8285, ESP8266, ESP32, or similar with your own set of devices attached to the GPIO
 
@@ -43,7 +44,7 @@ The use in Node-RED is done using the nodes `MQTT in` and `MQTT out`. If you don
 
 If your ESP device has Domoticz topics enabled, then the message will follow this format. The advantage of using Domoticz topics is having the standard format message, and is useful for those who are comfortable with the Domoticz topic structure. The identifier of your ESP will be `idx` in the message.
 
-Topic : **domoticz/in** for `MQTT in` and **domoticz/out** for ` MQTT out` node.
+Topic : **domoticz/in** for `MQTT in` and **domoticz/out** for `MQTT out` node.
 
 Example message at the output of the `MQTT in` node:
 
@@ -75,7 +76,7 @@ Tasmota uses 3 prefixes for forming a `FullTopic`:
 
 Before starting, add an `MQTT in` node, then let's go to the configuration:
 
-+ MQTT Server
+- MQTT Server
 
 Put the `IP address` and `port` of your server.
 User advance, you can choose the desired `mqtt protocol`.
@@ -86,7 +87,7 @@ And put, if you have, the logins of your server.
 
 ![MQTT Server Login](esp_mqtt_server_login_configuration_example.png)
 
-+ MQTT Properties
+- MQTT Properties
 
 Put the `Topic` as described above and select "A parsed JSON object" in `Output`.
 
@@ -104,7 +105,7 @@ Here is a screenshot of the general structure of your flow:
 
 #### Domoticz Topic
 
-+ Doorbell
+- Doorbell
 
 `State to HK` node:
 
@@ -121,7 +122,7 @@ if (msg.payload.idx == 1 && msg.payload.nvalue == 1) {
 }
 ```
 
-+ Fan/LightBulb/Outlet/Switch
+- Fan/LightBulb/Outlet/Switch
 
 `State to HK` node:
 
@@ -150,7 +151,7 @@ msg = {
 return msg;
 ```
 
-+ Humidity Sensor
+- Humidity Sensor
 
 `State to HK` node:
 
@@ -167,7 +168,7 @@ if (msg.payload.idx == 1) {
 }
 ```
 
-+ Light Sensor
+- Light Sensor
 
 ```js
 if (msg.payload.idx == 1) {
@@ -182,7 +183,7 @@ if (msg.payload.idx == 1) {
 }
 ```
 
-+ Temperature Sensor
+- Temperature Sensor
 
 `State to HK` node:
 
@@ -199,7 +200,7 @@ if (msg.payload.idx == 1) {
 }
 ```
 
-+ Temperature + Humidity Sensor
+- Temperature + Humidity Sensor
 
 `State to HK` node:
 
@@ -226,7 +227,7 @@ if (msg.payload.idx == 1) {
 
 #### Manual Topic
 
-+ Fan/LightBulb/Outlet
+- Fan/LightBulb/Outlet
 
 `Topic in` = **stat/Light1/POWER**
 
@@ -266,7 +267,7 @@ msg = {
 return msg;
 ```
 
-+ Humidity Sensor
+- Humidity Sensor
 
 `Topic in` = **tele/Humidity/SENSOR**
 
@@ -281,7 +282,7 @@ msg = {
 return msg;
 ```
 
-+ Temperature Sensor
+- Temperature Sensor
 
 `Topic in` = **tele/Temp/SENSOR**
 
@@ -296,7 +297,7 @@ msg = {
 return msg;
 ```
 
-+ Light Sensor
+- Light Sensor
 
 `Topic in` = **tele/Light_Sensor/SENSOR**
 
