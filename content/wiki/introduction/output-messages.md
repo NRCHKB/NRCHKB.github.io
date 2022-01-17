@@ -33,7 +33,7 @@ The new message part `msg.hap.session` will exist only if the message is initiat
 
 The `msg.hap.session` object can therefore be used to determine who or which device is initiating changes to your setup.
 
-{{< alert icon="💡" text="Additionally, it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when "allow message pass through" is enabled on your bridge or accessory." />}}
+{{< alert icon="💡" text="Additionally, it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when \"allow message pass through\" is enabled on your bridge or accessory." />}}
 
 ## Allow/Disable messages passthrough
 
