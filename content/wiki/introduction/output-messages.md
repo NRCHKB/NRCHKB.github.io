@@ -3,7 +3,7 @@ title: "Output Messages"
 description: "Output Messages"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-10-15T22:06:03.142Z
+lastmod: 2022-01-17T15:13:57.388Z
 draft: false
 images: []
 menu:
@@ -11,8 +11,10 @@ menu:
     parent: "introduction"
 weight: 50
 toc: true
-contributors: ["crxporter","Shaquu"]
+contributors: ["crxporter","Shaquu","GogoVega"]
 ---
+
+## Differentiate between passthrough or "from HomeKit" messages
 
 Starting with version `1.3.0`, there are some changes in the `hap` part of the messages coming from this node.
 
@@ -27,8 +29,12 @@ The new message part `msg.hap.session` will exist only if the message is initiat
 * `msg.hap.session.sessionID` : UUID unique to each HAP connection
 * `msg.hap.session.username` : A unique identifier for each user, essentially a random string which will be different for each Apple ID your home is shared with
 * `msg.hap.session.remoteAddress` : the IP address where the message came from (iPhone, iPad, computer, Apple TV, HomePod, etc)
-* 'msg.hap.session.localAddress` : the IP where your HomeKit bridge lives, will match wherever you host NodeRED
+* `msg.hap.session.localAddress` : the IP where your HomeKit bridge lives, will match wherever you host NodeRED
 
 The `msg.hap.session` object can therefore be used to determine who or which device is initiating changes to your setup.
 
-Additionally, it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when "allow message pass through" is enabled on your bridge or accessory.
+{{< alert icon="💡" text="Additionally, it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when "allow message pass through" is enabled on your bridge or accessory." />}}
+
+## Allow/Disable messages passthrough
+
+If you don't want to pollute the rest of your flow with passthrough messages, you can disable this option at the bottom of your node's bridge configuration.
