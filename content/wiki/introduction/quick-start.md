@@ -3,7 +3,7 @@ title: "Quick Start"
 description: "Welcome to the NRCHKB wiki!"
 lead: "Welcome to the NRCHKB wiki!"
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-10-15T22:06:03.411Z
+lastmod: 2022-01-18T12:00:57.074Z
 draft: false
 images: []
 menu:
@@ -32,19 +32,20 @@ Currently, we have two nodes:
 Service Node mostly represents Service which will appear in Apple Home.app.
 It is our main building block for creating interaction between house, application and our other systems.
 
-Find more about this node [here]({{< ref "/wiki/nodes/service-node" >}} "Service Node").
+{{< alert icon="👉" text="Find more about this node [here]({{< ref "/wiki/nodes/service-node" >}} "Service Node")." >}}
 
 ### Host Node
 
 Host Node is our configuration node. It is either Bridge or Standalone Accessory.
 It will be used to pair (connect) our virtual device in Apple Home.app.
 
-Find more about this node [here]({{< ref "/wiki/nodes/host-node" >}} "Host Node").
+{{< alert icon="👉" text="Find more about this node [here]({{< ref "/wiki/nodes/host-node" >}} "Host Node")." >}}
 
 ## Demo Setup
 
 Once you have Node-RED running, head over to the Demo Setup page for the easiest demo setup we can provide. This is the setup we use for testing new releases - the demos can be copied directly into Node-RED and added to HomeKit.
-[Demo Setup page]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup")
+
+{{< alert icon="👉" text="Find more about [Demo Setup page]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup")." >}}
 
 ## Contribution
 
