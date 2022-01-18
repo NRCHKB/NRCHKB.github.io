@@ -1,2 +1,2 @@
 [build]
-command = "hugo -b $DEPLOY_URL"
+  command = "hugo -b $DEPLOY_URL"
