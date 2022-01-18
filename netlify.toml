@@ -1,3 +1,2 @@
-[context.deploy-preview]
-[context.deploy-preview.environment]
-  HUGO_ENV = "deploy-preview"
+[build]
+command = "hugo -b $DEPLOY_URL"
