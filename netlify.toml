@@ -1,2 +1,5 @@
-[build]
-  command = "hugo -b $DEPLOY_URL"
+[context.deploy-preview]
+command = "hugo -b $DEPLOY_URL"
+
+[context.deploy-preview.environment]
+HUGO_VERSION = "0.76"
