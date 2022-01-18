@@ -16,6 +16,19 @@ contributors: ["crxporter","Shaquu","GogoVega"]
 
 ## Differentiate between passthrough or "from HomeKit" messages
 
+In some cases, it may be useful, even essential, to differentiate a command from the previous node or Home.app in order to avoid a loop problem. There are two possible cases:
+
+### Disable messages passthrough
+
+The first solution is to disable passthrough messages, which will cause your Homekit node to no longer send messages from your previous nodes.
+If you need to keep passthrough messages, used the second solution.
+
+{{< alert icon="💡" text="To disable this option, go to the bottom of your node's bridge configuration." >}}
+
+### Use hap.session characteristics
+
+The second solution is to use the `hap.session` feature which is generated when the command comes from Home.app:
+
 Starting with version `1.3.0`, there are some changes in the `hap` part of the messages coming from this node.
 
 Previous versions would have `msg.hap.newValue` and `msg.hap.oldValue` _only if the message originated from the Home.app_. Additionally there was a message part `msg.hap.context` with some information that nobody really knows what it means, but it was there.
@@ -33,8 +46,16 @@ The new message part `msg.hap.session` will exist only if the message is initiat
 
 The `msg.hap.session` object can therefore be used to determine who or which device is initiating changes to your setup.
 
-{{< alert icon="💡" text="Additionally, it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when \"allow message pass through\" is enabled on your bridge or accessory." >}}
+{{< alert icon="💡" text="Additionally, it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when \"allow message pass through\" is <strong>enabled</strong> on your bridge or accessory." >}}
 
-## Allow/Disable messages passthrough
+To do this, nothing could be simpler, add to the output of your Homekit node a `function node` in which you insert this:
 
-If you don't want to pollute the rest of your flow with passthrough messages, you can disable this option at the bottom of your node's bridge configuration.
+```js
+if (msg.hap.session) {
+    // Do stuff if it's from homekit
+    return msg;
+} else {
+    // Do different stuff if it's not from homekit
+    return;
+}
+```
