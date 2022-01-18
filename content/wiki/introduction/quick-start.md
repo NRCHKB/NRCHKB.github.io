@@ -32,20 +32,20 @@ Currently, we have two nodes:
 Service Node mostly represents Service which will appear in Apple Home.app.
 It is our main building block for creating interaction between house, application and our other systems.
 
-{{< alert icon="👉" text="Find more about this node [here]({{< ref "/wiki/nodes/service-node" >}} "Service Node")." >}}
+{{< alert icon="👉" >}}Find more about this node [here]({{< ref "/wiki/nodes/service-node" >}} "Service Node").{{< /alert >}}
 
 ### Host Node
 
 Host Node is our configuration node. It is either Bridge or Standalone Accessory.
 It will be used to pair (connect) our virtual device in Apple Home.app.
 
-{{< alert icon="👉" text="Find more about this node [here]({{< ref "/wiki/nodes/host-node" >}} "Host Node")." >}}
+{{< alert icon="👉" >}}Find more about this node [here]({{< ref "/wiki/nodes/host-node" >}} "Host Node").{{< /alert >}}
 
 ## Demo Setup
 
 Once you have Node-RED running, head over to the Demo Setup page for the easiest demo setup we can provide. This is the setup we use for testing new releases - the demos can be copied directly into Node-RED and added to HomeKit.
 
-{{< alert icon="👉" text="Find more about [Demo Setup page]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup")." >}}
+{{< alert icon="👉" >}}Find more about [Demo Setup page]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup").{{< /alert >}}
 
 ## Contribution
 
