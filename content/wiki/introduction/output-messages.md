@@ -3,7 +3,7 @@ title: "Output Messages"
 description: "Output Messages"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-01-17T15:13:57.388Z
+lastmod: 2022-01-19T13:39:41.390Z
 draft: false
 images: []
 menu:
@@ -23,7 +23,7 @@ In some cases, it may be useful, even essential, to differentiate a command from
 The first solution is to disable passthrough messages, which will cause your Homekit node to no longer send messages from your previous nodes.
 If you need to keep passthrough messages, used the second solution.
 
-{{< alert icon="💡" text="To disable this option, go to the bottom of your node's bridge configuration." >}}
+{{< alert icon="💡" text="To disable this option, go to the bottom of your node's bridge configuration." />}}
 
 ### Use hap.session characteristics
 
@@ -46,8 +46,8 @@ The new message part `msg.hap.session` will exist only if the message is initiat
 
 The `msg.hap.session` object can therefore be used to determine who or which device is initiating changes to your setup.
 
-{{< alert icon="💡" text="Additionally, it is recommended to use a rule checking whether `msg.hap.session` exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when \"allow message pass through\" is <strong>enabled</strong> on your bridge or accessory." >}}
-
+{{< alert icon="💡" >}}Additionally, it is recommended to use a rule checking whether "msg.hap.session" exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when "allow message pass through" is <strong>enabled</strong> on your bridge or accessory.{{< /alert >}}
+\
 To do this, nothing could be simpler, add to the output of your Homekit node a `function node` in which you insert this:
 
 ```js
