@@ -3,7 +3,7 @@ title: "Service Node"
 description: "This node represents Service in HomeKit"
 lead: "This node represents the Service displayed in Home.app."
 date: 2021-05-06T00:00:00+02:00
-lastmod: 2021-09-30T18:52:26.967Z
+lastmod: 2022-01-19T13:44:54.630Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     parent: "nodes"
 weight: 20
 toc: true
-contributors: ["Shaquu"]
+contributors: ["Shaquu","GogoVega"]
 ---
 
 ## Configuration
@@ -59,7 +59,7 @@ You will find below a table showing all the parameters and when they are used, a
     <td>Parent Service</td>
     <td style="text-align:center;"></td>
     <td style="text-align:center;">X</td>
-    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
     <td style="text-align:center;"></td>
   </tr>
   <tr>
@@ -104,6 +104,41 @@ You will find below a table showing all the parameters and when they are used, a
     <td style="text-align:center;">X</td>
     <td style="text-align:center;"></td>
   </tr>
+  <tr>
+    <td>Topic</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+  </tr>
+  <tr>
+    <td>Filter on Topic</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+  </tr>
+  <tr>
+    <td>Characteristic Properties</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+  </tr>
+  <tr>
+    <td>Wait for Setup</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+  </tr>
 </tbody>
 </table>
 
@@ -116,9 +151,7 @@ Choose if this node will represent Parent (or Primary) Service or Linked one.
 | Parent | Node will be used as Primary Service. The Primary Service must match the primary function of the accessory and must also match with the accessory category. An accessory must expose only one primary service from its list of available services. |
 | Linked | Node will be used as a Linked Service. Linked Services allows accessories to specify logical relationship between services. A service can link to one or more services. A service must not link to itself. Service links have context and meaning only to the first level of services that it links to. |
 
-<!--
-{{< alert icon="👉" >}}Learn more about Linked Service [here]({{< ref "/wiki/introduction/topic" >}} "Topic").{{< /alert >}}
--->
+{{< alert icon="👉" >}}Learn more about Linked Service .{{< /alert >}}
 
 #### Example
 
@@ -165,13 +198,13 @@ You can select already created [Standalone Accessory Node]({{< ref "/wiki/nodes/
 - By clicking button with a pencil icon next to it, you can edit currently selected Accessory
 - You can also create a new one by clicking the same button when *Add new homekit-standalone...* is selected. ![Adding new HomeKit Standalone Accessory](add-new-homekit-standalone-accessory.png)
 
-{{< alert icon="💡" >}}Accessory is used for particular services (television, speaker) in order to create a bridge specific to this service and thus avoid display problems in Home.app.{{< /alert >}}
+{{< alert icon="💡" >}}Accessory is used for particular services (television, smart speaker) in order to create a bridge specific to this service and thus avoid display problems in Home.app.{{< /alert >}}
 
 <!-- Ajouter note sur Accessory dans les services concernés -->
 
 ### Fields
 
-Below is a list of fields that you can complete, it is not mandatory but it can be used to identify the characteristics of your services.
+Below is a list of fields that you can fill, it is not mandatory but it can be used to identify the characteristics of your services.
 
 - Manufacturer
 - Serial Number
@@ -186,9 +219,7 @@ The topic does two things:
 - at the entrance of the Homekit node, it allows you to filter incoming messages.
 - at the exit of the Homekit node, it identifies which node sent a command.
 
-<!--
-{{< alert icon="👉" >}}Learn more about Topic [here]({{< ref "/wiki/introduction/topic" >}} "Topic").{{< /alert >}}
--->
+{{< alert icon="👉" >}}Learn more about Topic .{{< /alert >}}
 
 ### Filter on Topic
 
@@ -204,13 +235,13 @@ This name will be displayed on your node and also in Home.app. It is also possib
 
 Characteristic Properties tell HomeKit that the service will use that characteristic and set desired limits.
 
-{{< alert icon="👉" >}}Learn more about Characteristic Properties [here]({{< ref "/wiki/introduction/characteristics" >}} "Characteristics").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Characteristic Properties]({{< ref "/wiki/introduction/characteristics" >}} "Characteristics").{{< /alert >}}
 
 ### Wait for Setup
 
 Wait for Setup is ....?
 
-{{< alert icon="👉" >}}Learn more about Wait for Setup [here]({{< ref "/wiki/introduction/wait-for-setup" >}} "Wait for Setup").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Wait for Setup]({{< ref "/wiki/introduction/wait-for-setup" >}} "Wait for Setup").{{< /alert >}}
 
 ## Input messages
 
@@ -224,10 +255,10 @@ msg = {
 }
 ```
 
-{{< alert icon="💡" text="Characteristics are available on each service page." >}}
+{{< alert icon="💡" text="Characteristics are available on each Service page." />}}
 
 ## Output messages
 
 Output messages uses the Input messages structure with the particularity of being able to allows/deactivate passthrough messages and msg.hap.
 
-{{< alert icon="👉" >}}Learn more about Output messages [here]({{< ref "/wiki/introduction/output-messages" >}} "Output messages").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Output Messages]({{< ref "/wiki/introduction/output-messages" >}} "Output messages").{{< /alert >}}
