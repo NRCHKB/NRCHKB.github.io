@@ -1,7 +1,7 @@
 ---
 title: "Service Node"
 description: "This node represents Service in HomeKit"
-lead: ""
+lead: "This node represents the Service displayed in Home.app."
 date: 2021-05-06T00:00:00+02:00
 lastmod: 2021-09-30T18:52:26.967Z
 draft: false
@@ -14,12 +14,98 @@ toc: true
 contributors: ["Shaquu"]
 ---
 
-This node represents Service in HomeKit.
-When hosted behind the [Bridge]({{< ref "/wiki/nodes/host-node" >}} "Host Node") it will also represent Accessory.
-
 ## Configuration
 
-Below you can find the list of configurable parameters for Service Node (this Node can also be found as a homekit node or homekit-service).
+You will find below a table showing all the parameters and when they are used, as well as the list of parameters and their usefulness.
+
+<table>
+<thead>
+  <tr>
+    <th></th>
+    <th colspan="2" style="text-align:center;">Service Hierarchy</th>
+    <th colspan="2" style="text-align:center;">Host Type</th>
+  </tr>
+  <tr>
+    <th>Field</th>
+    <th style="text-align:center;">Parent</th>
+    <th style="text-align:center;">Linked</th>
+    <th style="text-align:center;">Bridge</th>
+    <th style="text-align:center;">Accessory</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Service</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+  </tr>
+  <tr>
+    <td>Bridge</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+  </tr>
+  <tr>
+    <td>Accessory</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+  </tr>
+  <tr>
+    <td>Parent Service</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+  </tr>
+  <tr>
+    <td>Manufacturer</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+  </tr>
+  <tr>
+    <td>Serial Number</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+  </tr>
+  <tr>
+    <td>Model</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+  </tr>
+  <tr>
+    <td>Firmware Revision</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+  </tr>
+  <tr>
+    <td>Hardware Revision</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+  </tr>
+  <tr>
+    <td>Software Revision</td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+    <td style="text-align:center;">X</td>
+    <td style="text-align:center;"></td>
+  </tr>
+</tbody>
+</table>
 
 ### Service Hierarchy
 
@@ -30,10 +116,13 @@ Choose if this node will represent Parent (or Primary) Service or Linked one.
 | Parent | Node will be used as Primary Service. The Primary Service must match the primary function of the accessory and must also match with the accessory category. An accessory must expose only one primary service from its list of available services. |
 | Linked | Node will be used as a Linked Service. Linked Services allows accessories to specify logical relationship between services. A service can link to one or more services. A service must not link to itself. Service links have context and meaning only to the first level of services that it links to. |
 
-### Example
+<!--
+{{< alert icon="👉" >}}Learn more about Linked Service [here]({{< ref "/wiki/introduction/topic" >}} "Topic").{{< /alert >}}
+-->
 
-We want to configure Air Quality Sensor which is battery powered.
-We need to define Air Quality Sensor (Parent) and Battery (Linked).
+#### Example
+
+We want to configure Air Quality Sensor which is battery powered. We need to define Air Quality Sensor (Parent) and Battery (Linked).
 
 ![Service Hierarchy Node-Red](service-hierarchy-node-red.png)
 
@@ -51,74 +140,94 @@ Select Service from the [list]({{< ref "/wiki/service" >}} "Services") which wil
 
 ### Parent Service
 
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Linked***
-
 Select Parent Service from the list to which this node's Linked Service will be attached to.
 
 ### Host Type
-
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent***
 
 | Option | Description |
 |---|---|
 | Bridge | Service will be hosted behind Bridge. |
 | Accessory | Service will be hosted as Standalone Accessory. |
 
-### Accessory
-
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent* and *[Host Type]({{< ref "#host-type" >}} "Host Type")* is set to *Accessory***
-
-You can select already created [Standalone Accessory Node]({{< ref "/wiki/nodes/host-node" >}} "Host Node") or create a new one.
-
-- By clicking button with a pencil icon next to it, you can edit currently selected Accessory
-- You can also create a new one by clicking the same button when *Add new homekit-standalone...* is selected. ![Adding new HomeKit Standalone Accessory](add-new-homekit-standalone-accessory.png)
-
 ### Bridge
-
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent* and *[Host Type]({{< ref "#host-type" >}} "Host Type")* is set to *Bridge***
 
 You can select already created [Bridge Node]({{< ref "/wiki/nodes/host-node" >}} "Host Node") or create a new one.
 
 - By clicking button with a pencil icon next to it, you can edit currently selected Bridge
 - You can also create a new one by clicking the same button when *Add new homekit-bridge...* is selected. ![Adding new HomeKit Bridge](add-new-homekit-bridge.png)
 
-> **Important Notice,** when you create a new Bridge for Service Node that is in a subflow, once deployed new Bridge will be created for each Subflow instance in a flow.
-If you create a Bridge outside a Subflow then it will be created only once (reused).
+{{< alert icon="💡" >}}<strong>Important Notice,</strong> when you create a new Bridge for Service Node that is in a subflow, once deployed new Bridge will be created for each Subflow instance in a flow. If you create a Bridge outside a Subflow then it will be created only once (reused)..{{< /alert >}}
 
-### Manufacturer
+### Accessory
 
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent* and *[Host Type]({{< ref "#host-type" >}} "Host Type")* is set to *Bridge***
+You can select already created [Standalone Accessory Node]({{< ref "/wiki/nodes/host-node" >}} "Host Node") or create a new one.
 
-### Serial Number
+- By clicking button with a pencil icon next to it, you can edit currently selected Accessory
+- You can also create a new one by clicking the same button when *Add new homekit-standalone...* is selected. ![Adding new HomeKit Standalone Accessory](add-new-homekit-standalone-accessory.png)
 
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent* and *[Host Type]({{< ref "#host-type" >}} "Host Type")* is set to *Bridge***
+{{< alert icon="💡" >}}Accessory is used for particular services (television, speaker) in order to create a bridge specific to this service and thus avoid display problems in Home.app.{{< /alert >}}
 
-### Model
+<!-- Ajouter note sur Accessory dans les services concernés -->
 
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent* and *[Host Type]({{< ref "#host-type" >}} "Host Type")* is set to *Bridge***
+### Fields
 
-### Firmware Revision
+Below is a list of fields that you can complete, it is not mandatory but it can be used to identify the characteristics of your services.
 
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent* and *[Host Type]({{< ref "#host-type" >}} "Host Type")* is set to *Bridge***
-
-### Hardware Revision
-
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent* and *[Host Type]({{< ref "#host-type" >}} "Host Type")* is set to *Bridge***
-
-### Software Revision
-
-**This field is only available when *[Service Hierarchy]({{< ref "#service-hierarchy" >}} "Service Hierarchy")* is set to *Parent* and *[Host Type]({{< ref "#host-type" >}} "Host Type")* is set to *Bridge***
+- Manufacturer
+- Serial Number
+- Model
+- Firmware Revision
+- Hardware Revision
+- Software Revision
 
 ### Topic
 
+The topic does two things:
+- at the entrance of the Homekit node, it allows you to filter incoming messages.
+- at the exit of the Homekit node, it identifies which node sent a command.
+
+<!--
+{{< alert icon="👉" >}}Learn more about Topic [here]({{< ref "/wiki/introduction/topic" >}} "Topic").{{< /alert >}}
+-->
+
 ### Filter on Topic
+
+This option is used to filter messages entering the Homekit node. It will only pass messages with the matching `msg.topic`.
 
 ### Name
 
+This name will be displayed on your node and also in Home.app. It is also possible to change the name in Home.app of your service but this will not change the name of your node.
+
+{{< alert icon="💡" >}}<strong>Warning:</strong> if you rename a service, it will be initialized by HomeKit. This means that it is considered a new service and will have lost the configurations saved in Home.app (room, automation, scene). In order to avoid this, it is recommended to create one bridge per room.{{< /alert >}}
+
 ### Characteristic Properties
 
-### Wait for Setup message
+Characteristic Properties tell HomeKit that the service will use that characteristic and set desired limits.
 
-## Input
+{{< alert icon="👉" >}}Learn more about Characteristic Properties [here]({{< ref "/wiki/introduction/characteristics" >}} "Characteristics").{{< /alert >}}
 
-## Output
+### Wait for Setup
+
+Wait for Setup is ....?
+
+{{< alert icon="👉" >}}Learn more about Wait for Setup [here]({{< ref "/wiki/introduction/wait-for-setup" >}} "Wait for Setup").{{< /alert >}}
+
+## Input messages
+
+Input messages have the following structure:
+
+```js
+msg = { 
+    "payload": {
+        "Characteristics": Value
+    }
+}
+```
+
+{{< alert icon="💡" text="Characteristics are available on each service page." >}}
+
+## Output messages
+
+Output messages uses the Input messages structure with the particularity of being able to allows/deactivate passthrough messages and msg.hap.
+
+{{< alert icon="👉" >}}Learn more about Output messages [here]({{< ref "/wiki/introduction/output-messages" >}} "Output messages").{{< /alert >}}
