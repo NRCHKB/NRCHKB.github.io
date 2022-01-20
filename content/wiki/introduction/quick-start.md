@@ -45,7 +45,7 @@ It will be used to pair (connect) our virtual device in Apple Home.app.
 
 Once you have Node-RED running, head over to the Demo Setup page for the easiest demo setup we can provide. This is the setup we use for testing new releases - the demos can be copied directly into Node-RED and added to HomeKit.
 
-{{< alert icon="👉" >}}Find more about [Demo Setup page]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup").{{< /alert >}}
+{{< alert icon="👉" >}}Find more about [Demo Setup]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup").{{< /alert >}}
 
 ## Contribution
 
