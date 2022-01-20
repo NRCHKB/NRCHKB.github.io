@@ -3,7 +3,7 @@ title: "Service Node"
 description: "This node represents Service in HomeKit"
 lead: "This node represents the Service displayed in Home.app."
 date: 2021-05-06T00:00:00+02:00
-lastmod: 2022-01-19T13:44:54.630Z
+lastmod: 2022-01-20T23:26:53.041Z
 draft: false
 images: []
 menu:
@@ -13,6 +13,9 @@ weight: 20
 toc: true
 contributors: ["Shaquu","GogoVega"]
 ---
+
+A service or service group (parent and linked) is considered like accessory. You can choose to either link your accessory to a bridge or use your standalone accessory.
+The difference is when adding in Home.app: In the case of the bridge, adding the bridge adds all accessory linked to that bridge and in the case of the standalone accessory, you only add itself.
 
 ## Configuration
 
@@ -151,7 +154,7 @@ Choose if this node will represent Parent (or Primary) Service or Linked one.
 | Parent | Node will be used as Primary Service. The Primary Service must match the primary function of the accessory and must also match with the accessory category. An accessory must expose only one primary service from its list of available services. |
 | Linked | Node will be used as a Linked Service. Linked Services allows accessories to specify logical relationship between services. A service can link to one or more services. A service must not link to itself. Service links have context and meaning only to the first level of services that it links to. |
 
-{{< alert icon="👉" >}}Learn more about Linked Service .{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Linked Service]({{< ref "/wiki/introduction/linked-service" >}} "Linked Service").{{< /alert >}}
 
 #### Example
 
@@ -189,7 +192,7 @@ You can select already created [Bridge Node]({{< ref "/wiki/nodes/host-node" >}}
 - By clicking button with a pencil icon next to it, you can edit currently selected Bridge
 - You can also create a new one by clicking the same button when *Add new homekit-bridge...* is selected. ![Adding new HomeKit Bridge](add-new-homekit-bridge.png)
 
-{{< alert icon="💡" >}}<strong>Important Notice,</strong> when you create a new Bridge for Service Node that is in a subflow, once deployed new Bridge will be created for each Subflow instance in a flow. If you create a Bridge outside a Subflow then it will be created only once (reused)..{{< /alert >}}
+{{< alert icon="⚠" >}}**Important Notice,** when you create a new Bridge for Service Node that is in a subflow, once deployed new Bridge will be created for each Subflow instance in a flow. If you create a Bridge outside a Subflow then it will be created only once (reused)..{{< /alert >}}
 
 ### Accessory
 
@@ -199,8 +202,6 @@ You can select already created [Standalone Accessory Node]({{< ref "/wiki/nodes/
 - You can also create a new one by clicking the same button when *Add new homekit-standalone...* is selected. ![Adding new HomeKit Standalone Accessory](add-new-homekit-standalone-accessory.png)
 
 {{< alert icon="💡" >}}Accessory is used for particular services (Television, Smart Speaker) in order to create a bridge specific to this service and thus avoid display problems in Home.app.{{< /alert >}}
-
-<!-- Ajouter note sur Accessory dans les services concernés -->
 
 ### Fields
 
@@ -219,7 +220,7 @@ The topic does two things:
 - at the entrance of the HomeKit node, it allows you to filter incoming messages.
 - at the exit of the HomeKit node, it identifies which node sent a command.
 
-{{< alert icon="👉" >}}Learn more about Topic .{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Topic]({{< ref "/wiki/introduction/topic" >}} "Topic").{{< /alert >}}
 
 ### Filter on Topic
 
@@ -229,7 +230,7 @@ This option is used to filter messages entering the HomeKit node. It will only p
 
 This name will be displayed on your node and also in Home.app. It is also possible to change the name in Home.app of your service but this will not change the name of your node.
 
-{{< alert icon="💡" >}}<strong>Warning:</strong> if you rename a service, it will be initialized by HomeKit. This means that it is considered a new service and will have lost the configurations saved in Home.app (room, automation, scene). In order to avoid this, it is recommended to create one bridge per room.{{< /alert >}}
+{{< alert icon="⚠" >}}**Warning:** if you rename a service, it will be initialized by HomeKit. This means that it is considered a new service and will have lost the configurations saved in Home.app (room, automation, scene). In order to avoid this, it is recommended to create one bridge per room.{{< /alert >}}
 
 ### Characteristic Properties
 
@@ -259,6 +260,6 @@ msg = {
 
 ## Output messages
 
-Output messages uses the Input messages structure with the particularity of being able to allows/deactivate passthrough messages and msg.hap.
+Output messages use the structure of the input messages with the particularity of having in addition msg.hap when the request comes from HomeKit and of having the possibility of being able to allow or disallow passthrough messages.
 
 {{< alert icon="👉" >}}Learn more about [Output Messages]({{< ref "/wiki/introduction/output-messages" >}} "Output messages").{{< /alert >}}
