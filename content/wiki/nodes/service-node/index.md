@@ -198,7 +198,7 @@ You can select already created [Standalone Accessory Node]({{< ref "/wiki/nodes/
 - By clicking button with a pencil icon next to it, you can edit currently selected Accessory
 - You can also create a new one by clicking the same button when *Add new homekit-standalone...* is selected. ![Adding new HomeKit Standalone Accessory](add-new-homekit-standalone-accessory.png)
 
-{{< alert icon="💡" >}}Accessory is used for particular services (television, smart speaker) in order to create a bridge specific to this service and thus avoid display problems in Home.app.{{< /alert >}}
+{{< alert icon="💡" >}}Accessory is used for particular services (Television, Smart Speaker) in order to create a bridge specific to this service and thus avoid display problems in Home.app.{{< /alert >}}
 
 <!-- Ajouter note sur Accessory dans les services concernés -->
 
@@ -216,14 +216,14 @@ Below is a list of fields that you can fill, it is not mandatory but it can be u
 ### Topic
 
 The topic does two things:
-- at the entrance of the Homekit node, it allows you to filter incoming messages.
-- at the exit of the Homekit node, it identifies which node sent a command.
+- at the entrance of the HomeKit node, it allows you to filter incoming messages.
+- at the exit of the HomeKit node, it identifies which node sent a command.
 
 {{< alert icon="👉" >}}Learn more about Topic .{{< /alert >}}
 
 ### Filter on Topic
 
-This option is used to filter messages entering the Homekit node. It will only pass messages with the matching `msg.topic`.
+This option is used to filter messages entering the HomeKit node. It will only pass messages with the matching `msg.topic`.
 
 ### Name
 
