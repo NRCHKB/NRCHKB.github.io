@@ -3,7 +3,7 @@ title: "Service Node"
 description: "This node represents Service in HomeKit"
 lead: "This node represents the Service displayed in Home.app."
 date: 2021-05-06T00:00:00+02:00
-lastmod: 2022-01-20T23:26:53.041Z
+lastmod: 2022-01-21T19:16:22.044Z
 draft: false
 images: []
 menu:
@@ -14,8 +14,8 @@ toc: true
 contributors: ["Shaquu","GogoVega"]
 ---
 
-A service or service group (parent and linked) is considered like accessory. You can choose to either link your accessory to a bridge or use your standalone accessory.
-The difference is when adding in Home.app: In the case of the bridge, adding the bridge adds all accessory linked to that bridge and in the case of the standalone accessory, you only add itself.
+A Service or Service group (Parent and Linked) is considered like Accessory. You can choose to either link your Accessory to a Bridge or use your Standalone Accessory.
+The difference is when adding in Home.app: In the case of the Bridge, adding the Bridge adds all Accessory linked to that Bridge and in the case of the Standalone Accessory, you only add itself.
 
 ## Configuration
 
@@ -154,7 +154,7 @@ Choose if this node will represent Parent (or Primary) Service or Linked one.
 | Parent | Node will be used as Primary Service. The Primary Service must match the primary function of the accessory and must also match with the accessory category. An accessory must expose only one primary service from its list of available services. |
 | Linked | Node will be used as a Linked Service. Linked Services allows accessories to specify logical relationship between services. A service can link to one or more services. A service must not link to itself. Service links have context and meaning only to the first level of services that it links to. |
 
-{{< alert icon="👉" >}}Learn more about [Linked Service]({{< ref "/wiki/introduction/linked-service" >}} "Linked Service").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Linked Service]({{< ref "/wiki/nodes/linked-service" >}} "Linked Service").{{< /alert >}}
 
 #### Example
 
@@ -244,7 +244,7 @@ Wait for Setup is ....?
 
 {{< alert icon="👉" >}}Learn more about [Wait for Setup]({{< ref "/wiki/introduction/wait-for-setup" >}} "Wait for Setup").{{< /alert >}}
 
-## Input messages
+## Input Messages
 
 Input messages have the following structure:
 
@@ -258,8 +258,8 @@ msg = {
 
 {{< alert icon="💡" text="Characteristics are available on each Service page." />}}
 
-## Output messages
+## Output Messages
 
-Output messages use the structure of the input messages with the particularity of having in addition msg.hap when the request comes from HomeKit and of having the possibility of being able to allow or disallow passthrough messages.
+Output Messages use the structure of the Input Messages with the particularity of having in addition `msg.hap` when the request comes from HomeKit and of having the possibility of being able to allow or disallow Passthrough Messages.
 
-{{< alert icon="👉" >}}Learn more about [Output Messages]({{< ref "/wiki/introduction/output-messages" >}} "Output messages").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Output Messages]({{< ref "/wiki/introduction/output-messages" >}} "Output Messages").{{< /alert >}}
