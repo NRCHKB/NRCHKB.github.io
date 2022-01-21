@@ -3,7 +3,7 @@ title: "Output Messages"
 description: "Output Messages"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-01-19T13:39:41.390Z
+lastmod: 2022-01-21T15:52:08.378Z
 draft: false
 images: []
 menu:
@@ -46,7 +46,7 @@ The new message part `msg.hap.session` will exist only if the message is initiat
 
 The `msg.hap.session` object can therefore be used to determine who or which device is initiating changes to your setup.
 
-{{< alert icon="💡" >}}Additionally, it is recommended to use a rule checking whether "msg.hap.session" exists to determine whether a message originated in Home.app or was a pass-through message from your HomeKit node. This is useful to prevent loops when "allow message pass through" is <strong>enabled</strong> on your bridge or accessory.{{< /alert >}}
+{{< alert icon="💡" >}}Additionally, it is recommended to use a rule to determine if a message is from Home.app or a direct message from your HomeKit node. This is useful to avoid loops when "Allow Message Passthrough" is **enabled** on your Bridge or Accessory.{{< /alert >}}
 \
 To do this, nothing could be simpler, add to the output of your HomeKit node a `function node` in which you insert this:
 
