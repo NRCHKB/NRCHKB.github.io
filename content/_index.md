@@ -3,7 +3,7 @@ title : "HomeKit all the things!"
 description: "NRCHKB is a Node-RED nodes pack to simulate Apple HomeKit devices. The goal is to emulate native HomeKit devices as closely as possible."
 lead: "NRCHKB is a Node-RED nodes pack to simulate Apple HomeKit devices. The goal is to emulate native HomeKit devices as closely as possible."
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-08-11T22:37:27.450Z
+lastmod: 2022-01-22T20:32:10.143Z
 draft: false
 images: []
 ---
@@ -14,7 +14,7 @@ images: []
 
 ### About this Contrib
 
-This is a collection of nodes which can be used to imitate HomeKit devices inside of Node-RED. Messages coming into these nodes are able to set device states and status in Apple's iOS and MacOS Home apps. Commands from Home apps (or Siri) will be passed from these nodes into your Node-RED flows.
+This is a collection of nodes which can be used to imitate HomeKit devices inside Node-RED. Messages coming into these nodes are able to set device states and status in Apple's iOS and macOS Home apps. Commands from Home apps (or Siri) will be passed from these nodes into your Node-RED flows.
 
 ### Easy Install
 
@@ -28,8 +28,10 @@ You can also pull a [docker image](https://github.com/NRCHKB/node-red-contrib-ho
 
 ### Getting Started
 
-[**Example flows**](/wiki/examples/) For a quick start, we recommend checking out the flows which are included with the plugin, they can be imported using the Node-RED hamburger menu after install.
+[**Example flows**]({{< ref "/wiki/examples" >}} "Examples")
+For a quick start, we recommend checking out the flows which are included with the plugin, they can be imported using the Node-RED hamburger menu after install.
 
-[**Documentation home page**](/wiki/introduction/quick-start/) For more instructions, information about how things work, and detailed examples (including various real life examples from the community).
+[**Documentation home page**]({{< ref "/wiki/introduction/quick-start" >}} "Quick Start")
+For more instructions, information about how things work, and detailed examples (including various real life examples from the community).
 
 [**Discord**](https://discord.gg/uvYac5u) Again, one of us is on Discord every day, always ready to help!
