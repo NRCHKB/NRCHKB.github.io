@@ -16,7 +16,9 @@ contributors: ["crxporter","Toshik","Shaquu"]
 
 ## What is that
 
-Wait For Setup feature allows to perform actual Accessory configuration in Bridge on incoming Setup Message to dynamically configure the Characteristic Properties of your Service Node.
+Wait For Setup feature allows dynamic configuration of the Characteristic Properties of a Service Node before its initialization. In other words, it allows you to configure your Characteristic Properties with values from external sources.
+
+{{< alert icon="⚠️" >}}Service Node will remain in initialization (will not appear in Home.app) until it has received its configuration message. Once this message has been sent, it cannot be changed unless you redeploy your flow.{{< /alert >}}
 
 ## How to use it
 
