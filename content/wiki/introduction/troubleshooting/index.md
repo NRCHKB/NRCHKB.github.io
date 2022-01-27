@@ -49,6 +49,7 @@ Try the steps below to solve the problem:
 2. Update Node-RED
   ```bash
   bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+  ```
 3. Update your machine packages
   ```bash
   sudo apt-get update
