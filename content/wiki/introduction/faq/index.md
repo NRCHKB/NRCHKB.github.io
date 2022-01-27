@@ -14,15 +14,21 @@ toc: true
 contributors: ["Shaquu"]
 ---
 
-## How to check nodes versions
+## How to check version versions
 
-1. `Settings/Manage palette`
+How to check versions for most common install methods:
+
+1. Plugin version from `Settings/Manage palette`
 
   ![Nodes Version via Manage Palette](nodes_version_manage_palette.png)
 
-2. `package.json` file in your Node-RED installation folder usually `~/.node-red`
+2. Plugin version from `package.json` file in your Node-RED installation folder usually `~/.node-red`
 
   ![Nodes Version via package.json](nodes_version_package_json.png)
+  
+3. Node-RED version - check the drop down menu in the top right of the editor.
+
+3. Node-JS version - run `node -v` on command line
 
 ## Which format for msg.payload (JSON)
 
@@ -34,12 +40,12 @@ Below is an example of `msg.payload`:
 ```js
 msg = {
   "payload": {
-    "Active": true,
-    "StatusActive": true
+    "On": true,
+    "Brightness": 38
   }
 }
 ```
-In this example we can retrieve the value of `Active` with this message: `msg.payload.Active`.
+In this example we can retrieve the value of `On` with this JSON address: `msg.payload.On`.
 
 {{< alert icon="👉" >}}Find more about [JSON](https://en.wikipedia.org/wiki/JSON).{{< /alert >}}
 
@@ -55,3 +61,13 @@ Concretely, Home Hub allows you to access your accessories from outside your hom
 In some cases, it may be useful, even essential, to differentiate a command from the previous node or Home.app in order to avoid a loop problem.
 
 {{< alert icon="👉" >}}Find more about [Passthrough Messages]({{< ref "/wiki/nodes/output-messages" >}} "Passthrough Messages").{{< /alert >}}
+
+## Miscellaneous oddities...
+
+- We **highly recommend** setting your Node-RED editor to "Deploy modified nodes" only. This will keep the backend for homekit nodes from restarting so often while making edits, keeping the Home app much happier.
+
+<<insert screenshot here>>
+
+- Sometimes Node-RED will send multiple copies of each message when you've been working on a lot of flows, simply restart Node-RED to clear the caches and you'll usually be back to normal
+  
+- If something new is really struggling, the first thing to try is remove the problem service node, deploy, then add it back. If things still struggle it might be helpful to remove the problem nodes *and* bridge from Node-RED and the Home app - then add it all back in.
