@@ -2,8 +2,8 @@
 title: "How to Update"
 description: "How to Update"
 lead: "How to update NRCHKB node"
-date: 2021-04-15T20:00:00+02:00
-lastmod: 2021-10-04T16:10:51.017Z
+date: 2022-01-26T20:51:13.183Z
+lastmod: 2022-01-26T20:51:13.183Z
 draft: false
 images: []
 menu:

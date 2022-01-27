@@ -216,11 +216,11 @@ Below is a list of fields that you can fill, it is not mandatory but it can be u
 
 ### Topic
 
-The topic does two things:
-- at the entrance of the HomeKit node, it allows you to filter incoming messages.
-- at the exit of the HomeKit node, it identifies which node sent a command.
+The Topic serves two purposes:
+- at the entrance to the HomeKit node, it allows messages to be filtered.
+- at the exit of the HomeKit node, it identifies the message.
 
-{{< alert icon="👉" >}}Learn more about [Topic]({{< ref "/wiki/introduction/topic" >}} "Topic").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Topic]({{< ref "/wiki/nodes/topic" >}} "Topic").{{< /alert >}}
 
 ### Filter on Topic
 
@@ -236,13 +236,13 @@ This name will be displayed on your node and also in Home.app. It is also possib
 
 Characteristic Properties tell HomeKit that the service will use that characteristic and set desired limits.
 
-{{< alert icon="👉" >}}Learn more about [Characteristic Properties]({{< ref "/wiki/introduction/characteristics" >}} "Characteristics").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Characteristic Properties]({{< ref "/wiki/nodes/characteristics" >}} "Characteristics").{{< /alert >}}
 
 ### Wait for Setup
 
 Wait for Setup is ....?
 
-{{< alert icon="👉" >}}Learn more about [Wait for Setup]({{< ref "/wiki/introduction/wait-for-setup" >}} "Wait for Setup").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Wait for Setup]({{< ref "/wiki/nodes/wait-for-setup" >}} "Wait for Setup").{{< /alert >}}
 
 ## Input Messages
 
@@ -262,4 +262,4 @@ msg = {
 
 Output Messages use the structure of the Input Messages with the particularity of having in addition `msg.hap` when the request comes from HomeKit and of having the possibility of being able to allow or disallow Passthrough Messages.
 
-{{< alert icon="👉" >}}Learn more about [Output Messages]({{< ref "/wiki/introduction/output-messages" >}} "Output Messages").{{< /alert >}}
+{{< alert icon="👉" >}}Learn more about [Output Messages]({{< ref "/wiki/nodes/output-messages" >}} "Output Messages").{{< /alert >}}

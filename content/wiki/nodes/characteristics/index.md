@@ -1,7 +1,7 @@
 ---
 title: "Characteristics"
 description: "Characteristics"
-lead: "What is a characteristic and how to use it."
+lead: "What is a Characteristic and how to use it."
 date: 2021-04-01T00:00:00+02:00
 lastmod: 2022-01-26T20:51:13.183Z
 draft: false

@@ -23,7 +23,7 @@ It can be configured in two ways:
 
 {{< alert icon="⚠️" >}}**Important Notice,** when you create a new Bridge for Service Node that is in a subflow, once deployed new Bridge will be created for each Subflow instance in a flow. If you create a Bridge outside a Subflow then it will be created only once (reused)..{{< /alert >}}
 \
-{{< alert icon="💡" text="It is recommended to use Accessory when using a group of services (television, smart speaker) to avoid display problems in Home.app." />}}
+{{< alert icon="💡" text="It is recommended to use Accessory when using a group of services (Television, Smart Speaker) to avoid display problems in Home.app." />}}
 
 ## Configuration
 

@@ -1,7 +1,7 @@
 ---
 title: "Troubleshooting"
 description: "Troubleshooting"
-lead: ""
+lead: "Frequently Requested Troubleshooting"
 date: 2022-01-26T20:51:13.183Z
 lastmod: 2022-01-26T20:51:13.183Z
 draft: false
@@ -48,11 +48,7 @@ Try the steps below to solve the problem:
   ```
 2. Update Node-RED
   ```bash
-  sudo node-red-stop
-  cd ~/.node-red
-  npm i node-red-contrib-homekit-bridged@latest
-  sudo node-red-start
-  ```
+  bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
 3. Update your machine packages
   ```bash
   sudo apt-get update

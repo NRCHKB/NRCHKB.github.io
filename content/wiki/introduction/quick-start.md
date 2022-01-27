@@ -47,6 +47,14 @@ Once you have Node-RED running, head over to the Demo Setup page for the easiest
 
 {{< alert icon="👉" >}}Find more about [Demo Setup]({{< ref "/wiki/examples/demo-setup" >}} "Demo Setup").{{< /alert >}}
 
+## How to Install
+
+If you want to install NRCHKB node, follow the steps below.
+
+1. In the Node-RED UI, click on the menu at the top right.
+2. Go to `Manage Palette` and click on `Install`.
+3. Research `node-red-contrib-homekit-bridged` and click `Install`.
+
 ## Contribution
 
 If you wish to contribute to our wiki then head [here]({{< ref "/wiki/discover-more/contribution" >}} "Contribution") and read our guidelines.
