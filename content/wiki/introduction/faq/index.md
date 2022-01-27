@@ -14,7 +14,7 @@ toc: true
 contributors: ["Shaquu"]
 ---
 
-## How to check version versions
+## How to check software versions
 
 How to check versions for most common install methods:
 
