@@ -37,7 +37,7 @@ Use the following JSON in your Battery Characteristic Properties so that the Hom
 
 ## Other way
 
-Another method is to use Characteristic Properties.
+Another method is to use [Characteristic Properties]({{< ref "/wiki/nodes/characteristics" >}} "Characteristic Properties").
 As a reminder: Characteristic Properties tell HomeKit that your Accessory will use Characteristic(s) provided.
 
 For example you want an Accessory that is both Temperature Sensor and Humidity Sensor, nothing could be simpler, just use the following JSON in your Characteristic Properties.

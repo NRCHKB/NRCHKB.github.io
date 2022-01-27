@@ -66,7 +66,7 @@ In some cases, it may be useful, even essential, to differentiate a command from
 
 - We **highly recommend** setting your Node-RED editor to "Deploy modified nodes" only. This will keep the backend for homekit nodes from restarting so often while making edits, keeping the Home app much happier.
 
-<<insert screenshot here>>
+[Modified Nodes](modified_nodes.png)
 
 - Sometimes Node-RED will send multiple copies of each message when you've been working on a lot of flows, simply restart Node-RED to clear the caches and you'll usually be back to normal
   

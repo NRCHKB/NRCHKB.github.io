@@ -28,7 +28,7 @@ Go to your Service Node and check the option `Wait for Setup` then create a Mess
 {
    "nrchkb": {
        "setup": {
-           ... setup properties goes here
+           "... setup properties go here"
        }
     }
 }

@@ -64,6 +64,9 @@ Try the steps below to solve the problem:
 ## Changing characteristic properties had no effect
 
 1. Check that when you deploy you are in `full` mode.
+
+[Full Flow](full_flow.png)
+
 2. Restart Node-RED
 
 ## Sometimes multiple of the same message come through

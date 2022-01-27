@@ -18,7 +18,7 @@ contributors: ["GogoVega"]
 
 The Topic serves two purposes:
 - at the entrance to the HomeKit node, it allows messages to be filtered.
-- at the exit of the HomeKit node, it identifies the message.
+- at the exit of the HomeKit node, it identifies where the message came from.
 
 ## When to use it
 
