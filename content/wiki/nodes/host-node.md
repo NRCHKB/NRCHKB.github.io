@@ -76,7 +76,7 @@ This name will be displayed on your Bridge and also in Home.app. It is also poss
 
 This option allows you to choose whether you want to allow messages to pass through your node or not.
 
-{{< alert icon="💡" >}}Learn more about [Disable Message Passthrough]({{< ref "/wiki/introduction/output-messages#disable-messages-passthrough" >}} "Disable Messages Passthrough").{{< /alert >}}
+{{< alert icon="💡" >}}Learn more about [Disable Message Passthrough]({{< ref "/wiki/nodes/output-messages#disable-messages-passthrough" >}} "Disable Messages Passthrough").{{< /alert >}}
 
 ### Custom MDNS Configuration
 
