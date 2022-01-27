@@ -1,7 +1,7 @@
 ---
-title: "Characteristics"
-description: "Characteristics"
-lead: "What is a Characteristic and how to use it."
+title: "Characteristic Properties"
+description: "Characteristic Properties"
+lead: "What is a Characteristic Property and how to use it."
 date: 2021-04-01T00:00:00+02:00
 lastmod: 2022-01-26T20:51:13.183Z
 draft: false
@@ -16,7 +16,7 @@ contributors: ["crxporter","djiwondee","radokristof","caitken-com","Shaquu"]
 
 ## What is that
 
-A Service node is made up of one or more characteristics. This allows Home.app to adapt its display to the chosen characteristics. It also allows you to define default values and usage limitations.
+A Service node is made up of one or more characteristics. The Characteristic Properties tell Home.app to adapt its display to the chosen settings. It also allows you to define default values and usage limitations.
 
 {{< alert icon="💡" >}}The Characteristics available for each service are displayed on each page of the [Service]({{< ref "/wiki/service/" >}} "Service") section and information about each characteristic in the [Characteristic]({{< ref "/wiki/characteristic" >}} "Characteristic") section.{{< /alert >}}
 
@@ -26,17 +26,17 @@ Go to the section called `Characteristic Properties` of your HomeKit Service Nod
 
 ![Characteristic Properties](characteristic_properties.png)
 
-To indicate this Characteristic is used:
+To indicate that some Characteristic is used:
 
 ```{ "Characteristic": true }```
 
-To indicate a default value (20 for example):
+To indicate a default value for some characteristic (20 for example):
 
-```{ "Characteristic": 20 }```
+```{ "Characteristic": {"defaultValue": 20 }}```
 
 ## Usage Limitation
 
-To indicate a usage limitations:
+To tell home app some usage limitations on a characteristic:
 
 | Option | Description |
 |---|---|
@@ -46,7 +46,11 @@ To indicate a usage limitations:
 | `minStep` | Minimum step (gap) authorized |
 | `validValues` | Value authorized [ ] |
 
-### Example
+### Examples
+
+Below is an example list of characteristics.
+
+### Window covering with tilt option and default value
 
 ```json
 {
@@ -57,10 +61,6 @@ To indicate a usage limitations:
   }
 }
 ```
-
-## Examples
-
-Below is an example list of characteristics.
 
 ### On/off bulb (No optional characteristics: empty JSON object)
 
