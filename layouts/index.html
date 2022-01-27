@@ -13,17 +13,41 @@
 {{ end }}
 
 {{ define "sidebar-prefooter" }}
-<div class="d-flex justify-content-start">
-  <div class="bg-dots"></div>
-</div>
-{{ end }}
-
-{{ define "sidebar-footer" }}
-<section class="section section-sm container-fluid">
-  <div class="row justify-content-center text-center">
-    <div class="col-lg-9">
-      {{- .Content -}}
+<section class="section section-sm">
+  <div class="d-flex justify-content-start">
+    <div class="bg-dots"></div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center text-center row align-items-center">
+      <div class="col-lg-7">
+        <h2 class="h4">About NRCHKB</h2>
+        <p style="text-align: left;">This is a collection of nodes which can be used to simulate HomeKit accessorys inside of Node-RED. Messages coming into these nodes are able to set accessory states and status in Apple's iOS and MacOS Home apps. Commands from Home.app (or Siri) will be passed from these nodes into your Node-RED flows.</p>
+      </div>
+      <div class="col-lg-7">
+        <img src="/images/presentation/demonstration.gif" style="max-width: 100%; margin-top: 2rem;" alt="NRCHKB Demonstration"/>
+      </div>
     </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-7">
+        <h2 class="h4">Easy Install</h2>
+        <p style="text-align: left;">Installation of this collection of nodes is done directly in Node-RED from <code>Manage palette</code>.</p>
+      </div>
+      <div class="col-lg-7">
+        <h2 class="h4">Docker Install</h2>
+        <p style="text-align: left;">You can also pull a <a href="https://github.com/NRCHKB/node-red-contrib-homekit-docker">Docker image</a> containing everything needed to get started.</p>
+      </div>
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-7">
+        <h2 class="h4">Examples Included</h2>
+        <p style="text-align: left;"><a href="{{ "/wiki/examples/" | absURL }}"><strong>Example flows</strong></a> are included with the plugin, they can be imported using the Node-RED menu after install.</p>
+      </div>
+      <div class="col-lg-7">
+        <h2 class="h4">Getting Started</h2>
+        <p style="text-align: left;">For more information on the use of nodes go to <a href="{{ "/wiki/introduction/quick-start/" | absURL }}"><strong>Documentation Page</strong></a>.</p>
+    </div>
+  </div>
+  <div class="row justify-content-center text-center" style="margin-top: 2rem;">
+    <p>If you have any questions we are every day on <a href="https://discord.gg/uvYac5u"><strong>Discord</strong></a>, always ready to help!</p>
   </div>
 </section>
 {{ end }}
