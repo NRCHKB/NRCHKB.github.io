@@ -1,9 +1,9 @@
 ---
 title: "Migration"
-description: "Migration"
-lead: ""
+description: "Discover how to migrate to new setup or to new flow."
+lead: "Discover how to migrate to new setup or to new flow."
 date: 2021-08-03T23:21:00.000Z
-lastmod: 2021-10-12T22:15:26.438Z
+lastmod: 2022-01-30T12:38:44.142Z
 draft: false
 images: []
 menu:
@@ -16,22 +16,44 @@ contributors: ["crxporter", "Shaquu"]
 
 ## Migration to new setup
 
-There are some cases when you may want to move your HomeKit devices to a new Node-RED instance while not changing your Home App pairings.
+There are some cases when you may want to move your HomeKit devices to a new Node-RED instance while not changing your Home.app pairings.
 This could be when you are migrating to a new computer, flashing a new SD card for your pi, or restoring from a backup.
-While not guaranteed, this process should allow migration without needing to remove your bridge or standalone devices from the Home app.
+While not guaranteed, this process should allow migration without needing to remove your bridge or standalone devices from the Home.app.
 
-### How to do it!
-
-Moving to a new server is fairly simple, and only takes a few of steps,
-
-1. Install Node-RED on your new server
-2. Shut down Node-RED on the old server
+<!--
 3. Changed to the `.node-red` directory on the new server and run `npm install node-red-contrib-homekit-bridged` (and any other node modules you use in your flows)
 4. Copy over `homekit-persist` from the `.node-red` directory on the old server to the `.node-red` directory on the new server
 5. Copy over `flows_<old machine's hostname>.json` from the `.node-red` directory on the old server to the `.node-red` directory on the new server
 6. Rename the `flows_<old machine's hostname>.json` to `flows.json` on the new server.
 7. Edit the `settings.js` file on the new server, and uncomment the line `flowFile: 'flows.json'
+-->
+
+1. Install Node-RED on your new server
+    ```bash
+    bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+    ```
+2. Install Node Modules used on your new server
+    ```bash
+    cd /home/pi/.node-red/ && npm install node-red-contrib-homekit-bridged@latest
+    ```
+3. Shut down Node-RED on the old server
+    ```bash
+    sudo node-red-stop
+    ```
+4. Copy over `homekit-persist` from the `.node-red` directory on the old server to the new server
+
+5. Copy over `flows_<old machine's hostname>.json` from the `.node-red` directory on the old server to the new server
+
+6. Rename the `flows_<old machine's hostname>.json` to `flows.json` on the new server.
+
+7. Edit the `settings.js` file on the new server, and uncomment the line `flowFile: flows.json`
+    ```bash
+    sudo nano /home/pi/.node-red/settings.js
+    ```
 8. (Re)Start Node-RED on your new server.
+    ```bash
+    sudo node-red-start
+    ```
 
 ## Migration to new flow
 
@@ -43,6 +65,9 @@ New id means that HomeKit will loose data about that Service which can cause som
 3. Backup your files that are in `.node-red` directory
 4. Shut down Node-RED
 5. Locate flows file `flows_<machine's hostname>.json` and open it
+    ```
+    sudo nano /home/pi/.node-red/flows_<machine's hostname>.json
+    ```
 6. Locate node in the flow file. Example `"id":"6bed989d.116308","type":"homekit-service","z":"6c3f03b4.f0351c"`
 7. `z` is flow id. Change it to new flow id.
 8. Save file and start Node-RED.
