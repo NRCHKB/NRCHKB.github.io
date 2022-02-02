@@ -11,7 +11,7 @@ menu:
     parent: "discover-more"
 weight: 100
 toc: true
-contributors: ["Shaquu","crxporter"]
+contributors: ["Shaquu","crxporter","GogoVega"]
 ---
 
 These are beta versions containing possible future features.

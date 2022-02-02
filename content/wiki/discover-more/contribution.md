@@ -11,7 +11,7 @@ menu:
     parent: "discover-more"
 weight: 10
 toc: true
-contributors: ["Shaquu", "crxporter"]
+contributors: ["Shaquu", "crxporter","GogoVega"]
 ---
 
 ## How to Edit
@@ -45,7 +45,7 @@ On each raw page between `---` you can find page specific parameters:
 
 {{< alert icon="💡" >}}Other parameters such as draft, images and menu are also present but you are not asked to complete them.{{< /alert >}}
 
-## Language used
+## Markup Language used
 
 We mainly use the [markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) language to edit our pages and for more complex cases of [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML).
 
