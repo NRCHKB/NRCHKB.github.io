@@ -22,7 +22,9 @@ jobs:
         run: yarn test
 
       - name: Update metadata
-        shell: 'script --return --quiet --command "bash {0}"' # used to run with TTY
+        # used to run with TTY because of
+        # https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
+        shell: 'script --return --quiet --command "bash {0}"'
         run: yarn update:metadata
 
       - name: Push updated metadata

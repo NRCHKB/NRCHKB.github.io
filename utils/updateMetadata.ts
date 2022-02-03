@@ -10,7 +10,17 @@ const parseHrtimeToSeconds = (hrtime: [number, number]) =>
 const tty = process.platform === 'win32' ? 'CON' : '/dev/tty';
 
 const baseFolder = 'content/';
-const ignoredAuthors: string[] = ['h-enk', 'GitHub Actions'];
+
+// ignore "GitHub Actions" to prevent recursion of updating files
+const ignoredAuthors: string[] = [
+  'h-enk',
+  'GitHub Actions',
+  'dependabot-preview[bot]',
+  'dependabot[bot]',
+  'github-actions[bot]',
+  'h-enk',
+  'greenkeeper[bot]',
+];
 const contributorMap = {
   Shaquu: ['Tadeusz Wyrzykowski'],
 };
@@ -18,7 +28,25 @@ const contributorMap = {
 let counter = 0;
 const startTime = process.hrtime();
 
-glob(`${baseFolder}**/!(_index).md`, async (err, files) => {
+const updateFrontMatter = (content: string, key: string, value: string) => {
+  return content.replace(/(?<=---)((.|\n|\r)*?)(?=---)/, (_, frontmatter) => {
+    let replaced = false;
+
+    frontmatter = frontmatter.replace(new RegExp(`${key}: .*`), () => {
+      replaced = true;
+
+      return `${key}: ${value}`;
+    });
+
+    if (!replaced) {
+      frontmatter += `${key}: ${value}\n`;
+    }
+
+    return frontmatter;
+  });
+};
+
+glob(`${baseFolder}**/*.md`, async (_err, files) => {
   for (const file of files) {
     const fileContent = fs.readFileSync(file, { encoding: 'utf-8' });
     let replacedFileContent = fileContent;
@@ -33,27 +61,31 @@ glob(`${baseFolder}**/!(_index).md`, async (err, files) => {
         .trim()
     );
 
-    replacedFileContent = replacedFileContent.replace(
-      /date:.*/g,
-      `date: ${creationDate.toISOString()}`
+    replacedFileContent = updateFrontMatter(
+      replacedFileContent,
+      'date',
+      creationDate.toISOString()
     );
 
     // lastmod
+    // https://stackoverflow.com/a/70644305
     const lastmodDate = new Date(
       childProcess
         .execSync(
-          `git log -1 --pretty="format:%aI" --perl-regexp --invert-grep --committer='GitHub Actions' -- ${file}`
+          `git log -1 --pretty="format:%aI" --perl-regexp --author='^((?!GitHub Actions).*)$' -- ${file}`
         )
         .toString()
         .trim()
     );
 
-    replacedFileContent = replacedFileContent.replace(
-      /lastmod:.*/g,
-      `lastmod: ${lastmodDate.toISOString()}`
+    replacedFileContent = updateFrontMatter(
+      replacedFileContent,
+      'lastmod',
+      lastmodDate.toISOString()
     );
 
     // contributors
+    // run in tty because of https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
     const gitContributors: string[] = childProcess
       .execSync(`git shortlog -n -s -- ${file} < ${tty}`)
       .toString()
@@ -86,9 +118,10 @@ glob(`${baseFolder}**/!(_index).md`, async (err, files) => {
       );
 
       if (difference.length > 0) {
-        replacedFileContent = replacedFileContent.replace(
-          /contributors:.*/g,
-          `contributors: ${JSON.stringify(contributors)}`
+        replacedFileContent = updateFrontMatter(
+          replacedFileContent,
+          'contributors',
+          JSON.stringify(contributors)
         );
       }
     }
