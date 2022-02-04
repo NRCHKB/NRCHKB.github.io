@@ -25,7 +25,7 @@ If you want to edit a page of our wiki, nothing could be simpler, follow the ste
 3. In GitHub editor, add or edit content after last `---`
    * For content, you can use markdown (preferred) or html
 4. Create new branch for commit and create Pull Request
-   * Our Moderators will respond shortly!
+   * We welcome all PRs and will try to work through any suggested features & fixes.
 
 
 ## Page Parameters
