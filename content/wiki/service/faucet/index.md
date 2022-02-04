@@ -3,7 +3,7 @@ title: "Faucet"
 description: "Faucet"
 lead: ""
 date: 2021-04-17T18:50:12.030Z
-lastmod: 2022-02-02T11:21:59.030Z
+lastmod: 2022-02-04T20:15:23.783Z
 draft: false
 images: []
 menu:
@@ -16,10 +16,10 @@ contributors: ["GogoVega","Shaquu"]
 ---
 
 {{< alert icon="👉" >}}If you are looking for a simple controlled Valve (motorized Valve, solenoid Valve...) see [Single Valve]({{< ref "/wiki/service/valve#single-valve" >}} "Single Valve") Service.{{< /alert >}}
-\
-This service is used with the [Heater Cooler]({{< ref "/wiki/service/heater-cooler" >}} "Heater Cooler") Service and the [Valve]({{< ref "/wiki/service/valve" >}} "Valve") Service to either represent a Hot Water Faucet (or Shower Head) or to represent a set of Valves.
 
 {{< alert icon="‼️" >}}This Service should be used as a **Parent Service** with Valve and Heater Cooler as a **Linked Service**.{{< /alert >}}
+\
+This service is used with the [Heater Cooler]({{< ref "/wiki/service/heater-cooler" >}} "Heater Cooler") Service and the [Valve]({{< ref "/wiki/service/valve" >}} "Valve") Service to either represent a Hot Water Faucet (or Shower Head) or to represent a set of Valves.
 
 ## Status Icon
 
@@ -34,7 +34,7 @@ Depending on the situation, the Faucet will show a different status in Home.app:
 
 ## Basic principle
 
-This is example of a faucet item with single valve.
+This is example of a Faucet item with single Valve.
 
 ![Basic Principle](faucet_single_valve_example.png)
 
@@ -50,7 +50,7 @@ Copyable Node-RED flow:
 
 ### Faucet with Heater and multiple Valves
 
-This is example of a faucet item with heater and multiple valves.
+This is example of a Faucet item with Heater and multiple Valves.
 
 ![Faucet with Heater and multiple Valves](faucet_with_heater_multi_valve_example.png)
 
