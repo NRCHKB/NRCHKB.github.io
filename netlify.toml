@@ -15,14 +15,14 @@ HUGO_VERSION = "0.76.0"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
-command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --environment netlify"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.76.0"
 HUGO_ENV = "netlify"
 
 [context.branch-deploy]
-command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+command = "hugo --gc --minify -b $DEPLOY_PRIME_URL --environment netlify"
 
 [context.branch-deploy.environment]
 HUGO_VERSION = "0.76.0"
