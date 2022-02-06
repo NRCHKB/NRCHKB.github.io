@@ -11,7 +11,7 @@
         {{ range .Children -}}
         {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
         {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
-        <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+        <li><a class="docs-link{{ if $active }} active{{ end }} {{ if .Page.Params.divider }} divider{{ end }}" href="{{ .URL | absURL }}">{{ .Name }}</a></li>
         {{ end -}}
       </ul>
     </div>

@@ -12,6 +12,7 @@ menu:
 weight: 40
 toc: true
 contributors: ["Shaquu"]
+divider: true
 ---
 
 This node outputs status of the HomeKit Service.
