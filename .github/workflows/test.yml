@@ -18,14 +18,13 @@ jobs:
         run: yarn lint
 
       - name: Build production website
-        run: yarn build
+        run: yarn build:preview
 
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v1.2.3
         with:
           publish-dir: "./public"
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          netlify-config-path: ./netlify.toml
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_NRCHKB_WIKI }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_NRCHKB_WIKI }}
