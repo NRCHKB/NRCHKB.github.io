@@ -20,7 +20,7 @@
     "start": "hugo server --disableFastRender",
     "prebuild": "yarn clean",
     "build": "hugo --gc --minify",
-    "build:preview": "yarn build -D -F",
+    "build:preview": "yarn build -D -F -b $DEPLOY_PRIME_URL",
     "clean": "rimraf public resources",
     "lint": "yarn -s lint:scripts && yarn -s lint:styles && yarn -s lint:markdown",
     "lint:scripts": "eslint assets/js config",
