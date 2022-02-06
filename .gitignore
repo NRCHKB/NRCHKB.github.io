@@ -5,3 +5,5 @@ resources
 bin
 .idea
 .vscode
+
+*.iml

@@ -9,21 +9,21 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '16'
+          node-version: "16"
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
       - name: Check for linting errors
         run: yarn lint
-        
+
       - name: Build production website
-        run: yarn build
-        
+        run: yarn build:preview
+
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v1.2.3
         with:
-          publish-dir: './public'
+          publish-dir: "./public"
           github-token: ${{ secrets.GITHUB_TOKEN }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_NRCHKB_WIKI }}
