@@ -18,7 +18,7 @@ jobs:
         run: yarn lint
 
       - name: Build production website
-        run: yarn build
+        run: yarn build:preview
 
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v1.2.3
