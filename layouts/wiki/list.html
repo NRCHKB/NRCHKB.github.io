@@ -7,13 +7,14 @@
       <div class="card-list">
         {{ $currentSection := .CurrentSection }}
         {{ range where .Site.RegularPages.ByTitle "Section" .Section }}
-        {{ if in (.Permalink | string) $currentSection.Permalink }}
-        <div class="card my-3">
-          <div class="card-body">
-            <a class="stretched-link" href="{{ .Permalink }}">{{ .Params.title | title }} &rarr;</a>
+          {{ if in (.Permalink | string) $currentSection.Permalink }}
+          <div class="card my-3">
+            <div class="card-body">
+              <a class="stretched-link" href="{{ .Permalink }}">{{ .Params.title | title }} &rarr;</a>
+            </div>
           </div>
-        </div>
-        {{ end }} {{ end }}
+          {{ end }} 
+        {{ end }}
       </div>
     </article>
   </div>
