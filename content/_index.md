@@ -27,19 +27,17 @@ images: []
       <h2 class="h4">Docker Install</h2>
       <p style="text-align: left;">You can also pull a <a href="https://github.com/NRCHKB/node-red-contrib-homekit-docker">Docker image</a> containing everything needed to get started. </p>
     </div>
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-7">
+    <div class="col-lg-7">
         <h2 class="h4">Examples Included</h2>
         <p style="text-align: left;">
           <a href="{{"/wiki/examples/" | absURL }}"><strong>Example flows</strong></a> are included with the plugin, they can be imported using the Node-RED menu after install.
         </p>
-      </div>
-      <div class="col-lg-7">
-        <h2 class="h4">Getting Started</h2>
-        <p style="text-align: left;">Our <a href="{{"/wiki/introduction/quick-start/" | absURL }}"><strong>Documentation Page</strong></a> is full of explanations, examples, and information to get you moving! </p>
-      </div>
     </div>
-    <div class="row justify-content-center text-center" style="margin-top: 2rem;">
-      <p>If you have any questions we are every day on <a href="https://discord.gg/uvYac5u"><strong>Discord</strong></a>, always ready to help!</p>
+    <div class="col-lg-7">
+      <h2 class="h4">Getting Started</h2>
+      <p style="text-align: left;">Our <a href="{{"/wiki/introduction/quick-start/" | absURL }}"><strong>Documentation Page</strong></a> is full of explanations, examples, and information to get you moving! </p>
+    </div>
+    <div class="col-lg-12 mt-4 pt-1">
+      <p style="text-align: center;">If you have any questions we are every day on <a href="https://discord.gg/uvYac5u"><strong>Discord</strong></a>, always ready to help!</p>
     </div>
   </div>
