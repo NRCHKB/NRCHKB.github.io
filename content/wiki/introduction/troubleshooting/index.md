@@ -43,38 +43,14 @@ DEBUG=NRCHKB*,HAP* node-red
 
 Try the steps below to solve the problem:
 
-1. Restart Node-RED
-
-```bash
-sudo node-red-restart
-```
-
-2. Update Node-RED
-
-```bash
-bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
-```
-
-3. Update your machine packages
-
-```bash
-sudo apt-get update
-sudo apt-get upgrade
-```
-
-4. Update LTS
-
-```bash
-nvm install --lts
-nvm use --lts
-```
+1. Restart Node-RED: `sudo node-red-restart`
+2. Update Node-RED: [Instructions](https://nodered.org/docs/getting-started/local#upgrading-node-red)
+3. Update your machine packages: `sudo apt-get update && sudo apt-get upgrade`
+4. Update NodeJS to LTS: `nvm install --lts && nvm use --lts`
 
 ## Changing characteristic properties had no effect
 
-1. Check that when you deploy you are in `full` mode.
-
-[Full Flow](full_flow.png)
-
+1. Check that when you deploy you are in `full` mode. ![Full Flow](full_flow.png)
 2. Restart Node-RED
 
 ## Sometimes multiple of the same message comes through

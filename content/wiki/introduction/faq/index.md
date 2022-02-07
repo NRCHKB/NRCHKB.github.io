@@ -69,7 +69,7 @@ In some cases, it may be useful, even essential, to differentiate a command from
 
 - We **highly recommend** setting your Node-RED editor to "Deploy modified nodes" only. This will keep the backend for HomeKit nodes from restarting so often while making edits, keeping the Home app much happier.
 
-[Modified Nodes](modified_nodes.png)
+![Modified Nodes](modified_nodes.png)
 
 - Sometimes Node-RED will send multiple copies of each message when you've been working on a lot of flows, simply restart Node-RED to clear the caches and you'll usually be back to normal
 - If something new is struggling, the first thing to try is to remove the problem service node, deploy, then add it back. If things still struggle it might be helpful to remove the problem nodes _and_ bridge from Node-RED and the Home app - then add it all back in.

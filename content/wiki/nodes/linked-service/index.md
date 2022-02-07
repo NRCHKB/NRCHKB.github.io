@@ -24,7 +24,7 @@ Next, you must create Linked Service and select Parent Service used.
 
 ![Create Linked Service](battery_create_linked_service_example.png)
 
-#### Characteristic Properties
+### Characteristic Properties
 
 Use the following JSON in your Battery Characteristic Properties so that the Home.app displays `BatteryLevel` and `StatusLowBattery`.
 
