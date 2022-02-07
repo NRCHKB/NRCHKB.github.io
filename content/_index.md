@@ -17,6 +17,8 @@ images: []
     <div class="col-lg-7 order-lg-last order-md-first order-first">
       <video autoplay loop muted playsinline>
         <source src="/images/presentation/nrchkb-demonstration.webm" type="video/webm">
+        <source src="/images/presentation/nrchkb-demonstration.mp4" type="video/mp4">
+        <source src="/images/presentation/nrchkb-demonstration.mov" type="video/quicktime">
       </video>
     </div>
   </div>
