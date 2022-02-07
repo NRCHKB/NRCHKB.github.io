@@ -64,6 +64,6 @@
   weight = 10
 
 [[footer]]
-  pre = "<img src=\"https://img.shields.io/discord/586065987267330068?color=%238f0000&label=Discord&logo=discord\" alt=\"NRCHKB Discord\"/>"
+  pre = "<img src=\"https://img.shields.io/discord/586065987267330068?color=%238f0000&label=Discord&logo=discord\" alt=\"NRCHKB Discord\"/ width=\"129px\" height=\"20\">"
   url = "https://discord.gg/uvYac5u"
   weight = 20
