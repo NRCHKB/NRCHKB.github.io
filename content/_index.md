@@ -10,11 +10,11 @@ images: []
 
 <div class="container">
   <div class="row justify-content-center text-center row align-items-center">
-    <div class="col-lg-7">
+    <div class="col-lg-7 order-lg-first order-md-last order-last">
       <h2 class="h4">About NRCHKB</h2>
       <p style="text-align: left;">This is a collection of nodes which can be used to simulate HomeKit accessories inside of Node-RED. Messages coming into these nodes are able to set accessory states and status in Apple's iOS and MacOS Home apps. Commands from Home.app (or Siri) will be passed from these nodes into your Node-RED flows.</p>
     </div>
-    <div class="col-lg-7">
+    <div class="col-lg-7 order-lg-last order-md-first order-first">
       <img src="/images/presentation/demonstration.gif" style="max-width: 100%; margin-top: 2rem;" alt="NRCHKB Demonstration" />
     </div>
   </div>
