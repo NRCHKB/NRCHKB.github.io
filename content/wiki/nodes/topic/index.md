@@ -1,9 +1,9 @@
 ---
 title: "Topic"
-description: "Topic."
+description: "The topic is used to identify and filter messages"
 lead: "The topic is used to identify and filter messages."
 date: 2022-01-22T18:59:43.769Z
-lastmod: 2022-01-22T18:59:43.769Z
+lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:
@@ -17,6 +17,7 @@ contributors: ["GogoVega"]
 ## What is that
 
 The Topic serves two purposes:
+
 - at the entrance to the HomeKit node, it allows messages to be filtered.
 - at the exit of the HomeKit node, it identifies where the message came from.
 
@@ -38,9 +39,9 @@ Below is the structure of a message with a Topic.
 
 ```js
 msg = {
-    "payload": {
-        "On": true
-    },
-    "topic": "Your Topic"
-}
+  payload: {
+    On: true,
+  },
+  topic: "Your Topic",
+};
 ```

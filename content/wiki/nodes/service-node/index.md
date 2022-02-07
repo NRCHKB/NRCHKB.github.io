@@ -3,7 +3,7 @@ title: "Service Node"
 description: "This node represents Service in HomeKit"
 lead: "This node represents the Service displayed in Home.app."
 date: 2021-05-06T00:00:00+02:00
-lastmod: 2022-01-21T19:16:22.044Z
+lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     parent: "nodes"
 weight: 20
 toc: true
-contributors: ["Shaquu","GogoVega"]
+contributors: ["Shaquu", "GogoVega"]
 ---
 
 A Service or Service group (Parent and Linked) is considered like Accessory. You can choose to either link your Accessory to a Bridge or use your Standalone Accessory.
@@ -149,9 +149,9 @@ You will find below a table showing all the parameters and when they are used, a
 
 Choose if this node will represent Parent (or Primary) Service or Linked one.
 
-| Option | Description |
-|---|---|
-| Parent | Node will be used as Primary Service. The Primary Service must match the primary function of the accessory and must also match with the accessory category. An accessory must expose only one primary service from its list of available services. |
+| Option | Description                                                                                                                                                                                                                                                                                             |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Parent | Node will be used as Primary Service. The Primary Service must match the primary function of the accessory and must also match with the accessory category. An accessory must expose only one primary service from its list of available services.                                                      |
 | Linked | Node will be used as a Linked Service. Linked Services allows accessories to specify logical relationship between services. A service can link to one or more services. A service must not link to itself. Service links have context and meaning only to the first level of services that it links to. |
 
 {{< alert icon="👉" >}}Learn more about [Linked Service]({{< ref "/wiki/nodes/linked-service" >}} "Linked Service").{{< /alert >}}
@@ -180,9 +180,9 @@ Select Parent Service from the list to which this node's Linked Service will be 
 
 ### Host Type
 
-| Option | Description |
-|---|---|
-| Bridge | Service will be hosted behind Bridge. |
+| Option    | Description                                     |
+| --------- | ----------------------------------------------- |
+| Bridge    | Service will be hosted behind Bridge.           |
 | Accessory | Service will be hosted as Standalone Accessory. |
 
 ### Bridge
@@ -190,7 +190,7 @@ Select Parent Service from the list to which this node's Linked Service will be 
 You can select already created [Bridge Node]({{< ref "/wiki/nodes/host-node" >}} "Host Node") or create a new one.
 
 - By clicking button with a pencil icon next to it, you can edit currently selected Bridge
-- You can also create a new one by clicking the same button when *Add new homekit-bridge...* is selected. ![Adding new HomeKit Bridge](add-new-homekit-bridge.png)
+- You can also create a new one by clicking the same button when _Add new homekit-bridge..._ is selected. ![Adding new HomeKit Bridge](add-new-homekit-bridge.png)
 
 {{< alert icon="⚠" >}}**Important Notice,** when you create a new Bridge for Service Node that is in a subflow, once deployed new Bridge will be created for each Subflow instance in a flow. If you create a Bridge outside a Subflow then it will be created only once (reused)..{{< /alert >}}
 
@@ -199,7 +199,7 @@ You can select already created [Bridge Node]({{< ref "/wiki/nodes/host-node" >}}
 You can select already created [Standalone Accessory Node]({{< ref "/wiki/nodes/host-node" >}} "Host Node") or create a new one.
 
 - By clicking button with a pencil icon next to it, you can edit currently selected Accessory
-- You can also create a new one by clicking the same button when *Add new homekit-standalone...* is selected. ![Adding new HomeKit Standalone Accessory](add-new-homekit-standalone-accessory.png)
+- You can also create a new one by clicking the same button when _Add new homekit-standalone..._ is selected. ![Adding new HomeKit Standalone Accessory](add-new-homekit-standalone-accessory.png)
 
 {{< alert icon="💡" >}}Accessory is used for particular services (Television, Smart Speaker) in order to create a bridge specific to this service and thus avoid display problems in Home.app.{{< /alert >}}
 
@@ -217,6 +217,7 @@ Below is a list of fields that you can fill, it is not mandatory but it can be u
 ### Topic
 
 The Topic serves two purposes:
+
 - at the entrance to the HomeKit node, it allows messages to be filtered.
 - at the exit of the HomeKit node, it identifies the message.
 
@@ -249,11 +250,11 @@ Wait for Setup is ....?
 Input messages have the following structure:
 
 ```js
-msg = { 
-    "payload": {
-        "Characteristics": Value
-    }
-}
+msg = {
+  payload: {
+    Characteristics: Value,
+  },
+};
 ```
 
 {{< alert icon="💡" text="Characteristics are available on each Service page." />}}
