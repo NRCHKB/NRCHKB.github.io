@@ -1,9 +1,9 @@
 ---
 title: "Characteristic Properties"
-description: "Characteristic Properties"
+description: "What is a Characteristic Property and how to use it"
 lead: "What is a Characteristic Property and how to use it."
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-01-26T20:51:13.183Z
+lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:
@@ -11,12 +11,12 @@ menu:
     parent: "nodes"
 weight: 60
 toc: true
-contributors: ["crxporter","djiwondee","radokristof","caitken-com","Shaquu"]
+contributors: ["crxporter", "djiwondee", "radokristof", "caitken-com", "Shaquu"]
 ---
 
 ## What is that
 
-A Service node is made up of one or more characteristics. The Characteristic Properties tell Home.app to adapt its display to the chosen settings. It also allows you to define default values and usage limitations.
+A Service node is made up of one or more characteristics. The Characteristic Properties tell the Home.app to adapt its display to the chosen settings. It also allows you to define default values and usage limitations.
 
 {{< alert icon="💡" >}}The Characteristics available for each service are displayed on each page of the [Service]({{< ref "/wiki/service/" >}} "Service") section and information about each characteristic in the [Characteristic]({{< ref "/wiki/characteristic" >}} "Characteristic") section.{{< /alert >}}
 
@@ -28,23 +28,23 @@ Go to the section called `Characteristic Properties` of your HomeKit Service Nod
 
 To indicate that some Characteristic is used:
 
-```{ "Characteristic": true }```
+`{ "Characteristic": true }`
 
 To indicate a default value for some characteristic (20 for example):
 
-```{ "Characteristic": {"defaultValue": 20 }}```
+`{ "Characteristic": {"defaultValue": 20 }}`
 
 ## Usage Limitation
 
-To tell home app some usage limitations on a characteristic:
+To tell the Home.app some usage limitations on a characteristic:
 
-| Option | Description |
-|---|---|
-| `defaultValue` | Value by default |
-| `minValue` | Minimum value authorized |
-| `maxValue` | Maximum value authorized |
-| `minStep` | Minimum step (gap) authorized |
-| `validValues` | Value authorized [ ] |
+| Option         | Description                   |
+| -------------- | ----------------------------- |
+| `defaultValue` | Value by default              |
+| `minValue`     | Minimum value authorized      |
+| `maxValue`     | Maximum value authorized      |
+| `minStep`      | Minimum step (gap) authorized |
+| `validValues`  | Value authorized [ ]          |
 
 ### Examples
 
@@ -55,9 +55,9 @@ Below is an example list of characteristics.
 ```json
 {
   "TargetHorizontalTiltAngle": {
-    "defaultValue":45,
-    "minValue":0,
-    "maxValue":90
+    "defaultValue": 45,
+    "minValue": 0,
+    "maxValue": 90
   }
 }
 ```
@@ -72,7 +72,7 @@ Below is an example list of characteristics.
 
 ```json
 {
-    "Brightness":true
+  "Brightness": true
 }
 ```
 
@@ -80,23 +80,23 @@ Below is an example list of characteristics.
 
 ```json
 {
-    "Brightness":true,
-    "Hue":true,
-    "Saturation":true
+  "Brightness": true,
+  "Hue": true,
+  "Saturation": true
 }
 ```
 
 ### Color Temperature bulb
 
-It is also possible to define the range of the lightbulb if it has a light which can change temperature.
+It is also possible to define the range of the lightbulb if it has a light that can change temperature.
 You should watch out, that these values are in `Reciprocal megakelvin` so you have to 'convert' to this if your lamp is using Kelvin values (1000000 / Kelvin).
 
 ```json
 {
-    "ColorTemperature": {
-         "minValue": 150,
-         "maxValue": 500
-    }
+  "ColorTemperature": {
+    "minValue": 150,
+    "maxValue": 500
+  }
 }
 ```
 
@@ -104,9 +104,9 @@ You should watch out, that these values are in `Reciprocal megakelvin` so you ha
 
 ```json
 {
-    "Brightness":{
-        "minStep":5
-    }
+  "Brightness": {
+    "minStep": 5
+  }
 }
 ```
 
@@ -114,14 +114,12 @@ You should watch out, that these values are in `Reciprocal megakelvin` so you ha
 
 ```json
 {
-    "SecuritySystemCurrentState":
-        {
-            "validValues": [0,1,3,4]
-        },
-    "SecuritySystemTargetState":
-        {
-            "validValues": [0,1,3,4]
-        }
+  "SecuritySystemCurrentState": {
+    "validValues": [0, 1, 3, 4]
+  },
+  "SecuritySystemTargetState": {
+    "validValues": [0, 1, 3, 4]
+  }
 }
 ```
 
@@ -129,10 +127,9 @@ You should watch out, that these values are in `Reciprocal megakelvin` so you ha
 
 ```json
 {
-    "ValveType":
-    {
-        "minValue":1,
-        "maxValue":1
-    }
+  "ValveType": {
+    "minValue": 1,
+    "maxValue": 1
+  }
 }
 ```

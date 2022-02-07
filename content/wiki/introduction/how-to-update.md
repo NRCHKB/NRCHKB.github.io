@@ -1,9 +1,9 @@
 ---
 title: "How to Update"
-description: "How to Update"
+description: "NRCHKB node update instructions"
 lead: "How to update NRCHKB node"
 date: 2022-01-26T20:51:13.183Z
-lastmod: 2022-01-26T20:51:13.183Z
+lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:
@@ -14,7 +14,7 @@ toc: true
 contributors: ["Shaquu"]
 ---
 
-New version has been released, and you would like to upgrade? There are at least two ways to do that!
+A new version has been released, and you would like to upgrade? There are at least two ways to do that!
 
 ## Inside Node-RED
 
