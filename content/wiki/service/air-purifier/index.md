@@ -17,13 +17,13 @@ contributors: ["crxporter","Shaquu"]
 
 ## Basic Principle
 
-This is the simplest example of a Air Purifier item. There are 3 sets of input nodes.
+This is the simplest example of an Air Purifier item. There are 3 sets of input nodes.
 
 **Auto/Manual Mode** will determine whether the Home.app displays that the Purifier is in Automatic or Manual Mode. This is set by sending a value of 0 or 1 to `TargetAirPurifierState`.
 
 **Set Target State** will dictate whether the user wants the Purifier to be On or Off. This is set by sending a value of 0 or 1 to `Active`.
 
-**Set Current State Off/Idle/On** this will dictate whether the Purifier is actually Off, Idle, or On. This is set by sending a value of 0, 1, or 2 to `CurrentAirPurifierState`.
+**Set Current State Off/Idle/On** this will dictate whether the Purifier is Off, Idle, or On. This is set by sending a value of 0, 1, or 2 to `CurrentAirPurifierState`.
 
 ![Basic Principle](air_purifier_basic_principle.png)
 
