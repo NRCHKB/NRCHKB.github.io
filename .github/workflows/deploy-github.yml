@@ -2,6 +2,12 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+    inputs:
+      all:
+        type: boolean
+        default: false
+        description: Update metadata of all md files (otherwise just changed files)
 
 jobs:
   deploy:
@@ -26,6 +32,8 @@ jobs:
         # https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
         shell: 'script --return --quiet --command "bash {0}"'
         run: yarn update:metadata
+        env:
+          ALL: ${{ github.event.inputs.all }}
 
       - name: Push updated metadata
         uses: stefanzweifel/git-auto-commit-action@v4
