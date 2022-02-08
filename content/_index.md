@@ -1,37 +1,43 @@
 ---
-title : "HomeKit all the things!"
+title: "HomeKit all the things!"
 description: "NRCHKB is a Node-RED nodes pack to simulate Apple HomeKit devices. The goal is to emulate native HomeKit devices as closely as possible."
 lead: "NRCHKB is a Node-RED nodes pack to simulate Apple HomeKit devices. The goal is to emulate native HomeKit devices as closely as possible."
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-01-22T20:32:10.143Z
+lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 ---
 
-
-<div class="clearfix">
-<img src="/images/presentation/demonstration.gif" class="col-md-9 float-md-end mb-3 ms-md-3" style="max-width: 100%;" alt="NRCHKB Demonstration"/>
-
-### About this Contrib
-
-This is a collection of nodes which can be used to imitate HomeKit devices inside Node-RED. Messages coming into these nodes are able to set device states and status in Apple's iOS and macOS Home apps. Commands from Home apps (or Siri) will be passed from these nodes into your Node-RED flows.
-
-### Easy Install
-
-If you have Node-RED already installed, the recommended install method is to use the editor. To do this, select `Manage palette` from the Node-RED menu (top right).
-Then select `Install` tab in the palette. Search for and install this node (`node-red-contrib-homekit-bridged`).
-</div>
-
-### Docker Install
-
-You can also pull a [docker image](https://github.com/NRCHKB/node-red-contrib-homekit-docker) containing everything needed to get started.
-
-### Getting Started
-
-[**Example flows**]({{< ref "/wiki/examples" >}} "Examples")
-For a quick start, we recommend checking out the flows which are included with the plugin, they can be imported using the Node-RED hamburger menu after install.
-
-[**Documentation home page**]({{< ref "/wiki/introduction/quick-start" >}} "Quick Start")
-For more instructions, information about how things work, and detailed examples (including various real life examples from the community).
-
-[**Discord**](https://discord.gg/uvYac5u) Again, one of us is on Discord every day, always ready to help!
+<div class="container">
+  <div class="row justify-content-center text-center row align-items-center">
+    <div class="col-lg-7 order-lg-first order-md-last order-last">
+      <h2 class="h4">About NRCHKB</h2>
+      <p style="text-align: left;">This is a collection of nodes which can be used to simulate HomeKit accessories inside of Node-RED. Messages coming into these nodes are able to set accessory states and status in Apple's iOS and MacOS Home apps. Commands from Home.app (or Siri) will be passed from these nodes into your Node-RED flows.</p>
+    </div>
+    <div class="col-lg-7 order-lg-last order-md-first order-first">
+      <img src="/images/presentation/demonstration.gif" style="max-width: 100%; margin-top: 2rem;" alt="NRCHKB Demonstration" />
+    </div>
+  </div>
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-7">
+      <h2 class="h4">Easy Install</h2>
+      <p style="text-align: left;">Installation of this collection of nodes (<code>node-red-contrib-homekit-bridged</code>) is done directly in Node-RED from <code>Manage palette</code>. </p>
+    </div>
+    <div class="col-lg-7">
+      <h2 class="h4">Docker Install</h2>
+      <p style="text-align: left;">You can also pull a <a href="https://github.com/NRCHKB/node-red-contrib-homekit-docker">Docker image</a> containing everything needed to get started. </p>
+    </div>
+    <div class="col-lg-7">
+        <h2 class="h4">Examples Included</h2>
+        <p style="text-align: left;">
+          <a href="{{"/wiki/examples/" | absURL }}"><strong>Example flows</strong></a> are included with the plugin, they can be imported using the Node-RED menu after install.
+        </p>
+    </div>
+    <div class="col-lg-7">
+      <h2 class="h4">Getting Started</h2>
+      <p style="text-align: left;">Our <a href="{{"/wiki/introduction/quick-start/" | absURL }}"><strong>Documentation Page</strong></a> is full of explanations, examples, and information to get you moving! </p>
+    </div>
+    <div class="col-lg-12 mt-4 pt-1">
+      <p style="text-align: center;">If you have any questions we are every day on <a href="https://discord.gg/uvYac5u"><strong>Discord</strong></a>, always ready to help!</p>
+    </div>
+  </div>
