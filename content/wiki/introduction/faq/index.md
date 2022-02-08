@@ -1,54 +1,75 @@
 ---
 title: "FAQ"
 description: "Frequently Asked Questions"
-lead: "Question you ask us and questions we ask you"
-date: 2021-04-15T20:00:00+02:00
-lastmod: 2021-10-04T16:10:51.017Z
+lead: "Frequently Asked Questions"
+date: 2022-01-26T20:51:13.183Z
+lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:
   docs:
     parent: "introduction"
-weight: 100
+weight: 40
 toc: true
 contributors: ["Shaquu"]
 ---
 
-## How to update NRCHKB node
+## How to check software versions
 
-New version has been released, and you would like to upgrade? There are at least two ways to do that!
+How to check versions for most common install methods:
 
-### Using palette
+### Our node
 
-1. In `node-red` UI click Manage palette in Menu
-2. Locate `node-red-contrib-homekit-bridged` and click update to `1.4.0`
+- `Settings/Manage palette` ![Nodes Version via Manage Palette](nodes_version_manage_palette.png)
 
-### Manually
+- `package.json` file in your Node-RED installation folder usually `~/.node-red` ![Nodes Version via package.json](nodes_version_package_json.png)
 
-1. Stop `node-red`
-2. `cd ~/.node-red`
-3. `npm i node-red-contrib-homekit-bridged@1.4.0`
-4. Start `node-red`
+### Node-RED
 
-## Device paired but Service disappearing in Home.app from time to time
+Check in the drop-down menu in the top right of the editor.
 
-You managed to pair with Accessory or Bridge but after a while it has disappeared?
+### Node-JS
 
-1. Make sure that device you are using to view Home status is connected to the same network that node-red (with nrchkb) is running on
-2. If you are using VLAN or special firewall rules, [join us on Discord](https://discord.gg/uvYac5u) to discuss what settings should be for things to work
+Run `node -v` in the command line
 
-## Type already defined error
+## Which format for msg.payload (JSON)
 
-`Type already defined` or `Cannot register type` errors appeared in UI?
+Payload messages sent and received from the HomeKit node have a **JSON** structure.
+To popularize, this structure resembles a library: you search for your book (value) thanks to its title (key).
 
-1. Make sure you are using the latest version of our node.
-2. Look for other homekit nodes that you have installed. You will have to remove them if they collide with our node. Possible collisions with:
-   1. `node-red-contrib-homekit-preconfigured`
-   2. `node-red-contrib-homekit`
+Below is an example of `msg.payload`:
 
-How to check nodes versions?
+```js
+msg = {
+  payload: {
+    On: true,
+    Brightness: 38,
+  },
+};
+```
 
-1. `Settings/Manage palette`
-   ![Nodes Version via Manage Palette](nodes_version_manage_palette.png)
-2. `package.json` file in your Node-RED installation folder usually `~/.node-red`
-   ![Nodes Version via package.json](nodes_version_package_json.png)
+In this example we can retrieve the value of `On` with this JavaScript path: `msg.payload.On`.
+
+{{< alert icon="👉" >}}Find more about [JSON](https://en.wikipedia.org/wiki/JSON).{{< /alert >}}
+
+## What's Home Hub
+
+Home Hub is the name given to the device that acts as the gateway between your accessories and Apple's servers.
+Concretely, Home Hub allows you to access your accessories from outside your home.
+
+{{< alert icon="👉" >}}Find more about [Home Hub](https://support.apple.com/en-us/HT207057).{{< /alert >}}
+
+## Differentiate between passthrough or "from HomeKit" messages
+
+In some cases, it may be useful, even essential, to differentiate a command from the previous node or Home.app to avoid a loop problem.
+
+{{< alert icon="👉" >}}Find more about [Passthrough Messages]({{< ref "/wiki/nodes/output-messages" >}} "Passthrough Messages").{{< /alert >}}
+
+## Miscellaneous oddities...
+
+- We **highly recommend** setting your Node-RED editor to "Deploy modified nodes" only. This will keep the backend for HomeKit nodes from restarting so often while making edits, keeping the Home app much happier.
+
+![Modified Nodes](modified_nodes.png)
+
+- Sometimes Node-RED will send multiple copies of each message when you've been working on a lot of flows, simply restart Node-RED to clear the caches and you'll usually be back to normal
+- If something new is struggling, the first thing to try is to remove the problem service node, deploy, then add it back. If things still struggle it might be helpful to remove the problem nodes _and_ bridge from Node-RED and the Home app - then add it all back in.
