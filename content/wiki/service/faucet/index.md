@@ -3,7 +3,7 @@ title: "Faucet"
 description: "Faucet"
 lead: ""
 date: 2021-04-17T18:50:12.030Z
-lastmod: 2022-02-04T20:15:23.783Z
+lastmod: 2022-02-08T17:49:09.511Z
 draft: false
 images: []
 menu:
@@ -23,7 +23,7 @@ This service is used with the [Heater Cooler]({{< ref "/wiki/service/heater-cool
 
 ## Status Icon
 
-Depending on the situation, the Faucet will show a different status in Home.app:
+Depending on the situation, the Faucet will show a different status in the Home.app:
 
 | Faucet - Linked Valves | Home.app Shows |
 | --- | --- |
@@ -34,7 +34,7 @@ Depending on the situation, the Faucet will show a different status in Home.app:
 
 ## Basic principle
 
-This is example of a Faucet item with single Valve.
+This is an example of a Faucet item with a single Valve.
 
 ![Basic Principle](faucet_single_valve_example.png)
 
@@ -50,7 +50,7 @@ Copyable Node-RED flow:
 
 ### Faucet with Heater and multiple Valves
 
-This is example of a Faucet item with Heater and multiple Valves.
+This is an example of a Faucet item with a Heater and multiple Valves.
 
 ![Faucet with Heater and multiple Valves](faucet_with_heater_multi_valve_example.png)
 
