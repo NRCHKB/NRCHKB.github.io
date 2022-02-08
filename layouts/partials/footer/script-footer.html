@@ -58,12 +58,14 @@
   {{ end -}}
   <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
 {{ end -}}
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script type="text/javascript"> docsearch({
-  apiKey: 'c0d6b8c0b6482607e905f4b1ba9397b4',
+<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@alpha"></script>
+<script type="text/javascript">
+docsearch({
+  container: '#docsearch',
+  appId: 'J8509KWQO1',
   indexName: 'nrchkb',
-  inputSelector: '#userinput',
-  debug: false
+  apiKey: '3b8902adb61265110336eccda34c4199',
 });
 </script>
+<link rel="preconnect" href="https://J8509KWQO1-dsn.algolia.net" crossorigin />
 <script src="{{ $index.Permalink }}" defer></script>
