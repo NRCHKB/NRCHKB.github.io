@@ -29,7 +29,7 @@ Next, create the Battery Service as a Linked Service, selecting your desired Acc
 
 ### Characteristic Properties
 
-Use the following JSON in your Battery Characteristic Properties so that the Home.app displays a `BatteryLevel`, `ChargingState` and `StatusLowBattery`.
+Use the following JSON in your Battery Characteristic Properties so that the Home.app displays a `BatteryLevel`, `ChargingState`, and `StatusLowBattery`.
 
 ```json
 { 
