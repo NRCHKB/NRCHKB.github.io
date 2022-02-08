@@ -37,7 +37,7 @@ Simply create a service named however you like using `ServiceLabel` service - th
 
 Create some combination of devices to be grouped in the power strip. If it is important the order they appear, create one at a time so the "next" device will be added at the bottom of your power strip.
 
-![Power Strip](power_strip.jpeg)
+![Power Strip](power_strip.png)
 
 Copyable Node-RED flow:
 
