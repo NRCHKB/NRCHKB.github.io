@@ -31,6 +31,7 @@ const ignoredAuthors: string[] = [
 const contributorMap = {
   Shaquu: ['Tadeusz Wyrzykowski'],
 };
+const ignoredFiles: string[] = ['content/wiki/discover-more/changelog.md'];
 
 const updateFrontMatter = (content: string, key: string, value: string) => {
   return content.replace(/(?<=---)((.|\n|\r)*?)(?=---)/, (_, frontmatter) => {
@@ -161,6 +162,8 @@ const processFile = async (file: string) => {
   }
 
   for (const file of files) {
+    if (ignoredFiles.includes(file)) continue;
+
     await processFile(file);
   }
 
