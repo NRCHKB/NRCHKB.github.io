@@ -148,7 +148,7 @@ const processFile = async (file: string) => {
     const lastSha = process.env.GITHUB_SHA || 'HEAD';
 
     const changelist = await childProcess
-      .execSync(`git diff --name-status ${lastSha}~1..${lastSha}`)
+      .execSync(`git diff-tree --no-commit-id --name-status -r ${lastSha}`)
       .toString();
 
     for (const line of changelist.split('\n')) {
