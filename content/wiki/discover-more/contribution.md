@@ -14,7 +14,6 @@ toc: true
 contributors: ["Shaquu", "crxporter"]
 ---
 
-
 ## Editing
 
 1. Open desired page
