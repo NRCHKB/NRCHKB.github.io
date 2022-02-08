@@ -15,7 +15,7 @@ service:
 contributors: ["crxporter"]
 ---
 
-Service Label is kind of an open box for HomeKit devices. So far I (@crxporter) have seen it used in two places - a [multi-button stateless programmable switch](https://nrchkb.github.io/wiki/service/stateless-programmable-switch/#multi-button-example) and a power strip. Surely it can be used in more places but this is what I've seen so far.
+Service Label is kind of an open box for HomeKit devices. So far I (@crxporter) have seen it used in two places - a [multi-button stateless programmable switch]({{< ref "/wiki/service/stateless-programmable-switch/#multi-button-example" >}} "Stateless Programmable Switch") and a power strip. Surely it can be used in more places but this is what I've seen so far.
 
 ## Examples
 
@@ -23,15 +23,16 @@ These examples are meant to be copied into your Node-RED system and adapted to y
 
 ### Power Strip
 
-This example shows a power strip type accessory where multiple on/off items (works best with `Outlet`, `LightBulb`, or `Fan`) will be merged to show a set of small buttons in the Home app. The example will include 4 devices: two outlets, one fan, and one bulb. Any number of these may be added in a similar manner to have more devices shown, simply add the device with the same parent accessory.
+This example shows a power strip type accessory where multiple on/off items (works best with `Outlet`, `LightBulb`, or `Fan`) will be merged to show a set of small buttons in the Home.app. The example will include 4 devices: two outlets, one fan, and one bulb. Any number of these may be added similarly to have more devices shown, simply add the device with the same parent accessory.
 
-The setup of this will require use of a parent/linked setup.
+The setup of this will require the use of a Parent/Linked setup.
+
 * **Parent Service** will be `ServiceLabel`
 * **Linked Services** will be `Outlet`, `Lightbulb`, or `Fan` (others may be possible with mixed results)
 
 **Parent Service**
 
-Simply create a service named however you like using `ServiceLabel` service - this is the parent for all of your incoming devices.
+Simply create a service named however you like using the `ServiceLabel` service - this is the parent for all of your incoming devices.
 
 **Linked Services**
 
