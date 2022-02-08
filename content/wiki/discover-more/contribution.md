@@ -15,7 +15,6 @@ contributors: ["Shaquu", "crxporter"]
 ---
 
 
-# Test
 ## Editing
 
 1. Open desired page

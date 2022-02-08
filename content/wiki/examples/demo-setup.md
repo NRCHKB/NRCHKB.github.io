@@ -14,8 +14,6 @@ toc: true
 contributors: ["crxporter","Shaquu"]
 ---
 
-# This is an example
-
 ## Explanation
 
 The nature of this plugin and HomeKit in general is very complex. In the past we have tried screenshots, videos, and other ways to show how things work. With this new demo setup, we are taking it to a new level. You can simply copy the code and paste it right into your Node-RED setup to begin playing with many (eventually all) available HomeKit accessories.
