@@ -19,7 +19,7 @@ contributors: ["djiwondee","Shaquu"]
 
 ## Basic Principle
 
-This is the simplest example of a Air Quality Sensor item passing the Characteristics value for testing purposes.
+This is the simplest example of an Air Quality Sensor item passing the Characteristics value for testing purposes.
 
 ![Basic Principle](air_quality_basic_principle.png)
 
@@ -37,13 +37,13 @@ Below is a list of examples intended to be copied into your Node-RED system and 
 
 ### Full Featured Air Quality Sensor with real data
 
-This is an example of an Air Quality Sensor captures real-time date from a simple web service using a http-request:
+This is an example of an Air Quality Sensor captures real-time data from a simple web service using a http-request:
 
 ![Full Example](full_air_quality_example.png)
 
-There are a couple of public available websites providing real-time data to monitor pollution in public available areas. The author of this Wiki has been chosen the service [luftdaten.info](https://luftdaten.info/en/home-en/) for the setup above, a service provided by the OK Lab Stuttgart. The OK Lab Stuttgart is part of the program _Code for Germany_ of the _Open Knowledge Foundation Germany_. The aim of the program is to promote developments in the areas of transparency, Open Data and Citizen Science.
+There are a couple of publicly available websites providing real-time data to monitor pollution in publicly available areas. The author of this Wiki has been chosen the service [luftdaten.info](https://luftdaten.info/en/home-en/) for the setup above, a service provided by the OK Lab Stuttgart. The OK Lab Stuttgart is part of the program _Code for Germany_ of the _Open Knowledge Foundation Germany_. The program aims to promote developments in the areas of transparency, Open Data, and Citizen Science.
 
-As such the service is providing a web based [accessible network](https://deutschland.maps.sensor.community/#6/51.165/10.455) of Air Quality Sensors, distributed across Germany. A few sensors are also located outside of Germany across Europe.
+As such the service is providing a web-based [accessible network](https://deutschland.maps.sensor.community/#6/51.165/10.455) of Air Quality Sensors, distributed across Germany. A few sensors are also located outside of Germany across Europe.
 
 This service is providing real-time values for PM 10 and PM 2.5 particulate density. A URL (e.g. `https://data.sensor.community/airrohr/v1/sensor/{{SENSOR_ID}}/`) can be called by a http request node in Node-RED to retrieve a parsed payload with sensor data, formed as an analyzed JSON-object.
 
@@ -73,7 +73,7 @@ hkMsg.payload = {
 ```
 
 A special calculation is applied for the `AirQuality` value itself.
-Since the HAP Specification doesn't necessarily dictate _how_ the value has to be calculated it is up to the Accessory to determine the subject assessment of the Air Quality. For the example above the author decide to calculate a mean value derived from the different scale of the PM 10 and PM 2.5 particulate density US AQI scale.
+Since the HAP Specification doesn't necessarily dictate _how_ the value has to be calculated it is up to the Accessory to determine the subject assessment of the Air Quality. For the example above the author decide to calculate a mean value derived from the different scales of the PM 10 and PM 2.5 particulate density US AQI scale.
 
 {{< alert icon="👉" >}}Find more about the [Calculator](https://aqicn.org/calculator).{{< /alert >}}
 
