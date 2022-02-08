@@ -1,16 +1,24 @@
 <footer class="footer text-muted">
   <div class="container">
     <div class="row">
-      <div class="col order-first order-lg-first">
+      {{ range .Site.Menus.footer -}}
+        {{ if eq .Name "Discord" }}
+          <div class="col order-last order-lg-last text-end">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="{{ .URL | absURL }}">{{ .Pre }}</a></li>
+            </ul>
+          </div> 
+        {{ else }}
+          <div class="col order-first order-lg-first">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="{{ .URL | absURL }}">{{ .Pre }}{{ .Name }}</a></li>
+            </ul>
+          </div>
+        {{ end }}
+      {{ end -}}
+      <div class="col-lg-8 order-last order-lg-first text-center">
         <ul class="list-inline">
           <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li>
-        </ul>
-      </div>
-      <div class="col order-last order-lg-last text-end">
-        <ul class="list-inline">
-          {{ range .Site.Menus.footer -}}
-            <li class="list-inline-item"><a href="{{ .URL | absURL }}">{{ .Pre }}{{ .Name }}</a></li>
-          {{ end -}}
         </ul>
       </div>
     </div>
