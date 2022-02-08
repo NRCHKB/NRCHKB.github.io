@@ -21,7 +21,7 @@ This Service allows you to unlock a door using an Access Code.
 
 ## Basic Principle
 
-This is the simplest example of a Lock Mechanism item with Access Code. The input nodes are `Close`, `Opening`, `Closing` and `Open`.
+This is the simplest example of a Lock Mechanism item with an Access Code. The input nodes are `Close`, `Opening`, `Closing`, and `Open`.
 
 
 {{< alert icon="‼️" >}}This service is under development ‼️{{< /alert >}}
