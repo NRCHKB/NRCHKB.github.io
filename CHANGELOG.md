@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.50.3](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.50.2...v1.50.3) (2022-01-06)
+
+
+### Bug Fixes
+
+* docsearch form position (with css whitelist) ([1c741f3](https://github.com/NRCHKB/NRCHKB.github.io/commit/1c741f3502febc0a5f8d99019d6515c6f8b628c5))
+
+### [1.50.2](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.50.1...v1.50.2) (2022-01-06)
+
+
+### Bug Fixes
+
+* docsearch form position ([3a96c3b](https://github.com/NRCHKB/NRCHKB.github.io/commit/3a96c3b1c1646b11cf393bbbe7fb89dc50379372))
+
+### [1.50.1](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.50.0...v1.50.1) (2022-01-06)
+
+
+### Bug Fixes
+
+* docsearch not working after upgrade ([b143f5b](https://github.com/NRCHKB/NRCHKB.github.io/commit/b143f5bef513487f98e49e33f621d0406b3b110c))
+
+## [1.50.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.49.0...v1.50.0) (2022-01-06)
+
+
+### Features
+
+* Added Basic Principle to Filter Maintenance ([cdcb46d](https://github.com/NRCHKB/NRCHKB.github.io/commit/cdcb46dde6ae59ebc65ec5c6d3b687a8f453677a))
+* Added Basic Principle to Humidity Sensor ([9a04ca0](https://github.com/NRCHKB/NRCHKB.github.io/commit/9a04ca04a8a2bd531670e1cc5420acde0e85bcf7))
+* Added ESP Page ([1f86d97](https://github.com/NRCHKB/NRCHKB.github.io/commit/1f86d976e3b3989784e0e6f0cabe1931456d655a))
+* Punt op de lijn and Translate to Valve ([2762184](https://github.com/NRCHKB/NRCHKB.github.io/commit/276218400f511e6c2e1f0d0b6c4af93e03ee1d64))
+* Update function node for Humidity Sensor ([bcbf4be](https://github.com/NRCHKB/NRCHKB.github.io/commit/bcbf4be7f35f50f871c02642946ba23bf0a39047))
+
+
+### Bug Fixes
+
+* omron images display ([d094f47](https://github.com/NRCHKB/NRCHKB.github.io/commit/d094f47246d45d24bcc66f77d10fd4e6f3309952))
+
 ## [1.49.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.48.0...v1.49.0) (2021-10-25)
 
 

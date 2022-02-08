@@ -3,7 +3,7 @@ title: "Television"
 description: "Television"
 lead: ""
 date: 2021-04-17T18:50:12.037Z
-lastmod: 2021-10-23T05:48:09+02:00
+lastmod: 2022-01-06T22:41:19.584Z
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "Television"
-contributors: ["crxporter","caitken-com","S474N","Shaquu"]
+contributors: ["crxporter","caitken-com","S474N","Shaquu","luwol03"]
 ---
 
 **Note:** It is recommended that beginners get comfortable with Node Red and more simple HomeKit configurations of this plugin before attempting to set up Television Service.
@@ -29,6 +29,8 @@ Currently, the example below has:
 * **Input 1** as child service of _Television Service_
 * **Input 2** as child service of _Television Service_
 * **Input 3** as child service of _Television Service_
+
+**Note:** Such complex linked services only work properly if they are standalone accessories. Otherwise the linked services are not shown correctly in the home app.
 
 ## Example With Speaker and 4 inputs
 

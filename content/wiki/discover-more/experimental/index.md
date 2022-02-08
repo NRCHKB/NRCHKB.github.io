@@ -3,7 +3,7 @@ title: "Experimental"
 description: "NRCHKB experimental features"
 lead: ""
 date: 2021-10-11T23:29:29.943Z
-lastmod: 2021-10-15T22:06:00.598Z
+lastmod: 2022-01-11T16:34:39+01:00
 draft: false
 images: []
 menu:
@@ -45,6 +45,12 @@ Find a line starting with `Environment` and add one (or both) of the following l
 ```bash
 Environment="NRCHKB_EXPERIMENTAL=true"
 Environment="DEBUG=NRCHKB*"
+```
+
+**Watching these logs** after enabling the logging can be done using the `journalctl -f` command. Specifically on Raspberry Pi, run this command:
+
+```bash
+sudo journalctl -u nodered.service -f
 ```
 
 ### Docker
