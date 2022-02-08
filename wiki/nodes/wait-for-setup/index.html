@@ -1,0 +1,610 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
+<link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
+<link rel=stylesheet href=https://nrchkb.github.io/main.f396c6486718626f1400fa7d7d8c2a88a380e965e4e46586237940d1749a3ca64397dcaaabb088403c5b944a92be772f1d4c690478e597db963cea19e0044df5.css integrity="sha512-85bGSGcYYm8UAPp9fYwqiKOA6WXk5GWGI3lA0XSaPKZDl9yqq7CIQDxblEqSvncvHUxpBHjll9uWPOoZ4ARN9Q==" crossorigin=anonymous>
+<noscript><style>img.lazyload{display:none}</style></noscript>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@docsearch/css@alpha>
+<meta name=robots content="index, follow">
+<meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<title>Wait For Setup - NRCHKB</title>
+<meta name=description content="Dynamic configuration of the Characteristic Properties of your Service Node">
+<link rel=canonical href=https://nrchkb.github.io/wiki/nodes/wait-for-setup/>
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://nrchkb.github.io/images/social-preview.png">
+<meta name=twitter:title content="Wait For Setup">
+<meta name=twitter:description content="Dynamic configuration of the Characteristic Properties of your Service Node">
+<meta property="og:title" content="Wait For Setup">
+<meta property="og:description" content="Dynamic configuration of the Characteristic Properties of your Service Node">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://nrchkb.github.io/wiki/nodes/wait-for-setup/">
+<meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
+<meta property="article:published_time" content="2021-08-03T00:00:00+02:00">
+<meta property="article:modified_time" content="2022-02-07T19:48:12+00:00">
+<meta property="og:site_name" content="NRCHKB">
+<meta property="og:locale" content="en_US">
+<meta name=yandex-verification content="5f5fdb90049c85bb">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/nrchkb.github.io\/"},{"@type":"ListItem","position":2,"name":"Wiki","item":"https:\/\/nrchkb.github.io\/wiki\/"},{"@type":"ListItem","position":3,"name":"Nodes","item":"https:\/\/nrchkb.github.io\/wiki\/nodes\/"},{"@type":"ListItem","position":4,"name":"Wait for Setup","item":"https:\/\/nrchkb.github.io\/wiki\/nodes\/wait-for-setup\/"}]}</script>
+<meta name=theme-color content="#8f0000">
+<link rel=apple-touch-icon sizes=180x180 href=https://nrchkb.github.io/apple-touch-icon.png>
+<link rel=icon type=image/png sizes=32x32 href=https://nrchkb.github.io/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=https://nrchkb.github.io/favicon-16x16.png>
+<link rel=manifest href=https://nrchkb.github.io/site.webmanifest>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYRM4ZVKJS"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-XYRM4ZVKJS',{anonymize_ip:!1})}</script>
+</head>
+<body class="wiki single">
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+<div class=container>
+<input class="menu-btn order-0" type=checkbox id=menu-btn>
+<label class="menu-icon d-md-none" for=menu-btn><span class=navicon></span></label>
+<a class="navbar-brand order-1 order-md-0 me-auto" href=https://nrchkb.github.io/>NRCHKB</a>
+<div id=docsearch class="order-2 order-md-4"></div>
+<button id=mode class="btn btn-link order-3 order-md-4" type=button aria-label="Toggle mode">
+<span class=toggle-dark><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg></span>
+<span class=toggle-light><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+</button>
+<ul class="navbar-nav social-nav order-4 order-md-5">
+<li class=nav-item>
+<a class=nav-link href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://discord.gg/uvYac5u target=_blank rel=noopener><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 245 240"><style>.st0{fill:#7289da}</style><path class="st0" d="M104.4 103.9c-5.7.0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7.0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5.0c-5.7.0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7.0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"/><path class="st0" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2.0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6.0.0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3.0.0-8.5 14.5-30.6 15.2z"/></svg><span class="ms-2 visually-hidden">Discord</span></a>
+</li>
+</ul>
+<div class="collapse navbar-collapse order-5 order-md-1">
+<ul class="navbar-nav main-nav me-auto order-6 order-md-2"><li class="nav-item active">
+<div class=btn-group>
+<a class=nav-link href=https://nrchkb.github.io/wiki/introduction/quick-start/>Wiki</a>
+<button class="btn menu-wiki dropdown-toggle dropdown-toggle-split" data-bs-toggle=dropdown aria-expanded=false><span class=visually-hidden>Toggle Dropdown</span></button>
+<ul class=dropdown-menu>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/introduction/quick-start/>Introduction</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/nodes/service-node/>Nodes</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/examples/demo-setup/>Examples</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/service/access-control/>Service</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/characteristic/access-control-level/>Characteristic</a></li>
+<li><a class=dropdown-item href=https://nrchkb.github.io/wiki/discover-more/contribution/>Discover More</a></li>
+</ul>
+</div>
+</li>
+<li class=nav-item>
+<a class=nav-link href=https://nrchkb.github.io/blog/>Blog</a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+<div class="wrap container" role=document>
+<div class=content>
+<div class="row flex-xl-nowrap">
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+<nav class=docs-links aria-label="Main navigation">
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-introduction role=button aria-expanded=false aria-controls=collapse-introduction>
+<h3 class=caret>Introduction</h3>
+</a>
+<div class=collapse id=collapse-introduction>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/quick-start/>Quick Start</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/how-to-update/>How to Update</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/troubleshooting/>Troubleshooting</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/faq/>FAQ</a></li>
+</ul>
+</div>
+</div>
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-nodes role=button aria-expanded=false aria-controls=collapse-nodes>
+<h3 class=caret>Nodes</h3>
+</a>
+<div class="collapse show" id=collapse-nodes>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/service-node/>Service Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/host-node/>Host Node</a></li>
+<li><a class="docs-link divider" href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/linked-service/>Linked Service</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/characteristics/>Characteristic Properties</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/topic/>Topic</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/output-messages/>Output Messages</a></li>
+<li><a class="docs-link active" href=https://nrchkb.github.io/wiki/nodes/wait-for-setup/>Wait For Setup</a></li>
+</ul>
+</div>
+</div>
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-examples role=button aria-expanded=false aria-controls=collapse-examples>
+<h3 class=caret>Examples</h3>
+</a>
+<div class=collapse id=collapse-examples>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/examples/demo-setup/>Demo Setup</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/examples/esp/>ESP</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/examples/washing-machine-monitor/>Washing Machine Monitor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/examples/omron-plc/>OMRON PLC</a></li>
+</ul>
+</div>
+</div>
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-service role=button aria-expanded=false aria-controls=collapse-service>
+<h3 class=caret>Service</h3>
+</a>
+<div class=collapse id=collapse-service>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/access-code/>Access Code</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/access-control/>Access Control</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/accessory-information/>Accessory Information</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/accessory-metrics/>Accessory Metrics</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/accessory-runtime-information/>Accessory Runtime Information</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/air-purifier/>Air Purifier</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/air-quality-sensor/>Air Quality Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/asset-update/>Asset Update</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/assistant/>Assistant</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/audio-stream-management/>Audio Stream Management</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/battery/>Battery</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/bridge-configuration/>Bridge Configuration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/bridging-state/>Bridging State</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/camera-control/>Camera Control</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/camera-operating-mode/>Camera Operating Mode</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/camera-recording-management/>Camera Recording Management</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/camera-rtpstream-management/>Camera RTPStream Management</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/carbon-dioxide-sensor/>Carbon Dioxide Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/carbon-monoxide-sensor/>Carbon Monoxide Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/cloud-relay/>Cloud Relay</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/contact-sensor/>Contact Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/data-stream-transport-management/>Data Stream Transport Management</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/diagnostics/>Diagnostics</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/door/>Door</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/doorbell/>Doorbell</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/fan/>Fan</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/fanv2/>Fanv2</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/faucet/>Faucet</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/filter-maintenance/>Filter Maintenance</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/garage-door-opener/>Garage Door Opener</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/heater-cooler/>Heater Cooler</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/humidifier-dehumidifier/>Humidifier Dehumidifier</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/humidity-sensor/>Humidity Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/input-source/>Input Source</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/irrigation-system/>Irrigation System</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/leak-sensor/>Leak Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/lightbulb/>Light Bulb</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/light-sensor/>Light Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/lock-management/>Lock Management</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/lock-mechanism/>Lock Mechanism</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/microphone/>Microphone</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/motion-sensor/>Motion Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/nfcaccess/>NFCAccess</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/occupancy-sensor/>Occupancy Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/outlet/>Outlet</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/pairing/>Pairing</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/power-management/>Power Management</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/protocol-information/>Protocol Information</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/security-system/>Security System</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/service-label/>Service Label</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/siri/>Siri</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/siri-endpoint/>Siri Endpoint</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/slats/>Slats</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/smart-speaker/>Smart Speaker</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/smoke-sensor/>Smoke Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/speaker/>Speaker</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/stateful-programmable-switch/>Stateful Programmable Switch</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/stateless-programmable-switch/>Stateless Programmable Switch</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/switch/>Switch</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/target-control/>Target Control</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/target-control-management/>Target Control Management</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/television/>Television</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/television-speaker/>Television Speaker</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/temperature-sensor/>Temperature Sensor</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/thermostat/>Thermostat</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/thread-transport/>Thread Transport</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/time-information/>Time Information</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/transfer-transport-management/>Transfer Transport Management</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/tunnel/>Tunnel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/valve/>Valve</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/wi-fi-router/>Wi Fi Router</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/wi-fi-satellite/>Wi Fi Satellite</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/wi-fi-transport/>Wi Fi Transport</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/window/>Window</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/service/window-covering/>Window Covering</a></li>
+</ul>
+</div>
+</div>
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-characteristic role=button aria-expanded=false aria-controls=collapse-characteristic>
+<h3 class=caret>Characteristic</h3>
+</a>
+<div class=collapse id=collapse-characteristic>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/access-code-control-point/>AccessCodeControlPoint</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/access-code-supported-configuration/>AccessCodeSupportedConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/access-control-level/>AccessControlLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/accessory-flags/>AccessoryFlags</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/accessory-identifier/>AccessoryIdentifier</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/active/>Active</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/active-identifier/>ActiveIdentifier</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/activity-interval/>ActivityInterval</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/administrator-only-access/>AdministratorOnlyAccess</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/air-particulate-density/>AirParticulateDensity</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/air-particulate-size/>AirParticulateSize</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/airplay-enable/>AirPlayEnable</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/air-quality/>AirQuality</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/app-matching-identifier/>AppMatchingIdentifier</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/asset-update-readiness/>AssetUpdateReadiness</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/audio-feedback/>AudioFeedback</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/battery-level/>BatteryLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/brightness/>Brightness</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/button-event/>ButtonEvent</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/camera-operating-mode-indicator/>CameraOperatingModeIndicator</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/carbon-dioxide-detected/>CarbonDioxideDetected</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/carbon-dioxide-level/>CarbonDioxideLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/carbon-dioxide-peak-level/>CarbonDioxidePeakLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/carbon-monoxide-detected/>CarbonMonoxideDetected</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/carbon-monoxide-level/>CarbonMonoxideLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/carbon-monoxide-peak-level/>CarbonMonoxidePeakLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/category/>Category</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/cca-energy-detect-threshold/>CCAEnergyDetectThreshold</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/cca-signal-detect-threshold/>CCASignalDetectThreshold</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/characteristic-value-active-transition-count/>CharacteristicValueActiveTransitionCount</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/characteristic-value-transition-control/>CharacteristicValueTransitionControl</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/charging-state/>ChargingState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/closed-captions/>ClosedCaptions</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/color-temperature/>ColorTemperature</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/configuration-state/>ConfigurationState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/configure-bridged-accessory/>ConfigureBridgedAccessory</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/configure-bridged-accessory-status/>ConfigureBridgedAccessoryStatus</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/configured-name/>ConfiguredName</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/contact-sensor-state/>ContactSensorState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/cooling-threshold-temperature/>CoolingThresholdTemperature</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-air-purifier-state/>CurrentAirPurifierState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-ambient-light-level/>CurrentAmbientLightLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-door-state/>CurrentDoorState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-fan-state/>CurrentFanState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-heater-cooler-state/>CurrentHeaterCoolerState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-heating-cooling-state/>CurrentHeatingCoolingState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-horizontal-tilt-angle/>CurrentHorizontalTiltAngle</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-humidifier-dehumidifier-state/>CurrentHumidifierDehumidifierState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-media-state/>CurrentMediaState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-position/>CurrentPosition</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-relative-humidity/>CurrentRelativeHumidity</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-slat-state/>CurrentSlatState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-temperature/>CurrentTemperature</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-tilt-angle/>CurrentTiltAngle</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-time/>CurrentTime</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-transport/>CurrentTransport</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-vertical-tilt-angle/>CurrentVerticalTiltAngle</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/current-visibility-state/>CurrentVisibilityState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/data-stream-hap-transport/>DataStreamHAPTransport</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/data-stream-hap-transport-interrupt/>DataStreamHAPTransportInterrupt</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/day-of-the-week/>DayoftheWeek</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/diagonal-field-of-view/>DiagonalFieldOfView</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/digital-zoom/>DigitalZoom</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/discover-bridged-accessories/>DiscoverBridgedAccessories</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/discovered-bridged-accessories/>DiscoveredBridgedAccessories</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/display-order/>DisplayOrder</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/event-retransmission-maximum/>EventRetransmissionMaximum</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/event-snapshots-active/>EventSnapshotsActive</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/event-transmission-counters/>EventTransmissionCounters</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/filter-change-indication/>FilterChangeIndication</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/filter-life-level/>FilterLifeLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/firmware-revision/>FirmwareRevision</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/firmware-update-readiness/>FirmwareUpdateReadiness</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/firmware-update-status/>FirmwareUpdateStatus</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/hardware-finish/>HardwareFinish</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/hardware-revision/>HardwareRevision</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/heart-beat/>HeartBeat</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/heating-threshold-temperature/>HeatingThresholdTemperature</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/hold-position/>HoldPosition</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/homekit-camera-active/>HomeKitCameraActive</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/hue/>Hue</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/identifier/>Identifier</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/identify/>Identify</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/image-mirroring/>ImageMirroring</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/image-rotation/>ImageRotation</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/input-device-type/>InputDeviceType</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/input-source-type/>InputSourceType</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/in-use/>InUse</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/is-configured/>IsConfigured</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/leak-detected/>LeakDetected</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/link-quality/>LinkQuality</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/list-pairings/>ListPairings</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/lock-control-point/>LockControlPoint</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/lock-current-state/>LockCurrentState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/lock-last-known-action/>LockLastKnownAction</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/lock-management-auto-security-timeout/>LockManagementAutoSecurityTimeout</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/lock-physical-controls/>LockPhysicalControls</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/lock-target-state/>LockTargetState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/logs/>Logs</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/mac-retransmission-maximum/>MACRetransmissionMaximum</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/mac-transmission-counters/>MACTransmissionCounters</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/managed-network-enable/>ManagedNetworkEnable</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/manually-disabled/>ManuallyDisabled</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/manufacturer/>Manufacturer</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/maximum-transmit-power/>MaximumTransmitPower</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/model/>Model</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/motion-detected/>MotionDetected</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/multifunction-button/>MultifunctionButton</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/mute/>Mute</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/name/>Name</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/network-access-violation-control/>NetworkAccessViolationControl</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/network-client-profile-control/>NetworkClientProfileControl</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/network-client-status-control/>NetworkClientStatusControl</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/nfc-access-control-point/>NFCAccessControlPoint</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/nfc-access-supported-configuration/>NFCAccessSupportedConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/night-vision/>NightVision</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/nitrogen-dioxide-density/>NitrogenDioxideDensity</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/obstruction-detected/>ObstructionDetected</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/occupancy-detected/>OccupancyDetected</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/on/>On</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/operating-state-response/>OperatingStateResponse</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/optical-zoom/>OpticalZoom</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/outlet-in-use/>OutletInUse</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/ozone-density/>OzoneDensity</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/pairing-features/>PairingFeatures</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/pair-setup/>PairSetup</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/pair-verify/>PairVerify</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/password-setting/>PasswordSetting</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/periodic-snapshots-active/>PeriodicSnapshotsActive</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/picture-mode/>PictureMode</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/ping/>Ping</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/pm10-density/>PM10Density</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/pm2.5-density/>PM2_5Density</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/position-state/>PositionState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/power-mode-selection/>PowerModeSelection</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/product-data/>ProductData</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/programmable-switch-event/>ProgrammableSwitchEvent</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/programmable-switch-output-state/>ProgrammableSwitchOutputState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/program-mode/>ProgramMode</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/reachable/>Reachable</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/received-signal-strength-indication/>ReceivedSignalStrengthIndication</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/receiver-sensitivity/>ReceiverSensitivity</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/recording-audio-active/>RecordingAudioActive</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/relative-humidity-dehumidifier-threshold/>RelativeHumidityDehumidifierThreshold</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/relative-humidity-humidifier-threshold/>RelativeHumidityHumidifierThreshold</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/relay-control-point/>RelayControlPoint</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/relay-enabled/>RelayEnabled</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/relay-state/>RelayState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/remaining-duration/>RemainingDuration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/remote-key/>RemoteKey</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/reset-filter-indication/>ResetFilterIndication</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/rotation-direction/>RotationDirection</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/rotation-speed/>RotationSpeed</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/router-status/>RouterStatus</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/saturation/>Saturation</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/security-system-alarm-type/>SecuritySystemAlarmType</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/security-system-current-state/>SecuritySystemCurrentState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/security-system-target-state/>SecuritySystemTargetState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/selected-audio-stream-configuration/>SelectedAudioStreamConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/selected-camera-recording-configuration/>SelectedCameraRecordingConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/selected-diagnostics-modes/>SelectedDiagnosticsModes</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/selected-rtp-stream-configuration/>SelectedRTPStreamConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/serial-number/>SerialNumber</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/service-label-index/>ServiceLabelIndex</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/service-label-namespace/>ServiceLabelNamespace</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/set-duration/>SetDuration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/setup-data-stream-transport/>SetupDataStreamTransport</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/setup-endpoints/>SetupEndpoints</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/setup-transfer-transport/>SetupTransferTransport</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/signal-to-noise-ratio/>SignalToNoiseRatio</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/siri-enable/>SiriEnable</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/siri-endpoint-session-status/>SiriEndpointSessionStatus</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/siri-engine-version/>SiriEngineVersion</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/siri-input-type/>SiriInputType</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/siri-light-on-use/>SiriLightOnUse</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/siri-listening/>SiriListening</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/siri-touch-to-use/>SiriTouchToUse</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/slat-type/>SlatType</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/sleep-discovery-mode/>SleepDiscoveryMode</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/sleep-interval/>SleepInterval</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/smoke-detected/>SmokeDetected</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/software-revision/>SoftwareRevision</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/staged-firmware-version/>StagedFirmwareVersion</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/status-active/>StatusActive</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/status-fault/>StatusFault</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/status-jammed/>StatusJammed</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/status-low-battery/>StatusLowBattery</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/status-tampered/>StatusTampered</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/streaming-status/>StreamingStatus</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/sulphur-dioxide-density/>SulphurDioxideDensity</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-asset-types/>SupportedAssetTypes</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-audio-recording-configuration/>SupportedAudioRecordingConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-audio-stream-configuration/>SupportedAudioStreamConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-camera-recording-configuration/>SupportedCameraRecordingConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-characteristic-value-transition-configuration/>SupportedCharacteristicValueTransitionConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-data-stream-transport-configuration/>SupportedDataStreamTransportConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-diagnostics-modes/>SupportedDiagnosticsModes</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-diagnostics-snapshot/>SupportedDiagnosticsSnapshot</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-firmware-update-configuration/>SupportedFirmwareUpdateConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-router-configuration/>SupportedRouterConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-rtp-configuration/>SupportedRTPConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-transfer-transport-configuration/>SupportedTransferTransportConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-video-recording-configuration/>SupportedVideoRecordingConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/supported-video-stream-configuration/>SupportedVideoStreamConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/swing-mode/>SwingMode</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-air-purifier-state/>TargetAirPurifierState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-air-quality/>TargetAirQuality</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-control-list/>TargetControlList</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-control-supported-configuration/>TargetControlSupportedConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-door-state/>TargetDoorState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-fan-state/>TargetFanState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-heater-cooler-state/>TargetHeaterCoolerState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-heating-cooling-state/>TargetHeatingCoolingState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-horizontal-tilt-angle/>TargetHorizontalTiltAngle</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-humidifier-dehumidifier-state/>TargetHumidifierDehumidifierState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-media-state/>TargetMediaState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-position/>TargetPosition</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-relative-humidity/>TargetRelativeHumidity</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-slat-state/>TargetSlatState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-temperature/>TargetTemperature</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-tilt-angle/>TargetTiltAngle</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-vertical-tilt-angle/>TargetVerticalTiltAngle</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/target-visibility-state/>TargetVisibilityState</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/temperature-display-units/>TemperatureDisplayUnits</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/third-party-camera-active/>ThirdPartyCameraActive</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/thread-control-point/>ThreadControlPoint</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/thread-node-capabilities/>ThreadNodeCapabilities</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/thread-openthread-version/>ThreadOpenThreadVersion</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/thread-status/>ThreadStatus</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/time-update/>TimeUpdate</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/transmit-power/>TransmitPower</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/tunnel-connection-timeout/>TunnelConnectionTimeout</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/tunneled-accessory-advertising/>TunneledAccessoryAdvertising</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/tunneled-accessory-connected/>TunneledAccessoryConnected</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/tunneled-accessory-state-number/>TunneledAccessoryStateNumber</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/valve-type/>ValveType</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/version/>Version</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/video-analysis-active/>VideoAnalysisActive</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/voc-density/>VOCDensity</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/volume/>Volume</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/volume-control-type/>VolumeControlType</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/volume-selector/>VolumeSelector</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/wake-configuration/>WakeConfiguration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/wan-configuration-list/>WANConfigurationList</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/wan-status-list/>WANStatusList</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/water-level/>WaterLevel</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/wi-fi-capabilities/>WiFiCapabilities</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/wi-fi-configuration-control/>WiFiConfigurationControl</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/characteristic/wi-fi-satellite-status/>WiFiSatelliteStatus</a></li>
+</ul>
+</div>
+</div>
+<div class=dropdown>
+<a class=unstyled data-bs-toggle=collapse href=#collapse-discover-more role=button aria-expanded=false aria-controls=collapse-discover-more>
+<h3 class=caret>Discover More</h3>
+</a>
+<div class=collapse id=collapse-discover-more>
+<ul class=list-unstyled>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/discover-more/contribution/>Contribution</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/discover-more/migration/>Migration</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/discover-more/roadmap/>Roadmap</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/discover-more/changelog/>Changelog</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/discover-more/credits/>Credits</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/discover-more/experimental/>Experimental</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+<div class=page-links>
+<h3>On this page</h3>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#what-is-that>What is that</a></li>
+<li><a href=#how-to-use-it>How to use it</a></li>
+<li><a href=#example>Example</a></li>
+</ul>
+</nav>
+</div>
+</nav>
+<main class="docs-content col-lg-11 col-xl-9">
+<nav aria-label=breadcrumb>
+<ol class=breadcrumb>
+<li class=breadcrumb-item><a href=https://nrchkb.github.io/>Home</a></li>
+<li class=breadcrumb-item><a href=https://nrchkb.github.io/wiki/>Wiki</a></li>
+<li class=breadcrumb-item><a href=https://nrchkb.github.io/wiki/nodes/>Nodes</a></li>
+<li class="breadcrumb-item active" aria-current=page>Wait For Setup</li>
+</ol>
+</nav>
+<h1 id=title>Wait For Setup</h1>
+<small class=updated>Updated February 7, 2022 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a>, <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/toshik/>Toshik</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<p class=lead>Dynamic configuration of the Characteristic Properties of your Service Node.</p>
+<h2 id=what-is-that>What is that<a href=#what-is-that class=anchor aria-hidden=true>#</a> </h2>
+<p>Wait For Setup feature allows dynamic configuration of the Characteristic Properties of a Service Node before its initialization. In other words, it allows you to configure your Characteristic Properties with values from external sources.</p>
+<div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">⚠️ </div>
+<div class=w-100> Service Node will remain in initialization (will not appear in Home.app) until it has received its configuration message. Once this message has been sent, it cannot be changed unless you redeploy your flow.</div>
+</div>
+<h2 id=how-to-use-it>How to use it<a href=#how-to-use-it class=anchor aria-hidden=true>#</a> </h2>
+<p>Go to your Service Node and check the option <code>Wait for Setup</code> then create a Message that will have the following structure:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+ <span class=nt>&#34;nrchkb&#34;</span><span class=p>:</span> <span class=p>{</span>
+ <span class=nt>&#34;setup&#34;</span><span class=p>:</span> <span class=p>{</span>
+ <span class=nt>&#34;... setup properties go here&#34;</span>
+ <span class=p>}</span>
+ <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><p>In the <code>setup</code> part you may specify properties to configure accessories, such as <code>name</code>, <code>model</code>, <code>manufacturer</code>, and other properties available on the <code>HomeKit</code> node.</p>
+<p>To configure accessory characteristics <code>setup</code> should contain <code>characteristicProperties</code> <strong>string</strong> JSON representation for Characteristics Properties as seen in the HomeKit node properties page.</p>
+<p>All properties passed in the <code>setup</code> part of the Setup Message will be merged with properties explicitly set in the node properties page, so you may specify only properties to override those on the properties page.</p>
+<p>Also, the feature allows configuring the homekit node based on some external variables.</p>
+<h2 id=example>Example<a href=#example class=anchor aria-hidden=true>#</a> </h2>
+<p>Here is an example of how to configure the HomeKit node to set accessory name based on <code>ACCESSORY_NAME</code> variable and <code>ColorTemperature</code> feature will be enabled in case <code>FEATURE_COLOR_TEMPERATURE</code> variable is <code>true</code>:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>[</span>
+  <span class=p>{</span>
+    <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;3550fe6c.93d6a2&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;inject&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;z&#34;</span><span class=p>:</span> <span class=s2>&#34;93ad7680.969cb8&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;props&#34;</span><span class=p>:</span> <span class=p>[</span>
+      <span class=p>{</span> <span class=nt>&#34;p&#34;</span><span class=p>:</span> <span class=s2>&#34;payload&#34;</span> <span class=p>},</span>
+      <span class=p>{</span>
+        <span class=nt>&#34;p&#34;</span><span class=p>:</span> <span class=s2>&#34;payload.nrchkb.setup.characteristicProperties&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;v&#34;</span><span class=p>:</span> <span class=s2>&#34;&#39;{\t \&#34;On\&#34;: true,\t \&#34;Brightness\&#34;: true\t &#39; &amp; ($env(&#39;FEATURE_COLOR_TEMPERATURE&#39;) ? &#39;,\&#34;ColorTemperature\&#34;: true&#39; : &#39;&#39; ) &amp; &#39;\t}&#39;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;vt&#34;</span><span class=p>:</span> <span class=s2>&#34;jsonata&#34;</span>
+      <span class=p>}</span>
+    <span class=p>],</span>
+    <span class=nt>&#34;repeat&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;crontab&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;once&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+    <span class=nt>&#34;onceDelay&#34;</span><span class=p>:</span> <span class=mf>0.1</span><span class=p>,</span>
+    <span class=nt>&#34;topic&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;payload&#34;</span><span class=p>:</span> <span class=s2>&#34;{\t \&#34;nrchkb\&#34;: {\t \&#34;setup\&#34;: {\t \&#34;name\&#34;: $env(\&#34;ACCESSORY_NAME\&#34;),\t \&#34;characteristicProperties\&#34;: \&#34;{}\&#34;\t }\t }\t}&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;payloadType&#34;</span><span class=p>:</span> <span class=s2>&#34;jsonata&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;x&#34;</span><span class=p>:</span> <span class=mi>660</span><span class=p>,</span>
+    <span class=nt>&#34;y&#34;</span><span class=p>:</span> <span class=mi>440</span><span class=p>,</span>
+    <span class=nt>&#34;wires&#34;</span><span class=p>:</span> <span class=p>[[</span><span class=s2>&#34;d73d1565.8d9568&#34;</span><span class=p>,</span> <span class=s2>&#34;a954f617.e7b868&#34;</span><span class=p>]]</span>
+  <span class=p>}</span>
+<span class=p>]</span>
+</code></pre></div>
+<p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/nodes/wait-for-setup.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
+<div class="docs-navigation d-flex justify-content-between">
+<a href=https://nrchkb.github.io/wiki/discover-more/roadmap/>
+<div class="card my-1">
+<div class="card-body py-2">
+&larr; Roadmap
+</div>
+</div>
+</a>
+<a class=ms-auto href=https://nrchkb.github.io/wiki/discover-more/changelog/>
+<div class="card my-1">
+<div class="card-body py-2">
+Changelog &rarr;
+</div>
+</div>
+</a>
+</div>
+</main>
+</div>
+</div>
+</div>
+<footer class="footer text-muted">
+<div class=container>
+<div class=row>
+<div class="col order-first order-lg-first">
+<ul class=list-inline>
+<li class=list-inline-item><a href=https://nrchkb.github.io/privacy-policy/>Privacy</a></li>
+</ul>
+</div>
+<div class="col order-last order-lg-last text-end">
+<ul class=list-inline>
+<li class=list-inline-item><a href=https://discord.gg/uvYac5u><img src="https://img.shields.io/discord/586065987267330068?color=%238f0000&label=Discord&logo=discord" alt="NRCHKB Discord"></a></li>
+</ul>
+</div>
+<div class="col-lg-8 order-last order-lg-first text-center">
+<ul class=list-inline>
+<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://getdoks.org/>Doks</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script src=https://nrchkb.github.io/js/bootstrap.min.592b9faf6c83a2bda564a377cf82f9a67546b198510a93fdb0728f9622ec22729d44be02fb2ea16c3fe5365ae1806259cd111932ca28e68b66462d6937635bab.js integrity="sha512-WSufr2yDor2lZKN3z4L5pnVGsZhRCpP9sHKPliLsInKdRL4C+y6hbD/lNlrhgGJZzREZMsoo5otmRi1pN2Nbqw==" crossorigin=anonymous defer></script>
+<script src=https://nrchkb.github.io/js/highlight.min.533e1de8c53e115db8b89c51da51ec35dd647651070cba69056f64cfe8801f920028db81aeed3391346f17b90cf80e7c20c9ef80cac058de437fd57af2f097df.js integrity="sha512-Uz4d6MU+EV24uJxR2lHsNd1kdlEHDLppBW9kz+iAH5IAKNuBru0zkTRvF7kM+A58IMnvgMrAWN5Df9V68vCX3w==" crossorigin=anonymous defer></script>
+<script src=https://nrchkb.github.io/main.min.fe7dc6b46d2ca054feeaf5e9971466c39008f8abcdcdf2d0625572a67438ec19d8551d9542053e8d2c1702e8bd41427e8b6dfa045981c3274652484f9326ae04.js integrity="sha512-/n3GtG0soFT+6vXplxRmw5AI+KvNzfLQYlVypnQ47BnYVR2VQgU+jSwXAui9QUJ+i236BFmBwydGUkhPkyauBA==" crossorigin=anonymous defer></script>
+<script src=https://cdn.jsdelivr.net/npm/@docsearch/js@alpha></script>
+<script type=text/javascript>docsearch({container:'#docsearch',appId:'J8509KWQO1',indexName:'nrchkb',apiKey:'3b8902adb61265110336eccda34c4199'})</script>
+<link rel=preconnect href=https://J8509KWQO1-dsn.algolia.net crossorigin>
+<script src=https://nrchkb.github.io/index.js defer></script>
+</body>
+</html>

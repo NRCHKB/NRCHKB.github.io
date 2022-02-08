@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.0be1f4069c6ad7da42f777fc9459a851bb68a3f5653eaaaf1f580b4861cf9d45b6047134e8134c7016ff01b167f362ea33c5cca9bc64d88bad2da4f0a7d79441.css integrity="sha512-C+H0Bpxq19pC93f8lFmoUbtoo/VlPqqvH1gLSGHPnUW2BHE06BNMcBb/AbFn82LqM8XMqbxk2IutLaTwp9eUQQ==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.f396c6486718626f1400fa7d7d8c2a88a380e965e4e46586237940d1749a3ca64397dcaaabb088403c5b944a92be772f1d4c690478e597db963cea19e0044df5.css integrity="sha512-85bGSGcYYm8UAPp9fYwqiKOA6WXk5GWGI3lA0XSaPKZDl9yqq7CIQDxblEqSvncvHUxpBHjll9uWPOoZ4ARN9Q==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@docsearch/css@alpha>
 <meta name=robots content="index, follow">
@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/introduction/quick-start/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-04-01T00:00:00+02:00">
-<meta property="article:modified_time" content="2021-10-15T22:06:03+00:00">
+<meta property="article:modified_time" content="2022-02-07T19:48:12+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -90,9 +90,8 @@
 <div class="collapse show" id=collapse-introduction>
 <ul class=list-unstyled>
 <li><a class="docs-link active" href=https://nrchkb.github.io/wiki/introduction/quick-start/>Quick Start</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/output-messages/>Output Messages</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/characteristics/>Characteristics</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/wait-for-setup/>Wait For Setup</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/how-to-update/>How to Update</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/troubleshooting/>Troubleshooting</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/faq/>FAQ</a></li>
 </ul>
 </div>
@@ -105,7 +104,12 @@
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/service-node/>Service Node</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/host-node/>Host Node</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
+<li><a class="docs-link divider" href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/linked-service/>Linked Service</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/characteristics/>Characteristic Properties</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/topic/>Topic</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/output-messages/>Output Messages</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/wait-for-setup/>Wait For Setup</a></li>
 </ul>
 </div>
 </div>
@@ -493,6 +497,7 @@
 </ul>
 </li>
 <li><a href=#demo-setup>Demo Setup</a></li>
+<li><a href=#how-to-install>How to Install</a></li>
 <li><a href=#contribution>Contribution</a></li>
 </ul>
 </nav>
@@ -508,26 +513,42 @@
 </ol>
 </nav>
 <h1 id=title>Quick Start</h1>
-<small class=updated>Updated October 15, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a>, <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/radokristof/>radokristof</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<small class=updated>Updated February 7, 2022 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a>, <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/radokristof/>radokristof</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead>Welcome to the NRCHKB wiki!</p>
-<p>This wiki will be used to share examples so that users may see how this plugin functions and get started more easily with copyable flows for each HomeKit service. This page will assume you are familiar with Node-RED basics.</p>
+<p>This wiki will be used to share examples so that users may see how this plugin functions and to get started more easily with copyable flows for each HomeKit service. This page will assume you are familiar with Node-RED basics.</p>
 <p>For new users, please start with the <a href=https://nodered.org/docs/>official Node-RED docs</a> before continuing.</p>
 <h2 id=nodes>Nodes<a href=#nodes class=anchor aria-hidden=true>#</a> </h2>
 <p>A Node is the basic building block of a flow.
-Nodes are triggered by either receiving a message from the previous node in a flow, or by waiting for some external event, such as change state of the light or some automated logic. They process that message, or event, and then may send a message to the next nodes in the flow.</p>
+Nodes are triggered by either receiving a message from the previous node in a flow or by waiting for some external event, such as state change of the light or some automated logic. They process that message, or event, and then may send a message to the next nodes in the flow.</p>
 <p>A node can have at most one input port and as many output ports as it requires.</p>
 <p>Currently, we have two nodes:</p>
 <h3 id=service-node>Service Node<a href=#service-node class=anchor aria-hidden=true>#</a> </h3>
 <p>Service Node mostly represents Service which will appear in Apple Home.app.
-It is our main building block for creating interaction between house, application and our other systems.</p>
-<p>Find more about this node <a href=https://nrchkb.github.io/wiki/nodes/service-node/ title="Service Node">here</a>.</p>
+It is our main building block for creating interaction between house, application, and our other systems.</p>
+<div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">👉 </div>
+<div class=w-100> Find more about <a href=https://nrchkb.github.io/wiki/nodes/service-node/ title="Service Node">Service Node</a>.</div>
+</div>
 <h3 id=host-node>Host Node<a href=#host-node class=anchor aria-hidden=true>#</a> </h3>
 <p>Host Node is our configuration node. It is either Bridge or Standalone Accessory.
 It will be used to pair (connect) our virtual device in Apple Home.app.</p>
-<p>Find more about this node <a href=https://nrchkb.github.io/wiki/nodes/host-node/ title="Host Node">here</a>.</p>
+<div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">👉 </div>
+<div class=w-100> Find more about <a href=https://nrchkb.github.io/wiki/nodes/host-node/ title="Host Node">Host Node</a>.</div>
+</div>
 <h2 id=demo-setup>Demo Setup<a href=#demo-setup class=anchor aria-hidden=true>#</a> </h2>
-<p>Once you have Node-RED running, head over to the Demo Setup page for the easiest demo setup we can provide. This is the setup we use for testing new releases - the demos can be copied directly into Node-RED and added to HomeKit.
-<a href=https://nrchkb.github.io/wiki/examples/demo-setup/ title="Demo Setup">Demo Setup page</a></p>
+<p>Once you have Node-RED running, head over to the Demo Setup page for the easiest demo setup we can provide. This is the setup we use for testing new releases - the demos can be copied directly into Node-RED and added to HomeKit.</p>
+<div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">👉 </div>
+<div class=w-100> Find more about <a href=https://nrchkb.github.io/wiki/examples/demo-setup/ title="Demo Setup">Demo Setup</a>.</div>
+</div>
+<h2 id=how-to-install>How to Install<a href=#how-to-install class=anchor aria-hidden=true>#</a> </h2>
+<p>If you want to install the NRCHKB node, follow the steps below.</p>
+<ol>
+<li>In the Node-RED UI, click on the menu at the top right.</li>
+<li>Go to <code>Manage Palette</code> and click on <code>Install</code>.</li>
+<li>Research <code>node-red-contrib-homekit-bridged</code> and click <code>Install</code>.</li>
+</ol>
 <h2 id=contribution>Contribution<a href=#contribution class=anchor aria-hidden=true>#</a> </h2>
 <p>If you wish to contribute to our wiki then head <a href=https://nrchkb.github.io/wiki/discover-more/contribution/ title=Contribution>here</a> and read our guidelines.</p>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/introduction/quick-start.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
@@ -539,10 +560,10 @@ It will be used to pair (connect) our virtual device in Apple Home.app.</p>
 </div>
 </div>
 </a>
-<a class=ms-auto href=https://nrchkb.github.io/wiki/nodes/service-node/>
+<a class=ms-auto href=https://nrchkb.github.io/wiki/introduction/how-to-update/>
 <div class="card my-1">
 <div class="card-body py-2">
-Service Node &rarr;
+How to Update &rarr;
 </div>
 </div>
 </a>
@@ -554,15 +575,19 @@ Service Node &rarr;
 <footer class="footer text-muted">
 <div class=container>
 <div class=row>
-<div class="col-lg-8 order-last order-lg-first">
-<ul class=list-inline>
-<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://getdoks.org/>Doks</a></li>
-</ul>
-</div>
-<div class="col-lg-8 order-first order-lg-last text-lg-end">
+<div class="col order-first order-lg-first">
 <ul class=list-inline>
 <li class=list-inline-item><a href=https://nrchkb.github.io/privacy-policy/>Privacy</a></li>
+</ul>
+</div>
+<div class="col order-last order-lg-last text-end">
+<ul class=list-inline>
 <li class=list-inline-item><a href=https://discord.gg/uvYac5u><img src="https://img.shields.io/discord/586065987267330068?color=%238f0000&label=Discord&logo=discord" alt="NRCHKB Discord"></a></li>
+</ul>
+</div>
+<div class="col-lg-8 order-last order-lg-first text-center">
+<ul class=list-inline>
+<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://getdoks.org/>Doks</a></li>
 </ul>
 </div>
 </div>

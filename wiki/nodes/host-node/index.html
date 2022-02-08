@@ -5,26 +5,26 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.0be1f4069c6ad7da42f777fc9459a851bb68a3f5653eaaaf1f580b4861cf9d45b6047134e8134c7016ff01b167f362ea33c5cca9bc64d88bad2da4f0a7d79441.css integrity="sha512-C+H0Bpxq19pC93f8lFmoUbtoo/VlPqqvH1gLSGHPnUW2BHE06BNMcBb/AbFn82LqM8XMqbxk2IutLaTwp9eUQQ==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.f396c6486718626f1400fa7d7d8c2a88a380e965e4e46586237940d1749a3ca64397dcaaabb088403c5b944a92be772f1d4c690478e597db963cea19e0044df5.css integrity="sha512-85bGSGcYYm8UAPp9fYwqiKOA6WXk5GWGI3lA0XSaPKZDl9yqq7CIQDxblEqSvncvHUxpBHjll9uWPOoZ4ARN9Q==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@docsearch/css@alpha>
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <title>Host Node - NRCHKB</title>
-<meta name=description content="Host Node">
+<meta name=description content="Host node acts as a link between service node(s) and Home.app">
 <link rel=canonical href=https://nrchkb.github.io/wiki/nodes/host-node/>
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://nrchkb.github.io/images/social-preview.png">
 <meta name=twitter:title content="Host Node">
-<meta name=twitter:description content="Host Node">
+<meta name=twitter:description content="Host node acts as a link between service node(s) and Home.app">
 <meta property="og:title" content="Host Node">
-<meta property="og:description" content="Host Node">
+<meta property="og:description" content="Host node acts as a link between service node(s) and Home.app">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://nrchkb.github.io/wiki/nodes/host-node/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-05-06T00:00:00+02:00">
-<meta property="article:modified_time" content="2021-09-30T18:52:26+00:00">
+<meta property="article:modified_time" content="2022-02-07T19:48:12+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -90,9 +90,8 @@
 <div class=collapse id=collapse-introduction>
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/quick-start/>Quick Start</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/output-messages/>Output Messages</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/characteristics/>Characteristics</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/wait-for-setup/>Wait For Setup</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/how-to-update/>How to Update</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/troubleshooting/>Troubleshooting</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/faq/>FAQ</a></li>
 </ul>
 </div>
@@ -105,7 +104,12 @@
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/service-node/>Service Node</a></li>
 <li><a class="docs-link active" href=https://nrchkb.github.io/wiki/nodes/host-node/>Host Node</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
+<li><a class="docs-link divider" href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/linked-service/>Linked Service</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/characteristics/>Characteristic Properties</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/topic/>Topic</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/output-messages/>Output Messages</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/wait-for-setup/>Wait For Setup</a></li>
 </ul>
 </div>
 </div>
@@ -484,7 +488,23 @@
 <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 <div class=page-links>
 <h3>On this page</h3>
-<nav id=TableOfContents><ul></ul></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#configuration>Configuration</a>
+<ul>
+<li><a href=#accessory-category>Accessory Category</a></li>
+<li><a href=#pin-code>Pin Code</a></li>
+<li><a href=#port>Port</a></li>
+<li><a href=#advertiser>Advertiser</a></li>
+<li><a href=#allow-insecure-request>Allow Insecure Request</a></li>
+<li><a href=#fields>Fields</a></li>
+<li><a href=#name>Name</a></li>
+<li><a href=#allow-message-passthrough>Allow Message Passthrough</a></li>
+<li><a href=#custom-mdns-configuration>Custom MDNS Configuration</a></li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
 </nav>
 <main class="docs-content col-lg-11 col-xl-9">
@@ -497,22 +517,121 @@
 </ol>
 </nav>
 <h1 id=title>Host Node</h1>
-<small class=updated>Updated September 30, 2021 </small>
-<p class=lead></p>
-<p>Host Node is either Bridge or Standalone Accessory</p>
+<small class=updated>Updated February 7, 2022 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/gogovega/>GogoVega</a></small>
+<p class=lead>Host node acts as a link between service node(s) and Home.app.</p>
+<p>It can be configured in two ways:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bridge</td>
+<td>When you add a Bridge in the Home.app, it will add all services related to this Bridge.</td>
+</tr>
+<tr>
+<td>Accessory</td>
+<td>Here, the Bridge being the Accessory itself, you can define the type of service it is, and when you add it to the Home.app it will show you your Accessory with a logo.</td>
+</tr>
+</tbody>
+</table>
+<p><div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">⚠️ </div>
+<div class=w-100> <strong>Important Notice,</strong> when you create a new Bridge for Service Node that is in a subflow, once deployed new Bridge will be created for each subflow instance in a flow. If you create a Bridge outside a subflow then it will be created only once (reused)..</div>
+</div>
+<br>
+<div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">💡 </div>
+<div class=w-100>It is recommended to use Accessory when using a group of services (Television, Smart Speaker) to avoid display problems in Home.app. </div>
+</div>
+</p>
+<h2 id=configuration>Configuration<a href=#configuration class=anchor aria-hidden=true>#</a> </h2>
+<p>You will find below a list of parameters and their usefulness.</p>
+<h3 id=accessory-category>Accessory Category<a href=#accessory-category class=anchor aria-hidden=true>#</a> </h3>
+<p><strong>This field is only available when <em><a href=https://nrchkb.github.io/wiki/nodes/service-node/#host-type title="Host Type">Host Type</a></em> is set to <em>Accessory</em></strong></p>
+<p>Select the type of Accessory to display in the Home.app.</p>
+<h3 id=pin-code>Pin Code<a href=#pin-code class=anchor aria-hidden=true>#</a> </h3>
+<p>The Pin code is used to validate the addition of a Bridge or an Accessory.</p>
+<div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">‼️ </div>
+<div class=w-100> <strong>It is strongly recommended</strong> not to use weak code due to their trivial, insecure nature. Since version 1.2.0 a pin code generator has been added.</div>
+</div>
+<h3 id=port>Port<a href=#port class=anchor aria-hidden=true>#</a> </h3>
+<p>You can manually enter the desired port or leave the field blank to generate it automatically.</p>
+<h3 id=advertiser>Advertiser<a href=#advertiser class=anchor aria-hidden=true>#</a> </h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leave blank</td>
+<td>By default, it&rsquo;s Bonjour used.</td>
+</tr>
+<tr>
+<td>Bonjour</td>
+<td>Bonjour HAP is the default and legacy advertiser, it is not as efficient in terms of system resource usage and network traffic when compared to Ciao.</td>
+</tr>
+<tr>
+<td>Ciao</td>
+<td>For the majority of users, Ciao should provide the best experience, however in some network setups it does not work and Bonjour HAP should be used instead.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=allow-insecure-request>Allow Insecure Request<a href=#allow-insecure-request class=anchor aria-hidden=true>#</a> </h3>
+<p>If allowed, will allow Unencrypted and Unauthenticated access to the HTTP server.</p>
+<h3 id=fields>Fields<a href=#fields class=anchor aria-hidden=true>#</a> </h3>
+<p>Below is a list of fields that you can fill, it is not mandatory but it can be used to identify the characteristics of your services.</p>
+<ul>
+<li>Manufacturer</li>
+<li>Serial Number</li>
+<li>Model</li>
+<li>Firmware Revision</li>
+<li>Hardware Revision</li>
+<li>Software Revision</li>
+</ul>
+<h3 id=name>Name<a href=#name class=anchor aria-hidden=true>#</a> </h3>
+<p>This name will be displayed on your Bridge and also in the Home.app. It is also possible to change the name in the Home.app of your Bridge but this will not change the name in Node-RED.</p>
+<h3 id=allow-message-passthrough>Allow Message Passthrough<a href=#allow-message-passthrough class=anchor aria-hidden=true>#</a> </h3>
+<p>This option allows you to choose whether you want to allow messages to pass through your node or not.</p>
+<div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">💡 </div>
+<div class=w-100> Learn more about <a href=https://nrchkb.github.io/wiki/nodes/output-messages/#disable-messages-passthrough title="Disable Messages Passthrough">Disable Message Passthrough</a>.</div>
+</div>
+<h3 id=custom-mdns-configuration>Custom MDNS Configuration<a href=#custom-mdns-configuration class=anchor aria-hidden=true>#</a> </h3>
+<p>In computer networks, the multicast DNS protocol resolves hostnames to IP addresses within small networks that do not include a local name server.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=kr>export</span> <span class=nx>type</span> <span class=nx>MulticastOptions</span> <span class=o>=</span> <span class=p>{</span>
+  <span class=nx>multicast</span><span class=o>?:</span> <span class=kr>boolean</span><span class=p>,</span>
+  <span class=kr>interface</span><span class=o>?:</span> <span class=nx>string</span><span class=p>,</span>
+  <span class=nx>port</span><span class=o>?:</span> <span class=nx>number</span><span class=p>,</span>
+  <span class=nx>ip</span><span class=o>?:</span> <span class=nx>string</span><span class=p>,</span>
+  <span class=nx>ttl</span><span class=o>?:</span> <span class=nx>number</span><span class=p>,</span>
+  <span class=nx>loopback</span><span class=o>?:</span> <span class=kr>boolean</span><span class=p>,</span>
+  <span class=nx>reuseAddr</span><span class=o>?:</span> <span class=kr>boolean</span><span class=p>,</span>
+<span class=p>};</span>
+</code></pre></div><div class="alert alert-warning d-flex" role=alert>
+<div class="flex-shrink-1 alert-icon">👉 </div>
+<div class=w-100> Learn more about <a href=https://github.com/mafintosh/multicast-dns>MDNS Configuration</a>.</div>
+</div>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/nodes/host-node.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
-<a href=https://nrchkb.github.io/wiki/nodes/service-node/>
+<a href=https://nrchkb.github.io/wiki/introduction/troubleshooting/>
 <div class="card my-1">
 <div class="card-body py-2">
-&larr; Service Node
+&larr; Troubleshooting
 </div>
 </div>
 </a>
-<a class=ms-auto href=https://nrchkb.github.io/wiki/nodes/status-node/>
+<a class=ms-auto href=https://nrchkb.github.io/wiki/introduction/faq/>
 <div class="card my-1">
 <div class="card-body py-2">
-Status Node &rarr;
+FAQ &rarr;
 </div>
 </div>
 </a>
@@ -524,15 +643,19 @@ Status Node &rarr;
 <footer class="footer text-muted">
 <div class=container>
 <div class=row>
-<div class="col-lg-8 order-last order-lg-first">
-<ul class=list-inline>
-<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://getdoks.org/>Doks</a></li>
-</ul>
-</div>
-<div class="col-lg-8 order-first order-lg-last text-lg-end">
+<div class="col order-first order-lg-first">
 <ul class=list-inline>
 <li class=list-inline-item><a href=https://nrchkb.github.io/privacy-policy/>Privacy</a></li>
+</ul>
+</div>
+<div class="col order-last order-lg-last text-end">
+<ul class=list-inline>
 <li class=list-inline-item><a href=https://discord.gg/uvYac5u><img src="https://img.shields.io/discord/586065987267330068?color=%238f0000&label=Discord&logo=discord" alt="NRCHKB Discord"></a></li>
+</ul>
+</div>
+<div class="col-lg-8 order-last order-lg-first text-center">
+<ul class=list-inline>
+<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://getdoks.org/>Doks</a></li>
 </ul>
 </div>
 </div>

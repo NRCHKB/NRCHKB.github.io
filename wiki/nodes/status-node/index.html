@@ -5,7 +5,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-regular.woff2 type=font/woff2 crossorigin>
 <link rel=preload as=font href=https://nrchkb.github.io/fonts/vendor/jost/jost-v4-latin-700.woff2 type=font/woff2 crossorigin>
-<link rel=stylesheet href=https://nrchkb.github.io/main.0be1f4069c6ad7da42f777fc9459a851bb68a3f5653eaaaf1f580b4861cf9d45b6047134e8134c7016ff01b167f362ea33c5cca9bc64d88bad2da4f0a7d79441.css integrity="sha512-C+H0Bpxq19pC93f8lFmoUbtoo/VlPqqvH1gLSGHPnUW2BHE06BNMcBb/AbFn82LqM8XMqbxk2IutLaTwp9eUQQ==" crossorigin=anonymous>
+<link rel=stylesheet href=https://nrchkb.github.io/main.f396c6486718626f1400fa7d7d8c2a88a380e965e4e46586237940d1749a3ca64397dcaaabb088403c5b944a92be772f1d4c690478e597db963cea19e0044df5.css integrity="sha512-85bGSGcYYm8UAPp9fYwqiKOA6WXk5GWGI3lA0XSaPKZDl9yqq7CIQDxblEqSvncvHUxpBHjll9uWPOoZ4ARN9Q==" crossorigin=anonymous>
 <noscript><style>img.lazyload{display:none}</style></noscript>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@docsearch/css@alpha>
 <meta name=robots content="index, follow">
@@ -24,7 +24,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/nodes/status-node/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-09-30T18:51:41+00:00">
-<meta property="article:modified_time" content="2021-09-30T18:57:39+00:00">
+<meta property="article:modified_time" content="2022-02-07T19:48:12+00:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -90,9 +90,8 @@
 <div class=collapse id=collapse-introduction>
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/quick-start/>Quick Start</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/output-messages/>Output Messages</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/characteristics/>Characteristics</a></li>
-<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/wait-for-setup/>Wait For Setup</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/how-to-update/>How to Update</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/troubleshooting/>Troubleshooting</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/introduction/faq/>FAQ</a></li>
 </ul>
 </div>
@@ -105,7 +104,12 @@
 <ul class=list-unstyled>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/service-node/>Service Node</a></li>
 <li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/host-node/>Host Node</a></li>
-<li><a class="docs-link active" href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
+<li><a class="docs-link active divider" href=https://nrchkb.github.io/wiki/nodes/status-node/>Status Node</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/linked-service/>Linked Service</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/characteristics/>Characteristic Properties</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/topic/>Topic</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/output-messages/>Output Messages</a></li>
+<li><a class=docs-link href=https://nrchkb.github.io/wiki/nodes/wait-for-setup/>Wait For Setup</a></li>
 </ul>
 </div>
 </div>
@@ -511,7 +515,7 @@
 </ol>
 </nav>
 <h1 id=title>Status Node</h1>
-<small class=updated>Updated September 30, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
+<small class=updated>Updated February 7, 2022 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a></small>
 <p class=lead></p>
 <p>This node outputs status of the HomeKit Service.</p>
 <h2 id=configuration>Configuration<a href=#configuration class=anchor aria-hidden=true>#</a> </h2>
@@ -573,77 +577,69 @@ You can either connect inject node or make some login in your flow to trigger it
 </table>
 <h3 id=example-output>Example output<a href=#example-output class=anchor aria-hidden=true>#</a> </h3>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
-  <span class=nt>&#34;payload&#34;</span><span class=p>:{</span>
-    <span class=nt>&#34;displayName&#34;</span><span class=p>:</span><span class=s2>&#34;My Fav Switch&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;00000049-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;subtype&#34;</span><span class=p>:</span><span class=s2>&#34;01b45824-9beb-4b19-bb0c-3b4c9e3fe2ba&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span><span class=s2>&#34;Switch&#34;</span><span class=p>,</span>
-    <span class=nt>&#34;hiddenService&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
-    <span class=nt>&#34;primaryService&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
-    <span class=nt>&#34;characteristics&#34;</span><span class=p>:[</span>
+  <span class=nt>&#34;payload&#34;</span><span class=p>:</span> <span class=p>{</span>
+    <span class=nt>&#34;displayName&#34;</span><span class=p>:</span> <span class=s2>&#34;My Fav Switch&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;UUID&#34;</span><span class=p>:</span> <span class=s2>&#34;00000049-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;subtype&#34;</span><span class=p>:</span> <span class=s2>&#34;01b45824-9beb-4b19-bb0c-3b4c9e3fe2ba&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span> <span class=s2>&#34;Switch&#34;</span><span class=p>,</span>
+    <span class=nt>&#34;hiddenService&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+    <span class=nt>&#34;primaryService&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+    <span class=nt>&#34;characteristics&#34;</span><span class=p>:</span> <span class=p>[</span>
       <span class=p>{</span>
-        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span><span class=s2>&#34;Name&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;00000023-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
-        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span><span class=s2>&#34;Name&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;value&#34;</span><span class=p>:</span><span class=s2>&#34;My Fav Switch&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;props&#34;</span><span class=p>:{</span>
-          <span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;string&#34;</span><span class=p>,</span>
-          <span class=nt>&#34;perms&#34;</span><span class=p>:[</span>
-            <span class=s2>&#34;pr&#34;</span>
-          <span class=p>],</span>
-          <span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=mi>64</span>
+        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span> <span class=s2>&#34;Name&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span> <span class=s2>&#34;00000023-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span> <span class=s2>&#34;Name&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;value&#34;</span><span class=p>:</span> <span class=s2>&#34;My Fav Switch&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;props&#34;</span><span class=p>:</span> <span class=p>{</span>
+          <span class=nt>&#34;format&#34;</span><span class=p>:</span> <span class=s2>&#34;string&#34;</span><span class=p>,</span>
+          <span class=nt>&#34;perms&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;pr&#34;</span><span class=p>],</span>
+          <span class=nt>&#34;maxLen&#34;</span><span class=p>:</span> <span class=mi>64</span>
         <span class=p>}</span>
       <span class=p>},</span>
       <span class=p>{</span>
-        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span><span class=s2>&#34;On&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;00000025-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
-        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span><span class=s2>&#34;On&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;value&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
-        <span class=nt>&#34;props&#34;</span><span class=p>:{</span>
-          <span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;bool&#34;</span><span class=p>,</span>
-          <span class=nt>&#34;perms&#34;</span><span class=p>:[</span>
-            <span class=s2>&#34;ev&#34;</span><span class=p>,</span>
-            <span class=s2>&#34;pr&#34;</span><span class=p>,</span>
-            <span class=s2>&#34;pw&#34;</span>
-          <span class=p>]</span>
+        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span> <span class=s2>&#34;On&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span> <span class=s2>&#34;00000025-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span> <span class=s2>&#34;On&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;value&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;props&#34;</span><span class=p>:</span> <span class=p>{</span>
+          <span class=nt>&#34;format&#34;</span><span class=p>:</span> <span class=s2>&#34;bool&#34;</span><span class=p>,</span>
+          <span class=nt>&#34;perms&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;ev&#34;</span><span class=p>,</span> <span class=s2>&#34;pr&#34;</span><span class=p>,</span> <span class=s2>&#34;pw&#34;</span><span class=p>]</span>
         <span class=p>}</span>
       <span class=p>}</span>
     <span class=p>],</span>
-    <span class=nt>&#34;optionalCharacteristics&#34;</span><span class=p>:[</span>
+    <span class=nt>&#34;optionalCharacteristics&#34;</span><span class=p>:</span> <span class=p>[</span>
       <span class=p>{</span>
-        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span><span class=s2>&#34;Name&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span><span class=s2>&#34;00000023-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span><span class=kc>false</span><span class=p>,</span>
-        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span><span class=s2>&#34;Name&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;value&#34;</span><span class=p>:</span><span class=s2>&#34;&#34;</span><span class=p>,</span>
-        <span class=nt>&#34;props&#34;</span><span class=p>:{</span>
-          <span class=nt>&#34;format&#34;</span><span class=p>:</span><span class=s2>&#34;string&#34;</span><span class=p>,</span>
-          <span class=nt>&#34;perms&#34;</span><span class=p>:[</span>
-            <span class=s2>&#34;pr&#34;</span>
-          <span class=p>],</span>
-          <span class=nt>&#34;maxLen&#34;</span><span class=p>:</span><span class=mi>64</span>
+        <span class=nt>&#34;displayName&#34;</span><span class=p>:</span> <span class=s2>&#34;Name&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;UUID&#34;</span><span class=p>:</span> <span class=s2>&#34;00000023-0000-1000-8000-0026BB765291&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;eventOnlyCharacteristic&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+        <span class=nt>&#34;constructorName&#34;</span><span class=p>:</span> <span class=s2>&#34;Name&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;value&#34;</span><span class=p>:</span> <span class=s2>&#34;&#34;</span><span class=p>,</span>
+        <span class=nt>&#34;props&#34;</span><span class=p>:</span> <span class=p>{</span>
+          <span class=nt>&#34;format&#34;</span><span class=p>:</span> <span class=s2>&#34;string&#34;</span><span class=p>,</span>
+          <span class=nt>&#34;perms&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;pr&#34;</span><span class=p>],</span>
+          <span class=nt>&#34;maxLen&#34;</span><span class=p>:</span> <span class=mi>64</span>
         <span class=p>}</span>
       <span class=p>}</span>
     <span class=p>]</span>
   <span class=p>},</span>
-  <span class=nt>&#34;_msgid&#34;</span><span class=p>:</span><span class=s2>&#34;12353123.f7ba2f&#34;</span>
+  <span class=nt>&#34;_msgid&#34;</span><span class=p>:</span> <span class=s2>&#34;12353123.f7ba2f&#34;</span>
 <span class=p>}</span>
 </code></pre></div>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/nodes/status-node/index.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
-<a href=https://nrchkb.github.io/wiki/nodes/host-node/>
+<a href=https://nrchkb.github.io/wiki/introduction/faq/>
 <div class="card my-1">
 <div class="card-body py-2">
-&larr; Host Node
+&larr; FAQ
 </div>
 </div>
 </a>
-<a class=ms-auto href=https://nrchkb.github.io/wiki/examples/washing-machine-monitor/>
+<a class=ms-auto href=https://nrchkb.github.io/wiki/nodes/linked-service/>
 <div class="card my-1">
 <div class="card-body py-2">
-Washing Machine Monitor &rarr;
+Linked Service &rarr;
 </div>
 </div>
 </a>
@@ -655,15 +651,19 @@ Washing Machine Monitor &rarr;
 <footer class="footer text-muted">
 <div class=container>
 <div class=row>
-<div class="col-lg-8 order-last order-lg-first">
-<ul class=list-inline>
-<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://getdoks.org/>Doks</a></li>
-</ul>
-</div>
-<div class="col-lg-8 order-first order-lg-last text-lg-end">
+<div class="col order-first order-lg-first">
 <ul class=list-inline>
 <li class=list-inline-item><a href=https://nrchkb.github.io/privacy-policy/>Privacy</a></li>
+</ul>
+</div>
+<div class="col order-last order-lg-last text-end">
+<ul class=list-inline>
 <li class=list-inline-item><a href=https://discord.gg/uvYac5u><img src="https://img.shields.io/discord/586065987267330068?color=%238f0000&label=Discord&logo=discord" alt="NRCHKB Discord"></a></li>
+</ul>
+</div>
+<div class="col-lg-8 order-last order-lg-first text-center">
+<ul class=list-inline>
+<li class=list-inline-item>Powered by <a href=https://gohugo.io/>Hugo</a> and <a href=https://getdoks.org/>Doks</a></li>
 </ul>
 </div>
 </div>
