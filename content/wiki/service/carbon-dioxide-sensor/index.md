@@ -3,7 +3,7 @@ title: "Carbon Dioxide Sensor"
 description: "Carbon Dioxide Sensor"
 lead: ""
 date: 2021-12-05T19:21:31.768Z
-lastmod: 2021-10-15T22:06:11.305Z
+lastmod: 2022-02-09T13:56:57.324Z
 draft: false
 images: []
 menu:
@@ -15,29 +15,30 @@ service:
 contributors: ["djiwondee","crxporter","caitken-com","Shaquu"]
 ---
 
-## Example
+{{< alert icon="💡" text="Home.app will not display the <strong>Carbon Dioxide Level</strong> in the Accessory's bubble." />}}
 
-These examples are meant to be copied into your Node-RED system and adapted to your setup.
+## Basic Principle
 
-**Please note:** Different from other HomeKit services (e.g. temperature sensor) the Home.app is not showing the carbon dioxide level on the device icon. To view the current value you have to open the preferences of the device in the Home.app. This works as designed by Apple and can't be changed with characteristics properties.
+This is the simplest example of a CO2 Sensor item. The input nodes are `Detected` and `Not Detected`.
 
-### Simple CO2 Sensor
+![Basic Principle](CO2_basic_principle.png)
 
-This example is a simple CO2 sensor that is only ever "triggered" or "normal".
-The msg.payload going in is either `{"CarbonDioxideDetected":1}` or `{"CarbonDioxideDetected":0}` where 1 is "carbon dioxide detected" and 0 is "normal conditions".
-
-![screen shot 2019-03-06 at 9 51 04 am](https://user-images.githubusercontent.com/38265886/53894230-5cebb780-3ff5-11e9-81d8-fb1ec6fad816.png)
+Copyable Node-RED flow:
 
 ```json
 [{"id":"abf13091.ebbd38","type":"homekit-service","z":"54339415.36f384","bridge":"b070e578.4eca1","name":"Simple CO2","serviceName":"CarbonDioxideSensor","topic":"","manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number","characteristicProperties":"{}","x":870,"y":380,"wires":[["e1bd6875.39b18"]]},{"id":"e1bd6875.39b18","type":"debug","z":"54339415.36f384","name":"CO2 Debug","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":1050,"y":380,"wires":[]},{"id":"46f9e422.63a86c","type":"inject","z":"54339415.36f384","name":"Detected","topic":"","payload":"{\"CarbonDioxideDetected\":1}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":680,"y":360,"wires":[["abf13091.ebbd38"]]},{"id":"ea1120d0.634c88","type":"inject","z":"54339415.36f384","name":"Not Detected","topic":"","payload":"{\"CarbonDioxideDetected\":0}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":670,"y":400,"wires":[["abf13091.ebbd38"]]},{"id":"b070e578.4eca1","type":"homekit-bridge","z":"","bridgeName":"Node-Red-Homekit-Bridge","pinCode":"270-21-969","port":"34567","allowInsecureRequest":false,"manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number"}]
 ```
 
+## Example
+
+Below is a list of examples intended to be copied into your Node-RED system and adapted to your setup:
+
 ### Full Featured CO2 Sensor
 
-This is an example of a CO2 Sensor that triggers an event message in the Home.app in case the CO2 level is above a threshold level of 1000.
-In this example the input nodes is an inject node just for a value of an assumed carbon dioxide level. In real life the author of that example gather the current value from a [Netatmo weather stations](https://www.netatmo.com/en-eu/weather?force_locale=en-eu) by accessing the [Netatmo Connect API](https://dev.netatmo.com/en-US/resources/technical/introduction). The debug node will return values set in the payload as it available in the Home.app on an Apple device.
+This is an example of a CO2 Sensor that triggers an event message in the Home.app in case the CO2 Level is above a threshold Level of 1000.
+In this example the input nodes is an inject node just for a value of an assumed Carbon Dioxide Level. In real life the author of that example gather the current value from a [Netatmo weather stations](https://www.netatmo.com/en-eu/weather?force_locale=en-eu) by accessing the [Netatmo Connect API](https://dev.netatmo.com/en-US/resources/technical/introduction). The debug node will return values set in the payload as it available in the Home.app on an Apple device.
 
-![bildschirmfoto 2019-03-06 um 14 29 28](https://user-images.githubusercontent.com/37173958/53884669-6b00fe80-401c-11e9-8709-2cee51974111.png)
+![Full Example](CO2_full_example.png)
 
 Copyable Node-RED flow:
 
@@ -45,14 +46,14 @@ Copyable Node-RED flow:
 [{"id":"9753f14168949be2","type":"switch","z":"d13781c2edd7efd1","name":"Check CO2 Peaklevel","property":"payload","propertyType":"msg","rules":[{"t":"gt","v":"1000","vt":"str"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":480,"y":520,"wires":[["92bfc0d7d2d54d0e"],["6ee0215b3c7e8743"]]},{"id":"92bfc0d7d2d54d0e","type":"change","z":"d13781c2edd7efd1","name":"Set HkMsg CO2 PeakLevel Detected","rules":[{"t":"move","p":"payload","pt":"msg","to":"payload.CarbonDioxideLevel","tot":"msg"},{"t":"set","p":"payload.CarbonDioxidePeakLevel","pt":"msg","to":"payload.CarbonDioxideLevel","tot":"msg"},{"t":"set","p":"payload.CarbonDioxideDetected","pt":"msg","to":"1","tot":"num"},{"t":"set","p":"payload.StatusActive","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":790,"y":500,"wires":[["7bbcbe8c1a25d4df"]]},{"id":"6ee0215b3c7e8743","type":"change","z":"d13781c2edd7efd1","name":"Set HkMsg CO2 No PeakLevel Detected","rules":[{"t":"move","p":"payload","pt":"msg","to":"payload.CarbonDioxideLevel","tot":"msg"},{"t":"set","p":"payload.CarbonDioxidePeakLevel","pt":"msg","to":"payload.CarbonDioxideLevel","tot":"msg"},{"t":"set","p":"payload.CarbonDioxideDetected","pt":"msg","to":"0","tot":"num"},{"t":"set","p":"payload.StatusActive","pt":"msg","to":"true","tot":"bool"}],"action":"","property":"","from":"","to":"","reg":false,"x":780,"y":540,"wires":[["7bbcbe8c1a25d4df"]]},{"id":"e79fda3842fe456f","type":"debug","z":"d13781c2edd7efd1","name":"CO2 Debug","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":1210,"y":520,"wires":[]},{"id":"68e5c6f16ac5e512","type":"inject","z":"d13781c2edd7efd1","name":"Inject 567 ppm","props":[{"p":"payload","v":"567","vt":"num"},{"p":"topic","v":"","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"567","payloadType":"num","x":260,"y":500,"wires":[["9753f14168949be2"]]},{"id":"72681c56064f6f9e","type":"inject","z":"d13781c2edd7efd1","name":"Inject 1357 ppm (above peak level)","props":[{"p":"payload","v":"1357","vt":"num"},{"p":"topic","v":"","vt":"str"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"1357","payloadType":"num","x":200,"y":540,"wires":[["9753f14168949be2"]]},{"id":"7bbcbe8c1a25d4df","type":"homekit-service","z":"d13781c2edd7efd1","bridge":"25f17d6406cfacdd","name":"CO2","serviceName":"CarbonDioxideSensor","topic":"","manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number","characteristicProperties":"{\n    \"StatusActive\" : true,\n    \"CarbonDioxideLevel\" : 0,\n    \"CarbonDioxidePeakLevel\" : 1000,\n    \"CarbonDioxideDetected\" : 0\n}","outputs":2,"x":1050,"y":520,"wires":[["e79fda3842fe456f"],[]]},{"id":"cc376b99a75e5dcb","type":"comment","z":"d13781c2edd7efd1","name":"Simulate CO2 Level","info":"","x":130,"y":440,"wires":[]},{"id":"e64b903b3f084112","type":"comment","z":"d13781c2edd7efd1","name":"Set and Check Peak Level","info":"","x":490,"y":440,"wires":[]},{"id":"fe1eafa00b02eb32","type":"comment","z":"d13781c2edd7efd1","name":"Set Payload according to HAP specification","info":"","x":790,"y":440,"wires":[]},{"id":"25f17d6406cfacdd","type":"homekit-bridge","bridgeName":"Node-Red-Homekit-Bridge","pinCode":"270-21-969","port":"34567","allowInsecureRequest":false,"manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number"}]
 ```
 
-This example triggers a message in iOS if the carbon dioxide level raises above 1000 ppm a set the status of the device in the Home.app to _peak level detected_. You can now use that to create an automation in the Home.app triggered by carbon dioxide peak level. If the level would fall below the selected peak level, the Peak level detection will be deactivated. In addition to that you can now ask Siri what the carbon dioxide level in the room you assign the sensor in the Home.app. But most important, if you are using Netatmo Weather Station as the source of your in and outdoor climatic measurement you can now bridge the gap of the missing HomeKit compatibility of Netatmo.
+This example triggers a message in iOS if the Carbon Dioxide Level raises above 1000 ppm a set the status of the device in the Home.app to _peak level detected_. You can now use that to create an automation in the Home.app triggered by carbon dioxide peak level. If the level would fall below the selected peak level, the Peak level detection will be deactivated. In addition to that you can now ask Siri what the Carbon Dioxide Level in the room you assign the Sensor in the Home.app. But most important, if you are using Netatmo Weather Station as the source of your in and outdoor climatic measurement you can now Bridge the gap of the missing HomeKit compatibility of Netatmo.
 
-### Monitoring peak level and event handling
+### Monitoring peak Level and event handling
 
 This is another example how to deal with the event interaction on iOS. The following flow saves the recent peak level in a context variable of the node and always updates the `CarbonDioxidePeakLevel` if it is larger than the previous measurement cycle.
-If the level goes up a particular value (e.g. 1000ppm is set in the example) it changes the `CarbonDioxideDetected` property to 1 which causes an alarm in the iOS Home.app.
+If the Level goes up a particular value (e.g. 1000ppm is set in the example) it changes the `CarbonDioxideDetected` property to 1 which causes an alarm in the iOS Home.app.
 
-![Bildschirmfoto 2019-03-09 um 16 36 48](https://user-images.githubusercontent.com/37173958/54073667-4e69fe00-428a-11e9-91e7-3f29bc87ea33.png)
+![CO2 Monitoring](CO2_monitoring.png)
 
 The alarm will be reset after 30sec based on the individual reset. Also, the recent peak level is set to `null` for some reasons.
 
@@ -66,9 +67,11 @@ Some credits for this example goes to [crxporter](https://github.com/crxporter) 
 
 ### Full CO2 Example from Demo
 
-This is a copy of the [Demo](https://nrchkb.github.io/wiki/examples/demo-setup/) CO2 sensor. It has inject nodes for random "safe", random "unsafe", and a reset to 0 level. Additionally it has `active | inactive | NO_RESPONSE` handling.
+This is a copy of the [Demo](https://nrchkb.github.io/wiki/examples/demo-setup/) CO2 Sensor. It has inject nodes for random "safe", random "unsafe", and a reset to 0 Level. Additionally it has `Active | Inactive | NO_RESPONSE` handling.
 
 ![CO2_demo](CO2_demo.png)
+
+Copyable Node-RED flow:
 
 ```json
 [{"id":"ab48426e.25466","type":"group","z":"58d0ac22b8a060e3","name":"CO2 Sensor: input only sensor","style":{"stroke":"#999999","fill":"none","label":true,"label-position":"nw","color":"#a4a4a4"},"nodes":["88892b4.8a61bd8","3611c654.8a42f2","62cafcb0.8ade9c","a0171cdb.f209b","6f7de764.a6a688","8758b463.afb0f","69e8161b.74b7a","40010b09.c73cdc"],"x":134,"y":819,"w":752,"h":202,"info":"# CO2 Sensor\n\nThere are three inputs to this example, one for each level of Carbon Dioxide in the air. Options are:\n\n**0 ppm:** this will assume no CO2 <br/>\n**Safe level:** this will assume a level between 1 and 999 ppm, inclusive <br/>\n**Dangerous level:** this will assume a level between 1,000 and 100,000, inclusive; this will also trigger an alert"},{"id":"88892b4.8a61bd8","type":"homekit-service","z":"58d0ac22b8a060e3","g":"ab48426e.25466","isParent":true,"hostType":"0","bridge":"409001a1.3e7a78","accessoryId":"","parentService":"","name":"CO2 Sensor","serviceName":"CarbonDioxideSensor","topic":"","filter":false,"manufacturer":"Default Manufacturer","model":"Carbon","serialNo":"Default Serial Number","firmwareRev":"22","hardwareRev":"11","softwareRev":"","cameraConfigVideoProcessor":"","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":"","cameraConfigMaxWidth":"","cameraConfigMaxHeight":"","cameraConfigMaxFPS":"","cameraConfigMaxBitrate":"","cameraConfigVideoCodec":"","cameraConfigAudioCodec":"","cameraConfigAudio":false,"cameraConfigPacketSize":"","cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"","cameraConfigMapAudio":"","cameraConfigVideoFilter":"","cameraConfigAdditionalCommandLine":"","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{    \"CarbonDioxideLevel\" : true,    \"CarbonDioxidePeakLevel\": true,    \"StatusActive\" : true}","waitForSetupMsg":false,"outputs":2,"x":790,"y":860,"wires":[[],[]]},{"id":"3611c654.8a42f2","type":"function","z":"58d0ac22b8a060e3","g":"ab48426e.25466","name":"Random values, peak value","func":"// Reset all values to 0 if 0ppm input\nif(msg.payload === 0){\n    context.set('lastPeak',0);\n    newMsg = {\n        payload: {\n            \"CarbonDioxideLevel\":0,\n            \"CarbonDioxidePeakLevel\":0,\n            \"CarbonDioxideDetected\":0\n        }\n    };\n    return newMsg;\n}\n\n// Initialize vars\nvar CurrentLevel = 0;\nvar lastPeak = context.get('lastPeak');\n\n// Set random safe or dangerous levels\nif(msg.payload === \"Safe\"){\n    CurrentLevel = Math.floor(Math.random() * (999 - 1 + 1) + 1);\n}\nif(msg.payload === \"Danger\"){\n    CurrentLevel = Math.floor(Math.random() * (100000 - 1000 + 1) + 1000);\n}\n\n// Formulate output message\nvar newMsg = {\n    payload: {\n        \"CarbonDioxideLevel\" : CurrentLevel,\n        \"CarbonDioxideDetected\" : 0\n    }\n};\n\n// Set new peak level\nif(CurrentLevel > lastPeak){\n    lastPeak = CurrentLevel;\n    context.set('lastPeak',CurrentLevel);\n    newMsg.payload.CarbonDioxidePeakLevel = CurrentLevel;\n}\n\n// Set warning if dangerous\nif (CurrentLevel >= 1000) {\n    newMsg.payload.CarbonDioxideDetected = 1;\n} \n\nreturn newMsg;","outputs":1,"noerr":0,"initialize":"// Code added here will be run once\n// whenever the node is deployed.\ncontext.set('lastPeak',0);\n","finalize":"","x":520,"y":860,"wires":[["88892b4.8a61bd8"]]},{"id":"62cafcb0.8ade9c","type":"inject","z":"58d0ac22b8a060e3","g":"ab48426e.25466","name":"Active","repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"StatusActive\":true}","payloadType":"json","x":590,"y":900,"wires":[["88892b4.8a61bd8"]]},{"id":"a0171cdb.f209b","type":"inject","z":"58d0ac22b8a060e3","g":"ab48426e.25466","name":"Inactive","repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"StatusActive\":false}","payloadType":"json","x":590,"y":940,"wires":[["88892b4.8a61bd8"]]},{"id":"6f7de764.a6a688","type":"inject","z":"58d0ac22b8a060e3","g":"ab48426e.25466","name":"NO RESPONSE","repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"{\"CarbonDioxideLevel\":\"NO_RESPONSE\"}","payloadType":"json","x":560,"y":980,"wires":[["88892b4.8a61bd8"]]},{"id":"8758b463.afb0f","type":"inject","z":"58d0ac22b8a060e3","g":"ab48426e.25466","name":"0 ppm","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"0","payloadType":"num","x":230,"y":860,"wires":[["3611c654.8a42f2"]]},{"id":"69e8161b.74b7a","type":"inject","z":"58d0ac22b8a060e3","g":"ab48426e.25466","name":"Safe Level","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"Safe","payloadType":"str","x":240,"y":900,"wires":[["3611c654.8a42f2"]]},{"id":"40010b09.c73cdc","type":"inject","z":"58d0ac22b8a060e3","g":"ab48426e.25466","name":"Dangerous level","props":[{"p":"payload"}],"repeat":"","crontab":"","once":false,"onceDelay":0.1,"topic":"","payload":"Danger","payloadType":"str","x":260,"y":940,"wires":[["3611c654.8a42f2"]]},{"id":"409001a1.3e7a78","type":"homekit-bridge","bridgeName":"Demo 1","pinCode":"153-10-538","port":"","allowInsecureRequest":false,"manufacturer":"NRCHKB","model":"Demo","serialNo":"1.1.2","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
