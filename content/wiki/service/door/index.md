@@ -12,6 +12,7 @@ menu:
 toc: true
 service:
   name: "Door"
+contributors: ["GogoVega"]
 ---
 
 {{< alert icon="💡" text="<strong>Hold Position</strong> is only available with Siri and Eve.app." />}}

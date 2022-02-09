@@ -12,7 +12,7 @@ menu:
 toc: true
 service:
   name: "CarbonMonoxideSensor"
-contributors: ["crxporter","caitken-com","Shaquu"]
+contributors: ["crxporter", "caitken-com", "Shaquu"]
 ---
 
 {{< alert icon="💡" text="Home.app will not display the <strong>Carbon Monoxide Level</strong> in the Accessory's bubble." />}}
