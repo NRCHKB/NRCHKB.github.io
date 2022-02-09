@@ -12,8 +12,7 @@ menu:
 toc: true
 service:
   name: "ContactSensor"
-contributors: ["GogoVega","Shaquu"]
-
+contributors: ["GogoVega", "Shaquu"]
 ---
 
 ## Basic principle
