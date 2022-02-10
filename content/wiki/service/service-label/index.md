@@ -15,7 +15,7 @@ service:
 contributors: ["crxporter"]
 ---
 
-Service Label is kind of an open box for HomeKit devices. So far I (@crxporter) have seen it used in two places - a [multi-button stateless programmable switch]({{< ref "/wiki/service/stateless-programmable-switch/#multi-button-example" >}} "Stateless Programmable Switch") and a power strip. Surely it can be used in more places but this is what I've seen so far.
+Service Label is kind of an open box for HomeKit devices. So far I (@crxporter) have seen it used in two places - a [multi-button stateless programmable switch]({{< ref "/wiki/service/stateless-programmable-switch#multi-button-example" >}} "Stateless Programmable Switch") and a power strip. Surely it can be used in more places but this is what I've seen so far.
 
 ## Examples
 
