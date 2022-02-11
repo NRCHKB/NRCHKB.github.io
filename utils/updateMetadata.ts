@@ -32,6 +32,7 @@ const contributorMap = {
   Shaquu: ['Tadeusz Wyrzykowski'],
 };
 const ignoredFiles: string[] = ['content/wiki/discover-more/changelog.md'];
+const minDate = new Date('2021-04-05T13:54:45+02:00');
 
 const updateFrontMatter = (content: string, key: string, value: string) => {
   return content.replace(/(?<=---)((.|\n|\r)*?)(?=---)/, (_, frontmatter) => {
@@ -51,6 +52,8 @@ const updateFrontMatter = (content: string, key: string, value: string) => {
   });
 };
 
+const limitDate = (date: Date) => (date < minDate ? minDate : date);
+
 const processFile = async (file: string) => {
   const fileContent = fs.readFileSync(file, { encoding: 'utf-8' });
   let replacedFileContent = fileContent;
@@ -68,7 +71,7 @@ const processFile = async (file: string) => {
   replacedFileContent = updateFrontMatter(
     replacedFileContent,
     'date',
-    creationDate.toISOString()
+    limitDate(creationDate).toISOString()
   );
 
   // lastmod
@@ -85,7 +88,7 @@ const processFile = async (file: string) => {
   replacedFileContent = updateFrontMatter(
     replacedFileContent,
     'lastmod',
-    lastmodDate.toISOString()
+    limitDate(lastmodDate).toISOString()
   );
 
   // contributors
