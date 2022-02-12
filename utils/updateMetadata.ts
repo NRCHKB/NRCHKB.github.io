@@ -1,44 +1,35 @@
-import * as fs from 'fs';
-import * as childProcess from 'child_process';
-import glob from 'glob';
+import * as fs from "fs";
+import * as childProcess from "child_process";
+import glob from "glob";
 
 // https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
-const tty = process.platform === 'win32' ? 'CON' : '/dev/tty';
+const tty = process.platform === "win32" ? "CON" : "/dev/tty";
 
-const asyncGlob = async (pattern: string): Promise<string[]> =>
-  new Promise((res, rej) =>
-    glob(pattern, (err, matches) => {
-      if (err) {
-        rej(err);
-      } else {
-        res(matches);
-      }
-    })
-  );
-
-const baseFolder = 'content/';
+const baseFolder = "content/";
 
 // ignore "GitHub Actions" to prevent recursion of updating files
 const ignoredAuthors: string[] = [
-  'h-enk',
-  'GitHub Actions',
-  'dependabot-preview[bot]',
-  'dependabot[bot]',
-  'github-actions[bot]',
-  'h-enk',
-  'greenkeeper[bot]',
+  "h-enk",
+  "GitHub Actions",
+  "dependabot-preview[bot]",
+  "dependabot[bot]",
+  "github-actions[bot]",
+  "h-enk",
+  "greenkeeper[bot]",
 ];
+
 const contributorMap = {
-  Shaquu: ['Tadeusz Wyrzykowski'],
+  Shaquu: ["Tadeusz Wyrzykowski"],
 };
-const ignoredFiles: string[] = ['content/wiki/discover-more/changelog.md'];
-const minDate = new Date('2021-04-05T13:54:45+02:00');
+
+const ignoredFiles: string[] = ["content/wiki/discover-more/changelog.md"];
+const minDate = new Date("2021-04-05T13:54:45+02:00");
 
 const updateFrontMatter = (content: string, key: string, value: string) => {
   return content.replace(/(?<=---)((.|\n|\r)*?)(?=---)/, (_, frontmatter) => {
     let replaced = false;
 
-    frontmatter = frontmatter.replace(new RegExp(`${key}: .*`), () => {
+    frontmatter = frontmatter.replace(new RegExp(`${key}:.*`), () => {
       replaced = true;
 
       return `${key}: ${value}`;
@@ -55,22 +46,22 @@ const updateFrontMatter = (content: string, key: string, value: string) => {
 const limitDate = (date: Date) => (date < minDate ? minDate : date);
 
 const processFile = async (file: string) => {
-  const fileContent = fs.readFileSync(file, { encoding: 'utf-8' });
+  const fileContent = fs.readFileSync(file, { encoding: "utf-8" });
   let replacedFileContent = fileContent;
 
   // creation date
   const creationDate = new Date(
     childProcess
       .execSync(
-        `git log --diff-filter=A --follow --format=%aI -- ${file} | tail -1`
+        `git log --diff-filter=A --follow --format=%aI -- ${file} | tail -1`,
+        { encoding: "utf8" }
       )
-      .toString()
       .trim()
   );
 
   replacedFileContent = updateFrontMatter(
     replacedFileContent,
-    'date',
+    "date",
     limitDate(creationDate).toISOString()
   );
 
@@ -79,29 +70,30 @@ const processFile = async (file: string) => {
   const lastmodDate = new Date(
     childProcess
       .execSync(
-        `git log -1 --pretty="format:%aI" --perl-regexp --author='^((?!GitHub Actions).*)$' -- ${file}`
+        `git log -1 --pretty="format:%aI" --perl-regexp --author="^((?!GitHub Actions).*)$" -- ${file}`,
+        { encoding: "utf8" }
       )
-      .toString()
       .trim()
   );
 
   replacedFileContent = updateFrontMatter(
     replacedFileContent,
-    'lastmod',
+    "lastmod",
     limitDate(lastmodDate).toISOString()
   );
 
   // contributors
   // run in tty because of https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
   const gitContributors: string[] = childProcess
-    .execSync(`git shortlog -n -s -- ${file} < ${tty}`)
-    .toString()
+    .execSync(`git shortlog -n -s -- ${file} < ${tty}`, { encoding: "utf8" })
     .trim()
-    .split('\n')
-    .map((contributor) => contributor.match(/^ *(\d*)\t(.*)/)?.[2])
-    .filter(
-      (contributor): contributor is string => typeof contributor === 'string'
-    );
+    .split("\n")
+    .reduce((arr, contributor) => {
+      if (contributor.match(/^ *(\d*)\t(.*)/)?.[2]) {
+        arr.push(contributor);
+      }
+      return arr;
+    }, [] as string[]);
 
   let difference: string[] = [];
 
@@ -127,14 +119,14 @@ const processFile = async (file: string) => {
     if (difference.length > 0) {
       replacedFileContent = updateFrontMatter(
         replacedFileContent,
-        'contributors',
+        "contributors",
         JSON.stringify(contributors)
       );
     }
   }
 
   if (replacedFileContent !== fileContent) {
-    fs.writeFileSync(file, replacedFileContent, { encoding: 'utf8' });
+    fs.writeFileSync(file, replacedFileContent, { encoding: "utf8" });
     console.log(
       `Updated metatdata for: "${file}" (date=${creationDate.toISOString()},lastmod=${lastmodDate.toISOString()},contributorsDiff=[${difference.join()}])`
     );
@@ -142,35 +134,51 @@ const processFile = async (file: string) => {
 };
 
 (async () => {
-  const files: string[] = [];
+  new Promise<string[]>((resolve, reject) => {
+    if (process.env.ALL === "true") {
+      glob(`${baseFolder}**/*.md`, (err, matches) => {
+        if (err) {
+          reject(err);
+          return;
+        }
 
-  if (process.env.ALL === 'true') {
-    const allFiles = await asyncGlob(`${baseFolder}**/*.md`);
-    files.push(...allFiles);
-  } else {
-    const lastSha = process.env.GITHUB_SHA || 'HEAD';
+        resolve(matches);
+      });
+    } else {
+      const lastSha = process.env.GITHUB_SHA || "HEAD";
 
-    const changelist = await childProcess
-      .execSync(`git diff-tree --no-commit-id --name-status -r ${lastSha}`)
-      .toString();
+      childProcess.exec(
+        `git diff-tree --no-commit-id --name-status -r ${lastSha}`,
+        (err, stdout) => {
+          if (err) {
+            reject(err);
+            return;
+          }
 
-    for (const line of changelist.split('\n')) {
-      const [modifier, path] = line.split(/\s+/);
+          const files = stdout.split("\n").reduce((arr, line) => {
+            const [modifier, path] = line.split(/\s+/);
 
-      // check if file is not deleted in that commit and if its an md file
-      if (path && modifier !== 'D' && path.endsWith('.md')) {
-        files.push(path);
-      }
+            if (path && modifier !== "D" && path.endsWith(".md")) {
+              arr.push(path);
+            }
+
+            return arr;
+          }, [] as string[]);
+
+          resolve(files);
+        }
+      );
     }
-  }
-
-  for (const file of files) {
-    if (ignoredFiles.includes(file)) continue;
-
-    await processFile(file);
-  }
-
-  console.log(`\nSuccessfully updated metadata for ${files.length} files.`);
+  })
+    .then(
+      async (files) =>
+        await Promise.all(
+          files.map(async (file) => await processFile(file))
+        ).then(() => files.length)
+    )
+    .then((count) => {
+      console.log(`\nScanned ${count} files.`);
+    });
 })();
 
 export {};
