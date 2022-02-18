@@ -17,11 +17,13 @@ contributors: ["caitken-com", "crxporter", "itsj4y", "Shaquu"]
 
 ## Notes on Cameras
 
-Cameras are a complicated situation. If you are running the [Docker way](https://github.com/NRCHKB/node-red-contrib-homekit-docker) then FFmpeg will be preinstalled for you with several of the options preset (may not have all hardware accelerations built). If you are on a system with `apt` (Raspberry pi, Ubuntu, Debian, etc) you can use the FFmpeg install script which is maintained by a couple of our users and designed for nrchkb users. This script is documented [here](https://github.com/marcus-j-davies/nrchkb-ffmpeg-build) and can be run at any time using this one-line terminal command then following the prompts:
+Cameras require an extra install of FFmpeg for video processing. If you are on a system with `apt` (Raspberry pi, Ubuntu, Debian, etc) you can use the FFmpeg install script which is maintained by a couple of our users and designed for nrchkb. This script is documented [here](https://github.com/marcus-j-davies/nrchkb-ffmpeg-build) and can be run at any time using this one-line terminal command then following the prompts:
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
 ```
+
+If you are running our [Docker image](https://github.com/NRCHKB/node-red-contrib-homekit-docker) then FFmpeg will be preinstalled for you with several of the options preset (may not have all hardware accelerations built).
 
 For those writing examples, please include how you have installed FFmpeg (including any special build flags)!
 
@@ -54,7 +56,7 @@ Step **zero**: I assume you are able to set up a pi zero with SSH and Wi-Fi. I a
 
 Step **one**: use `raspi-config` to enable the camera interface on the pi
 
-Step **two**: install FFmpeg for HomeBridge using our script:
+Step **two**: install FFmpeg using our script:
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
