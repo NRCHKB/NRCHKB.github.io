@@ -3,7 +3,7 @@ title: "Camera Control"
 description: "Camera Control"
 lead: ""
 date: 2021-04-17T18:50:12.026Z
-lastmod: 2021-10-09T12:01:54.995Z
+lastmod: 2022-02-18T22:06:22.437Z
 draft: false
 images: []
 menu:
@@ -17,28 +17,32 @@ contributors: ["caitken-com", "crxporter", "itsj4y", "Shaquu"]
 
 ## Notes on Cameras
 
-Cameras are a complicated situation. If you are running the [Docker way](https://github.com/NRCHKB/node-red-contrib-homekit-docker) then FFMPEG will be preinstalled for you with several of the options preset (may not have all hardware accelerations built). Alternately you can download and compile your own version of FFMPEG with the build flags you need for your cameras.
+Cameras are a complicated situation. If you are running the [Docker way](https://github.com/NRCHKB/node-red-contrib-homekit-docker) then FFmpeg will be preinstalled for you with several of the options preset (may not have all hardware accelerations built). If you are on a system with `apt` (Raspberry pi, Ubuntu, Debian, etc) you can use the FFmpeg install script which is maintained by a couple of our users and designed for nrchkb users. This script is documented [here](https://github.com/marcus-j-davies/nrchkb-ffmpeg-build) and can be run at any time using this one-line terminal command then following the prompts:
 
-For those writing examples, please include how you have installed FFMPEG!
+```
+bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
+```
 
-It is recommended to add only one camera per bridge. The camera should be the "parent" service with "motion" and "doorbell" (if used) as linked services.
+For those writing examples, please include how you have installed FFmpeg (including any special build flags)!
+
+It is recommended use "Accessory" as the Host Type for cameras. The camera should be the "parent" service with "motion" and "doorbell" (if used) as linked services.
 
 ### How to debug issues
 
-If you have problems with FFMPEG (if you think the camera is set up properly but it "does nothing" then you might have FFMPEG problems) then please follow these steps to properly debug your FFMPEG setup.
+If you have problems with FFmpeg (if you think the camera is set up properly but it "does nothing" then you might have FFmpeg problems) then please follow these steps to properly debug your FFmpeg setup.
 
 - Configure Camera Control node in Node-RED
 - Run Node-RED with `DEBUG=NRCHKB*,CameraSource*` and tick "debug mode" in Camera Control
   - ![Camera Control Debug checkbox](camera-control-debug.png)
 - Try to open Camera stream in Home.app
-- It will error again but will also print FFMPEG command in logs
+- It will error again but will also print FFmpeg command in logs
 - Run that command in terminal separately to get real problem
 
 ## Examples
 
 ### * Raspberry Pi Zero W
 
-Example written by CRXPorter. Date 21 November 2020. Plugin version 1.2.0, Node-RED version 1.2.5.
+Example written by CRXPorter. Date 21 November 2020, updated February, 2022. Plugin version 1.4.3, Node-RED version 2.1.5.
 
 Hardware:\
 -Raspberry Pi Zero W\
@@ -50,7 +54,11 @@ Step **zero**: I assume you are able to set up a pi zero with SSH and Wi-Fi. I a
 
 Step **one**: use `raspi-config` to enable the camera interface on the pi
 
-Step **two**: install FFMPEG for HomeBridge using the script [found here](https://github.com/homebridge/ffmpeg-for-homebridge)
+Step **two**: install FFmpeg for HomeBridge using our script:
+
+```
+bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
+```
 
 Step **three**: install and start Node-RED with the script [found here](https://Node-RED.org/docs/getting-started/raspberrypi)
 
@@ -59,10 +67,8 @@ Step **four**: install node-red-contrib-homekit-bridged from palette manager
 Step **five**: import this flow. It should be a single homekit node
 
 ```json
-[{"id":"36df1f80.39e34","type":"homekit-service","z":"c9e35eda.bb75f8","isParent":true,"bridge":"f18ad79f.5081e8","parentService":"","name":"Pi zero camera","serviceName":"CameraControl","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Default Serial Number","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"-re -r 6 -s 1280x720 -f video4linux2 -i /dev/video0","cameraConfigStillImageSource":"-s 1280x720 -f video4linux2 -i /dev/video0","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":"1280","cameraConfigMaxHeight":"720","cameraConfigMaxFPS":"6","cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"h264_omx","cameraConfigAudioCodec":"h264_omx","cameraConfigAudio":false,"cameraConfigPacketSize":"564","cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":3,"x":430,"y":260,"wires":[[],[],[]]},{"id":"f18ad79f.5081e8","type":"homekit-bridge","bridgeName":"Camera","pinCode":"111-11-111","port":"","allowInsecureRequest":false,"manufacturer":"Raspberry Pi","model":"Pi zero w","serialNo":"00001","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
+[{"id":"36df1f80.39e34","type":"homekit-service","z":"c9e35eda.bb75f8","isParent":true,"bridge":"f18ad79f.5081e8","parentService":"","name":"Pi zero camera","serviceName":"CameraControl","topic":"","filter":false,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Default Serial Number","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"-re -r 6 -s 1280x720 -f video4linux2 -i /dev/video0","cameraConfigStillImageSource":"-s 1280x720 -f video4linux2 -i /dev/video0","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":"1280","cameraConfigMaxHeight":"720","cameraConfigMaxFPS":"6","cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"h264_v4l2m2m","cameraConfigAudioCodec":"h264_v4l2m2m","cameraConfigAudio":false,"cameraConfigPacketSize":"564","cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":3,"x":430,"y":260,"wires":[[],[],[]]},{"id":"f18ad79f.5081e8","type":"homekit-bridge","bridgeName":"Camera","pinCode":"111-11-111","port":"","allowInsecureRequest":false,"manufacturer":"Raspberry Pi","model":"Pi zero w","serialNo":"00001","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
 ```
-
-(Note to self: need to add this to the examples for next release)
 
 Step **six**: add it to your Home.app and enjoy!
 
@@ -90,54 +96,16 @@ Cameras tested:
 - Unifi G3 Bullet
 - Unifi G4 Doorbell
 
-Motion detection and doorbell presses are available for advanced users, ask @crxporter on discord. A new Unifi node is pending from CRXPorter - hopefully coming late 2020.
+Motion detection and doorbell presses are available for advanced users, ask @crxporter on discord. A new Unifi node is in active development, check [here](https://github.com/NRCHKB/node-red-contrib-unifi-os) for that project.
 
-FFMPEG was installed on a pi 4. Node-RED was installed with the official Node-RED on pi install script.
+FFmpeg was installed on a pi 4. Node-RED was installed with the official Node-RED on pi install script.
 
-#### FFMPEG Install
+#### FFmpeg Install
 
-Install build tools
+Just run the `nrchkb-ffmpeg-build` script found here:
 
-```bash
-sudo apt install git pkg-config autoconf automake libtool libx264-dev
 ```
-
-ALSA runtime library
-
-```bash
-sudo apt install libasound2-dev
-```
-
-Download and build fdk-aac
-
-```bash
-cd ~
-git clone https://github.com/mstorsjo/fdk-aac.git
-cd fdk-aac
-sudo ./autogen.sh
-sudo ./configure --prefix=/usr/local --enable-shared --enable-static
-sudo make -j4
-sudo make install
-sudo ldconfig
-```
-
-Download and build ffmpeg
-
-```bash
-cd ~
-git clone https://github.com/FFmpeg/FFmpeg.git
-cd FFmpeg
-sudo ./configure --prefix=/usr/local --arch=armel --target-os=linux --enable-omx-rpi --enable-nonfree --enable-gpl --enable-libfdk-aac --enable-mmal --enable-libx264 --enable-decoder=h264 --enable-network --enable-protocol=tcp --enable-demuxer=rtsp
-sudo make -j4
-sudo make install
-```
-
-Clean up
-
-```bash
-cd ~
-rm -rf FFmpeg
-rm -rf fdk-aac
+bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
 ```
 
 #### Cameras Setup
@@ -153,17 +121,17 @@ Max Width: 960
 Max Height: 720
 Max FPS: 10
 Max Bitrate: 3072
-Video Codec: h264_omx
+Video Codec: copy
 Audio Codec: libfdk_aac
 Audio: yes
 Packet Sixe: 564
-Map Video: 0:1
-Map Audio: 0:0
-Video Filter: scale=960:720
+Map Video: 0:v
+Map Audio: 0:a
+Video Filter: 
 Additional Command Line: -preset slow -profile:v high -level 4.2 -x264-params intra-refresh=1:bframes=0
 ```
 
-This is a work in progress. Written October 9, 2020. Please find me (crxporter) on [our discord server](https://discord.gg/uvYac5u) if you're having problems or would like more information.
+This is a work in progress. Updated 18 February 2022. Please find me (crxporter) on [our discord server](https://discord.gg/uvYac5u) if you're having problems or would like more information.
 
 ### * Reolink
 
