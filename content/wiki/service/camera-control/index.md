@@ -19,7 +19,7 @@ contributors: ["caitken-com", "crxporter", "itsj4y", "Shaquu"]
 
 Cameras require an extra install of FFmpeg for video processing. If you are on a system with `apt` (Raspberry Pi, Ubuntu, Debian, etc.) you can use the FFmpeg install script which is maintained by a couple of our users and designed for NRCHKB. This script is documented [here](https://github.com/marcus-j-davies/nrchkb-ffmpeg-build) and can be run at any time using this one-line terminal command, then following the prompts:
 
-```
+```bash
 bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
 ```
 
@@ -58,7 +58,7 @@ Step **one**: use `raspi-config` to enable the camera interface on the pi
 
 Step **two**: install FFmpeg using our script:
 
-```
+```bash
 bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
 ```
 
