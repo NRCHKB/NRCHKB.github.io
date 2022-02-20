@@ -17,7 +17,9 @@ contributors: ["caitken-com", "crxporter", "itsj4y", "Shaquu"]
 
 ## Notes on Cameras
 
-Cameras require an extra install of FFmpeg for video processing. If you are on a system with `apt` (Raspberry Pi, Ubuntu, Debian, etc.) you can use the FFmpeg install script which is maintained by a couple of our users and designed for NRCHKB. This script is documented [here](https://github.com/marcus-j-davies/nrchkb-ffmpeg-build) and can be run at any time using this one-line terminal command, then following the prompts:
+Cameras require an extra install of FFmpeg for video processing.
+If you are on a system with `apt` (Raspberry Pi, Ubuntu, Debian, etc.) you can use the FFmpeg install script, which is maintained by a couple of our users and designed for NRCHKB.
+This script is documented [here](https://github.com/marcus-j-davies/nrchkb-ffmpeg-build) and can be run at any time using this one-line terminal command, then after the prompts:
 
 ```bash
 bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
@@ -27,11 +29,12 @@ If you are running our [Docker image](https://github.com/NRCHKB/node-red-contrib
 
 For those writing examples, please include how you have installed FFmpeg (including any special build flags)!
 
-It is recommended to use "Accessory" as the Host Type for cameras. The camera should be the Parent Service, with "Motion" and "Doorbell" (if used) as Linked Services.
+It is recommended to use "Accessory" as the Host Type for cameras.
+The camera should be the Parent Service, with "Motion" and "Doorbell" (if used) as Linked Services.
 
 ### How to debug issues
 
-If you have problems with FFmpeg (if you think the camera is set up properly but it "does nothing" then you might have FFmpeg problems) then please follow these steps to properly debug your FFmpeg setup.
+If you have problems with FFmpeg (if you think the camera is set up properly, but it "does nothing" then you might have FFmpeg problems) then please follow these steps to properly debug your FFmpeg setup.
 
 - Configure Camera Control node in Node-RED
 - Run Node-RED with `DEBUG=NRCHKB*,CameraSource*` and tick "debug mode" in Camera Control
@@ -46,7 +49,8 @@ If you have problems with FFmpeg (if you think the camera is set up properly but
 
 Example written by CRXPorter. Date 21 November 2020, updated February 2022. Plugin version 1.4.3, Node-RED version 2.1.5.
 
-Hardware:\
+Hardware:
+
 -Raspberry Pi Zero W\
 -Raspberry Pi Camera Module V2\
 
@@ -75,13 +79,17 @@ Step **five**: import this flow. It should be a single homekit node
 Step **six**: add it to your Home.app and enjoy!
 
 Notes:\
-Additional tuning could be done to optimize resolution and speed. The new Raspberry Pi High Quality camera should work with the same setup. This setup should work on a Pi 3 or 4 with very little modification. Adding a microphone, motion detector, doorbell button, or other things should be relatively simple. Visit us [on discord](https://discord.gg/uvYac5u) if you'd like to discuss!
+Additional tuning could be done to optimize resolution and speed.
+The new Raspberry Pi High Quality camera should work with the same setup.
+This setup should work on a Pi 3 or 4 with very little modification.
+Adding a microphone, motion detector, doorbell button, or other things should be relatively simple.
+Visit us [on discord](https://discord.gg/uvYac5u) if you'd like to discuss!
 
 ### * Raspberry Pi Zero W running MotionEyeOS
 
 This setup adds motion detection to the Pi Zero W camera. Note that the pi zero does not appear to have enough power to run MotionEye alongside Node-RED, so it is recommended to run MotionEyeOS alone on a pi with Node-RED on another server (bigger pi, NAS, etc.).
 
-1. Head over to [MotionEyeOS](https://github.com/ccrisan/motioneyeos) releases and download the one for "raspberrypi", flash it to your SD card as you normally would
+1. Head over to [MotionEyeOS](https://github.com/ccrisan/motioneyeos) releases and download the one for "raspberrypi", flash it to your SD card as you normally would.
 2. Boot and set up MotionEyeOS as you like it (motion detector settings, stream quality, etc.) using their instructions. The one important part is to send your motion alerts to a webhook, the address used in the code below is `http://<node-red-pi-address>:1880/MotionEye`
 3. To import the flow below into your Node-RED machine, you will need to change the IP addresses in the camera node, so they point to your pi zero.
 
@@ -98,15 +106,16 @@ Cameras tested:
 - UniFi G3 Bullet
 - UniFi G4 Doorbell
 
-Motion detection and doorbell presses are available for advanced users, ask @crxporter on discord. A new UniFi node is in active development, check [here](https://github.com/NRCHKB/node-red-contrib-unifi-os) for that project.
+Motion detection and doorbell presses are available for advanced users, ask @crxporter on discord.
+A new UniFi node is in active development, check [here](https://github.com/NRCHKB/node-red-contrib-unifi-os) for that project.
 
-FFmpeg was installed on a pi 4. Node-RED was installed with the official Node-RED on pi install script.
+FFmpeg was installed on a pi 4. Node-RED was installed with the official Node-RED on a PI install script.
 
 #### FFmpeg Install
 
 Just run the `nrchkb-ffmpeg-build` script found here:
 
-```
+```bash
 bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
 ```
 
@@ -129,7 +138,7 @@ Audio: yes
 Packet Sixe: 564
 Map Video: 0:v
 Map Audio: 0:a
-Video Filter: 
+Video Filter:
 Additional Command Line: -preset slow -profile:v high -level 4.2 -x264-params intra-refresh=1:bframes=0
 ```
 
