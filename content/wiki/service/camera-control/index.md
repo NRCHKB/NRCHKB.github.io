@@ -17,7 +17,7 @@ contributors: ["caitken-com", "crxporter", "itsj4y", "Shaquu"]
 
 ## Notes on Cameras
 
-Cameras require an extra install of FFmpeg for video processing. If you are on a system with `apt` (Raspberry pi, Ubuntu, Debian, etc) you can use the FFmpeg install script which is maintained by a couple of our users and designed for nrchkb. This script is documented [here](https://github.com/marcus-j-davies/nrchkb-ffmpeg-build) and can be run at any time using this one-line terminal command then following the prompts:
+Cameras require an extra install of FFmpeg for video processing. If you are on a system with `apt` (Raspberry Pi, Ubuntu, Debian, etc.) you can use the FFmpeg install script which is maintained by a couple of our users and designed for NRCHKB. This script is documented [here](https://github.com/marcus-j-davies/nrchkb-ffmpeg-build) and can be run at any time using this one-line terminal command, then following the prompts:
 
 ```
 bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-build/main/nrchkb-ffmpeg-build.sh)
@@ -27,7 +27,7 @@ If you are running our [Docker image](https://github.com/NRCHKB/node-red-contrib
 
 For those writing examples, please include how you have installed FFmpeg (including any special build flags)!
 
-It is recommended use "Accessory" as the Host Type for cameras. The camera should be the "parent" service with "motion" and "doorbell" (if used) as linked services.
+It is recommended to use "Accessory" as the Host Type for cameras. The camera should be the Parent Service, with "Motion" and "Doorbell" (if used) as Linked Services.
 
 ### How to debug issues
 
@@ -44,7 +44,7 @@ If you have problems with FFmpeg (if you think the camera is set up properly but
 
 ### * Raspberry Pi Zero W
 
-Example written by CRXPorter. Date 21 November 2020, updated February, 2022. Plugin version 1.4.3, Node-RED version 2.1.5.
+Example written by CRXPorter. Date 21 November 2020, updated February 2022. Plugin version 1.4.3, Node-RED version 2.1.5.
 
 Hardware:\
 -Raspberry Pi Zero W\
@@ -79,26 +79,26 @@ Additional tuning could be done to optimize resolution and speed. The new Raspbe
 
 ### * Raspberry Pi Zero W running MotionEyeOS
 
-This setup adds motion detection to the Pi Zero W camera. Note that the pi zero does not appear to have enough power to run MotionEye alongside Node-RED, so it is recommended to run MotionEyeOS alone on a pi with Node-RED on another server (bigger pi, nas, etc.).
+This setup adds motion detection to the Pi Zero W camera. Note that the pi zero does not appear to have enough power to run MotionEye alongside Node-RED, so it is recommended to run MotionEyeOS alone on a pi with Node-RED on another server (bigger pi, NAS, etc.).
 
 1. Head over to [MotionEyeOS](https://github.com/ccrisan/motioneyeos) releases and download the one for "raspberrypi", flash it to your SD card as you normally would
 2. Boot and set up MotionEyeOS as you like it (motion detector settings, stream quality, etc.) using their instructions. The one important part is to send your motion alerts to a webhook, the address used in the code below is `http://<node-red-pi-address>:1880/MotionEye`
-3. Import the flow below into your Node-RED machine, you will need to change the IP addresses in the camera node, so they point to your pi zero.
+3. To import the flow below into your Node-RED machine, you will need to change the IP addresses in the camera node, so they point to your pi zero.
 
 ```json
 [{"id":"54eca8a5.3ae868","type":"homekit-service","z":"e9d44372.de7a58","isParent":true,"bridge":"e1aa7622.06a8b","parentService":"","name":"MotionEye OS","serviceName":"CameraControl","topic":"","filter":false,"manufacturer":"NRCHKB","model":"0.130.2","serialNo":"Default Serial Number","firmwareRev":"0.130.2","hardwareRev":"0.130.2","softwareRev":"0.130.2","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"-re -f mjpeg -i http://10.10.10.13:8081","cameraConfigStillImageSource":"-f mjpeg -i http://10.10.10.13/picture/1/current/","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":"800","cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":3,"x":460,"y":1680,"wires":[[],[],[]]},{"id":"ea482940.81194","type":"http in","z":"e9d44372.de7a58","name":"MotionEye","url":"/MotionEye","method":"get","upload":false,"swaggerDoc":"","x":290,"y":1540,"wires":[["10c44307.6c37ad","6a889a0f.5f851c","a3c9a20d.a1fef8"]]},{"id":"10c44307.6c37ad","type":"debug","z":"e9d44372.de7a58","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"true","targetType":"full","statusVal":"","statusType":"auto","x":450,"y":1500,"wires":[]},{"id":"6a889a0f.5f851c","type":"http response","z":"e9d44372.de7a58","name":"Success","statusCode":"201","headers":{},"x":750,"y":1540,"wires":[]},{"id":"5ed047ac.070648","type":"homekit-service","z":"e9d44372.de7a58","isParent":false,"bridge":"","parentService":"54eca8a5.3ae868","name":"MotionEye Motion","serviceName":"MotionSensor","topic":"","filter":false,"manufacturer":"NRCHKB","model":"0.130.2","serialNo":"Default Serial Number","firmwareRev":"0.130.2","hardwareRev":"0.130.2","softwareRev":"0.130.2","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":2,"x":790,"y":1600,"wires":[[],[]]},{"id":"b29f3d75.196e1","type":"change","z":"e9d44372.de7a58","name":"","rules":[{"t":"move","p":"payload","pt":"msg","to":"payload.MotionDetected","tot":"msg"}],"action":"","property":"","from":"","to":"","reg":false,"x":570,"y":1600,"wires":[["5ed047ac.070648"]]},{"id":"a3c9a20d.a1fef8","type":"trigger","z":"e9d44372.de7a58","name":"","op1":"true","op2":"false","op1type":"bool","op2type":"bool","duration":"30","extend":true,"overrideDelay":false,"units":"s","reset":"","bytopic":"all","topic":"topic","outputs":1,"x":370,"y":1600,"wires":[["b29f3d75.196e1"]]},{"id":"e1aa7622.06a8b","type":"homekit-bridge","bridgeName":"TestCam","pinCode":"111-11-111","port":"","allowInsecureRequest":false,"manufacturer":"NRCHKB","model":"0.130.2","serialNo":"Default Serial Number","firmwareRev":"0.130.2","hardwareRev":"0.130.2","softwareRev":"0.130.2","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
 ```
 
-### * Unifi Protect
+### * UniFi Protect
 
 Example written by CRXPorter.\
 Cameras tested:
 
-- Unifi G3 Flex
-- Unifi G3 Bullet
-- Unifi G4 Doorbell
+- UniFi G3 Flex
+- UniFi G3 Bullet
+- UniFi G4 Doorbell
 
-Motion detection and doorbell presses are available for advanced users, ask @crxporter on discord. A new Unifi node is in active development, check [here](https://github.com/NRCHKB/node-red-contrib-unifi-os) for that project.
+Motion detection and doorbell presses are available for advanced users, ask @crxporter on discord. A new UniFi node is in active development, check [here](https://github.com/NRCHKB/node-red-contrib-unifi-os) for that project.
 
 FFmpeg was installed on a pi 4. Node-RED was installed with the official Node-RED on pi install script.
 
@@ -112,7 +112,7 @@ bash <(curl -sL https://raw.githubusercontent.com/marcus-j-davies/nrchkb-ffmpeg-
 
 #### Cameras Setup
 
-The camera node setup is quite simple for Unifi. Be sure to enable unauthenticated still images on your cameras. My fields are filled out as shown:
+The camera node setup is quite simple for UniFi. Be sure to enable unauthenticated still images on your cameras. My fields are filled out as shown:
 
 ```yaml
 Video Processor: ffmpeg
@@ -141,7 +141,7 @@ This is a work in progress. Updated 18 February 2022. Please find me (crxporter)
 
 Replace XXX with your camera's password.
 Do not use Video Filter with copy codec.
-There may be more ideal settings but these should get you up and running.
+There may be more ideal settings, but these should get you up and running.
 
 ```yaml
 Video Processor: ffmpeg
