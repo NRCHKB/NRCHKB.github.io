@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.51.0](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.50.3...v1.51.0) (2022-02-22)
+
+
+### Features
+
+* add relation between Camera* Services to Camera Control Service ([5ae7c84](https://github.com/NRCHKB/NRCHKB.github.io/commit/5ae7c8496e5e29de481e83b34cee51d6a830c5c8))
+* disable bottom alert ([49915b0](https://github.com/NRCHKB/NRCHKB.github.io/commit/49915b0e256eee609f8a4bd7af57cc1adbc16c84))
+* Faucet Service + Valve Service ([#103](https://github.com/NRCHKB/NRCHKB.github.io/issues/103)) ([2086fff](https://github.com/NRCHKB/NRCHKB.github.io/commit/2086fff8a5552bc4a5ff14c02acdc73ce8441c19))
+* Main page improvements ([7e00e9b](https://github.com/NRCHKB/NRCHKB.github.io/commit/7e00e9bd8fc9dc68ada7b8c20e3be90d4ba372d2))
+* make alert background on light theme more contrast ([ba6a07d](https://github.com/NRCHKB/NRCHKB.github.io/commit/ba6a07da9d118b1c84fde642b863b795ad91c95d))
+* Update HomePage, Introduction and Nodes + Alert Style ([#112](https://github.com/NRCHKB/NRCHKB.github.io/issues/112)) ([0f3d2c8](https://github.com/NRCHKB/NRCHKB.github.io/commit/0f3d2c82935e9c1db0e2be7ba5e7d94b22cb5ce3))
+
+
+### Bug Fixes
+
+* Custom config path for netlify ([#115](https://github.com/NRCHKB/NRCHKB.github.io/issues/115)) ([f99e451](https://github.com/NRCHKB/NRCHKB.github.io/commit/f99e451dc54fbba8754d823eaa517a6b24d89364))
+* netlify preview url ([622caa8](https://github.com/NRCHKB/NRCHKB.github.io/commit/622caa8c8b06bc02eb6b5f16f1ceb0773a263141))
+* netlify.toml lines nesting ([ad027fc](https://github.com/NRCHKB/NRCHKB.github.io/commit/ad027fcb80c0eff73e75d215071aede881e965e6))
+* Probably correct netlify preview config ([9cff781](https://github.com/NRCHKB/NRCHKB.github.io/commit/9cff7818b8dc6951d81bfff52701f87667fff433))
+* Resolve Problem with non-stationary sidebar ([c40a7b0](https://github.com/NRCHKB/NRCHKB.github.io/commit/c40a7b0deb90c7b6dcf4fea26b1bf8aa9fc7ef26))
+* Resolve Problem with Scrollbar (docs-menu) ([9dc652a](https://github.com/NRCHKB/NRCHKB.github.io/commit/9dc652a2ad37c1f57938d4b941c137e08ef5bc8c))
+
 ### [1.50.3](https://github.com/NRCHKB/NRCHKB.github.io/compare/v1.50.2...v1.50.3) (2022-01-06)
 
 
