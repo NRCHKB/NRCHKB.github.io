@@ -3,7 +3,7 @@ title: "Host Node"
 description: "Host node acts as a link between service node(s) and Home.app"
 lead: "Host node acts as a link between service node(s) and Home.app."
 date: 2021-05-06T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
+lastmod: 2022-02-22T19:43:56.156Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     parent: "nodes"
 weight: 30
 toc: true
-contributors: ["GogoVega"]
+contributors: ["GogoVega","Shaquu"]
 ---
 
 It can be configured in two ways:

@@ -3,7 +3,7 @@ title: "FAQ"
 description: "Frequently Asked Questions"
 lead: "Frequently Asked Questions"
 date: 2022-01-26T20:51:13.183Z
-lastmod: 2022-02-07T19:48:12.612Z
+lastmod: 2022-02-22T19:43:54.470Z
 draft: false
 images: []
 menu:
@@ -11,7 +11,7 @@ menu:
     parent: "introduction"
 weight: 40
 toc: true
-contributors: ["Shaquu"]
+contributors: ["Shaquu","GogoVega"]
 ---
 
 ## How to check software versions
