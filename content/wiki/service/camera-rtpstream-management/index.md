@@ -14,4 +14,4 @@ service:
   name: "CameraRTPStreamManagement"
 ---
 
-Please relate to [CameraControl Service]({{< ref "/wiki/service/camera-control" >}} "CameraControl") for RTSP Camera configuration.
+{{< alert icon="⚠️" >}}Please relate to [CameraControl Service]({{< ref "/wiki/service/camera-control" >}} "CameraControl") for RTSP Camera configuration.{{< /alert >}}
