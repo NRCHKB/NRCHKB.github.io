@@ -3,7 +3,7 @@ title: "Battery"
 description: "Battery"
 lead: ""
 date: 2021-04-17T18:50:12.025Z
-lastmod: 2021-10-25T17:14:21.615Z
+lastmod: 2022-02-07T14:31:14.059Z
 draft: false
 images: []
 menu:
@@ -15,33 +15,33 @@ service:
 contributors: ["GogoVega","Shaquu"]
 ---
 
-**Note:** This service is to be used as a Linked Service as status of the parent's battery level.
+{{< alert icon="‼️" >}}This service must be used as a [**Linked Service**]({{< ref "/wiki/nodes/linked-service" >}} "Linked Service")!{{< /alert >}}
 
 ## Creating Battery Service
 
-To display a battery service you must first create a parent service. Motion Sensor for this example.
+To display a Battery Service you must first create a Parent Service. Motion Sensor for this example.
 
 ![Create Parent Service](battery_create_parent_service_example.png)
 
-Next you must create a battery linked service and select parent service used.
+Next, create the Battery Service as a Linked Service, selecting your desired Accessory as the Parent Service for which your Battery will be grouped under.
 
 ![Create Linked Service](battery_create_linked_service_example.png)
 
 ### Characteristic Properties
 
-Use the following JSON in your battery characteristic properties so that the Home application displays a `BatteryLevel`, `ChargingState` and `StatusLowBattery`.
+Use the following JSON in your Battery Characteristic Properties so that the Home.app displays a `BatteryLevel`, `ChargingState`, and `StatusLowBattery`.
 
 ```json
 { 
   "BatteryLevel": 100,
-  "ChargingState":0,
-  "StatusLowBattery":0
+  "ChargingState": 0,
+  "StatusLowBattery": 0
 }
 ```
 
 ### Example
 
-Here is a screenshot of the Home app.
+Here is a screenshot of the Home.app.
 
 ![Battery Motion Sensor Home App](battery_motion_sensor_home_app_example.png)
 
