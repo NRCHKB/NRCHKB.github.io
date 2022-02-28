@@ -3,7 +3,7 @@ title: "Output Messages"
 description: "NRCHKB nodes output messages tips"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
+lastmod: 2022-02-28T11:12:52.892Z
 draft: false
 images: []
 menu:
@@ -13,6 +13,16 @@ weight: 80
 toc: true
 contributors: ["crxporter", "Shaquu", "GogoVega"]
 ---
+
+## Which Output to choose?
+
+Below is a table with the Output description for the [Service Node]({{< ref "/wiki/nodes/service-node" >}} "Service Node"):
+
+| Order | Output | Description |
+|---|---|---|
+| Top | `onChange` | Outputs a message only if a value changes, this is the most recommended Output in most cases. |
+| Bottom | `onSet` | Outputs a message at each set value (even if the value has not changed), it is used to capture repeated inputs like TV remote buttons. |
+| Third* | `camera snapshot` | **Is displayed only** for [Camera Control]({{< ref "/wiki/service/camera-control" >}} "Camera Control") service and is used to retrieve camera snapshot data. |
 
 ## Differentiate between passthrough or "from HomeKit" messages
 
