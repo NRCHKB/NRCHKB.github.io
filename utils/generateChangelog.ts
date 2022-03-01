@@ -28,19 +28,26 @@ let changelog = fs.readFileSync(path.join(__dirname, "../node_modules/node-red-c
 changelog = changelog.replace('# Changelog', '')
 changelog = changelog.replace(/[^[]#(\d+)/g, (_: any, ticketID: string) => ` [#${ticketID}](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/${ticketID})`)
 changelog = changelog.replace(/@(\w*)/g, (_: any, nickname: string) => `[@${nickname}](https://github.com/${nickname})`)
+changelog = changelog.trim()
 
-fs.writeFile(changelogFile,
-  changelogTemplate(changelog, new Date().toISOString()),
-  {flag: "w"},
-  (err: any) => {
-    if (err) {
-      if (err.code == "EEXIST") {
+const previousChangelog = fs.readFileSync(changelogFile).toString().replace(/---(?:.|\n|\r)+?---/gm, '').trim()
+
+if (previousChangelog != changelog) {
+  fs.writeFile(changelogFile,
+    changelogTemplate(changelog, new Date().toISOString()),
+    {flag: "w"},
+    (err: any) => {
+      if (err) {
+        if (err.code == "EEXIST") {
+        } else {
+          throw err
+        }
       } else {
-        throw err
+        console.log("Changelog generated")
       }
-    } else {
-      console.log("Changelog generated")
-    }
-  })
+    })
+} else {
+  console.log("Changelog not changed")
+}
 
 export {}

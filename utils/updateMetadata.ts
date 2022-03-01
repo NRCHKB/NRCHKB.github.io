@@ -14,7 +14,6 @@ const ignoredAuthors: string[] = [
   "dependabot-preview[bot]",
   "dependabot[bot]",
   "github-actions[bot]",
-  "h-enk",
   "greenkeeper[bot]",
 ];
 
@@ -46,7 +45,7 @@ const updateFrontMatter = (content: string, key: string, value: string) => {
 const limitDate = (date: Date) => (date < minDate ? minDate : date);
 
 const processFile = async (file: string) => {
-  const fileContent = fs.readFileSync(file, { encoding: "utf-8" });
+  const fileContent = fs.readFileSync(file, {encoding: "utf-8"});
   let replacedFileContent = fileContent;
 
   // creation date
@@ -54,7 +53,7 @@ const processFile = async (file: string) => {
     childProcess
       .execSync(
         `git log --diff-filter=A --follow --format=%aI -- ${file} | tail -1`,
-        { encoding: "utf8" }
+        {encoding: "utf8"}
       )
       .trim()
   );
@@ -71,7 +70,7 @@ const processFile = async (file: string) => {
     childProcess
       .execSync(
         `git log -1 --pretty="format:%aI" --perl-regexp --author="^((?!GitHub Actions).*)$" -- ${file}`,
-        { encoding: "utf8" }
+        {encoding: "utf8"}
       )
       .trim()
   );
@@ -85,7 +84,7 @@ const processFile = async (file: string) => {
   // contributors
   // run in tty because of https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
   const gitContributors: string[] = childProcess
-    .execSync(`git shortlog -n -s -- ${file} < ${tty}`, { encoding: "utf8" })
+    .execSync(`git shortlog -n -s -- ${file} < ${tty}`, {encoding: "utf8"})
     .trim()
     .split("\n")
     .reduce((arr, contributor) => {
@@ -126,7 +125,7 @@ const processFile = async (file: string) => {
   }
 
   if (replacedFileContent !== fileContent) {
-    fs.writeFileSync(file, replacedFileContent, { encoding: "utf8" });
+    fs.writeFileSync(file, replacedFileContent, {encoding: "utf8"});
     console.log(
       `Updated metatdata for: "${file}" (date=${creationDate.toISOString()},lastmod=${lastmodDate.toISOString()},contributorsDiff=[${difference.join()}])`
     );
@@ -170,14 +169,13 @@ const processFile = async (file: string) => {
       );
     }
   })
-    .then(
-      async (files) =>
-        await Promise.all(
-          files.map(async (file) => await processFile(file))
-        ).then(() => files.length)
-    )
+    .then((files) => Promise.all(files.filter(ignoredFiles.includes).map((file) => processFile(file))))
+    .then((files) => files.length)
     .then((count) => {
       console.log(`\nScanned ${count} files.`);
+    })
+    .catch((reason) => {
+      console.error(`\nFailed due to ${reason}`);
     });
 })();
 
