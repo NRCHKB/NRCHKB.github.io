@@ -170,7 +170,11 @@ const processFile = async (file: string) => {
       );
     }
   })
-    .then((files) => Promise.all(files.filter(f => ignoredFiles.includes(f)).map((file) => processFile(file))))
+    .then((files) => Promise.all(
+      files
+        .filter(f => !ignoredFiles.includes(f))
+        .map((file) => processFile(file)))
+    )
     .then((files) => files.length)
     .then((count) => {
       console.log(`\nScanned ${count} files.`);
