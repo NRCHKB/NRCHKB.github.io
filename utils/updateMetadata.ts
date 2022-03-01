@@ -88,8 +88,9 @@ const processFile = async (file: string) => {
     .trim()
     .split("\n")
     .reduce((arr, contributor) => {
-      if (contributor.match(/^ *(\d*)\t(.*)/)?.[2]) {
-        arr.push(contributor);
+      const match = contributor.match(/^ *(\d*)\t(.*)/)?.[2]
+      if (match) {
+        arr.push(match);
       }
       return arr;
     }, [] as string[]);
@@ -169,14 +170,14 @@ const processFile = async (file: string) => {
       );
     }
   })
-    .then((files) => Promise.all(files.filter(ignoredFiles.includes).map((file) => processFile(file))))
+    .then((files) => Promise.all(files.filter(f => ignoredFiles.includes(f)).map((file) => processFile(file))))
     .then((files) => files.length)
     .then((count) => {
       console.log(`\nScanned ${count} files.`);
     })
     .catch((reason) => {
       console.error(`\nFailed due to ${reason}`);
-    });
+    })
 })();
 
 export {};
