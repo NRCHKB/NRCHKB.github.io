@@ -3,7 +3,7 @@ title: "Carbon Monoxide Sensor"
 description: "Carbon Monoxide Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.028Z
-lastmod: 2021-10-15T22:06:11.570Z
+lastmod: 2022-02-09T13:56:57.324Z
 draft: false
 images: []
 menu:
@@ -12,30 +12,26 @@ menu:
 toc: true
 service:
   name: "CarbonMonoxideSensor"
-contributors: ["crxporter","caitken-com","Shaquu"]
+contributors: ["crxporter", "caitken-com", "Shaquu"]
 ---
 
-To have a carbon monoxide sensor appear in the Home.app, the CarbonMonoxide service is used.
-Required value is `CarbonMonoxideDetected`, there will be a simple example and detailed example included below.
-Characteristic Properties are not needed for this setup, the values will be updated in the Home.app based on what is being sent from your sensors.
+{{< alert icon="💡" text="Home.app will not display the <strong>Carbon Monoxide Level</strong> in the Accessory's bubble." />}}
 
-## Example
+## Basic Principle
 
-These examples are meant to be copied into your Node-RED system and adapted to your setup.
+This is the simplest example of a CO Sensor item. The input nodes are `Detected` and `Not Detected`.
 
-**Please note:** Different from other HomeKit services (e.g. temperature sensor) the Home.app is not showing the carbon monoxide level on the device icon. To view the current value you have to open the preferences of the device in the Home.app or ask Siri. This works as designed by Apple and can't be changed.
-
-### Simple Carbon Monoxide Sensor
-
-This example is a simple Carbon Monoxide sensor that is only ever "triggered" or "normal". The msg.payload going in is either `{"CarbonMonoxideDetected":1}` or `{"CarbonMonoxideDetected":0}` where 1 is "carbon monoxide detected" and 0 is "normal conditions". Use this example as a starting point for simple alarms that do not send detailed levels.
-
-![screen shot 2019-03-06 at 10 38 45 am](https://user-images.githubusercontent.com/38265886/53897565-059d1580-3ffc-11e9-8d69-dabb28d44aca.png)
+![Basic Principle](CO_basic_principle.png)
 
 Copyable Node-RED flow:
 
 ```json
 [{"id":"ac79f4f4.906df8","type":"homekit-service","z":"54339415.36f384","bridge":"d334490b.40dac","name":"Simple CO","serviceName":"CarbonMonoxideSensor","topic":"","manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number","characteristicProperties":"{}","x":670,"y":800,"wires":[["933cc1a6.dc8c98"]]},{"id":"7fe97674.cbc19","type":"inject","z":"54339415.36f384","name":"Not Detected","topic":"","payload":"{\"CarbonMonoxideDetected\":0}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":470,"y":820,"wires":[["ac79f4f4.906df8"]]},{"id":"933cc1a6.dc8c98","type":"debug","z":"54339415.36f384","name":"CO Debug","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"payload","x":850,"y":800,"wires":[]},{"id":"3efd37a6.392f78","type":"inject","z":"54339415.36f384","name":"Detected","topic":"","payload":"{\"CarbonMonoxideDetected\":1}","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":480,"y":780,"wires":[["ac79f4f4.906df8"]]},{"id":"d334490b.40dac","type":"homekit-bridge","z":"","bridgeName":"Example Bridge","pinCode":"111-11-111","port":"","allowInsecureRequest":false,"manufacturer":"Default Manufacturer","model":"Default Model","serialNo":"Default Serial Number"}]
 ```
+
+## Example
+
+Below is a list of examples intended to be copied into your Node-RED system and adapted to your setup:
 
 ### Full Featured Carbon Monoxide Sensor
 
@@ -49,7 +45,7 @@ There are three inject nodes in this example:
 
 **The `Reset` inject node** will send a value of 0 to both `CarbonMonoxideDetected` and `CarbonMonoxidePeakLevel` - used to clear the system after alarms have been dealt with and carbon monoxide sources have been stopped.
 
-![screen shot 2019-03-06 at 10 38 21 am](https://user-images.githubusercontent.com/38265886/53897541-f7e79000-3ffb-11e9-9481-23e6e8246a49.png)
+![Full Example](CO_full_example.png)
 
 Copyable Node-RED flow:
 
