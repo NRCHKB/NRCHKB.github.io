@@ -10,7 +10,7 @@ menu:
     parent: "nodes"
 weight: 60
 toc: true
-contributors: ["crxporter", "djiwondee", "radokristof", "caitken-com", "Shaquu"]
+contributors: ["crxporter","djiwondee","radokristof","caitken-com","Shaquu","GogoVega"]
 ---
 
 ## What is that
