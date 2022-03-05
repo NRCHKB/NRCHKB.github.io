@@ -3,7 +3,6 @@ title: "Heater Cooler"
 description: "This service can be used to describe either a heater, cooler or a heater and a cooler"
 lead: ""
 date: 2021-04-17T18:50:12.030Z
-lastmod: 2022-02-08T17:47:41.575Z
 draft: false
 images: []
 menu:

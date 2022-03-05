@@ -3,7 +3,6 @@ title: "Smoke Sensor"
 description: "Smoke Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.035Z
-lastmod: 2021-10-23T18:48:54+02:00
 draft: false
 images: []
 menu:

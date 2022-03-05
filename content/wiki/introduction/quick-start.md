@@ -3,7 +3,6 @@ title: "Quick Start"
 description: "Welcome to the NRCHKB wiki!"
 lead: "Welcome to the NRCHKB wiki!"
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:

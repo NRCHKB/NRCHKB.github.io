@@ -3,7 +3,6 @@ title: "Humidity Sensor"
 description: "Humidity Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.031Z
-lastmod: 2022-01-06T22:41:09.837Z
 draft: false
 images: []
 menu:

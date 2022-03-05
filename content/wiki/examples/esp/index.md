@@ -3,7 +3,6 @@ title: "ESP"
 description: "Description and example of ESP configuration"
 lead: ""
 date: 2021-11-10T18:28:20.895Z
-lastmod: 2022-01-11T16:34:08+01:00
 draft: false
 images: []
 menu:

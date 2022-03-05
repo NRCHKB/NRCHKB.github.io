@@ -3,7 +3,6 @@ title: "Carbon Monoxide Sensor"
 description: "Carbon Monoxide Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.028Z
-lastmod: 2021-10-15T22:06:11.570Z
 draft: false
 images: []
 menu:

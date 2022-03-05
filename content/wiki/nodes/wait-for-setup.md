@@ -3,7 +3,6 @@ title: "Wait For Setup"
 description: "Dynamic configuration of the Characteristic Properties of your Service Node"
 lead: "Dynamic configuration of the Characteristic Properties of your Service Node."
 date: 2021-08-03T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:

@@ -3,7 +3,6 @@ title: "Battery"
 description: "Battery"
 lead: ""
 date: 2021-04-17T18:50:12.025Z
-lastmod: 2021-10-25T17:14:21.615Z
 draft: false
 images: []
 menu:
@@ -32,7 +31,7 @@ Next you must create a battery linked service and select parent service used.
 Use the following JSON in your battery characteristic properties so that the Home application displays a `BatteryLevel`, `ChargingState` and `StatusLowBattery`.
 
 ```json
-{ 
+{
   "BatteryLevel": 100,
   "ChargingState":0,
   "StatusLowBattery":0

@@ -3,7 +3,6 @@ title: "Thermostat"
 description: "Thermostat"
 lead: ""
 date: 2021-04-17T18:50:12.037Z
-lastmod: 2021-10-15T22:06:24.023Z
 draft: false
 images: []
 menu:

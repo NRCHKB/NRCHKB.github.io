@@ -3,7 +3,6 @@ title: "Window Covering"
 description: "Window Covering"
 lead: ""
 date: 2021-04-17T18:50:12.040Z
-lastmod: 2021-10-15T22:06:26.519Z
 draft: false
 images: []
 menu:

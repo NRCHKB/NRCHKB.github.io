@@ -3,7 +3,6 @@ title: "Characteristic Properties"
 description: "What is a Characteristic Property and how to use it"
 lead: "What is a Characteristic Property and how to use it."
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:

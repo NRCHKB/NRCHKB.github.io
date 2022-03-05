@@ -3,7 +3,6 @@ title: "Output Messages"
 description: "NRCHKB nodes output messages tips"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:

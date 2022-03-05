@@ -3,7 +3,6 @@ title: "Irrigation System"
 description: "Irrigation System"
 lead: ""
 date: 2021-04-17T18:50:12.031Z
-lastmod: 2022-01-06T22:41:10.441Z
 draft: false
 images: []
 menu:

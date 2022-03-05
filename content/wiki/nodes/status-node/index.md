@@ -3,7 +3,6 @@ title: "Status Node"
 description: "This node outputs status of the HomeKit Service"
 lead: ""
 date: 2021-09-30T18:51:41.675Z
-lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:

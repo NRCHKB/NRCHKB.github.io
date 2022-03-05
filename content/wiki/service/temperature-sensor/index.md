@@ -3,7 +3,6 @@ title: "Temperature Sensor"
 description: "Temperature Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.037Z
-lastmod: 2021-10-15T22:06:23.762Z
 draft: false
 images: []
 menu:

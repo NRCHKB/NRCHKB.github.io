@@ -3,7 +3,6 @@ title: "Air Quality Sensor"
 description: "Air Quality Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.025Z
-lastmod: 2021-10-15T22:06:08.212Z
 draft: false
 images: []
 menu:

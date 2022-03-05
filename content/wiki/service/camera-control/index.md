@@ -3,7 +3,6 @@ title: "Camera Control"
 description: "Camera Control"
 lead: ""
 date: 2021-04-17T18:50:12.026Z
-lastmod: 2021-10-09T12:01:54.995Z
 draft: false
 images: []
 menu:

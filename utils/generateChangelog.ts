@@ -1,13 +1,11 @@
 import path from 'path'
 
 const changelogFile = path.join(__dirname, "../content/wiki/discover-more/changelog.md")
-const changelogTemplate = (changelog: string, lastmod: string) => {
-  return `---
+const changelogTemplate = (changelog: string) => `---
 title: "Changelog"
 description: "All notable changes in NRCHKB project."
 lead: ""
 date: 2021-08-11T18:47:58.489Z
-lastmod: ${lastmod}
 draft: false
 images: []
 menu:
@@ -20,7 +18,6 @@ contributors: ["Shaquu"]
 
 ${changelog}
 `
-}
 
 const fs = require("fs")
 
@@ -34,7 +31,7 @@ const previousChangelog = fs.readFileSync(changelogFile).toString().replace(/---
 
 if (previousChangelog != changelog) {
   fs.writeFile(changelogFile,
-    changelogTemplate(changelog, new Date().toISOString()),
+    changelogTemplate(changelog),
     {flag: "w"},
     (err: any) => {
       if (err) {

@@ -3,7 +3,6 @@ title: "Topic"
 description: "The topic is used to identify and filter messages"
 lead: "The topic is used to identify and filter messages."
 date: 2022-01-22T18:59:43.769Z
-lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:

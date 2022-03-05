@@ -3,7 +3,6 @@ title: "Experimental"
 description: "NRCHKB experimental features"
 lead: ""
 date: 2021-10-11T23:29:29.943Z
-lastmod: 2022-01-11T16:34:39+01:00
 draft: false
 images: []
 menu:

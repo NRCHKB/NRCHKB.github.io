@@ -3,7 +3,6 @@ title: "Host Node"
 description: "Host node acts as a link between service node(s) and Home.app"
 lead: "Host node acts as a link between service node(s) and Home.app."
 date: 2021-05-06T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
 draft: false
 images: []
 menu:

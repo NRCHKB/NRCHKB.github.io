@@ -3,7 +3,6 @@ title: "Motion Sensor"
 description: "Motion Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.032Z
-lastmod: 2021-10-25T17:14:31.056Z
 draft: false
 images: []
 menu:

@@ -3,7 +3,6 @@ title: "Window"
 description: "Window"
 lead: ""
 date: 2021-04-17T18:50:12.039Z
-lastmod: 2021-10-15T22:06:26.781Z
 draft: false
 images: []
 menu:

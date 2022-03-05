@@ -3,7 +3,6 @@ title: "Contact Sensor"
 description: "Contact Sensor"
 lead: ""
 date: 2021-04-17T18:50:12.028Z
-lastmod: 2021-10-23T18:48:46+02:00
 draft: false
 images: []
 menu:

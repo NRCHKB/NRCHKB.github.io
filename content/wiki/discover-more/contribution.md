@@ -3,7 +3,6 @@ title: "Contribution"
 description: "Few hints how to contribute to our wiki!"
 lead: ""
 date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-10-22T17:44:58+02:00
 draft: false
 images: []
 menu:
