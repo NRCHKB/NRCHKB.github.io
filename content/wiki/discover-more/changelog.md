@@ -2,8 +2,7 @@
 title: "Changelog"
 description: "All notable changes in NRCHKB project."
 lead: ""
-date: 2021-08-11T18:47:58.489Z
-lastmod: 2022-03-01T14:48:03.018Z
+date: 2021-08-11T19:04:33.000Z
 draft: false
 images: []
 menu:
