@@ -10,7 +10,7 @@ menu:
     parent: "introduction"
 weight: 10
 toc: true
-contributors: ["crxporter", "radokristof", "Shaquu"]
+contributors: ["crxporter","radokristof","Shaquu","GogoVega"]
 ---
 
 This wiki will be used to share examples so that users may see how this plugin functions and to get started more easily with copyable flows for each HomeKit service. This page will assume you are familiar with Node-RED basics.

@@ -10,7 +10,7 @@ menu:
     parent: "introduction"
 weight: 30
 toc: true
-contributors: ["Shaquu"]
+contributors: ["Shaquu","GogoVega"]
 ---
 
 ## Device paired but Service disappearing in Home.app from time to time

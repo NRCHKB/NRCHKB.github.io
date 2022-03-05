@@ -13,6 +13,16 @@ toc: true
 contributors: ["crxporter", "Shaquu", "GogoVega"]
 ---
 
+## Which Output to choose?
+
+Below is a table with the Output description for the [Service Node]({{< ref "/wiki/nodes/service-node" >}} "Service Node"):
+
+| Order | Output | Description |
+|---|---|---|
+| Top | `onChange` | Outputs a message only if a value changes, this is the most recommended Output in most cases. |
+| Bottom | `onSet` | Outputs a message at each set value (even if the value has not changed), it is used to capture repeated inputs like TV remote buttons. |
+| Third* | `camera snapshot` | **Is displayed only** for [Camera Control]({{< ref "/wiki/service/camera-control" >}} "Camera Control") service and is used to retrieve camera snapshot data. |
+
 ## Differentiate between passthrough or "from HomeKit" messages
 
 In some cases, it may be useful, even essential, to differentiate a command from the previous node or Home.app to avoid a loop problem. There are two possible cases:

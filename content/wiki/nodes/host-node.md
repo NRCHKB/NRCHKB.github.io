@@ -10,7 +10,7 @@ menu:
     parent: "nodes"
 weight: 30
 toc: true
-contributors: ["GogoVega"]
+contributors: ["GogoVega","Shaquu"]
 ---
 
 It can be configured in two ways:

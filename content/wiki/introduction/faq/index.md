@@ -10,7 +10,7 @@ menu:
     parent: "introduction"
 weight: 40
 toc: true
-contributors: ["Shaquu"]
+contributors: ["Shaquu","GogoVega"]
 ---
 
 ## How to check software versions

@@ -11,7 +11,7 @@ menu:
 toc: true
 service:
   name: "HeaterCooler"
-contributors: ["caitken-com","Shaquu"]
+contributors: ["caitken-com","Shaquu","GogoVega"]
 ---
 
 Used as an Air Conditioner accessory with 3 modes: Auto, Heat, Cool. Optionally able to control fan speed and enable fan swing mode.
