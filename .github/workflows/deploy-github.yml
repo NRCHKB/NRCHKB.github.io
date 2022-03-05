@@ -22,16 +22,16 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Check for linting errors
-        run: yarn test
+        run: npm run test
 
       - name: Update metadata
         # used to run with TTY because of
         # https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
         shell: 'script --return --quiet --command "bash {0}"'
-        run: yarn update:metadata
+        run: npm run update:metadata
         env:
           ALL: ${{ github.event.inputs.all }}
 
@@ -48,7 +48,7 @@ jobs:
             data/nrchkb/contributors.json
 
       - name: Build production website
-        run: yarn build
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
