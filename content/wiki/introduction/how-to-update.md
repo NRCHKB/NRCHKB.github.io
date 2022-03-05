@@ -2,7 +2,7 @@
 title: "How to Update"
 description: "NRCHKB node update instructions"
 lead: "How to update NRCHKB node"
-date: 2022-01-26T20:51:13.183Z
+date: 2022-02-08T15:27:48.000Z
 draft: false
 images: []
 menu:

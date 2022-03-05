@@ -14,13 +14,12 @@
     "access": "public"
   },
   "scripts": {
-    "init": "npm run clean && npm run gen:contributors && npm run gen:changelog",
-    "prestart": "npm run init",
+    "initialize": "rimraf public resources && ts-node utils/frontmatter/fetch-github-contributors.ts && ts-node utils/frontmatter/update-contributors.ts && ts-node utils/generate-changelog.ts",
+    "prestart": "npm run initialize",
     "start": "hugo server --disableFastRender",
-    "prebuild": "npm run init",
+    "prebuild": "npm run initialize",
     "build": "hugo --gc --minify",
     "build:preview": "npm run build --environment netlify",
-    "clean": "rimraf public resources",
     "lint": "eslint assets/js config && stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\" && markdownlint *.md content/**/*.md",
     "release": "standard-version",
     "server": "hugo server",
@@ -28,10 +27,7 @@
     "env": "env",
     "precheck": "npm version",
     "check": "hugo version",
-    "gen:wiki": "ts-node utils/generateWikiPages.ts",
-    "gen:changelog": "ts-node utils/generateChangelog.ts",
-    "gen:contributors": "ts-node utils/generateContributors.ts",
-    "update:metadata": "ts-node utils/updateMetadata.ts",
+    "postinstall": "ts-node utils/generate-wiki-pages.ts",
     "prepare": "husky install"
   },
   "devDependencies": {

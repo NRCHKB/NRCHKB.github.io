@@ -2,7 +2,7 @@
 title: "NFCAccessControlPoint"
 description: "NFC Access Control Point"
 lead: ""
-date: 2021-09-27T18:51:43.222Z
+date: 2021-09-27T18:54:22.000Z
 draft: false
 images: []
 menu:

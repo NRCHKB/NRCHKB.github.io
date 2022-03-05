@@ -2,7 +2,7 @@
 title: "Service Node"
 description: "This node represents Service in HomeKit"
 lead: "This node represents the Service displayed in Home.app."
-date: 2021-05-06T00:00:00+02:00
+date: 2021-05-06T21:18:56.000Z
 draft: false
 images: []
 menu:

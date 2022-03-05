@@ -2,7 +2,7 @@
 title: "Washing Machine Monitor"
 description: "Washing Machine Monitor"
 lead: ""
-date: 2021-08-03T00:00:00+02:00
+date: 2021-08-03T13:44:16.000Z
 draft: false
 images: []
 menu:

@@ -2,7 +2,7 @@
 title: "Linked Service"
 description: "Linked Service is, to put it another way, a Service attached to the Parent Service"
 lead: "Linked Service is, to put it another way, a Service attached to the Parent Service."
-date: 2022-01-21T14:54:56.266Z
+date: 2022-02-08T15:27:48.000Z
 draft: false
 images: []
 menu:

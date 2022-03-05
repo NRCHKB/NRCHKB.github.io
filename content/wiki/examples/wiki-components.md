@@ -2,7 +2,7 @@
 title: "Wiki Components"
 description: "Example components to be used in Wiki"
 lead: ""
-date: 2022-01-18T20:19:11.711Z
+date: 2022-01-18T20:22:16.000Z
 draft: true
 images: []
 menu:
