@@ -3,11 +3,6 @@ on:
     branches:
       - master
   workflow_dispatch:
-    inputs:
-      all:
-        type: boolean
-        default: false
-        description: Update metadata of all md files (otherwise just changed files)
 
 jobs:
   deploy:
@@ -26,26 +21,6 @@ jobs:
 
       - name: Check for linting errors
         run: npm run test
-
-      - name: Update metadata
-        # used to run with TTY because of
-        # https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
-        shell: 'script --return --quiet --command "bash {0}"'
-        run: npm run update:metadata
-        env:
-          ALL: ${{ github.event.inputs.all }}
-
-      - name: Push updated metadata
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          disable_globbing: true
-          commit_message: 'updated metadata'
-          commit_user_name: GitHub Actions
-          commit_user_email: actions@github.com
-          commit_author: GitHub Actions <actions@github.com>
-          file_pattern: |
-            content/*.md
-            data/nrchkb/contributors.json
 
       - name: Build production website
         run: npm run build

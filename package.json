@@ -26,6 +26,7 @@
     "precheck": "npm version",
     "check": "hugo version",
     "postinstall": "ts-node utils/generate-wiki-pages.ts && npm run initialize",
+    "postci": "npm run initialize",
     "prepare": "husky install"
   },
   "devDependencies": {
