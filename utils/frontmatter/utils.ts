@@ -27,6 +27,8 @@ export const forFiles = (baseFolder: string, all?: boolean) => {
           reject(err);
           return;
         }
+
+        resolve(matches)
       })
     } else {
       const lastSha = process.env.GITHUB_SHA || "HEAD";

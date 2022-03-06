@@ -12,12 +12,12 @@ const tty = process.platform === "win32" ? "CON" : "/dev/tty";
 const baseFolder = "content/";
 
 // Read all contributors from 'nrchkb' file
-const contributorsDataFileRaw: ContributorDataType[] = require("../data/nrchkb/contributors.json");
+const contributorsDataFileRaw: ContributorDataType[] = require("../../data/nrchkb/contributors.json");
 const contributorsDataFile =   contributorsDataFileRaw.map(contributorsData => contributorsData.login);
 
 // Read contributorsMap (login and name) from 'nrchkb' file
-const contributorsMapPath = path.join(__dirname, "../data/nrchkb/contributorsMap.json");
-let contributorsMap: Record<string, string[]> = require("../data/nrchkb/contributorsMap.json");
+const contributorsMapPath = path.join(__dirname, "../../data/nrchkb/contributors.map.json");
+let contributorsMap: Record<string, string[]> = require(contributorsMapPath);
 const _ = require("lodash"), contributorsMapCopy = JSON.stringify(_.cloneDeep(contributorsMap));
 
 // Ignore "GitHub Actions" to prevent recursion of updating files
@@ -125,7 +125,7 @@ const processFile = async (file: string) => {
     })
     .then(() => {
       fs.writeFileSync(contributorsMapPath, JSON.stringify(contributorsMap), { encoding: "utf-8" })
-      console.log("ContributorsMap Updated")
+      console.log("Contributors Map Updated")
     })
     .catch((reason) => {
       console.error(`\nFailed due to ${reason}`);

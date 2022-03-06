@@ -15,9 +15,7 @@
   },
   "scripts": {
     "initialize": "rimraf public resources && ts-node utils/frontmatter/fetch-github-contributors.ts && ts-node utils/frontmatter/update-contributors.ts && ts-node utils/generate-changelog.ts",
-    "prestart": "npm run initialize",
     "start": "hugo server --disableFastRender",
-    "prebuild": "npm run initialize",
     "build": "hugo --gc --minify",
     "build:preview": "npm run build --environment netlify",
     "lint": "eslint assets/js config && stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\" && markdownlint *.md content/**/*.md",
@@ -27,7 +25,7 @@
     "env": "env",
     "precheck": "npm version",
     "check": "hugo version",
-    "postinstall": "ts-node utils/generate-wiki-pages.ts",
+    "postinstall": "ts-node utils/generate-wiki-pages.ts && npm run initialize",
     "prepare": "husky install"
   },
   "devDependencies": {
