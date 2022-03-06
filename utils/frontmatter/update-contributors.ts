@@ -49,16 +49,16 @@ const processFile = async (file: string) => {
 
   // Read contributors from git log
   const gitContributors: string[] = childProcess
-  .execSync(`git shortlog -n -s -- ${file} < ${tty}`, {encoding: "utf8"})
-  .trim()
-  .split("\n")
-  .reduce((arr, contributor) => {
-    const match = contributor.match(/^ *(\d*)\t(.*)/)?.[2]
-    if (match) {
-      arr.push(match);
-    }
-    return arr;
-  }, [] as string[]);
+    .execSync(`git shortlog -n -s -- ${file} < ${tty}`, {encoding: "utf8"})
+    .trim()
+    .split("\n")
+    .reduce((arr, contributor) => {
+      const match = contributor.match(/^ *(\d*)\t(.*)/)?.[2]
+      if (match) {
+        arr.push(match);
+      }
+      return arr;
+    }, [] as string[]);
 
   let difference: string[] = [];
 
