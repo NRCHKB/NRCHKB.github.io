@@ -13,7 +13,7 @@ const processFile = async (file: string) => {
   const fileContent = fs.readFileSync(file, {encoding: "utf-8"});
   let replacedFileContent = fileContent;
 
-  // creation date
+  // Creation date
   const creationDate = new Date(
     childProcess
       .execSync(
@@ -32,7 +32,7 @@ const processFile = async (file: string) => {
   if (replacedFileContent !== fileContent) {
     fs.writeFileSync(file, replacedFileContent, {encoding: "utf8"});
     console.log(
-      `Updated date for: "${file}" (date=${creationDate.toISOString()})`
+      `Updated date for: "${file}" (date=${creationDate.toISOString()}).`
     );
   }
 };

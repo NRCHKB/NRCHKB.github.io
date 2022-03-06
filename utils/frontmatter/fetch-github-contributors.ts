@@ -1,6 +1,6 @@
-import path from 'path'
-import axios, {AxiosResponse} from "axios";
+import path from "path";
 import * as fs from "fs";
+import axios, {AxiosResponse} from "axios";
 import {GithubContributorType} from "./types/GithubContributorType";
 
 const contributorsDataFile = path.join(__dirname, "../../data/nrchkb/contributors.json")

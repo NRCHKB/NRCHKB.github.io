@@ -1,6 +1,6 @@
-import path from 'path'
+import path from "path";
 
-const changelogFile = path.join(__dirname, "../content/wiki/discover-more/changelog.md")
+const changelogFile = path.join(__dirname, "../content/wiki/discover-more/changelog.md");
 const changelogTemplate = (changelog: string) => `---
 title: "Changelog"
 description: "All notable changes in NRCHKB project."
@@ -19,15 +19,16 @@ contributors: ["Shaquu"]
 ${changelog}
 `
 
-const fs = require("fs")
+const fs = require("fs");
 
-let changelog = fs.readFileSync(path.join(__dirname, "../node_modules/node-red-contrib-homekit-bridged/CHANGELOG.md")).toString()
-changelog = changelog.replace('# Changelog', '')
-changelog = changelog.replace(/[^[]#(\d+)/g, (_: any, ticketID: string) => ` [#${ticketID}](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/${ticketID})`)
-changelog = changelog.replace(/@(\w*)/g, (_: any, nickname: string) => `[@${nickname}](https://github.com/${nickname})`)
-changelog = changelog.trim()
+let changelog = fs.readFileSync(path.join(__dirname, "../node_modules/node-red-contrib-homekit-bridged/CHANGELOG.md"))
+.toString()
+.replace('# Changelog', '')
+.replace(/[^[]#(\d+)/g, (_: any, ticketID: string) => ` [#${ticketID}](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/${ticketID})`)
+.replace(/@(\w*)/g, (_: any, nickname: string) => `[@${nickname}](https://github.com/${nickname})`)
+.trim();
 
-const previousChangelog = fs.readFileSync(changelogFile).toString().replace(/---(?:.|\n|\r)+?---/gm, '').trim()
+const previousChangelog = fs.readFileSync(changelogFile).toString().replace(/---(?:.|\n|\r)+?---/gm, '').trim();
 
 if (previousChangelog != changelog) {
   fs.writeFile(changelogFile,
@@ -40,11 +41,11 @@ if (previousChangelog != changelog) {
           throw err
         }
       } else {
-        console.log("Changelog generated")
+        console.log("Changelog generated.")
       }
     })
 } else {
-  console.log("Changelog not changed")
+  console.log("Changelog not changed!")
 }
 
 export {}
