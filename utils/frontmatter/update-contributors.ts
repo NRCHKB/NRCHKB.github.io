@@ -1,26 +1,17 @@
 import * as fs from "fs";
 import { glob } from "glob";
 import { GQLFileResponse } from "./types/GQLFileResponse";
-import { makeGQLRequest, updateFrontMatter } from "./utils";
+import { ignoredAuthors, makeGQLRequest, updateFrontMatter } from "./utils";
 
-const ignoredAuthors = [
-  "h-enk",
-  "GitHub Actions",
-  "dependabot-preview[bot]",
-  "dependabot[bot]",
-  "github-actions[bot]",
-  "greenkeeper[bot]",
-];
-
-const ITERATION_LIMIT = 2;  // 200 commits per file
+const ITERATION_LIMIT = 2; // 200 commits per file
 
 type File = {
-  id: number
-  path: string
-  hasNextPage: boolean
-  endCursor: null | string
-  contributors: string[]
-}
+  id: number;
+  path: string;
+  hasNextPage: boolean;
+  endCursor: null | string;
+  contributors: string[];
+};
 
 // Generate path mapping with all files
 const generatePathMap = () => {
@@ -30,16 +21,19 @@ const generatePathMap = () => {
       (err, matches) => {
         if (err) reject(err);
 
-        const files = matches.reduce((acc: File[], match, i) => [
-          ...acc,
-          {
-            id: i,
-            path: match,
-            hasNextPage: true,
-            endCursor: null,
-            contributors: []
-          }
-        ], []);
+        const files = matches.reduce(
+          (acc: File[], match, i) => [
+            ...acc,
+            {
+              id: i,
+              path: match,
+              hasNextPage: true,
+              endCursor: null,
+              contributors: [],
+            },
+          ],
+          []
+        );
         resolve(files);
       }
     );
@@ -48,22 +42,26 @@ const generatePathMap = () => {
 
 // Checks if some files have a next page
 const hasNextPages = (files: File[]) => {
-  return files.findIndex(({ hasNextPage }) => !!hasNextPage) !== -1
-}
+  return files.find(({ hasNextPage }) => hasNextPage);
+};
 
 const generateGQLArgs = (params: Record<string, null | string | number>) => {
   return Object.entries(params)
     .filter(([, value]) => value !== null && value !== "")
-    .map(([key, value])=> `${key}: ${typeof value === "string" ? JSON.stringify(value): value}`, "")
+    .map(
+      ([key, value]) =>
+        `${key}: ${typeof value === "string" ? JSON.stringify(value) : value}`,
+      ""
+    )
     .join(", ");
-}
+};
 
 // Generate GQL query
 const makeFilesRequest = async (files: File[]) => {
   let filesQueryPart = "";
 
   for (const file of files) {
-    if(!file.hasNextPage) continue;
+    if (!file.hasNextPage) continue;
 
     filesQueryPart += `\nf${file.id}: history(${generateGQLArgs({
       first: 100,
@@ -72,7 +70,7 @@ const makeFilesRequest = async (files: File[]) => {
     })}) {...Author}`;
   }
 
-  if(filesQueryPart === "") return;
+  if (filesQueryPart === "") return;
 
   const query = `
     query {
@@ -100,15 +98,17 @@ const makeFilesRequest = async (files: File[]) => {
     }
   `;
 
-  const response: GQLFileResponse = await makeGQLRequest(query);
+  const response: GQLFileResponse = await makeGQLRequest({ query });
 
-  for(const [key, value] of Object.entries(response.data.data.repository.object)) {
-    const fileIdx = files.findIndex(file => `f${file.id}` === key);
+  for (const [key, value] of Object.entries(
+    response.data.data.repository.object
+  )) {
+    const fileIdx = files.findIndex((file) => `f${file.id}` === key);
 
     // Update contributors
     const contributors = value.nodes.map((node) => node.author.user.login);
     for (const contributor of contributors) {
-      if(!files[fileIdx].contributors.includes(contributor)){
+      if (!files[fileIdx].contributors.includes(contributor)) {
         files[fileIdx].contributors.push(contributor);
       }
     }
@@ -121,21 +121,20 @@ const makeFilesRequest = async (files: File[]) => {
 
 // Update contributors list on each page
 const updateContributorsInFiles = (files: File[]) => {
-  for(const file of files) {
+  for (const file of files) {
     const fileContent = fs.readFileSync(file.path, { encoding: "utf-8" });
 
     let replacedFileContent = fileContent;
     let difference = [];
 
-    const currentContributorsRaw =
-      fileContent.match(/contributors: (.*)/)?.[1];
+    const currentContributorsRaw = fileContent.match(/contributors: (.*)/)?.[1];
 
     if (currentContributorsRaw) {
       const currentContributors = JSON.parse(currentContributorsRaw);
       const contributors = [...currentContributors];
 
       for (const c of file.contributors) {
-        if(!contributors.includes(c) && !ignoredAuthors.includes(c)) {
+        if (!contributors.includes(c) && !ignoredAuthors.includes(c)) {
           contributors.push(c);
           difference.push(c);
         }
@@ -160,25 +159,25 @@ const updateContributorsInFiles = (files: File[]) => {
 // Processus
 (async () => {
   try {
-
     let iteration = 0;
     const files = await generatePathMap();
 
     while (hasNextPages(files)) {
+      if (iteration >= ITERATION_LIMIT) {
+        console.log(`Amount commits over limit!`);
+        break;
+      }
 
-      if (iteration >= ITERATION_LIMIT) { console.log(`\nNumber of commits over limit!`); break; }
-
-      iteration++
+      iteration++;
 
       await makeFilesRequest(files);
 
       updateContributorsInFiles(files);
-
-    } console.log(`\nContributors updated.`);
-
+    }
+    console.log(`GitHub Contributors Map updated.`);
   } catch (error) {
-    console.error(`\nFailed due to ${error}.`);
+    console.error(`Failed`, error);
   }
 })();
 
-export { };
+export {};
