@@ -10,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 80
 toc: true
-contributors: ["crxporter", "Shaquu"]
 ---
 
 ## Migration to new setup

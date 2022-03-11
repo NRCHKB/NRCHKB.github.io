@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "MotionSensor"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic principle

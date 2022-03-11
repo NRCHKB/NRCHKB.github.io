@@ -10,7 +10,6 @@ menu:
     parent: "examples"
 weight: 3
 toc: true
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## What is an ESP?

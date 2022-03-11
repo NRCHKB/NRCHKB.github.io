@@ -10,7 +10,6 @@ menu:
     parent: "introduction"
 weight: 20
 toc: true
-contributors: ["Shaquu","GogoVega"]
 ---
 
 A new version has been released, and you would like to upgrade? There are at least two ways to do that!

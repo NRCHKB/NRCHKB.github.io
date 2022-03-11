@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Thermostat"
-contributors: ["oliverrahner","ptath","crxporter","Shaquu"]
 ---
 
 ## Examples

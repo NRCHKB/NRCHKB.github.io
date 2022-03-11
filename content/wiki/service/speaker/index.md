@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Speaker"
-contributors: ["caitken-com","Shaquu"]
 ---
 
 **Note:** This service is to be used as a linked/child accessory.

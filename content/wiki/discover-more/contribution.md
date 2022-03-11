@@ -10,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 10
 toc: true
-contributors: ["Shaquu", "crxporter"]
 ---
 
 ## Editing
@@ -58,8 +57,8 @@ An example can be found [here](https://github.com/NRCHKB/NRCHKB.github.io/tree/m
 
 ## Adding contributor
 
-Once you edit or add any content feel free to add yourself to contributors.
+Once you edit or add any content you will be added to contributors list.
 
-1. In specific page add your name (case sensitive) to the end of array `contributors: ["Shaquu", "crxporter"]`
-2. If you want you can create your profile page in `content/contributors`
-   * Use [this](https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/contributors/shaquu/_index.md) as an example.
+If you want you can create your profile page in `content/contributors`
+
+* Use [this](https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/contributors/shaquu/_index.md) as an example.

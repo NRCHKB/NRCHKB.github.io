@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Doorbell"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic Principle

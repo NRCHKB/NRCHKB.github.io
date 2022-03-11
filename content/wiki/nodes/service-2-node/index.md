@@ -10,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 99
 toc: true
-contributors: ["Shaquu"]
 ---
 
 This node represents Service 2 in HomeKit.

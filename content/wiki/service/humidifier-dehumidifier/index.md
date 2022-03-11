@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "HumidifierDehumidifier"
-contributors: ["caitken-com","Shaquu"]
 ---
 
 Used as a Humidifier/Dehumidifier accessory with 3 modes: Auto, Humidifying, Dehumidifying.

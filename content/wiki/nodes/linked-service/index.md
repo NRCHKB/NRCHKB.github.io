@@ -10,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 50
 toc: true
-contributors: ["GogoVega"]
 ---
 
 ## How to create a Linked Service

@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Lightbulb"
-contributors: ["crxporter","NorthernMan54","tupps","djiwondee","Shaquu","GogoVega"]
 ---
 
 

@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "OccupancySensor"
-contributors: ["djiwondee","crxporter","caitken-com","Shaquu","GogoVega"]
 ---
 
 ## Basic principle

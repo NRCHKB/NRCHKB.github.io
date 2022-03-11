@@ -10,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 70
 toc: true
-contributors: ["GogoVega"]
 ---
 
 ## What is that

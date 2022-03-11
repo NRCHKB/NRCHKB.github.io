@@ -10,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 90
 toc: true
-contributors: ["crxporter","Toshik","Shaquu","GogoVega"]
 ---
 
 ## What is that
@@ -25,11 +24,11 @@ Go to your Service Node and check the option `Wait for Setup` then create a Mess
 
 ```json
 {
- "nrchkb": {
- "setup": {
- "... setup properties go here"
- }
- }
+  "nrchkb": {
+    "setup": {
+      "properties": "go here"
+    }
+  }
 }
 ```
 

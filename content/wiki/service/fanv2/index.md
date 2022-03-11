@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Fanv2"
-contributors: ["crxporter","caitken-com","Shaquu"]
 ---
 
 If you would like to have all features, use this in Characteristic Properties:

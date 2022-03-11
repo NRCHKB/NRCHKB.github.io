@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Fan"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic Principle

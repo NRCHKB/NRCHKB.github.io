@@ -10,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 30
 toc: true
-contributors: ["GogoVega","Shaquu"]
 ---
 
 It can be configured in two ways:
@@ -81,7 +80,7 @@ This option allows you to choose whether you want to allow messages to pass thro
 
 In computer networks, the multicast DNS protocol resolves hostnames to IP addresses within small networks that do not include a local name server.
 
-```js
+```typescript
 export type MulticastOptions = {
   multicast?: boolean,
   interface?: string,

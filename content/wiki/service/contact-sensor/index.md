@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "ContactSensor"
-contributors: ["GogoVega","Shaquu"]
 
 ---
 

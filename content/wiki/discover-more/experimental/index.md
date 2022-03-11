@@ -10,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 100
 toc: true
-contributors: ["Shaquu","crxporter"]
 ---
 
 During development, we add new features that are marked as `experimental`.

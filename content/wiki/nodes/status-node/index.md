@@ -10,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 40
 toc: true
-contributors: ["Shaquu","GogoVega"]
 divider: true
 ---
 

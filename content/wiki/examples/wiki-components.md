@@ -10,7 +10,6 @@ menu:
     parent: "examples"
 weight: 100
 toc: true
-contributors: ["Shaquu"]
 ---
 
 To see that page you have to build Wiki with drafts using `-D` arg.

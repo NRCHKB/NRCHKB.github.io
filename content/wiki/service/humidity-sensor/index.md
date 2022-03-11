@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "HumiditySensor"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic principle

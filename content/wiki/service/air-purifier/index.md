@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "AirPurifier"
-contributors: ["crxporter","Shaquu"]
 ---
 
 ## Possible combinations

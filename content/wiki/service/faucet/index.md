@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Faucet"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 {{< alert icon="👉" >}}If you are looking for a simple controlled Valve (motorized Valve, solenoid Valve...) see [Single Valve]({{< ref "/wiki/service/valve#single-valve" >}} "Single Valve") Service.{{< /alert >}}

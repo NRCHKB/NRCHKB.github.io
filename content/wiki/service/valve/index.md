@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Valve"
-contributors: ["crxporter","ptath","Andi1968","Shaquu","GogoVega"]
 ---
 {{< alert icon="‼️" >}}**SetDuration** is an input or an output, it is used to set the "Default Run Time" on each valve in the Home.app.{{< /alert >}}
 

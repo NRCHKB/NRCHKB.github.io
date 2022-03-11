@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "FilterMaintenance"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic Principle

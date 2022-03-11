@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "LockMechanism"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic Principle

@@ -10,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 90
 toc: true
-contributors: ["Shaquu", "crxporter"]
 ---
 
 Here is a list of some things that have been accomplished over the last year or so.

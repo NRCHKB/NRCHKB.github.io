@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "SecuritySystem"
-contributors: ["radokristof","ptath","crxporter","Shaquu"]
 ---
 
 ## Example

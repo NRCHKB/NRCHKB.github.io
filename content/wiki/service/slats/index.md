@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Slats"
-contributors: ["caitken-com","Shaquu"]
 ---
 
 Used as an accessory to control slats/window blinds. Either as horizontal or vertical.

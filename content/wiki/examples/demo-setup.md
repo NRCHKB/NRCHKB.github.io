@@ -10,7 +10,6 @@ menu:
     parent: "examples"
 weight: 1
 toc: true
-contributors: ["crxporter","Shaquu"]
 ---
 
 ## Explanation

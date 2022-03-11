@@ -10,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 20
 toc: true
-contributors: ["Shaquu", "GogoVega"]
 ---
 
 A Service or Service group (Parent and Linked) is considered like Accessory. You can choose to either link your Accessory to a Bridge or use your Standalone Accessory.

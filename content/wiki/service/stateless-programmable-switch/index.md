@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "StatelessProgrammableSwitch"
-contributors: ["crxporter","djiwondee","Shaquu"]
 ---
 
 ## Examples
@@ -164,8 +163,9 @@ Copyable Node-RED flow:
 This example would only have double press and long press actions:
 
 ```json
-"ProgrammableSwitchEvent":
 {
-    "validValues": [1,2]
+  "ProgrammableSwitchEvent": {
+    "validValues": [1, 2]
+  }
 }
 ```

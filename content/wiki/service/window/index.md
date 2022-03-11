@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Window"
-contributors: ["djiwondee","Shaquu"]
 ---
 
 This service describes a motorized window to be appeared in the Home.app showing a status and whether the windows are moving its position based on an injected payload.

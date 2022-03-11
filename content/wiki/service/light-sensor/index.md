@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "LightSensor"
-contributors: ["kilbamoo","crxporter","Shaquu"]
 ---
 
 ## Examples

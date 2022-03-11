@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Switch"
-contributors: ["crxporter", "Shaquu"]
 ---
 
 Switch allow for implementing on/off logic to your devices.

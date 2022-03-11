@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "SmokeSensor"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ### Basic principle

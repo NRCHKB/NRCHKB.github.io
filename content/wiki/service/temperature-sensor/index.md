@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "TemperatureSensor"
-contributors: ["djiwondee","crxporter","caitken-com","Shaquu"]
 ---
 
 ## Example

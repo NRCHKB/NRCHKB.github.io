@@ -10,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 99
 toc: true
-contributors: ["Shaquu"]
 ---
 
 #### ⚠️ CAUTION ⚠️

@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Television"
-contributors: ["crxporter","caitken-com","S474N","Shaquu","luwol03"]
 ---
 
 **Note:** It is recommended that beginners get comfortable with Node Red and more simple HomeKit configurations of this plugin before attempting to set up Television Service.

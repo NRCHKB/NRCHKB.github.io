@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "CarbonDioxideSensor"
-contributors: ["djiwondee","crxporter","caitken-com","Shaquu"]
 ---
 
 ## Example

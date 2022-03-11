@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "CarbonMonoxideSensor"
-contributors: ["crxporter","caitken-com","Shaquu"]
 ---
 
 To have a carbon monoxide sensor appear in the Home.app, the CarbonMonoxide service is used.

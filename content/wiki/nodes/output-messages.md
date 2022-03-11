@@ -10,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 80
 toc: true
-contributors: ["crxporter", "Shaquu", "GogoVega"]
 ---
 
 ## Which Output to choose?

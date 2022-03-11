@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "CameraControl"
-contributors: ["caitken-com", "crxporter", "itsj4y", "Shaquu"]
 ---
 
 ## Notes on Cameras

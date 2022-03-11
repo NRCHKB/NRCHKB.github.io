@@ -11,7 +11,6 @@ menu:
 toc: true
 service:
   name: "GarageDoorOpener"
-contributors: ["caitken-com","ptath","Shaquu"]
 ---
 
 ## Synopsis

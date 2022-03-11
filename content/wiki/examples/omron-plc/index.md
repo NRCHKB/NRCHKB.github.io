@@ -10,7 +10,6 @@ menu:
     parent: "examples"
 weight: 100
 toc: true
-contributors: ["Shaquu","GogoVega"]
 ---
 
 ## What Is a Programmable Controller?

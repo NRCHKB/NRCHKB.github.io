@@ -10,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 100
 toc: true
-contributors: ["crxporter", "Shaquu"]
 ---
 
 This is a place where we would like to thank those who have come before to build the work that we have added to.
