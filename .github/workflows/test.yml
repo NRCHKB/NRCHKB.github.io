@@ -20,7 +20,7 @@ jobs:
       - name: Build production website
         run: npm run build:preview
         env:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v1.2.3
