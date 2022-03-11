@@ -1,4 +1,5 @@
 import * as childProcess from "child_process";
+import axios from "axios";
 import glob from "glob";
 
 export const updateFrontMatter = (content: string, key: string, value: string) => {
@@ -57,3 +58,18 @@ export const forFiles = (baseFolder: string, all?: boolean) => {
     }
   })
 }
+
+// Make query to GH GQL API
+export const makeGQLRequest = async (query: string) => {
+  return axios
+    .post(
+      "https://api.github.com/graphql",
+      { query },
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "token " + process.env.GITHUB_TOKEN,
+        },
+      }
+    )
+};

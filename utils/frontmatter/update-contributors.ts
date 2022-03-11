@@ -1,27 +1,9 @@
 import * as fs from "fs";
-import path from "path";
-import axios from "axios";
-import * as childProcess from "child_process";
-import {forFiles, updateFrontMatter} from "./utils";
-import {GitHubUserType} from "./types/GitHubUserType";
-import {ContributorDataType} from "./types/ContributorsDataType";
+import { glob } from "glob";
+import { GQLFileResponse } from "./types/GQLFileResponse";
+import { makeGQLRequest, updateFrontMatter } from "./utils";
 
-// https://stackoverflow.com/questions/15564185/exec-not-returning-anything-when-trying-to-run-git-shortlog-with-nodejs
-const tty = process.platform === "win32" ? "CON" : "/dev/tty";
-
-const baseFolder = "content/";
-
-// Read all contributors from 'nrchkb' file
-const contributorsDataFileRaw: ContributorDataType[] = require("../../data/nrchkb/contributors.json");
-const contributorsDataFile =   contributorsDataFileRaw.map(contributorsData => contributorsData.login);
-
-// Read contributorsMap (login and name) from 'nrchkb' file
-const contributorsMapPath = path.join(__dirname, "../../data/nrchkb/contributors.map.json");
-let contributorsMap: Record<string, string[]> = require(contributorsMapPath);
-const _ = require("lodash"), contributorsMapCopy = JSON.stringify(_.cloneDeep(contributorsMap));
-
-// Ignore "GitHub Actions" to prevent recursion of updating files
-const ignoredAuthors: string[] = [
+const ignoredAuthors = [
   "h-enk",
   "GitHub Actions",
   "dependabot-preview[bot]",
@@ -30,106 +12,173 @@ const ignoredAuthors: string[] = [
   "greenkeeper[bot]",
 ];
 
-const ignoredFiles: string[] = ["content/wiki/discover-more/changelog.md"];
+const ITERATION_LIMIT = 2;  // 200 commits per file
 
-// Search login and name of contributor on GitHub
-const updateContributorMap = async (username: string) => {
-  try {
-    const response = await axios.get<GitHubUserType>(`https://api.github.com/users/${username}`);
+type File = {
+  id: number
+  path: string
+  hasNextPage: boolean
+  endCursor: null | string
+  contributors: string[]
+}
 
-    contributorsMap[response.data.login] = [response.data.name];
+// Generate path mapping with all files
+const generatePathMap = () => {
+  return new Promise<File[]>((resolve, reject) => {
+    glob(
+      `content/@(blog|wiki)/!(characteristic)/**/!(_index)*.md`,
+      (err, matches) => {
+        if (err) reject(err);
 
-    console.log(`Contributor ${username} found on https://github.com/${username}.`);
-  } catch(error) {console.log(`Contributor ${username} not found!`);}
+        const files = matches.reduce((acc: File[], match, i) => [
+          ...acc,
+          {
+            id: i,
+            path: match,
+            hasNextPage: true,
+            endCursor: null,
+            contributors: []
+          }
+        ], []);
+        resolve(files);
+      }
+    );
+  });
 };
 
-const processFile = async (file: string) => {
-  const fileContent = fs.readFileSync(file, {encoding: "utf-8"});
-  let replacedFileContent = fileContent;
+// Checks if some files have a next page
+const hasNextPages = (files: File[]) => {
+  return files.findIndex(({ hasNextPage }) => !!hasNextPage) !== -1
+}
 
-  // Read contributors from git log
-  const gitContributors: string[] = childProcess
-    .execSync(`git shortlog -n -s -- ${file} < ${tty}`, {encoding: "utf8"})
-    .trim()
-    .split("\n")
-    .reduce((arr, contributor) => {
-      const match = contributor.match(/^ *(\d*)\t(.*)/)?.[2]
-      if (match) {
-        arr.push(match);
+const generateGQLArgs = (params: Record<string, null | string | number>) => {
+  return Object.entries(params)
+    .filter(([, value]) => value !== null && value !== "")
+    .map(([key, value])=> `${key}: ${typeof value === "string" ? JSON.stringify(value): value}`, "")
+    .join(", ");
+}
+
+// Generate GQL query
+const makeFilesRequest = async (files: File[]) => {
+  let filesQueryPart = "";
+
+  for (const file of files) {
+    if(!file.hasNextPage) continue;
+
+    filesQueryPart += `\nf${file.id}: history(${generateGQLArgs({
+      first: 100,
+      path: file.path,
+      after: file.endCursor,
+    })}) {...Author}`;
+  }
+
+  if(filesQueryPart === "") return;
+
+  const query = `
+    query {
+      repository(owner: "NRCHKB", name: "NRCHKB.github.io") {
+        object(expression: "master") {
+          ... on Commit {
+            ${filesQueryPart}
+          }
+        }
       }
-      return arr;
-    }, [] as string[]);
+    }
 
-  let difference: string[] = [];
+    fragment Author on CommitHistoryConnection {
+      nodes {
+        author {
+          user {
+            login
+          }
+        }
+      }
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  `;
 
-  // Read contributors from page frontmatter
-  const currentContributorsRaw = fileContent.match(/contributors: (.*)/)?.[1];
-  if (currentContributorsRaw) {
-    const currentContributors: string[] = JSON.parse(currentContributorsRaw);
-    const newContributors: string[] = gitContributors
-      .filter((contributor) => !ignoredAuthors.includes(contributor))
-      .map((contributor) => {
-        const otherName = Object.entries(contributorsMap).find(
-          ([, otherNames]) => otherNames.includes(contributor)
-        );
-        return otherName ? otherName[0] : contributor;
-      })
-      .filter((contributor) => !contributorsDataFile.includes(contributor));
+  const response: GQLFileResponse = await makeGQLRequest(query);
 
-    await Promise.all(newContributors.map(contributor => updateContributorMap(contributor)));
-
-    const contributors = [
-      ...new Set([
-        ...currentContributors,
-        ...gitContributors.map((contributor) => {
-          const otherName = Object.entries(contributorsMap).find(
-            ([, otherNames]) => otherNames.includes(contributor)
-          );
-          return otherName ? otherName[0] : contributor;
-        }),
-      ]),
-    ].filter((contributor) => !ignoredAuthors.includes(contributor));
-
-    difference = contributors.filter(
-      (contributor) => !currentContributors.includes(contributor!)
-    );
+  for(const [key, value] of Object.entries(response.data.data.repository.object)) {
+    const fileIdx = files.findIndex(file => `f${file.id}` === key);
 
     // Update contributors
-    if (difference.length > 0) {
-      replacedFileContent = updateFrontMatter(
-        replacedFileContent,
-        "contributors",
-        JSON.stringify(contributors)
-      );
+    const contributors = value.nodes.map((node) => node.author.user.login);
+    for (const contributor of contributors) {
+      if(!files[fileIdx].contributors.includes(contributor)){
+        files[fileIdx].contributors.push(contributor);
+      }
     }
-  }
 
-  if (replacedFileContent !== fileContent) {
-    fs.writeFileSync(file, replacedFileContent, {encoding: "utf8"});
-    console.log(
-      `Updated contributors for: "${file}" (contributorsDiff=[${difference.join()}]).`
-    );
+    // Update pagination infos
+    files[fileIdx].hasNextPage = value.pageInfo.hasNextPage;
+    files[fileIdx].endCursor = value.pageInfo.endCursor;
   }
 };
 
+// Update contributors list on each page
+const updateContributorsInFiles = (files: File[]) => {
+  for(const file of files) {
+    const fileContent = fs.readFileSync(file.path, { encoding: "utf-8" });
+
+    let replacedFileContent = fileContent;
+    let difference = [];
+
+    const currentContributorsRaw =
+      fileContent.match(/contributors: (.*)/)?.[1];
+
+    if (currentContributorsRaw) {
+      const currentContributors = JSON.parse(currentContributorsRaw);
+      const contributors = [...currentContributors];
+
+      for (const c of file.contributors) {
+        if(!contributors.includes(c) && !ignoredAuthors.includes(c)) {
+          contributors.push(c);
+          difference.push(c);
+        }
+      }
+
+      if (difference.length > 0) {
+        replacedFileContent = updateFrontMatter(
+          replacedFileContent,
+          "contributors",
+          JSON.stringify(contributors)
+        );
+      }
+    }
+
+    if (replacedFileContent !== fileContent) {
+      fs.writeFileSync(file.path, replacedFileContent, { encoding: "utf8" });
+      console.log(`Updated contributors: (${difference}) for: "${file.path}".`);
+    }
+  }
+};
+
+// Processus
 (async () => {
-  forFiles(baseFolder, true)
-    .then((files) => Promise.all(
-      files
-        .filter(f => !ignoredFiles.includes(f))
-        .map((file) => processFile(file)))
-    )
-    .then((files) => files.length)
-    .then((count) => {
-      console.log(`\nScanned ${count} files.`);
-    })
-    .then(() => {
-      fs.writeFileSync(contributorsMapPath, JSON.stringify(contributorsMap), { encoding: "utf-8" })
-      console.log("Contributors Map Updated")
-    })
-    .catch((reason) => {
-      console.error(`\nFailed due to ${reason}`);
-    })
+  try {
+
+    let iteration = 0;
+    const files = await generatePathMap();
+
+    while (hasNextPages(files)) {
+
+      if (iteration >= ITERATION_LIMIT) { console.log(`\nNumber of commits over limit!`); break; }
+
+      iteration++
+
+      await makeFilesRequest(files);
+
+      updateContributorsInFiles(files);
+
+    } console.log(`\nContributors updated.`);
+
+  } catch (error) {
+    console.error(`\nFailed due to ${error}.`);
+  }
 })();
 
-export {};
+export { };
