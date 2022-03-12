@@ -1,7 +1,8 @@
 import * as fs from "fs";
 import { glob } from "glob";
 import { GQLFileResponse } from "./types/GQLFileResponse";
-import { ignoredAuthors, makeGQLRequest, updateFrontMatter } from "./utils";
+import { makeGQLRequest } from "./utils";
+import path from "path";
 
 const ITERATION_LIMIT = 2; // 200 commits per file
 
@@ -16,27 +17,24 @@ type File = {
 // Generate path mapping with all files
 const generatePathMap = () => {
   return new Promise<File[]>((resolve, reject) => {
-    glob(
-      `content/@(blog|wiki)/!(characteristic)/**/!(_index)*.md`,
-      (err, matches) => {
-        if (err) reject(err);
+    glob(`content/wiki/!(characteristic)/**/!(_index)*.md`, (err, matches) => {
+      if (err) reject(err);
 
-        const files = matches.reduce(
-          (acc: File[], match, i) => [
-            ...acc,
-            {
-              id: i,
-              path: match,
-              hasNextPage: true,
-              endCursor: null,
-              contributors: [],
-            },
-          ],
-          []
-        );
-        resolve(files);
-      }
-    );
+      const files = matches.reduce(
+        (acc: File[], match, i) => [
+          ...acc,
+          {
+            id: i,
+            path: match,
+            hasNextPage: true,
+            endCursor: null,
+            contributors: [],
+          },
+        ],
+        []
+      );
+      resolve(files);
+    });
   });
 };
 
@@ -119,44 +117,6 @@ const makeFilesRequest = async (files: File[]) => {
   }
 };
 
-// Update contributors list on each page
-const updateContributorsInFiles = (files: File[]) => {
-  for (const file of files) {
-    const fileContent = fs.readFileSync(file.path, { encoding: "utf-8" });
-
-    let replacedFileContent = fileContent;
-    let difference = [];
-
-    const currentContributorsRaw = fileContent.match(/contributors: (.*)/)?.[1];
-
-    if (currentContributorsRaw) {
-      const currentContributors = JSON.parse(currentContributorsRaw);
-      const contributors = [...currentContributors];
-
-      for (const c of file.contributors) {
-        if (!contributors.includes(c) && !ignoredAuthors.includes(c)) {
-          contributors.push(c);
-          difference.push(c);
-        }
-      }
-
-      if (difference.length > 0) {
-        replacedFileContent = updateFrontMatter(
-          replacedFileContent,
-          "contributors",
-          JSON.stringify(contributors)
-        );
-      }
-    }
-
-    if (replacedFileContent !== fileContent) {
-      fs.writeFileSync(file.path, replacedFileContent, { encoding: "utf8" });
-      console.log(`Updated contributors: (${difference}) for: "${file.path}".`);
-    }
-  }
-};
-
-// Processus
 (async () => {
   try {
     let iteration = 0;
@@ -164,17 +124,49 @@ const updateContributorsInFiles = (files: File[]) => {
 
     while (hasNextPages(files)) {
       if (iteration >= ITERATION_LIMIT) {
-        console.log(`Amount commits over limit!`);
-        break;
+        throw new Error(`Amount commits over limit!`);
       }
 
       iteration++;
 
       await makeFilesRequest(files);
-
-      updateContributorsInFiles(files);
     }
-    console.log(`GitHub Contributors Map updated.`);
+
+    const contributorsMapDataFile = path.join(
+      __dirname,
+      "../../data/nrchkb/contributorsMap.json"
+    );
+
+    const contributorsMap = files.map(({ path, contributors }) => {
+      let relPath = path
+        .replace(/^content\//gm, "/")
+        .replace(/\/index\.md$/gm, "/");
+
+      if (relPath.endsWith(".md") && !relPath.endsWith("index.md")) {
+        relPath = relPath.replace(".md", "/");
+      }
+
+      return {
+        path: relPath,
+        contributors,
+      };
+    });
+
+    fs.writeFile(
+      contributorsMapDataFile,
+      JSON.stringify(contributorsMap),
+      { flag: "w" },
+      (err: any) => {
+        if (err) {
+          if (err.code == "EEXIST") {
+          } else {
+            throw err;
+          }
+        } else {
+          console.log(`GitHub Contributors Map updated.`);
+        }
+      }
+    );
   } catch (error) {
     console.error(`Failed`, error);
   }

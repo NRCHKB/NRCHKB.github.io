@@ -15,8 +15,9 @@
   },
   "scripts": {
     "init": "rimraf public resources && ts-node utils/frontmatter/fetch-github-contributors.ts && ts-node utils/frontmatter/update-contributors.ts && ts-node utils/generate-changelog.ts",
-    "start": "hugo server --disableFastRender",
     "prebuild": "npm run init",
+    "prestart": "npm run init",
+    "start": "hugo server --disableFastRender",
     "build": "hugo --gc --minify",
     "build:preview": "npm run prebuild && hugo --environment netlify",
     "lint": "eslint assets/js config && stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\" && markdownlint *.md content/**/*.md",
