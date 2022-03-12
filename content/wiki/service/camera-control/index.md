@@ -3,7 +3,6 @@ title: "Camera Control"
 description: "Camera Control"
 lead: ""
 date: 2021-04-17T18:50:12.026Z
-lastmod: 2022-02-18T22:06:22.437Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "CameraControl"
-contributors: ["caitken-com", "crxporter", "itsj4y", "Shaquu"]
 ---
 
 ## Notes on Cameras
