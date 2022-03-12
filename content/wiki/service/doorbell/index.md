@@ -2,8 +2,7 @@
 title: "Doorbell"
 description: "Doorbell"
 lead: ""
-date: 2021-04-17T18:50:12.029Z
-lastmod: 2021-10-26T09:17:57.605Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Doorbell"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic Principle

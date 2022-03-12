@@ -12,13 +12,15 @@ jobs:
           node-version: "16"
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Check for linting errors
-        run: yarn lint
+        run: npm run lint
 
       - name: Build production website
-        run: yarn build:preview
+        run: npm run build:preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v1.2.3

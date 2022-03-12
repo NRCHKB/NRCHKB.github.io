@@ -2,8 +2,7 @@
 title: "How to Update"
 description: "NRCHKB node update instructions"
 lead: "How to update NRCHKB node"
-date: 2022-01-26T20:51:13.183Z
-lastmod: 2022-02-22T19:43:54.747Z
+date: 2022-02-08T15:27:48.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "introduction"
 weight: 20
 toc: true
-contributors: ["Shaquu","GogoVega"]
 ---
 
 A new version has been released, and you would like to upgrade? There are at least two ways to do that!

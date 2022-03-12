@@ -2,8 +2,7 @@
 title: "Window Covering"
 description: "Window Covering"
 lead: ""
-date: 2021-04-17T18:50:12.040Z
-lastmod: 2021-10-15T22:06:26.519Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "WindowCovering"
-contributors: ["oliverrahner","crxporter","Shaquu"]
 ---
 
 A minimal Window Covering only has a Position.

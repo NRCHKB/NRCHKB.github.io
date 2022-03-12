@@ -2,8 +2,7 @@
 title: "Humidifier Dehumidifier"
 description: "Humidifier Dehumidifier"
 lead: ""
-date: 2021-04-17T18:50:12.030Z
-lastmod: 2021-10-15T22:06:15.147Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "HumidifierDehumidifier"
-contributors: ["caitken-com","Shaquu"]
 ---
 
 Used as a Humidifier/Dehumidifier accessory with 3 modes: Auto, Humidifying, Dehumidifying.

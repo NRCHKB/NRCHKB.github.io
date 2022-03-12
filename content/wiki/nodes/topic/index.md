@@ -2,8 +2,7 @@
 title: "Topic"
 description: "The topic is used to identify and filter messages"
 lead: "The topic is used to identify and filter messages."
-date: 2022-01-22T18:59:43.769Z
-lastmod: 2022-02-07T19:48:12.612Z
+date: 2022-02-08T15:27:48.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 70
 toc: true
-contributors: ["GogoVega"]
 ---
 
 ## What is that

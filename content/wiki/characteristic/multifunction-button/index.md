@@ -2,8 +2,7 @@
 title: "MultifunctionButton"
 description: "Multifunction Button"
 lead: ""
-date: 2021-09-27T18:51:43.221Z
-lastmod: 2021-09-27T18:51:43.221Z
+date: 2021-09-27T18:54:22.000Z
 draft: false
 images: []
 menu:

@@ -2,8 +2,7 @@
 title: "Service Node"
 description: "This node represents Service in HomeKit"
 lead: "This node represents the Service displayed in Home.app."
-date: 2021-05-06T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
+date: 2021-05-06T21:18:56.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 20
 toc: true
-contributors: ["Shaquu", "GogoVega"]
 ---
 
 A Service or Service group (Parent and Linked) is considered like Accessory. You can choose to either link your Accessory to a Bridge or use your Standalone Accessory.

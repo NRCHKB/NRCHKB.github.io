@@ -2,8 +2,7 @@
 title: "Wait For Setup"
 description: "Dynamic configuration of the Characteristic Properties of your Service Node"
 lead: "Dynamic configuration of the Characteristic Properties of your Service Node."
-date: 2021-08-03T00:00:00+02:00
-lastmod: 2022-02-22T19:43:58.115Z
+date: 2022-02-08T15:27:48.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 90
 toc: true
-contributors: ["crxporter","Toshik","Shaquu","GogoVega"]
 ---
 
 ## What is that
@@ -26,11 +24,11 @@ Go to your Service Node and check the option `Wait for Setup` then create a Mess
 
 ```json
 {
- "nrchkb": {
- "setup": {
- "... setup properties go here"
- }
- }
+  "nrchkb": {
+    "setup": {
+      "properties": "go here"
+    }
+  }
 }
 ```
 

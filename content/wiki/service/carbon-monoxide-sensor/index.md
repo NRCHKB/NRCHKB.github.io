@@ -2,8 +2,7 @@
 title: "Carbon Monoxide Sensor"
 description: "Carbon Monoxide Sensor"
 lead: ""
-date: 2021-04-17T18:50:12.028Z
-lastmod: 2021-10-15T22:06:11.570Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "CarbonMonoxideSensor"
-contributors: ["crxporter","caitken-com","Shaquu"]
 ---
 
 To have a carbon monoxide sensor appear in the Home.app, the CarbonMonoxide service is used.

@@ -2,8 +2,7 @@
 title: "Status Node"
 description: "This node outputs status of the HomeKit Service"
 lead: ""
-date: 2021-09-30T18:51:41.675Z
-lastmod: 2022-02-22T19:43:57.547Z
+date: 2021-09-30T18:53:08.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 40
 toc: true
-contributors: ["Shaquu","GogoVega"]
 divider: true
 ---
 

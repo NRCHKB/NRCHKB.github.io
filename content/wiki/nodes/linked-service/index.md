@@ -2,8 +2,7 @@
 title: "Linked Service"
 description: "Linked Service is, to put it another way, a Service attached to the Parent Service"
 lead: "Linked Service is, to put it another way, a Service attached to the Parent Service."
-date: 2022-01-21T14:54:56.266Z
-lastmod: 2022-02-07T19:48:12.612Z
+date: 2022-02-08T15:27:48.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 50
 toc: true
-contributors: ["GogoVega"]
 ---
 
 ## How to create a Linked Service

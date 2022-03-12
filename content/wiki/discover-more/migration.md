@@ -2,8 +2,7 @@
 title: "Migration"
 description: "Migration"
 lead: ""
-date: 2021-08-03T23:21:00.000Z
-lastmod: 2021-10-12T22:15:26.438Z
+date: 2021-08-03T21:37:19.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 80
 toc: true
-contributors: ["crxporter", "Shaquu"]
 ---
 
 ## Migration to new setup

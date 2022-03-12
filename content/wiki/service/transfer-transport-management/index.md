@@ -2,8 +2,7 @@
 title: "Transfer Transport Management"
 description: "Transfer Transport Management"
 lead: ""
-date: 2021-04-17T18:50:12.038Z
-lastmod: 2021-04-17T18:50:12.038Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:

@@ -2,8 +2,7 @@
 title: "Host Node"
 description: "Host node acts as a link between service node(s) and Home.app"
 lead: "Host node acts as a link between service node(s) and Home.app."
-date: 2021-05-06T00:00:00+02:00
-lastmod: 2022-02-22T19:43:56.156Z
+date: 2021-05-06T21:18:56.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "nodes"
 weight: 30
 toc: true
-contributors: ["GogoVega","Shaquu"]
 ---
 
 It can be configured in two ways:
@@ -82,7 +80,7 @@ This option allows you to choose whether you want to allow messages to pass thro
 
 In computer networks, the multicast DNS protocol resolves hostnames to IP addresses within small networks that do not include a local name server.
 
-```js
+```typescript
 export type MulticastOptions = {
   multicast?: boolean,
   interface?: string,

@@ -2,8 +2,7 @@
 title: "Troubleshooting"
 description: "Troubleshooting NRCHKB nodes"
 lead: "Frequently Requested Troubleshooting"
-date: 2022-01-26T20:51:13.183Z
-lastmod: 2022-02-22T19:43:55.308Z
+date: 2022-02-08T15:27:48.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "introduction"
 weight: 30
 toc: true
-contributors: ["Shaquu","GogoVega"]
 ---
 
 ## Device paired but Service disappearing in Home.app from time to time
