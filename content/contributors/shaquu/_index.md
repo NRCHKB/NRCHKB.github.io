@@ -1,8 +1,7 @@
 ---
 title: "Tadeusz Wyrzykowski"
 description: "Main NRCHKB developer"
-date: 2021-04-11T22:00:00+02:00
-lastmod: 2021-10-13T22:54:57+02:00
+date: 2021-04-11T20:22:26.000Z
 draft: false
 images: []
 ---

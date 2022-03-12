@@ -2,8 +2,7 @@
 title: "Camera RTPStream Management"
 description: "Camera RTPStream Management"
 lead: ""
-date: 2021-04-17T18:50:12.027Z
-lastmod: 2021-10-09T12:01:54.995Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -14,4 +13,4 @@ service:
   name: "CameraRTPStreamManagement"
 ---
 
-Please relate to [CameraControl Service]({{< ref "/wiki/service/camera-control" >}} "CameraControl") for RTSP Camera configuration.
+{{< alert icon="⚠️" >}}Please relate to [CameraControl Service]({{< ref "/wiki/service/camera-control" >}} "CameraControl") for RTSP Camera configuration.{{< /alert >}}

@@ -2,8 +2,7 @@
 title: "Assistant"
 description: "Assistant"
 lead: ""
-date: 2021-09-27T18:51:43.246Z
-lastmod: 2021-09-27T18:51:43.246Z
+date: 2021-09-27T18:54:22.000Z
 draft: false
 images: []
 menu:

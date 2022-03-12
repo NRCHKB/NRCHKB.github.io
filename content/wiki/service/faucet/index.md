@@ -2,8 +2,7 @@
 title: "Faucet"
 description: "Faucet"
 lead: ""
-date: 2021-04-17T18:50:12.030Z
-lastmod: 2022-02-08T17:49:09.511Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Faucet"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 {{< alert icon="👉" >}}If you are looking for a simple controlled Valve (motorized Valve, solenoid Valve...) see [Single Valve]({{< ref "/wiki/service/valve#single-valve" >}} "Single Valve") Service.{{< /alert >}}

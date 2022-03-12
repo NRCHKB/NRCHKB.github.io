@@ -2,8 +2,7 @@
 title: "Air Quality Sensor"
 description: "Air Quality Sensor"
 lead: ""
-date: 2021-04-17T18:50:12.025Z
-lastmod: 2021-10-15T22:06:08.212Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "AirQualitySensor"
-contributors: ["djiwondee","Shaquu"]
 ---
 
 To have a real _Air Quality Sensor_ appear in the Home.app showing a _Particulate Levels for 2.5 and 10 microns_ as well as an _Air Quality Index_ based on the [US EPA Scale](https://aqicn.org), you can setup a Node-red flow to provide air characteristics value in HomeKit.
@@ -58,16 +56,17 @@ The following Node-RED flow uses one particular sensor.:
 The PM 10 and PM 2.5 value is directly mapped to the appropriate HomeKit Characteristics value, using a _function node_.
 
 ```javascript
-var pm10 = Number(msg.payload[0].sensordatavalues[0].value);
-var pm2 = Number(msg.payload[0].sensordatavalues[1].value);
+const pm10 = Number(msg.payload[0].sensordatavalues[0].value);
+const pm2 = Number(msg.payload[0].sensordatavalues[1].value);
 
-...
+//...
+
 hkMsg.payload = {
-    "AirQuality" : Number(airQuality.toFixed(0)),
-    "PM10Density" : pm10,
-    "PM2_5Density" : pm2,
-    "StatusActive" : 1
-    };
+  "AirQuality": Number(airQuality.toFixed(0)),
+  "PM10Density": pm10,
+  "PM2_5Density": pm2,
+  "StatusActive": 1
+};
 ```
 
 A special calculation is applied for the `AirQuality` value itself.

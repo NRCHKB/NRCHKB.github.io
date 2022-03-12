@@ -2,8 +2,7 @@
 title: "Switch"
 description: "Switch"
 lead: ""
-date: 2021-04-17T18:50:12.036Z
-lastmod: 2021-08-11T22:15:36.344Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Switch"
-contributors: ["crxporter", "Shaquu"]
 ---
 
 Switch allow for implementing on/off logic to your devices.

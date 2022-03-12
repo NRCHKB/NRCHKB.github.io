@@ -2,8 +2,7 @@
 title: "Roadmap"
 description: "Roadmap"
 lead: ""
-date: 2021-08-03T21:21:00+01:00
-lastmod: 2021-08-11T22:15:36.344Z
+date: 2021-08-03T19:51:06.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 90
 toc: true
-contributors: ["Shaquu", "crxporter"]
 ---
 
 Here is a list of some things that have been accomplished over the last year or so.

@@ -2,8 +2,7 @@
 title: "Wiki Components"
 description: "Example components to be used in Wiki"
 lead: ""
-date: 2022-01-18T20:19:11.711Z
-lastmod: 2022-01-18T20:19:11.711Z
+date: 2022-01-18T20:22:16.000Z
 draft: true
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "examples"
 weight: 100
 toc: true
-contributors: ["Shaquu"]
 ---
 
 To see that page you have to build Wiki with drafts using `-D` arg.

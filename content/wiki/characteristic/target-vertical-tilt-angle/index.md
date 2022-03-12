@@ -2,8 +2,7 @@
 title: "TargetVerticalTiltAngle"
 description: "Target Vertical Tilt Angle"
 lead: ""
-date: 2021-08-09T18:32:49.981Z
-lastmod: 2021-08-09T18:32:49.981Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:

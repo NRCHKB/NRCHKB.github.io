@@ -2,8 +2,7 @@
 title: "Quick Start"
 description: "Welcome to the NRCHKB wiki!"
 lead: "Welcome to the NRCHKB wiki!"
-date: 2021-04-01T00:00:00+02:00
-lastmod: 2022-02-07T19:48:12.612Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "introduction"
 weight: 10
 toc: true
-contributors: ["crxporter", "radokristof", "Shaquu"]
 ---
 
 This wiki will be used to share examples so that users may see how this plugin functions and to get started more easily with copyable flows for each HomeKit service. This page will assume you are familiar with Node-RED basics.

@@ -2,8 +2,7 @@
 title: "Garage Door Opener"
 description: "Garage Door Opener"
 lead: ""
-date: 2021-04-17T18:50:12.030Z
-lastmod: 2021-10-15T22:06:14.624Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "GarageDoorOpener"
-contributors: ["caitken-com","ptath","Shaquu"]
 ---
 
 ## Synopsis

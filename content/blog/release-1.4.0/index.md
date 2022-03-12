@@ -2,8 +2,7 @@
 title: "Release 1.4.0 🥳"
 description: "NRCHKB/node-red-contrib-homekit-bridged Release 1.4.0"
 lead: "New version is now available to install!"
-date: 2021-10-04T16:04:58.440Z
-lastmod: 2021-10-04T16:04:58.440Z
+date: 2021-10-04T16:11:26.000Z
 draft: false
 images: ["title.png"]
 contributors: ["Shaquu"]

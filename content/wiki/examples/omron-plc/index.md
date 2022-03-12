@@ -2,8 +2,7 @@
 title: "OMRON PLC"
 description: "HomeKit for OMRON PLCs"
 lead: ""
-date: 2021-10-23T18:26:33+02:00
-lastmod: 2021-10-26T21:05:47+02:00
+date: 2021-10-23T16:49:25.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "examples"
 weight: 100
 toc: true
-contributors: ["Shaquu","GogoVega"]
 ---
 
 ## What Is a Programmable Controller?

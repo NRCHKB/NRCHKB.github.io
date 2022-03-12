@@ -25,7 +25,6 @@ title: "${title}"
 description: "${description}"
 lead: ""
 date: ${date}
-lastmod: ${date}
 draft: false
 images: []
 menu:
@@ -52,7 +51,6 @@ title: "${title}"
 description: "${title}"
 lead: ""
 date: ${date}
-lastmod: ${date}
 draft: false
 images: []
 menu:

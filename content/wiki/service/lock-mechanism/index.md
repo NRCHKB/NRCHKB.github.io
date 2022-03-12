@@ -2,8 +2,7 @@
 title: "Lock Mechanism"
 description: "Lock Mechanism"
 lead: ""
-date: 2021-04-17T18:50:12.032Z
-lastmod: 2021-10-25T17:14:30.490Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "LockMechanism"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic Principle
