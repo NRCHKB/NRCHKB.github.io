@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://nrchkb.github.io/wiki/nodes/wait-for-setup/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
-<meta property="article:published_time" content="2021-08-03T00:00:00+02:00">
-<meta property="article:modified_time" content="2022-02-22T19:43:58+00:00">
+<meta property="article:published_time" content="2022-02-08T15:27:48+00:00">
+<meta property="article:modified_time" content="2022-03-12T19:30:07+01:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -506,7 +506,10 @@
 </ol>
 </nav>
 <h1 id=title>Wait For Setup</h1>
-<small class=updated>Updated February 22, 2022 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/crxporter/>crxporter</a>, <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/toshik/>Toshik</a>, <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/gogovega/>GogoVega</a></small>
+<small class=updated>Updated March 12, 2022
+by
+<a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/luwol03/>luwol03</a>, <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/gogovega/>GogoVega</a>
+</small>
 <p class=lead>Dynamic configuration of the Characteristic Properties of your Service Node.</p>
 <h2 id=what-is-that>What is that<a href=#what-is-that class=anchor aria-hidden=true>#</a> </h2>
 <p>Wait For Setup feature allows dynamic configuration of the Characteristic Properties of a Service Node before its initialization. In other words, it allows you to configure your Characteristic Properties with values from external sources.</p>
@@ -517,11 +520,11 @@
 <h2 id=how-to-use-it>How to use it<a href=#how-to-use-it class=anchor aria-hidden=true>#</a> </h2>
 <p>Go to your Service Node and check the option <code>Wait for Setup</code> then create a Message that will have the following structure:</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
- <span class=nt>&#34;nrchkb&#34;</span><span class=p>:</span> <span class=p>{</span>
- <span class=nt>&#34;setup&#34;</span><span class=p>:</span> <span class=p>{</span>
- <span class=nt>&#34;... setup properties go here&#34;</span>
- <span class=p>}</span>
- <span class=p>}</span>
+  <span class=nt>&#34;nrchkb&#34;</span><span class=p>:</span> <span class=p>{</span>
+    <span class=nt>&#34;setup&#34;</span><span class=p>:</span> <span class=p>{</span>
+      <span class=nt>&#34;properties&#34;</span><span class=p>:</span> <span class=s2>&#34;go here&#34;</span>
+    <span class=p>}</span>
+  <span class=p>}</span>
 <span class=p>}</span>
 </code></pre></div><p>In the <code>setup</code> part you may specify properties to configure accessories, such as <code>name</code>, <code>model</code>, <code>manufacturer</code>, and other properties available on the <code>HomeKit</code> node.</p>
 <p>To configure accessory characteristics <code>setup</code> should contain <code>characteristicProperties</code> <strong>string</strong> JSON representation for Characteristics Properties as seen in the HomeKit node properties page.</p>
@@ -558,17 +561,17 @@
 </code></pre></div>
 <p class=edit-page id=edit-page><a href=https://github.com/NRCHKB/NRCHKB.github.io/blob/master/content/wiki/nodes/wait-for-setup.md><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828.0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>Edit this page on GitHub</a></p>
 <div class="docs-navigation d-flex justify-content-between">
-<a href=https://nrchkb.github.io/wiki/discover-more/roadmap/>
+<a href=https://nrchkb.github.io/wiki/discover-more/migration/>
 <div class="card my-1">
 <div class="card-body py-2">
-&larr; Roadmap
+&larr; Migration
 </div>
 </div>
 </a>
-<a class=ms-auto href=https://nrchkb.github.io/wiki/discover-more/changelog/>
+<a class=ms-auto href=https://nrchkb.github.io/wiki/discover-more/roadmap/>
 <div class="card my-1">
 <div class="card-body py-2">
-Changelog &rarr;
+Roadmap &rarr;
 </div>
 </div>
 </a>
