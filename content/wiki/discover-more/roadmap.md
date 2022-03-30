@@ -2,8 +2,7 @@
 title: "Roadmap"
 description: "Roadmap"
 lead: ""
-date: 2021-08-03T21:21:00+01:00
-lastmod: 2022-01-30T12:38:44.142Z
+date: 2021-08-03T19:51:06.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 90
 toc: true
-contributors: ["Shaquu", "crxporter"]
 ---
 
 Below you will find a list of things to do, our potential next developments and what has already been done. If you want to add an idea, join us in [issues](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues) to discuss it.

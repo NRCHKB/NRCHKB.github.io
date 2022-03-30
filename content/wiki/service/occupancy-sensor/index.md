@@ -2,8 +2,7 @@
 title: "Occupancy Sensor"
 description: "Occupancy Sensor"
 lead: ""
-date: 2021-04-17T18:50:12.033Z
-lastmod: 2021-10-25T19:11:42+02:00
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "OccupancySensor"
-contributors: ["djiwondee","crxporter","caitken-com","Shaquu","GogoVega"]
 ---
 
 ## Basic principle

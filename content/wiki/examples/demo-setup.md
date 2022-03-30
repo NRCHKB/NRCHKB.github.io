@@ -2,8 +2,7 @@
 title: "Demo Setup"
 description: "Demo Setup"
 lead: ""
-date: 2021-04-01T00:00:00+02:00
-lastmod: 2021-10-15T22:06:01.730Z
+date: 2021-04-05T12:50:20.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "examples"
 weight: 1
 toc: true
-contributors: ["crxporter","Shaquu"]
 ---
 
 ## Explanation

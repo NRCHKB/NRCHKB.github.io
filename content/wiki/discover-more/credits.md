@@ -2,8 +2,7 @@
 title: "Credits"
 description: "Credits"
 lead: ""
-date: 2021-08-03T00:00:00+02:00
-lastmod: 2022-01-30T12:38:44.142Z
+date: 2021-08-03T13:44:01.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 100
 toc: true
-contributors: ["crxporter", "Shaquu"]
 ---
 
 *First of all, we would like to express our deepest thanks to the creators of this project.*

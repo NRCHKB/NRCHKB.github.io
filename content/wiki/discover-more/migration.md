@@ -2,8 +2,7 @@
 title: "Migration"
 description: "Discover how to migrate to new setup or to new flow."
 lead: "Discover how to migrate to new setup or to new flow."
-date: 2021-08-03T23:21:00.000Z
-lastmod: 2022-01-30T12:38:44.142Z
+date: 2021-08-03T21:37:19.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "discover-more"
 weight: 80
 toc: true
-contributors: ["crxporter", "Shaquu"]
 ---
 
 ## Migration to new setup

@@ -12,20 +12,21 @@ jobs:
           node-version: "16"
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Check for linting errors
-        run: yarn lint
+        run: npm run lint
 
       - name: Build production website
-        run: yarn build
+        run: npm run build:preview
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Netlify Actions
         uses: nwtgck/actions-netlify@v1.2.3
         with:
           publish-dir: "./public"
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          netlify-config-path: ./netlify.toml
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN_NRCHKB_WIKI }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_NRCHKB_WIKI }}

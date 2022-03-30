@@ -1,9 +1,8 @@
 ---
 title: "Heater Cooler"
-description: "Heater Cooler"
+description: "This service can be used to describe either a heater, cooler or a heater and a cooler"
 lead: ""
-date: 2021-04-17T18:50:12.030Z
-lastmod: 2021-10-15T22:06:14.888Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,8 @@ menu:
 toc: true
 service:
   name: "HeaterCooler"
-contributors: ["caitken-com","Shaquu"]
 ---
 
 Used as an Air Conditioner accessory with 3 modes: Auto, Heat, Cool. Optionally able to control fan speed and enable fan swing mode.
+
+It can also be used as a Linked Service for [Faucet]({{< ref "/wiki/service/faucet" >}} "Faucet") Service for heating of water through common temperature control.

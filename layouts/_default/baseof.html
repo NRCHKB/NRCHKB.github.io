@@ -25,6 +25,7 @@
     {{ if and .IsHome .Site.Params.alert }}
       {{ partial "footer/alert.html" . }}
     {{ end }}
+    {{ partial "footer/stylesheet-footer.html" . }}
     {{ partial "footer/script-footer.html" . }}
   </body>
 </html>

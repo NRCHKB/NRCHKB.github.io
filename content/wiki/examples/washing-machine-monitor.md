@@ -2,8 +2,7 @@
 title: "Washing Machine Monitor"
 description: "Washing Machine Monitor"
 lead: ""
-date: 2021-08-03T00:00:00+02:00
-lastmod: 2021-10-15T22:06:02.033Z
+date: 2021-08-03T13:44:16.000Z
 draft: false
 images: []
 menu:
@@ -11,7 +10,6 @@ menu:
     parent: "examples"
 weight: 50
 toc: true
-contributors: ["NorthernMan54","Shaquu"]
 ---
 
 This is a Washing Machine in use flow I created to monitor the usage of our washing machine, and provide notification to the Home.app of the wash status.  To create this I leveraged an ESP8266 based current sensor [WemosEM](https://github.com/alcar21/WemosEM) to monitor usage of the Washing Machine.  And used the flow to determine if the Washing machine was in use, then trigger a Contact sensor.

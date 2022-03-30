@@ -13,13 +13,15 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Check for linting errors
-        run: yarn test
+        run: npm run test
 
       - name: Build production website
-        run: yarn build
+        run: npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

@@ -2,8 +2,7 @@
 title: "Fan"
 description: "Fan"
 lead: ""
-date: 2021-04-17T18:50:12.029Z
-lastmod: 2021-10-25T17:14:26.175Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: []
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Fan"
-contributors: ["GogoVega","Shaquu"]
 ---
 
 ## Basic Principle

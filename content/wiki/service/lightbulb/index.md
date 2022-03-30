@@ -2,8 +2,7 @@
 title: "Light Bulb"
 description: "This service describes a light bulb."
 lead: ""
-date: 2021-04-17T18:50:12.031Z
-lastmod: 2021-10-25T15:20:43.064Z
+date: 2021-04-05T11:54:45.000Z
 draft: false
 images: ["preview.png"]
 menu:
@@ -12,7 +11,6 @@ menu:
 toc: true
 service:
   name: "Lightbulb"
-contributors: ["crxporter","NorthernMan54","tupps","djiwondee","Shaquu","GogoVega"]
 ---
 
 

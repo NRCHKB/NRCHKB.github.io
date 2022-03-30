@@ -7,3 +7,7 @@ bin
 .vscode
 
 *.iml
+
+
+data/nrchkb/contributors.json
+data/nrchkb/contributorsMap.json

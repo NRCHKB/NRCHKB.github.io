@@ -1,0 +1,9 @@
+{
+    "baseURL": "/",
+    "enableRobotsTXT": false,
+    "gc": true,
+    "minify": true,
+    "buildDrafts": true,
+    "buildFuture": true,
+    "googleAnalytics": ""
+}
