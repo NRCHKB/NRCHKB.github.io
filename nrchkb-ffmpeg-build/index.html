@@ -10,25 +10,24 @@
 <meta name=robots content="index, follow">
 <meta name=googlebot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name=bingbot content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<title>Release 1.4.0 🥳 - NRCHKB</title>
-<meta name=description content="NRCHKB/node-red-contrib-homekit-bridged Release 1.4.0">
-<link rel=canonical href=https://nrchkb.github.io/blog/release-1.4.0/>
+<title>NRCHKB FFmpeg Build - NRCHKB</title>
+<meta name=description content="A fully updatable FFmpeg build script for multiple Pi versions and OS's">
+<link rel=canonical href=https://nrchkb.github.io/nrchkb-ffmpeg-build/>
 <meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://nrchkb.github.io/blog/release-1.4.0/title.png">
-<meta name=twitter:title content="Release 1.4.0 🥳">
-<meta name=twitter:description content="NRCHKB/node-red-contrib-homekit-bridged Release 1.4.0">
-<meta property="og:title" content="Release 1.4.0 🥳">
-<meta property="og:description" content="NRCHKB/node-red-contrib-homekit-bridged Release 1.4.0">
+<meta name=twitter:image content="https://nrchkb.github.io/images/social-preview.png">
+<meta name=twitter:title content="NRCHKB FFmpeg Build">
+<meta name=twitter:description content="A fully updatable FFmpeg build script for multiple Pi versions and OS's">
+<meta property="og:title" content="NRCHKB FFmpeg Build">
+<meta property="og:description" content="A fully updatable FFmpeg build script for multiple Pi versions and OS's">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://nrchkb.github.io/blog/release-1.4.0/">
-<meta property="og:image" content="https://nrchkb.github.io/blog/release-1.4.0/title.png">
-<meta property="article:published_time" content="2021-10-04T16:11:26+00:00">
+<meta property="og:url" content="https://nrchkb.github.io/nrchkb-ffmpeg-build/">
+<meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
+<meta property="article:published_time" content="2022-04-11T22:18:14+00:00">
 <meta property="article:modified_time" content="2022-04-12T00:42:19+02:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/nrchkb.github.io\/blog\/release-1.4.0\/"},"headline":"Release 1.4.0 🥳","image":["https://nrchkb.github.io/blog/release-1.4.0/title.png"],"datePublished":"2021-10-04T16:11:26CET","dateModified":"2022-04-12T00:42:19CET","author":{"@type":"Organization","name":"NRCHKB"},"publisher":{"@type":"Organization","name":"NRCHKB","logo":{"@type":"ImageObject","url":"https:\/\/nrchkb.github.io\/images\/logo.png"}},"description":"NRCHKB\/node-red-contrib-homekit-bridged Release 1.4.0"}</script>
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/nrchkb.github.io\/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https:\/\/nrchkb.github.io\/blog\/"},{"@type":"ListItem","position":3,"name":"Release 1.4.0","item":"https:\/\/nrchkb.github.io\/blog\/release-1.4.0\/"}]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/nrchkb.github.io\/"},{"@type":"ListItem","position":2,"name":"Nrchkb Ffmpeg Build","item":"https:\/\/nrchkb.github.io\/nrchkb-ffmpeg-build\/"}]}</script>
 <meta name=theme-color content="#8f0000">
 <link rel=apple-touch-icon sizes=180x180 href=https://nrchkb.github.io/apple-touch-icon.png>
 <link rel=icon type=image/png sizes=32x32 href=https://nrchkb.github.io/favicon-32x32.png>
@@ -37,7 +36,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYRM4ZVKJS"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-XYRM4ZVKJS',{anonymize_ip:!1})}</script>
 </head>
-<body class="blog single">
+<body class="page single">
 <header class="navbar fixed-top navbar-expand-md navbar-light">
 <div class=container>
 <input class="menu-btn order-0" type=checkbox id=menu-btn>
@@ -71,7 +70,7 @@
 </ul>
 </div>
 </li>
-<li class="nav-item active">
+<li class=nav-item>
 <a class=nav-link href=https://nrchkb.github.io/blog/>Blog</a>
 </li>
 </ul>
@@ -83,45 +82,69 @@
 <div class="row justify-content-center">
 <div class="col-md-12 col-lg-10 col-xl-8">
 <article>
-<div class=blog-header>
-<h1>Release 1.4.0 🥳</h1>
-<p><small>Posted October 4, 2021 by <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a>&nbsp;&dash;&nbsp;<strong>2&nbsp;min read</strong></small><p>
-</div>
-<p class=lead>New version is now available to install!</p>
-<p>You can read <a href=https://nrchkb.github.io/wiki/introduction/faq/#how-to-update-nrchkb-node title="How to upgrade NRCHKB">here</a> to find out how to upgrade to the newest version.</p>
-<p>Huge thanks to all contributors and testers from our <a href=https://discord.gg/uvYac5u>NRCHKB community</a>!
-Specially to <a href=https://nrchkb.github.io/contributors/crxporter/ title=@crxporter>@crxporter</a> and <a href=https://nrchkb.github.io/contributors/kevinkub/ title=@kevinkub>@kevinkub</a>.</p>
-<h2 id=changelog>Changelog</h2>
-<h3 id=fixed>Fixed</h3>
+<h1>NRCHKB FFmpeg Build</h1>
+<h2 id=ffmpeg-build-script>ffmpeg-build-script</h2>
+<p>This build script, is to support the NRCHKB project in allowing fully updatable FFmpeg builds. It supports Raspberry Pi
+OS, Ubuntu, Alpine, OSX and multiple CPU architectures (x86, x64, ARM)</p>
+<p>Highlights</p>
 <ul>
-<li>Fixed customCharacteristics incorrect refresh in UI</li>
-<li>Implemented static accessoryUUIDs for subflows Enables the use of nrchkb nodes in subflows with backwards
-compatibility <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/393>#393</a> - thanks <a href=https://github.com/kevinkub>@kevinkub</a></li>
-<li>Fixed Custom MDNS Configuration not showing in UI for Standalone Accessory</li>
-<li>Stop components from clearing other component&rsquo;s node.status call</li>
-<li>Add missing advertiser selector in UI for Standalone Accessory</li>
-<li>Not naming the host node causes a crash <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/424>#424</a></li>
-<li>Do not output oldValue for onSet as it does not have access to old value</li>
+<li>FFmpeg 5.0+ (Built for your platform)</li>
+<li>32 and 64 bit support</li>
+<li>libfdk-aac (Installed via the platform&rsquo;s package manager, or will build from source as a fallback if not available)</li>
+<li>libx264 (Installed via the platform&rsquo;s package manager, or will build from source as a fallback if not available)</li>
+<li>h264_omx (32Bit only, Raspberry Pi only, deprecated)</li>
+<li>h264_v4l2m2m (replaces h264_omx)</li>
+<li>Ability to add extra compile flags</li>
+<li>Automate with command line arguments.</li>
 </ul>
-<h3 id=added>Added</h3>
+<p>Tested systems</p>
 <ul>
-<li>Notice during app launch: Node.js 10 will be deprecated in Node-RED 2.0.0</li>
-<li>Event output in Service 2 which is available in NRCHKB_EXPERIMENTAL <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/392>#392</a> <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/437>#437</a></li>
-<li>Status node to fetch Serialized Service <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/210>#210</a></li>
-<li>Support for environment variables in characteristic properties <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/217>#217</a></li>
-</ul>
-<h3 id=changed>Changed</h3>
+<li>
+<p><strong>Alpine</strong></p>
 <ul>
-<li>Updated hap-nodejs to 0.9.5 (added new iOS 15 Services and Characteristics)</li>
-<li>Updated dependencies to the latest versions</li>
-<li>Changed <code>BatteryService</code> to <code>Battery</code> in demo examples as <code>BatteryService</code> is deprecated <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/381>#381</a> - thanks <a href=https://github.com/crxporter>@crxporter</a></li>
-<li>Readme rework - thanks <a href=https://github.com/crxporter>@crxporter</a></li>
-<li>More descriptive error when incorrect Characteristic has been used in msg.payload</li>
-<li>Add msg.hap.allChars to service nodes <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/438>#438</a></li>
+<li>Apple M1 (Virtual) (64 Bit)</li>
+<li>Raspberry Pi 3B (32 Bit)</li>
 </ul>
-<h2 id=whats-next>What&rsquo;s next</h2>
-<p>We are already preparing for the next phase which will be 1.5.0 release.
-You can find <a href=https://github.com/NRCHKB/node-red-contrib-homekit-bridged/projects/10>here</a> what is in the planned scope.</p>
+</li>
+<li>
+<p><strong>Bullseye</strong></p>
+<ul>
+<li>Raspberry Pi Zero W1 (32 Bit)</li>
+<li>Raspberry Pi Zero W2 (64 Bit)</li>
+<li>Raspberry Pi 4 (64 Bit)</li>
+<li>Raspberry Pi 3A+ (64 Bit)</li>
+</ul>
+</li>
+<li>
+<p><strong>Buster</strong></p>
+<ul>
+<li>Raspberry Pi 4 (32 Bit)</li>
+<li>Raspberry Pi 3B+ (32 Bit)</li>
+<li>Raspberry Pi 3B (32 Bit)</li>
+</ul>
+</li>
+<li>
+<p><strong>macOS Monterey</strong></p>
+<ul>
+<li>Apple M1 (64 Bit)</li>
+</ul>
+</li>
+<li>
+<p><strong>Ubuntu</strong></p>
+<ul>
+<li>Intel (64 Bit)</li>
+<li>Apple M1 (Virtual) (64 Bit)</li>
+</ul>
+</li>
+</ul>
+<img width=100% src=https://github.com/NRCHKB/nrchkb-ffmpeg-build/raw/main/Menu1.png alt=nrchkb-ffmpeg-build>
+<h2 id=how-to-install>How to Install</h2>
+<p>Copy the below and paste it in your terminal.</p>
+<p>Note: If your OS is Alpine, install curl and bash first.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>apk add curl bash
+</code></pre></div><p>Then</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>bash &lt;<span class=o>(</span>curl -sL https://raw.githubusercontent.com/NRCHKB/nrchkb-ffmpeg-build/main/build-bootstrap.sh<span class=o>)</span>
+</code></pre></div>
 </article>
 </div>
 </div>
