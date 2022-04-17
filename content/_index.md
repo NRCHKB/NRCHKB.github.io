@@ -33,12 +33,12 @@ images: []
     <div class="col-lg-7">
         <h2 class="h4">Examples Included</h2>
         <p style="text-align: left;">
-          <a href="{{"/wiki/examples/" | absURL }}"><strong>Example flows</strong></a> are included with the plugin, they can be imported using the Node-RED menu after install.
+          <a href="/wiki/examples/"><strong>Example flows</strong></a> are included with the plugin, they can be imported using the Node-RED menu after install.
         </p>
     </div>
     <div class="col-lg-7">
       <h2 class="h4">Getting Started</h2>
-      <p style="text-align: left;">Our <a href="{{"/wiki/introduction/quick-start/" | absURL }}"><strong>Documentation Page</strong></a> is full of explanations, examples, and information to get you moving! </p>
+      <p style="text-align: left;">Our <a href="/wiki/introduction/quick-start"><strong>Documentation Page</strong></a> is full of explanations, examples, and information to get you moving! </p>
     </div>
     <div class="col-lg-12 mt-4 pt-1">
       <p style="text-align: center;">If you have any questions we are every day on <a href="https://discord.gg/uvYac5u"><strong>Discord</strong></a>, always ready to help!</p>
