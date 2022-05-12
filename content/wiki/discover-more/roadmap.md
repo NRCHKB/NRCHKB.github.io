@@ -12,17 +12,20 @@ weight: 90
 toc: true
 ---
 
-Here is a list of some things that have been accomplished over the last year or so.
-Also, a few ideas that have been discussed. Please see the issues' area to discuss and make new requests.
+Below you will find a list of things to do, our potential next developments and what has already been done. If you want to add an idea, join us in [issues](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues) to discuss it.
 
 ## Current efforts:
 
 * Characteristics properties as GUI option in node configuration
 * Add compatibility for custom characteristics ([as requested](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/52))
 * Explore possibility of 2-way audio for cameras ([discussion here](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/232))
+* Wiki Facelift
+* Add more examples for the Wiki
+* Review Faucet Service
 
 ## Potential next developments:
 
+* Add QR-Code for Bridge
 * Add compatibility with Eve Energy ([as requested](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/27))
 * Add support to manage other homebridged accessories (made outside the node-red?)
 
@@ -35,6 +38,5 @@ Also, a few ideas that have been discussed. Please see the issues' area to discu
 * ~~Add camera support~~
 * ~~Review Doorbell if it is working ([as described](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/38))~~
 * ~~Review Battery Status if it is working ([as described](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/23))~~
-* ~~Review Speaker if it is working~~ (television speaker is working, 2-way camera audio is not confirmed)
+* ~~Review Speaker if it is working~~ (Television Speaker is working, 2-way camera audio is not confirmed)
 * ~~Add interface binding ([as requested](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/44))~~
-* ~~Add more examples
