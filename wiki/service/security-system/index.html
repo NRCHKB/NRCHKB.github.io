@@ -23,7 +23,7 @@
 <meta property="og:url" content="https://nrchkb.github.io/wiki/service/security-system/">
 <meta property="og:image" content="https://nrchkb.github.io/images/social-preview.png">
 <meta property="article:published_time" content="2021-04-05T11:54:45+00:00">
-<meta property="article:modified_time" content="2022-04-17T22:06:26+02:00">
+<meta property="article:modified_time" content="2022-07-19T22:57:30-05:00">
 <meta property="og:site_name" content="NRCHKB">
 <meta property="og:locale" content="en_US">
 <meta name=yandex-verification content="5f5fdb90049c85bb">
@@ -489,6 +489,11 @@
 <h3>On this page</h3>
 <nav id=TableOfContents>
 <ul><li><a href=#characteristics>Characteristics</a></li>
+<li>
+<ul>
+<li><a href=#changing-characteristics-properties-example-security-system-with-no-night-mode>Changing Characteristics properties example: security system with no &ldquo;night&rdquo; mode</a></li>
+</ul>
+</li>
 <li><a href=#example>Example</a></li>
 </ul>
 </nav>
@@ -504,9 +509,9 @@
 </ol>
 </nav>
 <h1 id=title>Security System</h1>
-<small class=updated>Updated April 17, 2022
+<small class=updated>Updated July 19, 2022
 by
-<a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/luwol03/>luwol03</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a>
+<a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/owlbawl/>OwlBawl</a>, <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/luwol03/>luwol03</a> and <a class="stretched-link position-relative" href=https://nrchkb.github.io/contributors/shaquu/>Shaquu</a>
 </small>
 <p class=lead></p>
 <p><small>UUID: 0000007E-0000-1000-8000-0026BB765291</small></p>
@@ -543,7 +548,16 @@ by
 </tr>
 </tbody>
 </table>
-<h2 id=example>Example<a href=#example class=anchor aria-hidden=true>#</a> </h2>
+<h3 id=changing-characteristics-properties-example-security-system-with-no-night-mode>Changing Characteristics properties example: security system with no &ldquo;night&rdquo; mode<a href=#changing-characteristics-properties-example-security-system-with-no-night-mode class=anchor aria-hidden=true>#</a> </h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=p>{</span>
+  <span class=nt>&#34;SecuritySystemCurrentState&#34;</span><span class=p>:</span> <span class=p>{</span>
+    <span class=nt>&#34;validValues&#34;</span><span class=p>:</span> <span class=p>[</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>]</span>
+  <span class=p>},</span>
+  <span class=nt>&#34;SecuritySystemTargetState&#34;</span><span class=p>:</span> <span class=p>{</span>
+    <span class=nt>&#34;validValues&#34;</span><span class=p>:</span> <span class=p>[</span><span class=mi>0</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>4</span><span class=p>]</span>
+  <span class=p>}</span>
+<span class=p>}</span>
+</code></pre></div><h2 id=example>Example<a href=#example class=anchor aria-hidden=true>#</a> </h2>
 <p>This example uses <a href=https://flows.nodered.org/node/node-red-contrib-alarm><code>node-red-contrib-alarm</code></a> as an &ldquo;alarm panel&rdquo;.
 Many thanks for the devs over there!</p>
 <p>The most basic parts are triggers going into alarm nodes and state changes coming to/from HomeKit.
