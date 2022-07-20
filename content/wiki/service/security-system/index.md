@@ -13,6 +13,18 @@ service:
   name: "SecuritySystem"
 ---
 
+### Changing Characteristics properties example: security system with no "night" mode
+
+```json
+{
+  "SecuritySystemCurrentState": {
+    "validValues": [0, 1, 3, 4]
+  },
+  "SecuritySystemTargetState": {
+    "validValues": [0, 1, 3, 4]
+  }
+}
+```
 ## Example
 
 This example uses [`node-red-contrib-alarm`](https://flows.nodered.org/node/node-red-contrib-alarm) as an "alarm panel".
