@@ -31,11 +31,9 @@ On each raw page between `---` you can find page specific parameters.
 |---|---|
 | title | Page title, used in browser tab and also displayed at the top of the page |
 | description | Page description, displayed when you share page link |
-| date | Page creation date (ISO 8601) |
-| lastmod | Page last modification date (ISO 8601), to be edited after every change. You can use [this](https://www.timestamp-converter.com/) page to generate one. |
+| date | Page creation date (ISO 8601). You can use [this](https://www.timestamp-converter.com/) page to generate one. |
 | weight | Page order in menu |
 | toc | If page table of content should be displayed |
-| contributors | List of contributors |
 
 ## Repository directory structure
 
