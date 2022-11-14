@@ -33,7 +33,7 @@ With `DEBUG` in addition:
 sudo NRCHKB_EXPERIMENTAL=true DEBUG=NRCHKB* node-red
 ```
 
-{{< alert icon="💡" text="Don't forget to stop Node-RED first before launching it in beta mode." />}}
+{{< alert icon="💡" text="Don't forget to stop Node-RED first before launching it in experimental mode." />}}
 
 
 ## Use of Debug
@@ -53,7 +53,7 @@ Below is a table with all the possible logs and their description:
 
 ## Start automatically in beta mode
 
-If you want to start Node-RED in beta mode when your system restarts:
+If you want to start Node-RED in experimental mode when your system restarts:
 
 ### Raspberry Pi
 
@@ -148,7 +148,7 @@ It will output data for all event types defined below:
 
 Node output will look like:
 
-```js
+```ts
 type HAPServiceNodeEvent = {name: CharacteristicEventTypes, context?: any}
 
 type HAPServiceNodeOutput = {

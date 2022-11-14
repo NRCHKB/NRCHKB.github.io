@@ -49,7 +49,7 @@ We mainly use the [markdown](https://docs.github.com/en/get-started/writing-on-g
 
 ## Image
 
-To add a image, you must **upload** it to the **same folder** as the page you are editing and **insert this code** `![Edit view](edit-view.png)` where you want to put your image.
+To add an image, you must **upload** it to the **same folder** as the page you are editing and **insert this code** `![Edit view](edit-view.png)` where you want to put your image.
 
 ## Link
 
