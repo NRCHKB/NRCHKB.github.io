@@ -12,7 +12,9 @@ weight: 100
 toc: true
 ---
 
-This is a place where we would like to thank those who have come before to build the work that we have added to.
+*First of all, we would like to express our deepest thanks to the creators of this project.*
+*Next, we would like to especially thank @Shaquu for his time and work in developing and maintaining this project.*\
+*Finally, we would like to sincerely express our thanks with deep gratitude to everyone who contributed near or far to its realization, because a project cannot be the work of one person.*
 
 ## History
 
