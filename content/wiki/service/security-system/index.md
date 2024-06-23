@@ -25,6 +25,7 @@ service:
   }
 }
 ```
+
 ## Example
 
 This example uses [`node-red-contrib-alarm`](https://flows.nodered.org/node/node-red-contrib-alarm) as an "alarm panel".
