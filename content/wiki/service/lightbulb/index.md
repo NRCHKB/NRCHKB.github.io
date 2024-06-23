@@ -155,3 +155,78 @@ Copyable Node-RED code:
 ```json
 [{"id":"76feea1d7599c771","type":"inject","z":"5971b8a103c6ba33","name":"2s","props":[{"p":"time","v":"true","vt":"bool"}],"repeat":"2","crontab":"","once":false,"onceDelay":"0.5","topic":"","x":110,"y":160,"wires":[["2f8d0105be10bf04"]]},{"id":"2f8d0105be10bf04","type":"FINS Read Multiple","z":"5971b8a103c6ba33","name":"Read PLC","connection":"11b8375b.b1ee31","addressType":"str","address":"CIO10","msgPropertyType":"msg","msgProperty":"CIO_READ","outputFormatType":"signed","outputFormat":"","x":270,"y":160,"wires":[["26514893fd100d8d"]]},{"id":"1a244c0c67b72d42","type":"FINS Write","z":"5971b8a103c6ba33","name":"Write PLC","connection":"11b8375b.b1ee31","addressType":"msg","address":"ADDRESS","dataType":"msg","data":"WRITE","msgPropertyType":"msg","msgProperty":"payload","x":990,"y":320,"wires":[[]]},{"id":"26514893fd100d8d","type":"buffer-parser","z":"5971b8a103c6ba33","name":"Int16=>16b","data":"CIO_READ","dataType":"msg","specification":"spec","specificationType":"ui","items":[{"type":"16bitbe","name":"CIO10","offset":0,"length":1,"offsetbit":0,"scale":"1","mask":""}],"swap1":"","swap2":"","swap3":"","swap1Type":"swap","swap2Type":"swap","swap3Type":"swap","msgProperty":"CIO_READ","msgPropertyType":"str","resultType":"keyvalue","resultTypeType":"output","multipleResult":false,"fanOutMultipleResult":false,"setTopic":true,"outputs":1,"x":450,"y":160,"wires":[["15a70dec2ff162b2"]]},{"id":"f44c7d3075759d21","type":"function","z":"5971b8a103c6ba33","name":"Value to Write","func":"var CIO_Address = msg.topic.substr(0,5);\nvar Bit_Address = parseInt(msg.topic.substr(6,2));\nvar Write = parseInt((msg.payload.On) ? 1 : 0);\nvar READ = msg.READ_PLC.CIO10[0].bits;\n\nREAD[Bit_Address] = Write;\n\nnbr = parseInt (READ[15]+\"\"+READ[14]+\"\"+READ[13]+\"\"+READ[12]+\"\"+READ[11]+\"\"+READ[10]+\"\"+READ[9]+\"\"+READ[8]+\"\"+READ[7]+\"\"+READ[6]+\"\"+READ[5]+\"\"+READ[4]+\"\"+READ[3]+\"\"+READ[2]+\"\"+READ[1]+\"\"+READ[0]);\n\nconst convert = {\n  bin2dec : s => parseInt(s, 2).toString(10)\n};\n\n\nmsg.ADDRESS = CIO_Address;\nmsg.WRITE = parseInt (convert.bin2dec(nbr));\n\nreturn msg;","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":800,"y":320,"wires":[["1a244c0c67b72d42"]]},{"id":"4d4fd86c38236bc3","type":"FINS Read Multiple","z":"5971b8a103c6ba33","name":"Read PLC","connection":"11b8375b.b1ee31","addressType":"str","address":"CIO10","msgPropertyType":"msg","msgProperty":"CIO_READ","outputFormatType":"signed","outputFormat":"","x":430,"y":320,"wires":[["04fd430dbce0a26b"]]},{"id":"04fd430dbce0a26b","type":"buffer-parser","z":"5971b8a103c6ba33","name":"Int16=>16b","data":"CIO_READ","dataType":"msg","specification":"spec","specificationType":"ui","items":[{"type":"16bitbe","name":"CIO10","offset":0,"length":1,"offsetbit":0,"scale":"1","mask":""}],"swap1":"","swap2":"","swap3":"","swap1Type":"swap","swap2Type":"swap","swap3Type":"swap","msgProperty":"CIO_READ","msgPropertyType":"str","resultType":"keyvalue","resultTypeType":"output","multipleResult":false,"fanOutMultipleResult":false,"setTopic":true,"outputs":1,"x":610,"y":320,"wires":[["f44c7d3075759d21"]]},{"id":"87168102320f8b34","type":"homekit-service","z":"5971b8a103c6ba33","isParent":true,"hostType":"0","bridge":"5b5f6f73.10106","accessoryId":"","parentService":"","name":"Light 1","serviceName":"Lightbulb","topic":"CIO10.00","filter":false,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Default Serial Number","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":2,"x":770,"y":40,"wires":[["3952732fe1122364"],[]]},{"id":"3952732fe1122364","type":"function","z":"5971b8a103c6ba33","name":"Passthrough ?","func":"if (msg.hap.session) {\n    // Do stuff if it's from homekit\n    return msg;\n    \n} else {\n    // Do different stuff if it's not from homekit\n    return;\n}","outputs":1,"noerr":0,"initialize":"","finalize":"","libs":[],"x":980,"y":100,"wires":[["4d4fd86c38236bc3"]]},{"id":"15a70dec2ff162b2","type":"function","z":"5971b8a103c6ba33","name":"CIO10","func":"var outputMsgs = [];\nvar CIO_READ = msg.CIO_READ.CIO10[0].bits;\n\nfor (var n in CIO_READ) {\n    outputMsgs.push({payload:{\"On\":(CIO_READ[n])?true:false}});\n}\nreturn outputMsgs;","outputs":16,"noerr":0,"initialize":"","finalize":"","libs":[],"x":610,"y":160,"wires":[["87168102320f8b34"],["84175b2d0291d733"],["1d46d43aaedbfc8d"],[],[],[],[],[],[],[],[],[],[],[],[],[]],"inputLabels":["CIO10"],"outputLabels":["10.00","10.01","10.02","10.03","10.04","10.05","10.06","10.07","10.08","10.09","10.10","10.11","10.12","10.13","10.14","10.15"]},{"id":"84175b2d0291d733","type":"homekit-service","z":"5971b8a103c6ba33","isParent":true,"hostType":"0","bridge":"5b5f6f73.10106","accessoryId":"","parentService":"","name":"Light 2","serviceName":"Lightbulb","topic":"CIO10.01","filter":false,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Default Serial Number","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":2,"x":770,"y":100,"wires":[["3952732fe1122364"],[]]},{"id":"1d46d43aaedbfc8d","type":"homekit-service","z":"5971b8a103c6ba33","isParent":true,"hostType":"0","bridge":"5b5f6f73.10106","accessoryId":"","parentService":"","name":"Light 3","serviceName":"Lightbulb","topic":"CIO10.02","filter":false,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Default Serial Number","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","cameraConfigVideoProcessor":"ffmpeg","cameraConfigSource":"","cameraConfigStillImageSource":"","cameraConfigMaxStreams":2,"cameraConfigMaxWidth":1280,"cameraConfigMaxHeight":720,"cameraConfigMaxFPS":10,"cameraConfigMaxBitrate":300,"cameraConfigVideoCodec":"libx264","cameraConfigAudioCodec":"libfdk_aac","cameraConfigAudio":false,"cameraConfigPacketSize":1316,"cameraConfigVerticalFlip":false,"cameraConfigHorizontalFlip":false,"cameraConfigMapVideo":"0:0","cameraConfigMapAudio":"0:1","cameraConfigVideoFilter":"scale=1280:720","cameraConfigAdditionalCommandLine":"-tune zerolatency","cameraConfigDebug":false,"cameraConfigSnapshotOutput":"disabled","cameraConfigInterfaceName":"","characteristicProperties":"{}","waitForSetupMsg":false,"outputs":2,"x":770,"y":160,"wires":[["3952732fe1122364"],[]]},{"id":"11b8375b.b1ee31","type":"FINS Connection","name":"PLC","host":"192.168.1.2","port":"9600","MODE":"","MODEType":"CS","protocol":"","protocolType":"udp","ICF":"","DNA":"","DA1":"2","DA2":"","SNA":"","SA1":"20","SA2":"","autoConnect":true},{"id":"5b5f6f73.10106","type":"homekit-bridge","bridgeName":"Pont Node-Red","pinCode":"123-45-321","port":"","allowInsecureRequest":true,"manufacturer":"NRCHKB","model":"1.2.0","serialNo":"Raspberry Pi 3 B+","firmwareRev":"1.2.0","hardwareRev":"1.2.0","softwareRev":"1.2.0","customMdnsConfig":false,"mdnsMulticast":true,"mdnsInterface":"","mdnsPort":"","mdnsIp":"","mdnsTtl":"","mdnsLoopback":true,"mdnsReuseAddr":true,"allowMessagePassthrough":true}]
 ```
+
+## Adaptive Lightning
+
+> **Important Notice,** this feature is only available in latest dev version.
+
+![Adaptive Lightning](lightbulb_adaptive_lightning.png)
+
+### Introduction
+
+Adaptive Lighting is a feature introduced in iOS 14.
+It allows supported smart home lights to automatically adjust their color temperature throughout the day.
+
+https://www.makeuseof.com/how-to-use-adaptive-lighting-apple-homekit/
+
+### Modes
+
+#### AUTOMATIC
+
+In automatic mode pretty much everything from setup to transition scheduling is done by the controller.
+By design, controller will send appropriate Characteristic update very minute.
+
+#### MANUAL
+
+In manual mode setup is done by the controller but the actual transition must be done by the user.
+This is useful for lights which natively support transitions.
+
+It also allows to reduce network traffic.
+By design, controller will send Characteristic schedule once per day.
+
+Once you enable Adaptive Lightning in Home.app for your Service, it will output below message
+
+```json
+{
+  "payload": {
+    "AdaptiveLightingController": {
+      "event": "update",
+      "data": {
+        "transitionStartMillis": 1719177786090,
+        "timeMillisOffset": 20610,
+        "transitionCurve": [{"temperature":517.6666870117188,"brightnessAdjustmentFactor":-1.8666666746139526,"transitionTime":0},{"temperature":518.5555419921875,"brightnessAdjustmentFactor":-1.855555534362793,"transitionTime":414000,"duration":10800000},{"temperature":512.111083984375,"brightnessAdjustmentFactor":-1.8111110925674438,"transitionTime":1800000},{"temperature":503.5555419921875,"brightnessAdjustmentFactor":-1.755555510520935,"transitionTime":1800000},{"temperature":490.6666564941406,"brightnessAdjustmentFactor":-1.6666666269302368,"transitionTime":1800000},{"temperature":476.77777099609375,"brightnessAdjustmentFactor":-1.5777777433395386,"transitionTime":1800000},{"temperature":462.77777099609375,"brightnessAdjustmentFactor":-1.4777777194976807,"transitionTime":1800000},{"temperature":447.5555419921875,"brightnessAdjustmentFactor":-1.355555534362793,"transitionTime":1800000},{"temperature":433.4444580078125,"brightnessAdjustmentFactor":-1.244444489479065,"transitionTime":1800000},{"temperature":419.5555419921875,"brightnessAdjustmentFactor":-1.1555556058883667,"transitionTime":1800000},{"temperature":407.3333435058594,"brightnessAdjustmentFactor":-1.1333333253860474,"transitionTime":1800000},{"temperature":395.8888854980469,"brightnessAdjustmentFactor":-1.1888889074325562,"transitionTime":1800000},{"temperature":385,"brightnessAdjustmentFactor":-1.2999999523162842,"transitionTime":1800000},{"temperature":375.22222900390625,"brightnessAdjustmentFactor":-1.4222222566604614,"transitionTime":1800000},{"temperature":367.3333435058594,"brightnessAdjustmentFactor":-1.5333333015441895,"transitionTime":1800000},{"temperature":360,"brightnessAdjustmentFactor":-1.600000023841858,"transitionTime":1800000},{"temperature":355.5555419921875,"brightnessAdjustmentFactor":-1.6555556058883667,"transitionTime":1800000},{"temperature":352.77777099609375,"brightnessAdjustmentFactor":-1.6777777671813965,"transitionTime":1800000},{"temperature":350.8888854980469,"brightnessAdjustmentFactor":-1.6888889074325562,"transitionTime":1800000},{"temperature":349.8888854980469,"brightnessAdjustmentFactor":-1.6888889074325562,"transitionTime":1800000,"duration":3600000},{"temperature":349.77777099609375,"brightnessAdjustmentFactor":-1.6777777671813965,"transitionTime":1800000},{"temperature":349.8888854980469,"brightnessAdjustmentFactor":-1.6888889074325562,"transitionTime":1800000,"duration":3600000},{"temperature":350.5555419921875,"brightnessAdjustmentFactor":-1.6555556058883667,"transitionTime":1800000},{"temperature":352.1111145019531,"brightnessAdjustmentFactor":-1.6111111640930176,"transitionTime":1800000},{"temperature":355.5555419921875,"brightnessAdjustmentFactor":-1.5555555820465088,"transitionTime":1800000},{"temperature":358.6666564941406,"brightnessAdjustmentFactor":-1.4666666984558105,"transitionTime":1800000},{"temperature":364.77777099609375,"brightnessAdjustmentFactor":-1.3777778148651123,"transitionTime":1800000},{"temperature":371.8888854980469,"brightnessAdjustmentFactor":-1.288888931274414,"transitionTime":1800000},{"temperature":382.3333435058594,"brightnessAdjustmentFactor":-1.2333333492279053,"transitionTime":1800000},{"temperature":397.4444580078125,"brightnessAdjustmentFactor":-1.244444489479065,"transitionTime":1800000},{"temperature":416.1111145019531,"brightnessAdjustmentFactor":-1.3111110925674438,"transitionTime":1800000},{"temperature":439.5555419921875,"brightnessAdjustmentFactor":-1.4555555582046509,"transitionTime":1800000},{"temperature":463.3333435058594,"brightnessAdjustmentFactor":-1.6333333253860474,"transitionTime":1800000},{"temperature":487.3333435058594,"brightnessAdjustmentFactor":-1.8333333730697632,"transitionTime":1800000},{"temperature":508,"brightnessAdjustmentFactor":-2,"transitionTime":1800000},{"temperature":520.888916015625,"brightnessAdjustmentFactor":-2.0888888835906982,"transitionTime":1800000},{"temperature":520.3333129882812,"brightnessAdjustmentFactor":-2.0333333015441895,"transitionTime":1800000},{"temperature":519.7777709960938,"brightnessAdjustmentFactor":-1.9777777194976807,"transitionTime":1800000},{"temperature":515.7777709960938,"brightnessAdjustmentFactor":-1.8777778148651123,"transitionTime":1800000},{"temperature":517.6666870117188,"brightnessAdjustmentFactor":-1.8666666746139526,"transitionTime":1386000}],
+        "brightnessAdjustmentRange": {
+          "minBrightnessValue": 10,
+          "maxBrightnessValue": 100
+        },
+        "updateInterval": 60000,
+        "notifyIntervalThreshold": 600000
+      }
+    }
+  }
+}
+```
+
+Once you disable Adaptive Lightning in Home.app for your Service, it will output below message
+
+```json
+{
+  "payload": {
+    "AdaptiveLightingController": {
+      "event": "disable"
+    }
+  }
+}
+```
+
+When the user manually changes the value of Hue, Saturation or ColorTemperature characteristics (or if any of those values is changed by physical interaction with the lightbulb), you must send below message to Service input.
+
+```json
+{
+  "payload": {
+    "AdaptiveLightingController": {
+      "event": "disable"
+    }
+  }
+}
+```
