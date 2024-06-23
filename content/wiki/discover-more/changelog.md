@@ -16,14 +16,80 @@ toc: true
 
 ##### Before upgrading make sure that you are using the latest version of [Node-RED](https://nodered.org/docs/getting-started/local) and latest LTS version of [Node.js](https://nodejs.org/en/download/)
 
-###### Upgrading from versions 0.X to 1.X is a breaking change, all devices will be reset in the Home app. Please review the [release notes](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/releases/tag/v1.0.1) thoroughly before updating!
-
 
 
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [1.7.0-dev.6] - To be announced
+
+### Fixed
+
+- Removed vulnerable module 'ip' [#545](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/545)
+- msg.context now handled properly
+
+### Added
+
+- Adaptive Lighting support [#335](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/335)
+- By default, registered Eve.app Characteristics for power management - for existing setup, requires old custom characteristics file to be removed
+
+### Changed
+
+- Updated hap-nodejs [0.11.1 to 0.12.2](https://github.com/homebridge/HAP-NodeJS/blob/latest/CHANGELOG.md) (features
+  and bug fixes)
+- Dependencies upgrade
+- Node `10`, `12` and `16` no longer supported
+- Updated GitHub Actions
+
+## [1.6.1] - 2024-02-19
+
+### Fixed
+
+- Bug: Cannot find module 'ip' [#545](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/545)
+
+## [1.6.0] - 2024-01-12
+
+### Removed
+
+- NodeJS <12 no longer supported
+
+### Changed
+
+- Pin Code format for new devices changed to XXXX-XXXX
+- Updated hap-nodejs to [0.11.1](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.11.1) (bug fixes)
+
+## [1.5.0] - 2022-11-20
+
+### Added
+
+- Support for new advertiser [AVAHI](https://github.com/homebridge/HAP-NodeJS/pull/918)
+- Support for new advertiser [RESOLVED](https://github.com/homebridge/HAP-NodeJS/pull/965)
+- Added `msg.hap.reachable` parameter to get device reachable state (related to NO_RESPONSE)
+
+### Fixed
+
+- Accessory could not be recovered from NO_RESPONSE using single Characteristic
+- Make unsupported Characteristic error more
+  descriptive [#456](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/456)
+- FFmpeg No such file or directory [#495](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/495)
+- allChars: properties have spaces in
+  names [#496](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/496)
+- Wait for host to return from unpublish/destroy before exiting, set published flag on destroy
+- Security system with characteristics, bad
+  behaviour [#388](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/388)
+
+### Changed
+
+- Updated hap-nodejs to [0.9.7](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.9.7) (bug fixes)
+- Updated hap-nodejs to [0.9.8](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.9.8) (bug fixes)
+- Updated hap-nodejs to [0.10.0](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.10.0) (features)
+- Updated hap-nodejs to [0.10.1](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.10.1) (changes)
+- Updated hap-nodejs to [0.10.2](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.10.2) (bug fixes)
+- Updated hap-nodejs to [0.10.3](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.10.3) (bug fixes)
+- Updated hap-nodejs to [0.10.4](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.10.4) (bug fixes)
+- Updated hap-nodejs to [0.11.0](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.11.0) (features and bug fixes)
 
 ## [1.4.3]
 
@@ -33,7 +99,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Updated hap-nodejs to [0.9.6](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.9.6) (bug fixes and security fixes)
+- Updated hap-nodejs to [0.9.6](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.9.6) (bug fixes and security
+  fixes)
 
 ## [1.4.2]
 
@@ -70,7 +137,8 @@ to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Updated hap-nodejs to [0.9.5](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.9.5) (added new iOS 15 Services and Characteristics)
+- Updated hap-nodejs to [0.9.5](https://github.com/homebridge/HAP-NodeJS/releases/tag/v0.9.5) (added new iOS 15 Services
+  and Characteristics)
 - Updated dependencies to latest versions
 - Changed `BatteryService` to `Battery` in demo examples as `BatteryService` is deprecated [#381](https://github.com/NRCHKB/node-red-contrib-homekit-bridged/issues/381) - thanks [@crxporter](https://github.com/crxporter)
 - Readme rework - thanks [@crxporter](https://github.com/crxporter)
